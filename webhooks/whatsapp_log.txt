@@ -1,0 +1,1807 @@
+2026-04-27 14:18:03 - Added TEXT header with 1 parameter(s)
+2026-04-27 14:18:03 - Added BODY with 1 parameter(s)
+2026-04-27 14:18:03 - Added URL button at index 0: test_url_1
+2026-04-27 14:18:05 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 14:18:05 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"#1182"}]},{"type":"body","parameters":[{"type":"text","text":"1"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"test_url_1"}]}]}}
+2026-04-27 14:18:05 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1848-055e-8601-246ab73b5855&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1848-055e-8601-246ab73b5855&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1848-055e-8601-246ab73b5855&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 14:18:05 - HTTP Code: 200
+2026-04-27 14:18:05 - -----------------------------------
+2026-04-27 14:18:05 - DB ERROR: SQLSTATE[42000]: Syntax error or access violation: 1103 Incorrect table name 'notify_cs_app_shopify_sms_notification_App_Email_Notification_logs'
+2026-04-27 14:18:05 - ========================================
+
+2026-04-27 14:22:39 - Added TEXT header with 1 parameter(s)
+2026-04-27 14:22:39 - Added BODY with 1 parameter(s)
+2026-04-27 14:22:39 - Added URL button at index 0: test_url_1
+2026-04-27 14:22:40 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 14:22:40 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"#1183"}]},{"type":"body","parameters":[{"type":"text","text":"1"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"test_url_1"}]}]}}
+2026-04-27 14:22:40 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1852-4012-a786-722c0f94b169&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1852-4012-a786-722c0f94b169&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1852-4012-a786-722c0f94b169&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 14:22:40 - HTTP Code: 200
+2026-04-27 14:22:40 - -----------------------------------
+2026-04-27 14:22:40 - Database log inserted successfully
+2026-04-27 14:22:40 - ========================================
+
+2026-04-27 15:07:06 - Added MEDIA header: image
+2026-04-27 15:07:06 - Added BODY with 1 parameter(s)
+2026-04-27 15:07:06 - Added URL button at index 0: test_url_1
+2026-04-27 15:07:06 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 15:07:07 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 15:07:07 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"image","image":{"link":"URL__test"}}]},{"type":"body","parameters":[{"type":"text","text":"1"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"test_url_1"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]}]}}
+2026-04-27 15:07:07 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1937-06db-9283-73d32af150c1&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1937-06db-9283-73d32af150c1&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-1937-06db-9283-73d32af150c1&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 15:07:07 - HTTP Code: 200
+2026-04-27 15:07:07 - -----------------------------------
+2026-04-27 15:07:07 - Database log inserted successfully
+2026-04-27 15:07:07 - ========================================
+
+2026-04-27 15:48:40 - ========== NEW WHATSAPP REQUEST ==========
+2026-04-27 15:48:40 - Template: test_template
+2026-04-27 15:48:40 - Media Type: image, Media Source: input, Media URL: URL__test
+2026-04-27 15:48:40 - Headers count: 1, Body count: 1
+2026-04-27 15:48:40 - Headers: ["7390678876265"]
+2026-04-27 15:48:40 - Body: ["600.00"]
+2026-04-27 15:48:40 - Buttons: [{"sub_type":"url","index":"0","value":"test_url_1","button_text":"test_button_1"},{"sub_type":"quick_reply","index":"1","value":"test Button 2","button_text":"test Button 2"}]
+2026-04-27 15:48:40 - Payload Builder - Has Media: YES
+2026-04-27 15:48:40 - Payload Builder - Has Headers: YES
+2026-04-27 15:48:40 - Payload Builder - Has Body: YES
+2026-04-27 15:48:40 - Payload Builder - Has Buttons: YES
+2026-04-27 15:48:40 - Added MEDIA header: image with URL: URL__test
+2026-04-27 15:48:40 - Added BODY with 1 parameter(s): ["600.00"]
+2026-04-27 15:48:40 - Added URL button at index 0: test_url_1
+2026-04-27 15:48:40 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 15:48:40 - Final payload built with 4 component(s)
+2026-04-27 15:48:41 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 15:48:41 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"image","image":{"link":"URL__test"}}]},{"type":"body","parameters":[{"type":"text","text":"600.00"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"test_url_1"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]}]}}
+2026-04-27 15:48:41 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2018-419a-9e46-aecb80e55fe7&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2018-419a-9e46-aecb80e55fe7&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2018-419a-9e46-aecb80e55fe7&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 15:48:41 - HTTP Code: 200
+2026-04-27 15:48:41 - -----------------------------------
+2026-04-27 15:48:41 - Database log inserted successfully
+2026-04-27 15:48:41 - ========================================
+
+2026-04-27 15:52:38 - ========== NEW WHATSAPP REQUEST ==========
+2026-04-27 15:52:38 - Template: test_template
+2026-04-27 15:52:38 - Media Type: text, Media Source: , Media URL: 
+2026-04-27 15:52:38 - Headers count: 1, Body count: 1
+2026-04-27 15:52:38 - Headers: ["7390681235561"]
+2026-04-27 15:52:38 - Body: ["600.00"]
+2026-04-27 15:52:38 - Buttons: [{"sub_type":"url","index":"0","value":"test_url_1","button_text":"test_button_1"},{"sub_type":"quick_reply","index":"1","value":"test Button 2","button_text":"test Button 2"}]
+2026-04-27 15:52:38 - Payload Builder - Has Media: NO
+2026-04-27 15:52:38 - Payload Builder - Has Headers: YES
+2026-04-27 15:52:38 - Payload Builder - Has Body: YES
+2026-04-27 15:52:38 - Payload Builder - Has Buttons: YES
+2026-04-27 15:52:38 - Added TEXT header with 1 parameter(s): ["7390681235561"]
+2026-04-27 15:52:38 - Added BODY with 1 parameter(s): ["600.00"]
+2026-04-27 15:52:38 - Added URL button at index 0: test_url_1
+2026-04-27 15:52:38 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 15:52:38 - Final payload built with 4 component(s)
+2026-04-27 15:52:39 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 15:52:39 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"7390681235561"}]},{"type":"body","parameters":[{"type":"text","text":"600.00"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"test_url_1"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]}]}}
+2026-04-27 15:52:39 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2022-396a-ab24-d25781b84500&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2022-396a-ab24-d25781b84500&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2022-396a-ab24-d25781b84500&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 15:52:39 - HTTP Code: 200
+2026-04-27 15:52:39 - -----------------------------------
+2026-04-27 15:52:39 - Database log inserted successfully
+2026-04-27 15:52:39 - ========================================
+
+2026-04-27 16:11:30 - ========== NEW WHATSAPP REQUEST ==========
+2026-04-27 16:11:30 - Template: test_template
+2026-04-27 16:11:30 - Media Type: text, Media Source: , Media URL: 
+2026-04-27 16:11:30 - Headers count: 0, Body count: 0
+2026-04-27 16:11:30 - Headers: []
+2026-04-27 16:11:30 - Body: []
+2026-04-27 16:11:30 - Buttons: []
+2026-04-27 16:11:30 - Payload Builder - Has Media: NO
+2026-04-27 16:11:30 - Payload Builder - Has Headers: NO
+2026-04-27 16:11:30 - Payload Builder - Has Body: NO
+2026-04-27 16:11:30 - Payload Builder - Has Buttons: NO
+2026-04-27 16:11:30 - Building SIMPLE template (no parameters)
+2026-04-27 16:11:31 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 16:11:31 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template","language":{"code":"en"}}}
+2026-04-27 16:11:31 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2041-31dd-b3e8-63e02c8856f3&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2041-31dd-b3e8-63e02c8856f3&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2041-31dd-b3e8-63e02c8856f3&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 16:11:31 - HTTP Code: 200
+2026-04-27 16:11:31 - -----------------------------------
+2026-04-27 16:11:31 - Database log inserted successfully
+2026-04-27 16:11:31 - ========================================
+
+2026-04-27 16:17:38 - ========== NEW WHATSAPP REQUEST ==========
+2026-04-27 16:17:38 - Template: test_template
+2026-04-27 16:17:38 - Media Type: text, Media Source: , Media URL: 
+2026-04-27 16:17:38 - Headers count: 1, Body count: 1
+2026-04-27 16:17:38 - Headers: ["#1189"]
+2026-04-27 16:17:38 - Body: ["600.00"]
+2026-04-27 16:17:38 - Buttons: [{"sub_type":"url","index":"0","value":"url1","button_text":"test"},{"sub_type":"url","index":"1","value":"url2","button_text":"test Button 2"},{"sub_type":"url","index":"2","value":"test_url_3","button_text":"Test Button 3"}]
+2026-04-27 16:17:38 - Payload Builder - Has Media: NO
+2026-04-27 16:17:38 - Payload Builder - Has Headers: YES
+2026-04-27 16:17:38 - Payload Builder - Has Body: YES
+2026-04-27 16:17:38 - Payload Builder - Has Buttons: YES
+2026-04-27 16:17:38 - Added TEXT header with 1 parameter(s): ["#1189"]
+2026-04-27 16:17:38 - Added BODY with 1 parameter(s): ["600.00"]
+2026-04-27 16:17:38 - Added URL button at index 0: url1
+2026-04-27 16:17:38 - Added URL button at index 1: url2
+2026-04-27 16:17:38 - Added URL button at index 2: test_url_3
+2026-04-27 16:17:38 - Final payload built with 5 component(s)
+2026-04-27 16:17:39 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 16:17:39 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"#1189"}]},{"type":"body","parameters":[{"type":"text","text":"600.00"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"url1"}]},{"type":"button","sub_type":"url","index":"1","parameters":[{"type":"text","text":"url2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 16:17:39 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2047-39c8-8759-c3f6bda82e96&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2047-39c8-8759-c3f6bda82e96&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2047-39c8-8759-c3f6bda82e96&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 16:17:39 - HTTP Code: 200
+2026-04-27 16:17:39 - -----------------------------------
+2026-04-27 16:17:39 - Database log inserted successfully
+2026-04-27 16:17:39 - ========================================
+
+2026-04-27 16:19:59 - ========== NEW WHATSAPP REQUEST ==========
+2026-04-27 16:19:59 - Template: test_template
+2026-04-27 16:19:59 - Media Type: image, Media Source: input, Media URL: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+2026-04-27 16:19:59 - Headers count: 1, Body count: 1
+2026-04-27 16:19:59 - Headers: ["#1190"]
+2026-04-27 16:19:59 - Body: ["600.00"]
+2026-04-27 16:19:59 - Buttons: [{"sub_type":"url","index":"0","value":"url1","button_text":"test"},{"sub_type":"url","index":"1","value":"url2","button_text":"test Button 2"},{"sub_type":"url","index":"2","value":"test_url_3","button_text":"Test Button 3"}]
+2026-04-27 16:19:59 - Payload Builder - Has Media: YES
+2026-04-27 16:19:59 - Payload Builder - Has Headers: YES
+2026-04-27 16:19:59 - Payload Builder - Has Body: YES
+2026-04-27 16:19:59 - Payload Builder - Has Buttons: YES
+2026-04-27 16:19:59 - Added MEDIA header: image with URL: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+2026-04-27 16:19:59 - Added BODY with 1 parameter(s): ["600.00"]
+2026-04-27 16:19:59 - Added URL button at index 0: url1
+2026-04-27 16:19:59 - Added URL button at index 1: url2
+2026-04-27 16:19:59 - Added URL button at index 2: test_url_3
+2026-04-27 16:19:59 - Final payload built with 5 component(s)
+2026-04-27 16:20:00 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 16:20:00 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"image","image":{"link":"https:\/\/documenter.getpostman.com\/view\/20579509\/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99"}}]},{"type":"body","parameters":[{"type":"text","text":"600.00"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"url1"}]},{"type":"button","sub_type":"url","index":"1","parameters":[{"type":"text","text":"url2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 16:20:00 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2050-0098-be40-0b2a593649a1&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2050-0098-be40-0b2a593649a1&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2050-0098-be40-0b2a593649a1&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 16:20:00 - HTTP Code: 200
+2026-04-27 16:20:00 - -----------------------------------
+2026-04-27 16:20:00 - Database log inserted successfully
+2026-04-27 16:20:00 - ========================================
+
+2026-04-27 16:41:06 - DB ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'api_response' cannot be null
+2026-04-27 16:41:06 - ========================================
+
+2026-04-27 16:51:24 - Database log inserted successfully
+2026-04-27 16:51:24 - ========================================
+
+2026-04-27 16:56:17 - DB ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'api_response' cannot be null
+2026-04-27 16:56:17 - ========================================
+
+2026-04-27 17:02:50 - ========== NEW WHATSAPP REQUEST ==========
+2026-04-27 17:02:50 - API Domain: https://your-api-domain.com
+2026-04-27 17:02:50 - Channel ID: your_channel_id
+2026-04-27 17:02:50 - Template: test_template
+2026-04-27 17:02:50 - Recipient: 8874589896
+2026-04-27 17:02:50 - Media Type: image, Media URL: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+2026-04-27 17:02:50 - Headers count: 1, Body count: 1
+2026-04-27 17:02:50 - Payload Builder - Has Media: YES
+2026-04-27 17:02:50 - Payload Builder - Has Headers: YES
+2026-04-27 17:02:50 - Payload Builder - Has Body: YES
+2026-04-27 17:02:50 - Payload Builder - Has Buttons: YES
+2026-04-27 17:02:50 - Added MEDIA header: image with URL: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+2026-04-27 17:02:50 - Added BODY with 1 parameter(s): ["600.00"]
+2026-04-27 17:02:50 - Added URL button at index 0: url1
+2026-04-27 17:02:50 - Added URL button at index 1: url2
+2026-04-27 17:02:50 - Added URL button at index 2: test_url_3
+2026-04-27 17:02:50 - Final payload built with 5 component(s)
+2026-04-27 17:02:50 - VALIDATION FAILED: Invalid API domain - contains placeholder (your-api-domain.com); Invalid channel ID - contains placeholder (your_channel_id)
+2026-04-27 17:02:50 - Request payload (would have been sent if configured correctly): {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"image","image":{"link":"https:\/\/documenter.getpostman.com\/view\/20579509\/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99"}}]},{"type":"body","parameters":[{"type":"text","text":"600.00"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"url1"}]},{"type":"button","sub_type":"url","index":"1","parameters":[{"type":"text","text":"url2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:02:50 - -----------------------------------
+2026-04-27 17:02:50 - DB ERROR: SQLSTATE[23000]: Integrity constraint violation: 1048 Column 'api_response' cannot be null
+2026-04-27 17:02:50 - ========================================
+
+2026-04-27 17:09:07 - ========== NEW WHATSAPP REQUEST ==========
+2026-04-27 17:09:07 - API Domain: https://your-api-domain.com
+2026-04-27 17:09:07 - Channel ID: your_channel_id
+2026-04-27 17:09:07 - Template: test_template
+2026-04-27 17:09:07 - Recipient: 8874589896
+2026-04-27 17:09:07 - Media Type: image, Media URL: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+2026-04-27 17:09:07 - Headers count: 1, Body count: 1
+2026-04-27 17:09:07 - Payload Builder - Has Media: YES
+2026-04-27 17:09:07 - Payload Builder - Has Headers: YES
+2026-04-27 17:09:07 - Payload Builder - Has Body: YES
+2026-04-27 17:09:07 - Payload Builder - Has Buttons: YES
+2026-04-27 17:09:07 - Added MEDIA header: image with URL: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+2026-04-27 17:09:07 - Added BODY with 1 parameter(s): ["600.00"]
+2026-04-27 17:09:07 - Added URL button at index 0: url1
+2026-04-27 17:09:07 - Added URL button at index 1: url2
+2026-04-27 17:09:07 - Added URL button at index 2: test_url_3
+2026-04-27 17:09:07 - Final payload built with 5 component(s)
+2026-04-27 17:09:07 - VALIDATION FAILED: Invalid API domain - contains placeholder (your-api-domain.com); Invalid channel ID - contains placeholder (your_channel_id)
+2026-04-27 17:09:07 - Request payload (would have been sent if configured correctly): {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"image","image":{"link":"https:\/\/documenter.getpostman.com\/view\/20579509\/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99"}}]},{"type":"body","parameters":[{"type":"text","text":"600.00"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"url1"}]},{"type":"button","sub_type":"url","index":"1","parameters":[{"type":"text","text":"url2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:09:07 - -----------------------------------
+2026-04-27 17:09:07 - Database log inserted successfully
+2026-04-27 17:09:07 - ========================================
+
+2026-04-27 17:10:38 - Added MEDIA header: image
+2026-04-27 17:10:38 - Added BODY with 1 parameter(s)
+2026-04-27 17:10:38 - Added URL button at index 0: url1
+2026-04-27 17:10:38 - Added URL button at index 1: url2
+2026-04-27 17:10:38 - Added URL button at index 2: test_url_3
+2026-04-27 17:10:40 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:10:40 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test_template","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"image","image":{"link":"https:\/\/documenter.getpostman.com\/view\/20579509\/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99"}}]},{"type":"body","parameters":[{"type":"text","text":"600.00"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"url1"}]},{"type":"button","sub_type":"url","index":"1","parameters":[{"type":"text","text":"url2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:10:40 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2140-4010-8f4e-870fc39c3a1e&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2140-4010-8f4e-870fc39c3a1e&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2140-4010-8f4e-870fc39c3a1e&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:10:40 - HTTP Code: 200
+2026-04-27 17:10:40 - -----------------------------------
+2026-04-27 17:10:40 - Database log inserted successfully
+2026-04-27 17:10:40 - ========================================
+
+2026-04-27 17:31:11 - Added TEXT header with 1 parameter(s)
+2026-04-27 17:31:11 - Added BODY with 1 parameter(s)
+2026-04-27 17:31:11 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 17:31:11 - Added URL button at index 2: test_url_3
+2026-04-27 17:31:12 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:31:12 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390745395305"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:31:12 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2201-128a-83dd-c166076b4103&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2201-128a-83dd-c166076b4103&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2201-128a-83dd-c166076b4103&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:31:12 - HTTP Code: 200
+2026-04-27 17:31:12 - -----------------------------------
+2026-04-27 17:31:12 - Database log inserted successfully
+2026-04-27 17:31:12 - ========================================
+
+2026-04-27 17:31:19 - Added TEXT header with 1 parameter(s)
+2026-04-27 17:31:19 - Added BODY with 1 parameter(s)
+2026-04-27 17:31:19 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 17:31:19 - Added URL button at index 2: test_url_3
+2026-04-27 17:31:20 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:31:20 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390745395305"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:31:20 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2201-20f7-aca8-b3a1f75403cd&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2201-20f7-aca8-b3a1f75403cd&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2201-20f7-aca8-b3a1f75403cd&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:31:20 - HTTP Code: 200
+2026-04-27 17:31:20 - -----------------------------------
+2026-04-27 17:31:20 - Database log inserted successfully
+2026-04-27 17:31:20 - ========================================
+
+2026-04-27 17:42:54 - Added TEXT header with 1 parameter(s)
+2026-04-27 17:42:54 - Added BODY with 1 parameter(s)
+2026-04-27 17:42:54 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 17:42:54 - Added URL button at index 2: test_url_3
+2026-04-27 17:42:56 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:42:56 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390745395305"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:42:56 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2212-567f-815b-98245ca4a081&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2212-567f-815b-98245ca4a081&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2212-567f-815b-98245ca4a081&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:42:56 - HTTP Code: 200
+2026-04-27 17:42:56 - -----------------------------------
+2026-04-27 17:42:56 - Database log inserted successfully
+2026-04-27 17:42:56 - ========================================
+
+2026-04-27 17:42:56 - Added TEXT header with 1 parameter(s)
+2026-04-27 17:42:56 - Added BODY with 1 parameter(s)
+2026-04-27 17:42:56 - Added URL button at index 0: url1
+2026-04-27 17:42:56 - Added URL button at index 2: test_url_33
+2026-04-27 17:42:58 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:42:58 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"order_cancelled","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"2"}]},{"type":"body","parameters":[{"type":"text","text":"0"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"url1"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_33"}]}]}}
+2026-04-27 17:42:58 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2212-58a5-a844-9390dc9f5ada&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2212-58a5-a844-9390dc9f5ada&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2212-58a5-a844-9390dc9f5ada&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:42:58 - HTTP Code: 200
+2026-04-27 17:42:58 - -----------------------------------
+2026-04-27 17:42:58 - Database log inserted successfully
+2026-04-27 17:42:58 - ========================================
+
+2026-04-27 17:50:45 - Added TEXT header with 1 parameter(s)
+2026-04-27 17:50:45 - Added BODY with 1 parameter(s)
+2026-04-27 17:50:45 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 17:50:45 - Added URL button at index 2: test_url_3
+2026-04-27 17:50:46 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:50:46 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390745395305"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:50:46 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2220-46ff-a736-7093f35edef2&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2220-46ff-a736-7093f35edef2&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2220-46ff-a736-7093f35edef2&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:50:46 - HTTP Code: 200
+2026-04-27 17:50:46 - -----------------------------------
+2026-04-27 17:50:46 - Database log inserted successfully
+2026-04-27 17:50:46 - ========================================
+
+2026-04-27 17:51:17 - Added TEXT header with 1 parameter(s)
+2026-04-27 17:51:17 - Added BODY with 1 parameter(s)
+2026-04-27 17:51:17 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 17:51:17 - Added URL button at index 2: test_url_3
+2026-04-27 17:51:18 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:51:18 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390744084585"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:51:18 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2221-18a4-beb4-915a318e4631&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2221-18a4-beb4-915a318e4631&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2221-18a4-beb4-915a318e4631&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:51:18 - HTTP Code: 200
+2026-04-27 17:51:18 - -----------------------------------
+2026-04-27 17:51:18 - Database log inserted successfully
+2026-04-27 17:51:18 - ========================================
+
+2026-04-27 17:54:15 - Added TEXT header with 1 parameter(s)
+2026-04-27 17:54:15 - Added BODY with 1 parameter(s)
+2026-04-27 17:54:15 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 17:54:15 - Added URL button at index 2: test_url_3
+2026-04-27 17:54:16 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:54:16 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390744084585"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 17:54:16 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2224-1638-aded-7f582eaa2045&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2224-1638-aded-7f582eaa2045&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2224-1638-aded-7f582eaa2045&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:54:16 - HTTP Code: 200
+2026-04-27 17:54:16 - -----------------------------------
+2026-04-27 17:54:16 - Database log inserted successfully
+2026-04-27 17:54:16 - ========================================
+
+2026-04-27 17:54:17 - Added TEXT header with 1 parameter(s)
+2026-04-27 17:54:17 - Added URL button at index 0: url1_refund
+2026-04-27 17:54:18 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 17:54:18 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test_template_refund","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"abcde@gmail.com"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"url1_refund"}]}]}}
+2026-04-27 17:54:18 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2224-18ee-9e9d-f363b720089a&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2224-18ee-9e9d-f363b720089a&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2224-18ee-9e9d-f363b720089a&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 17:54:18 - HTTP Code: 200
+2026-04-27 17:54:18 - -----------------------------------
+2026-04-27 17:54:18 - Database log inserted successfully
+2026-04-27 17:54:18 - ========================================
+
+2026-04-27 18:07:37 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:07:37 - Added BODY with 1 parameter(s)
+2026-04-27 18:07:37 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:07:37 - Added URL button at index 2: test_url_3
+2026-04-27 18:07:39 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:07:39 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390744084585"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:07:39 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2237-39cc-a630-280ce4517df9&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2237-39cc-a630-280ce4517df9&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2237-39cc-a630-280ce4517df9&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:07:39 - HTTP Code: 200
+2026-04-27 18:07:39 - -----------------------------------
+2026-04-27 18:07:39 - Database log inserted successfully
+2026-04-27 18:07:39 - ========================================
+
+2026-04-27 18:08:26 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:08:26 - Added BODY with 1 parameter(s)
+2026-04-27 18:08:26 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:08:26 - Added URL button at index 2: test_url_3
+2026-04-27 18:08:28 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:08:28 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390738350185"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:08:28 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2238-286d-b27b-a1a60e970cc3&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2238-286d-b27b-a1a60e970cc3&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2238-286d-b27b-a1a60e970cc3&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:08:28 - HTTP Code: 200
+2026-04-27 18:08:28 - -----------------------------------
+2026-04-27 18:08:28 - Database log inserted successfully
+2026-04-27 18:08:28 - ========================================
+
+2026-04-27 18:09:12 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:09:12 - Added BODY with 1 parameter(s)
+2026-04-27 18:09:12 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:09:12 - Added URL button at index 2: test_url_3
+2026-04-27 18:09:13 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:09:13 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"7894561230","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390737563753"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:09:13 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2239-135f-a169-6bcc0dde3e5c&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2239-135f-a169-6bcc0dde3e5c&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2239-135f-a169-6bcc0dde3e5c&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:09:13 - HTTP Code: 200
+2026-04-27 18:09:13 - -----------------------------------
+2026-04-27 18:09:13 - Database log inserted successfully
+2026-04-27 18:09:13 - ========================================
+
+2026-04-27 18:09:28 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:09:28 - Added BODY with 1 parameter(s)
+2026-04-27 18:09:28 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:09:28 - Added URL button at index 2: test_url_3
+2026-04-27 18:09:29 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:09:29 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390732484713"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:09:29 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2239-29b2-995e-f122d1523ac4&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2239-29b2-995e-f122d1523ac4&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2239-29b2-995e-f122d1523ac4&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:09:29 - HTTP Code: 200
+2026-04-27 18:09:29 - -----------------------------------
+2026-04-27 18:09:29 - Database log inserted successfully
+2026-04-27 18:09:29 - ========================================
+
+2026-04-27 18:24:04 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:24:04 - Added BODY with 1 parameter(s)
+2026-04-27 18:24:04 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:24:04 - Added URL button at index 2: test_url_3
+2026-04-27 18:24:05 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:24:05 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"8874589896","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390732484713"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:24:05 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2254-05f0-bbcc-856425902f69&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2254-05f0-bbcc-856425902f69&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2254-05f0-bbcc-856425902f69&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:24:05 - HTTP Code: 200
+2026-04-27 18:24:05 - -----------------------------------
+2026-04-27 18:24:05 - Database log inserted successfully
+2026-04-27 18:24:05 - ========================================
+
+2026-04-27 18:25:25 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:25:25 - Added BODY with 1 parameter(s)
+2026-04-27 18:25:25 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:25:25 - Added URL button at index 2: test_url_3
+2026-04-27 18:25:26 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:25:26 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"7894561230","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390737563753"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:25:26 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2255-2661-bf53-fab32d70a750&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2255-2661-bf53-fab32d70a750&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2255-2661-bf53-fab32d70a750&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:25:26 - HTTP Code: 200
+2026-04-27 18:25:26 - -----------------------------------
+2026-04-27 18:25:26 - Database log inserted successfully
+2026-04-27 18:25:26 - ========================================
+
+2026-04-27 18:25:35 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:25:35 - Added BODY with 1 parameter(s)
+2026-04-27 18:25:35 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:25:35 - Added URL button at index 2: test_url_3
+2026-04-27 18:25:36 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:25:36 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"7894561230","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390737563753"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:25:36 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2255-36a8-a1ba-120b5391afa9&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2255-36a8-a1ba-120b5391afa9&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2255-36a8-a1ba-120b5391afa9&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:25:36 - HTTP Code: 200
+2026-04-27 18:25:36 - -----------------------------------
+2026-04-27 18:25:36 - Database log inserted successfully
+2026-04-27 18:25:36 - ========================================
+
+2026-04-27 18:26:57 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:26:57 - Added BODY with 1 parameter(s)
+2026-04-27 18:26:57 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:26:57 - Added URL button at index 2: test_url_3
+2026-04-27 18:26:59 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:26:59 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390728683625"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:26:59 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2256-587c-ab73-469cd99273e4&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2256-587c-ab73-469cd99273e4&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2256-587c-ab73-469cd99273e4&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:26:59 - HTTP Code: 200
+2026-04-27 18:26:59 - -----------------------------------
+2026-04-27 18:26:59 - Database log inserted successfully
+2026-04-27 18:26:59 - ========================================
+
+2026-04-27 18:26:59 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:26:59 - Added BODY with 1 parameter(s)
+2026-04-27 18:26:59 - Added URL button at index 0: button_url_req
+2026-04-27 18:27:00 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:27:00 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"{{ customer_fname }}","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"1"}]},{"type":"body","parameters":[{"type":"text","text":"7390728683625"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"button_url_req"}]}]}}
+2026-04-27 18:27:00 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2257-00be-8839-621d3d29ebff&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2257-00be-8839-621d3d29ebff&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2257-00be-8839-621d3d29ebff&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:27:00 - HTTP Code: 200
+2026-04-27 18:27:00 - -----------------------------------
+2026-04-27 18:27:00 - Database log inserted successfully
+2026-04-27 18:27:00 - ========================================
+
+2026-04-27 18:28:29 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:28:29 - Added BODY with 1 parameter(s)
+2026-04-27 18:28:29 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:28:29 - Added URL button at index 2: test_url_3
+2026-04-27 18:28:31 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:28:31 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390720491625"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:28:31 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-3153-b3c5-17c440d3ad3a&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-3153-b3c5-17c440d3ad3a&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-3153-b3c5-17c440d3ad3a&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:28:31 - HTTP Code: 200
+2026-04-27 18:28:31 - -----------------------------------
+2026-04-27 18:28:31 - Database log inserted successfully
+2026-04-27 18:28:31 - ========================================
+
+2026-04-27 18:28:32 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:28:32 - Added BODY with 1 parameter(s)
+2026-04-27 18:28:32 - Added URL button at index 0: button_url_req
+2026-04-27 18:28:33 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:28:33 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"{{ customer_fname }}","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"1"}]},{"type":"body","parameters":[{"type":"text","text":"7390720491625"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"button_url_req"}]}]}}
+2026-04-27 18:28:33 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-338d-a93a-0d3de9585f52&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-338d-a93a-0d3de9585f52&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-338d-a93a-0d3de9585f52&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:28:33 - HTTP Code: 200
+2026-04-27 18:28:33 - -----------------------------------
+2026-04-27 18:28:33 - Database log inserted successfully
+2026-04-27 18:28:33 - ========================================
+
+2026-04-27 18:28:43 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:28:43 - Added BODY with 1 parameter(s)
+2026-04-27 18:28:43 - Added URL button at index 0: url1
+2026-04-27 18:28:45 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:28:45 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test_template_update","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"#1191.1"}]},{"type":"body","parameters":[{"type":"text","text":"9887154125"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"url1"}]}]}}
+2026-04-27 18:28:45 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-4559-85c9-a22113168abe&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-4559-85c9-a22113168abe&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-4559-85c9-a22113168abe&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:28:45 - HTTP Code: 200
+2026-04-27 18:28:45 - -----------------------------------
+2026-04-27 18:28:45 - Database log inserted successfully
+2026-04-27 18:28:45 - ========================================
+
+2026-04-27 18:28:46 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:28:46 - Added BODY with 1 parameter(s)
+2026-04-27 18:28:46 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:28:46 - Added URL button at index 2: test_url_3
+2026-04-27 18:28:48 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:28:48 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390720491625"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:28:48 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-4809-8dcd-c6bcbf13915a&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-4809-8dcd-c6bcbf13915a&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2258-4809-8dcd-c6bcbf13915a&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:28:48 - HTTP Code: 200
+2026-04-27 18:28:48 - -----------------------------------
+2026-04-27 18:28:48 - Database log inserted successfully
+2026-04-27 18:28:48 - ========================================
+
+2026-04-27 18:39:39 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:39:39 - Added BODY with 1 parameter(s)
+2026-04-27 18:39:39 - Added URL button at index 0: button_url_req
+2026-04-27 18:39:41 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:39:41 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"{{ customer_fname }}","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"1"}]},{"type":"body","parameters":[{"type":"text","text":"7390700437609"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"button_url_req"}]}]}}
+2026-04-27 18:39:41 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-4161-916b-154d8af795d7&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-4161-916b-154d8af795d7&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-4161-916b-154d8af795d7&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:39:41 - HTTP Code: 200
+2026-04-27 18:39:41 - -----------------------------------
+2026-04-27 18:39:41 - Database log inserted successfully
+2026-04-27 18:39:41 - ========================================
+
+2026-04-27 18:39:43 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:39:43 - Added BODY with 1 parameter(s)
+2026-04-27 18:39:43 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:39:43 - Added URL button at index 2: test_url_3
+2026-04-27 18:39:44 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:39:44 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390700437609"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:39:44 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-44aa-b529-03ce5ae7d8f3&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-44aa-b529-03ce5ae7d8f3&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-44aa-b529-03ce5ae7d8f3&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:39:44 - HTTP Code: 200
+2026-04-27 18:39:44 - -----------------------------------
+2026-04-27 18:39:44 - Database log inserted successfully
+2026-04-27 18:39:44 - ========================================
+
+2026-04-27 18:39:45 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:39:45 - Added BODY with 1 parameter(s)
+2026-04-27 18:39:45 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:39:45 - Added URL button at index 2: test_url_3
+2026-04-27 18:39:47 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:39:47 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390700437609"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:39:47 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-478c-8e52-bd5611d3fb70&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-478c-8e52-bd5611d3fb70&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2309-478c-8e52-bd5611d3fb70&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:39:47 - HTTP Code: 200
+2026-04-27 18:39:47 - -----------------------------------
+2026-04-27 18:39:47 - Database log inserted successfully
+2026-04-27 18:39:47 - ========================================
+
+2026-04-27 18:40:47 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:40:47 - Added BODY with 1 parameter(s)
+2026-04-27 18:40:47 - Added URL button at index 0: button_url_req
+2026-04-27 18:40:48 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:40:48 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"{{ customer_fname }}","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"1"}]},{"type":"body","parameters":[{"type":"text","text":"7390698635369"}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"button_url_req"}]}]}}
+2026-04-27 18:40:48 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-4801-ba49-8cfa4c976a51&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-4801-ba49-8cfa4c976a51&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-4801-ba49-8cfa4c976a51&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:40:48 - HTTP Code: 200
+2026-04-27 18:40:48 - -----------------------------------
+2026-04-27 18:40:48 - Database log inserted successfully
+2026-04-27 18:40:48 - ========================================
+
+2026-04-27 18:40:50 - Added TEXT header with 1 parameter(s)
+2026-04-27 18:40:50 - Added BODY with 1 parameter(s)
+2026-04-27 18:40:50 - Added Quick Reply button at index 1: test Button 2
+2026-04-27 18:40:50 - Added URL button at index 2: test_url_3
+2026-04-27 18:40:51 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:40:51 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"9887154125","type":"template","template":{"name":"test template_order_updated","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"text","text":"The Collection Snowboard: Hydrogen"}]},{"type":"body","parameters":[{"type":"text","text":"7390698635369"}]},{"type":"button","sub_type":"quick_reply","index":"1","parameters":[{"type":"payload","payload":"test Button 2"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3"}]}]}}
+2026-04-27 18:40:51 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-51ee-a64d-9664a175485f&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-51ee-a64d-9664a175485f&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-51ee-a64d-9664a175485f&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:40:51 - HTTP Code: 200
+2026-04-27 18:40:51 - -----------------------------------
+2026-04-27 18:40:51 - Database log inserted successfully
+2026-04-27 18:40:51 - ========================================
+
+2026-04-27 18:40:51 - Added MEDIA header: image
+2026-04-27 18:40:51 - Added URL button at index 0: test_url_1_update
+2026-04-27 18:40:51 - Added URL button at index 1: test_url_2_update
+2026-04-27 18:40:51 - Added URL button at index 2: test_url_3_update
+2026-04-27 18:40:52 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:40:52 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"7894561230","type":"template","template":{"name":"order_fulfilled","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"image","image":{"link":"asadsdsadas"}}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"test_url_1_update"}]},{"type":"button","sub_type":"url","index":"1","parameters":[{"type":"text","text":"test_url_2_update"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3_update"}]}]}}
+2026-04-27 18:40:52 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-52e8-a0de-c5bcfe87d1bb&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-52e8-a0de-c5bcfe87d1bb&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-52e8-a0de-c5bcfe87d1bb&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:40:52 - HTTP Code: 200
+2026-04-27 18:40:52 - -----------------------------------
+2026-04-27 18:40:52 - Database log inserted successfully
+2026-04-27 18:40:52 - ========================================
+
+2026-04-27 18:40:52 - Added MEDIA header: image
+2026-04-27 18:40:52 - Added URL button at index 0: test_url_1_update
+2026-04-27 18:40:52 - Added URL button at index 1: test_url_2_update
+2026-04-27 18:40:52 - Added URL button at index 2: test_url_3_update
+2026-04-27 18:40:54 - API URL: https://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages
+2026-04-27 18:40:54 - Request: {"messaging_product":"whatsapp","recipient_type":"individual","to":"7894561230","type":"template","template":{"name":"order_fulfilled","language":{"code":"en"},"components":[{"type":"header","parameters":[{"type":"image","image":{"link":"asadsdsadas"}}]},{"type":"button","sub_type":"url","index":"0","parameters":[{"type":"text","text":"test_url_1_update"}]},{"type":"button","sub_type":"url","index":"1","parameters":[{"type":"text","text":"test_url_2_update"}]},{"type":"button","sub_type":"url","index":"2","parameters":[{"type":"text","text":"test_url_3_update"}]}]}}
+2026-04-27 18:40:54 - Response: <html>
+<head>
+<title>your-api-domain.com</title>
+<script type="text/javascript" src="/js/fingerprint/iife.min.js"></script>
+<script type="text/javascript">
+var redirect_link = 'http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-5486-beee-a85608909e97&';
+let redirected = false;
+
+function redirect(suffix) {
+	if (redirected) return;
+	redirected = true;
+	window.location.replace(redirect_link + suffix);
+}
+
+const rdrTimeout = setTimeout(() => redirect('fp=-7'), 300);
+
+try {
+	FingerprintJS.load({monitoring: false})
+		.then(fp => fp.get())
+		.then(result => {
+			clearTimeout(rdrTimeout);
+			redirect('fp=' + result.visitorId);
+		});
+} catch (err) {
+	redirect('fp=-7');
+}
+
+</script>
+<style> body { background:#101c36 } </style>
+</head>
+<body bgcolor="#ffffff" text="#000000">
+<div style='display: none;'><a href='http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-5486-beee-a85608909e97&fp=-3'>Click here to enter</a></div>
+<noscript><meta http-equiv="refresh" content="0; URL=http://your-api-domain.com/relaybridge/api/v1/meta/your_channel_id/messages?tr_uuid=20260427-2310-5486-beee-a85608909e97&fp=-5"></noscript>
+</body>
+</html>
+2026-04-27 18:40:54 - HTTP Code: 200
+2026-04-27 18:40:54 - -----------------------------------
+2026-04-27 18:40:54 - Database log inserted successfully
+2026-04-27 18:40:54 - ========================================
+

@@ -1,0 +1,2588 @@
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389804658793
+Order Name: #1176
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T05:00:52.819+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7389804658793 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+SMS Text: 
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389804658793
+Order Name: #1176
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+SMS Content: Testing the orders value
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+SMS Text: 
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389804658793
+Order Name: #1176
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+SMS Content: sdfsdfsdfs
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389805477993
+Order Name: #1177
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T05:02:11.747+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7389805477993 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+SMS Text: 
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389805477993
+Order Name: #1177
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+SMS Content: Testing the orders value
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+SMS Text: 
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389805477993
+Order Name: #1177
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+SMS Content: sdfsdfsdfs
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389820354665
+Order Name: #1178
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T05:04:58.232+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7389820354665 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389820354665
+Order Name: #1178
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+SMS Content: Testing the orders value
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389820354665
+Order Name: #1178
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+SMS Content: sdfsdfsdfs
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389914464361
+Order Name: #1179
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T05:08:32.909+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7389914464361 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389914464361
+Order Name: #1179
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+SMS Content: 
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7389914464361
+Order Name: #1179
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+SMS Content: 
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7389997105257
+Order Name: #1180
+Formatted TO: +19876543210
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19876543210","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T05:12:31.083+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7389997105257 to 9876543210
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7389997105257
+Order Name: #1180
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9876543210
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7389997105257
+Order Name: #1180
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9876543210
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390352081001
+Order Name: #1181
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T05:27:43.624+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390352081001 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390352081001
+Order Name: #1181
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1181","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1181","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390352081001
+Order Name: #1181
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1181","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T05:27:43.714+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390626873449
+Order Name: #1182
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T08:48:03.913+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390626873449 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390626873449
+Order Name: #1182
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1182","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1182","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390626873449
+Order Name: #1182
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1182","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T08:48:05.401+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390628839529
+Order Name: #1183
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T08:52:39.284+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390628839529 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390628839529
+Order Name: #1183
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1183","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1183","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390628839529
+Order Name: #1183
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1183","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T08:52:40.533+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390653907049
+Order Name: #1184
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T09:37:06.256+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390653907049 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390653907049
+Order Name: #1184
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1184","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1184","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390653907049
+Order Name: #1184
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1184","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T09:37:07.325+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390678876265
+Order Name: #1185
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:18:39.379+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390678876265 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390678876265
+Order Name: #1185
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:18:40.293+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390678876265 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390678876265
+Order Name: #1185
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1185","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1185","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390678876265
+Order Name: #1185
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1185","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:18:41.513+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390681235561
+Order Name: #1186
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:22:37.464+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390681235561 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390681235561
+Order Name: #1186
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:22:38.599+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390681235561 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390681235561
+Order Name: #1186
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1186","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1186","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390681235561
+Order Name: #1186
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1186","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:22:39.920+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+ERROR: Customer phone is empty, cannot send SMS for order 7390693064809
+ERROR: Customer phone is empty, cannot send SMS for order 7390693064809
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional SMS NOT sent - Phone is empty for offer: Test Orders Value
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional SMS NOT sent - Phone is empty for offer: Test Orders Value
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390694080617
+Order Name: #1188
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:41:29.330+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390694080617 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390694080617
+Order Name: #1188
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:41:30.342+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390694080617 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390694080617
+Order Name: #1188
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1188","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1188","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390694080617
+Order Name: #1188
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1188","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:41:31.660+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390698635369
+Order Name: #1189
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:47:37.465+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390698635369 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390698635369
+Order Name: #1189
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:47:38.343+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390698635369 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390698635369
+Order Name: #1189
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1189","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1189","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390698635369
+Order Name: #1189
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1189","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:47:39.489+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390700437609
+Order Name: #1190
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:49:58.810+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390700437609 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390700437609
+Order Name: #1190
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:49:59.682+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390700437609 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390700437609
+Order Name: #1190
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1190","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1190","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390700437609
+Order Name: #1190
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1190","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T10:50:00.866+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390720491625
+Order Name: #1191
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:11:05.586+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390720491625 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390720491625
+Order Name: #1191
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:11:06.888+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390720491625 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390720491625
+Order Name: #1191
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1191","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1191","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390720491625
+Order Name: #1191
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1191","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:11:06.987+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390728683625
+Order Name: #1192
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:21:24.313+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390728683625 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390728683625
+Order Name: #1192
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:21:24.389+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390728683625 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390728683625
+Order Name: #1192
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1192","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1192","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390728683625
+Order Name: #1192
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1192","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:21:24.468+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390732484713
+Order Name: #1193
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:26:17.145+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390732484713 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390732484713
+Order Name: #1193
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:26:17.916+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390732484713 to 8874589896
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390732484713
+Order Name: #1193
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 8874589896
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1193","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: order_value_based
+Parameter Values: {"1":"#1193","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390732484713
+Order Name: #1193
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1193","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:26:18.004+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 8874589896
+ERROR: Customer phone is empty, cannot send SMS for order 7390737563753
+ERROR: Customer phone is empty, cannot send SMS for order 7390737563753
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional SMS NOT sent - Phone is empty for offer: Test Orders Value
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional SMS NOT sent - Phone is empty for offer: Test Orders Value
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390738350185
+Order Name: #1195
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:32:49.657+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390738350185 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390738350185
+Order Name: #1195
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:32:50.625+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390738350185 to 8874589896
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390738350185
+Order Name: #1195
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 8874589896
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1195","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: order_value_based
+Parameter Values: {"1":"#1195","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390738350185
+Order Name: #1195
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1195","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:32:50.705+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 8874589896
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390744084585
+Order Name: #1196
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:39:06.690+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390744084585 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390744084585
+Order Name: #1196
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:39:07.420+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390744084585 to 8874589896
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390744084585
+Order Name: #1196
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 8874589896
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1196","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: order_value_based
+Parameter Values: {"1":"#1196","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390744084585
+Order Name: #1196
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1196","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:39:07.482+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 8874589896
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:40:37.592+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390745395305 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:40:38.751+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7390745395305 to 8874589896
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 8874589896
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1197","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: order_value_based
+Parameter Values: {"1":"#1197","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1197","2":"600.00","3":"abcde@gmail.com","4":"1","5":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T11:40:40.347+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 8874589896
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:00:08.884+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390745395305 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:00:10.263+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390745395305 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:01:11.478+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390745395305 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+INFO: Found phone in order root: +918874589896
+DEBUG: Phone sources - shipping: , billing: , customer: +918874589896, root: , order_root: +918874589896, order_shipping: , order_billing: , final: +918874589896
+========== REFUND SMS ==========
+Original SMS Template: Test Order Refund.
+Processed SMS Text: Test Order Refund.
+Phone: 8874589896, Country: 91
+Transaction Type: 
+==============================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 8874589896
+Template ID: Order Refund
+Parameter Values: {"1":"The Collection Snowboard: Hydrogen","2":"7390745395305","3":"","4":"abcde@gmail.com","5":"91","6":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: 
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +918874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+918874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"The Collection Snowboard: Hydrogen","2":"7390745395305","3":"","4":"abcde@gmail.com","5":"91","6":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:01:19.471+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for refund 995224715369 to 8874589896
+SMS Text with replacements: Test Order Refund.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:01:19.624+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390745395305 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:12:54.856+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390745395305 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+INFO: Found phone in order root: +918874589896
+DEBUG: Phone sources - shipping: , billing: , customer: +918874589896, root: , order_root: +918874589896, order_shipping: , order_billing: , final: +918874589896
+========== REFUND SMS ==========
+Original SMS Template: Test Order Refund.
+Processed SMS Text: Test Order Refund.
+Phone: 8874589896, Country: 91
+Transaction Type: refund
+==============================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 8874589896
+Template ID: Order Refund
+Parameter Values: {"1":"The Collection Snowboard: Hydrogen","2":"7390745395305","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: 
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +918874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+918874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"The Collection Snowboard: Hydrogen","2":"7390745395305","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:12:56.693+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for refund 995225895017 to 8874589896
+SMS Text with replacements: Test Order Refund.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Cancelled
+Parameter Values: {"{{ item_name }}":"2","{{ customer_full_name }}":"","{{ Ad_order_number }}":"Hydrogen Vendor","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"abcde, fgij, United States","{{ Ad_item_price }}":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"{{ item_name }}":"2","{{ customer_full_name }}":"","{{ Ad_order_number }}":"Hydrogen Vendor","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"abcde, fgij, United States","{{ Ad_item_price }}":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:12:56.962+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order cancellation 7390745395305 to 8874589896
+SMS Text with replacements: test
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390745395305
+Order Name: #1197
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:20:45.106+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390745395305 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+INFO: Found phone in order root: +918874589896
+DEBUG: Phone sources - shipping: , billing: , customer: +918874589896, root: , order_root: +918874589896, order_shipping: , order_billing: , final: +918874589896
+========== REFUND SMS ==========
+Original SMS Template: Test Order Refund.
+Processed SMS Text: Test Order Refund.
+Phone: 8874589896, Country: 91
+Transaction Type: refund
+==============================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 8874589896
+Template ID: Order Refund
+Parameter Values: {"1":"","2":"7390744084585","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: 
+Order ID: 7390744084585
+Order Name: #1196
+Formatted TO: +918874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+918874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"","2":"7390744084585","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:21:17.376+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for refund 995226681449 to 8874589896
+SMS Text with replacements: Test Order Refund.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390744084585
+Order Name: #1196
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:21:17.477+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390744084585 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390744084585
+Order Name: #1196
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:24:15.719+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390744084585 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+INFO: Found phone in order root: +918874589896
+DEBUG: Phone sources - shipping: , billing: , customer: +918874589896, root: , order_root: +918874589896, order_shipping: , order_billing: , final: +918874589896
+========== REFUND SMS ==========
+Original SMS Template: Test Order Refund.
+Processed SMS Text: Test Order Refund.
+Phone: 8874589896, Country: 91
+Transaction Type: refund
+==============================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 8874589896
+Template ID: Order Refund
+Parameter Values: {"1":"","2":"7390744084585","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: 
+Order ID: 7390744084585
+Order Name: #1196
+Formatted TO: +918874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+918874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"","2":"7390744084585","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:24:17.521+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for refund 995227107433 to 8874589896
+SMS Text with replacements: Test Order Refund.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390744084585
+Order Name: #1196
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:37:37.767+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390744084585 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390738350185
+Order Name: #1195
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:38:26.735+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390738350185 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390737563753
+Order Name: #1194
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:39:12.518+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390737563753 to 7894561230
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== FULFILLMENTS-CREATE SMS ==========
+Original SMS Template: Testing Fulfillment Request.
+Processed SMS Text: Testing Fulfillment Request.
+Phone: , Country: US
+Tracking: 
+===========================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234136375401
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390732484713
+Order Name: #1193
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:39:28.172+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390732484713 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== FULFILLMENTS-CREATE SMS ==========
+Original SMS Template: Testing Fulfillment Request.
+Processed SMS Text: Testing Fulfillment Request.
+Phone: , Country: US
+Tracking: 
+===========================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234134212713
+========== FULFILLMENTS-CREATE SMS ==========
+Original SMS Template: Testing Fulfillment Request.
+Processed SMS Text: Testing Fulfillment Request.
+Phone: , Country: US
+Tracking: 
+===========================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234128248937
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 8874589896
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcde@gmail.com
+Customer Name: abcde fgij
+Order ID: 7390732484713
+Order Name: #1193
+Formatted TO: +18874589896
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+18874589896","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:54:04.787+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390732484713 to 8874589896
+SMS Text with replacements: Testing Order Updated abcde abcde@gmail.com
+========== FULFILLMENT SMS ==========
+Original SMS Template: Testing Shipping Update.{{ order_name }}
+Processed SMS Text: Testing Shipping Update.#1193.1
+Phone: , Country: US
+Tracking: 12343564564
+====================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234136375401
+========== FULFILLMENTS-CREATE SMS ==========
+Original SMS Template: Testing Fulfillment Request.
+Processed SMS Text: Testing Fulfillment Request.
+Phone: , Country: 
+Tracking: 
+===========================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234154070121
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390737563753
+Order Name: #1194
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:55:25.075+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390737563753 to 7894561230
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== FULFILLMENT SMS ==========
+Original SMS Template: Testing Shipping Update.{{ order_name }}
+Processed SMS Text: Testing Shipping Update.#1194.1
+Phone: , Country: 
+Tracking: 123456789
+====================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234154070121
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390737563753
+Order Name: #1194
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:55:35.428+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390737563753 to 7894561230
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== FULFILLMENT SMS ==========
+Original SMS Template: Testing Shipping Update.{{ order_name }}
+Processed SMS Text: Testing Shipping Update.#1194.1
+Phone: , Country: 
+Tracking: 123456789
+====================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234154070121
+========== FULFILLMENT SMS ==========
+Original SMS Template: Testing Shipping Update.{{ order_name }}
+Processed SMS Text: Testing Shipping Update.#1194.1
+Phone: , Country: 
+Tracking: 123456789
+====================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234154070121
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390728683625
+Order Name: #1192
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:56:57.513+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390728683625 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== FULFILLMENTS-CREATE SMS ==========
+Original SMS Template: Testing Fulfillment Request.
+Processed SMS Text: Testing Fulfillment Request.
+Phone: 9887154125, Country: 1
+Tracking: 34432432
+===========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390728683625
+Order Name: #1192.1
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:56:59.136+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for fulfillment 7234156593257 to 9887154125
+SMS Text with replacements: Testing Fulfillment Request.
+========== FULFILLMENT SMS ==========
+Original SMS Template: Testing Shipping Update.{{ order_name }}
+Processed SMS Text: Testing Shipping Update.#1193.1
+Phone: , Country: US
+Tracking: 12343564564
+====================================
+
+ERROR: Customer phone is empty, cannot send SMS for fulfillment 7234136375401
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390720491625
+Order Name: #1191
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:58:29.730+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390720491625 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== FULFILLMENTS-CREATE SMS ==========
+Original SMS Template: Testing Fulfillment Request.
+Processed SMS Text: Testing Fulfillment Request.
+Phone: 9887154125, Country: 1
+Tracking: 
+===========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390720491625
+Order Name: #1191.1
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:58:32.257+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for fulfillment 7234160525417 to 9887154125
+SMS Text with replacements: Testing Fulfillment Request.
+========== FULFILLMENT SMS ==========
+Original SMS Template: Testing Shipping Update.{{ order_name }}
+Processed SMS Text: Testing Shipping Update.#1191.1
+Phone: 9887154125, Country: 1
+Tracking: 1223434232423
+====================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Shipping Update
+Parameter Values: {"Order Name":"600.00","Order Number":"1","Total Discount":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390720491625
+Order Name: #1191.1
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Update","parameterValues":{"Order Name":"600.00","Order Number":"1","Total Discount":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:58:43.936+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for fulfillment 7234160525417 to 9887154125
+SMS Text with replacements: Testing Shipping Update.#1191.1
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390720491625
+Order Name: #1191
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T12:58:46.749+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390720491625 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== FULFILLMENTS-CREATE SMS ==========
+Original SMS Template: Testing Fulfillment Request.
+Processed SMS Text: Testing Fulfillment Request.
+Phone: 9887154125, Country: 1
+Tracking: 
+===========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390700437609
+Order Name: #1190.1
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:09:39.816+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for fulfillment 7234223538281 to 9887154125
+SMS Text with replacements: Testing Fulfillment Request.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390700437609
+Order Name: #1190
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:09:43.330+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390700437609 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390700437609
+Order Name: #1190
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:09:45.921+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390700437609 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== FULFILLMENTS-CREATE SMS ==========
+Original SMS Template: Testing Fulfillment Request.
+Processed SMS Text: Testing Fulfillment Request.
+Phone: 9887154125, Country: 1
+Tracking: 
+===========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390698635369
+Order Name: #1189.1
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:10:47.469+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for fulfillment 7234232287337 to 9887154125
+SMS Text with replacements: Testing Fulfillment Request.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7390698635369
+Order Name: #1189
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:10:50.131+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7390698635369 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== FULFILLMENT SMS ==========
+Original SMS Template: Testing Shipping Confirmation.
+Processed SMS Text: Testing Shipping Confirmation.
+Phone: 7894561230, Country: 91
+Tracking: 
+====================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Shipping Confirmation
+Parameter Values: {"Email":"{{ order_total_price }}","Shipping state":"1","Shipping Address":"","4":"Hydrogen Vendor","5":"0","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: 
+Order ID: 
+Order Name: #1189
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Confirmation","parameterValues":{"Email":"{{ order_total_price }}","Shipping state":"1","Shipping Address":"","4":"Hydrogen Vendor","5":"0","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:10:51.516+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for fulfillment 7390698635369 to 7894561230
+SMS Text with replacements: Testing Shipping Confirmation.
+========== FULFILLMENT SMS ==========
+Original SMS Template: Testing Shipping Confirmation.
+Processed SMS Text: Testing Shipping Confirmation.
+Phone: 7894561230, Country: 91
+Tracking: 
+====================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Shipping Confirmation
+Parameter Values: {"Email":"{{ order_total_price }}","Shipping state":"1","Shipping Address":"","4":"Hydrogen Vendor","5":"0","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: 
+Order ID: 
+Order Name: #1190
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Confirmation","parameterValues":{"Email":"{{ order_total_price }}","Shipping state":"1","Shipping Address":"","4":"Hydrogen Vendor","5":"0","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:10:52.913+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for fulfillment 7390700437609 to 7894561230
+SMS Text with replacements: Testing Shipping Confirmation.
+========== CUSTOMER UPDATE SMS ==========
+Customer: Atul Rajput
+Phone: 7894561230
+Country Code: 1
+Email: atul@gmail.com
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 7894561230
+Template ID: Invirtation
+Parameter Values: {"1":"atul@gmail.com","2":"Atul Rajput","3":"Atul","4":"7894561230","5":"Rajput","6":"1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 
+Order Name: 
+Formatted TO: +17894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+17894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"atul@gmail.com","2":"Atul Rajput","3":"Atul","4":"7894561230","5":"Rajput","6":"1"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T09:28:25.201+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for customer update to 7894561230
+SMS Text with replacements: Testing account invitation.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7392952451177
+Order Name: #1198
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T09:28:26.422+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7392952451177 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7392952451177
+Order Name: #1198
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T09:28:27.307+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7392952451177 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7392952451177
+Order Name: #1198
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1198","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: order_value_based
+Parameter Values: {"1":"#1198","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7392952451177
+Order Name: #1198
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1198","2":"600.00","3":"atul@gmail.com","4":"1","5":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T09:28:28.205+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9887154125
+========== CUSTOMER UPDATE SMS ==========
+Customer: Atul Rajput
+Phone: 7894561230
+Country Code: 1
+Email: atul@gmail.com
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 7894561230
+Template ID: Invirtation
+Parameter Values: {"1":"atul@gmail.com","2":"Atul Rajput","3":"Atul","4":"7894561230","5":"Rajput","6":"1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 
+Order Name: 
+Formatted TO: +17894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+17894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"atul@gmail.com","2":"Atul Rajput","3":"Atul","4":"7894561230","5":"Rajput","6":"1"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:49:36.738+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for customer update to 7894561230
+SMS Text with replacements: Testing account invitation.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7400847376489
+Order Name: #1199
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:49:36.997+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7400847376489 to 9887154125
+SMS Text with replacements: Testing Order Updated Atul atul@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7400847376489
+Order Name: #1199
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:49:37.799+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7400847376489 to 9887154125
+SMS Text with replacements: Test Order Confirmation
+========== CUSTOMER UPDATE SMS ==========
+Customer: AB CD
+Phone: 9876543210
+Country Code: 1
+Email: abcd@gmail.com
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Template ID: Invirtation
+Parameter Values: {"1":"abcd@gmail.com","2":"AB CD","3":"AB","4":"9876543210","5":"CD","6":"1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 
+Order Name: 
+Formatted TO: +19876543210
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19876543210","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"abcd@gmail.com","2":"AB CD","3":"AB","4":"9876543210","5":"CD","6":"1"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:51:54.432+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for customer update to 9876543210
+SMS Text with replacements: Testing account invitation.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"AB, CD, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7400848719977
+Order Name: #1200
+Formatted TO: +19876543210
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19876543210","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"AB, CD, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:51:54.520+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7400848719977 to 9876543210
+SMS Text with replacements: Testing Order Updated AB abcd@gmail.com
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7400848719977
+Order Name: #1200
+Formatted TO: +19876543210
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19876543210","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:51:55.134+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7400848719977 to 9876543210
+SMS Text with replacements: Test Order Confirmation
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Template ID: Order Update
+Parameter Values: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"AB, CD, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7400850587753
+Order Name: #1201
+Formatted TO: +19876543210
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19876543210","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"AB, CD, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:54:30.026+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order update 7400850587753 to 9876543210
+SMS Text with replacements: Testing Order Updated AB abcd@gmail.com
+========== CUSTOMER UPDATE SMS ==========
+Customer: AB CD
+Phone: 9876543210
+Country Code: 1
+Email: abcd@gmail.com
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Template ID: Invirtation
+Parameter Values: {"1":"abcd@gmail.com","2":"AB CD","3":"AB","4":"9876543210","5":"CD","6":"1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 
+Order Name: 
+Formatted TO: +19876543210
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19876543210","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"abcd@gmail.com","2":"AB CD","3":"AB","4":"9876543210","5":"CD","6":"1"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:54:30.146+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for customer update to 9876543210
+SMS Text with replacements: Testing account invitation.
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Template ID: OrderConfirmation
+Parameter Values: {"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7400850587753
+Order Name: #1201
+Formatted TO: +19876543210
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19876543210","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:54:31.156+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Template SMS sent successfully for order confirmation 7400850587753 to 9876543210
+SMS Text with replacements: Test Order Confirmation
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 455, Offer: Test Orders Value
+Promotional: Using plain text SMS for offer: Test Orders Value
+========== SMS SEND ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7400850587753
+Order Name: #1201
+ERROR: Phone number or SMS text is empty
+Promotional SMS sent successfully for offer: Test Orders Value to 9876543210
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 600.00 >= 43, Offer: Test Orders Value
+Promotional: Using template with parameters for offer: Test Orders Value
+Template Name: order_value_based
+Parameter Values: {"1":"#1201","2":"600.00","3":"abcd@gmail.com","4":"1","5":"9876543210"}
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9876543210
+Template ID: order_value_based
+Parameter Values: {"1":"#1201","2":"600.00","3":"abcd@gmail.com","4":"1","5":"9876543210"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: abcd@gmail.com
+Customer Name: AB CD
+Order ID: 7400850587753
+Order Name: #1201
+Formatted TO: +19876543210
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19876543210","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#1201","2":"600.00","3":"abcd@gmail.com","4":"1","5":"9876543210"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:54:31.840+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+Promotional SMS sent successfully for offer: Test Orders Value to 9876543210
+========== CUSTOMER UPDATE SMS ==========
+Customer: Atul Rajput
+Phone: 7894561230
+Country Code: 1
+Email: atul@gmail.com
+========================================
+
+========== CUSTOMER UPDATE SMS ==========
+Customer: Atul Rajput
+Phone: 7894561230
+Country Code: 1
+Email: atul@gmail.com
+========================================
+
+========== CUSTOMER UPDATE SMS ==========
+Customer: Atul Rajput
+Phone: 7894561230
+Country Code: 1
+Email: atul@gmail.com
+========================================
+
+========== CUSTOMER UPDATE SMS ==========
+Customer: Atul Rajput
+Phone: 7894561230
+Country Code: 1
+Email: atul@gmail.com
+========================================
+
+========== CUSTOMER UPDATE SMS ==========
+Customer: Atul Rajput
+Phone: 7894561230
+Country Code: 1
+Email: atul@gmail.com
+========================================
+
+========== CUSTOMER UPDATE SMS ==========
+Customer: Atul Rajput
+Phone: 7894561230
+Country Code: 1
+Email: atul@gmail.com
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: US
+Phone Number: +917894561230
+Template ID: test_email
+Parameter Values: {"1":"Atul"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 
+Order Name: 
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"test_email","parameterValues":{"1":"Atul"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-08T06:13:53.577+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+

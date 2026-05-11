@@ -1,0 +1,1615 @@
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id_product_tags
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id_product_tags","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-24T12:41:45.382+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: promo_msgs
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"promo_msgs","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-24T12:57:27.345+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: order_value_based
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-24T13:00:11.790+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: promo_msgs
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"promo_msgs","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-24T13:00:18.170+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-24T13:00:31.811+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T04:23:52.917+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: order_value_based
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T04:24:06.934+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:43:38.696+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:45:02.039+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Update
+Parameter Values: {"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-27T13:49:09.364+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Update
+Parameter Values: {"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T04:30:19.306+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Cancelled
+Parameter Values: {"{{ item_name }}":"1","{{ customer_full_name }}":"SKU2006-001","{{ Ad_order_number }}":"","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","{{ Ad_item_price }}":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"{{ item_name }}":"1","{{ customer_full_name }}":"SKU2006-001","{{ Ad_order_number }}":"","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","{{ Ad_item_price }}":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T04:32:41.686+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Cancelled
+Parameter Values: {"{{ item_name }}":"1","{{ customer_full_name }}":"SKU2006-001","{{ Ad_order_number }}":"","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","{{ Ad_item_price }}":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"{{ item_name }}":"1","{{ customer_full_name }}":"SKU2006-001","{{ Ad_order_number }}":"","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","{{ Ad_item_price }}":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T04:34:10.727+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Invirtation
+Parameter Values: {"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: bob@biller.com
+Customer Name: Bob Biller
+Order ID: 706405506930370084
+Order Name: Bob Biller
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T04:48:50.149+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Invirtation
+Parameter Values: {"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: bob@biller.com
+Customer Name: Bob Biller
+Order ID: 706405506930370084
+Order Name: Bob Biller
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T04:52:17.170+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Invirtation
+Parameter Values: {"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: bob@biller.com
+Customer Name: Bob Biller
+Order ID: 706405506930370084
+Order Name: Bob Biller
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T04:53:29.670+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Welcome
+Parameter Values: {"Full Name":"bob@biller.com","Phone Number":"Bob Biller","3":"Bob","4":"Biller","5":"7894561230","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: bob@biller.com
+Customer Name: Bob Biller
+Order ID: 
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Welcome","parameterValues":{"Full Name":"bob@biller.com","Phone Number":"Bob Biller","3":"Bob","4":"Biller","5":"7894561230","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T05:11:53.330+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"89.99","Tracking Number":"1","Tracking Url":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"89.99","Tracking Number":"1","Tracking Url":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T05:24:31.504+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"89.99","Tracking Number":"1","Tracking Url":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"89.99","Tracking Number":"1","Tracking Url":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T05:25:58.774+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: order_value_based
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T05:29:40.899+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: order_value_based
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T05:33:19.254+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: order_value_based
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T05:41:53.000+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: promo_msgs
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"promo_msgs","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T05:49:18.120+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: promo_msgs
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"promo_msgs","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T05:50:12.788+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: promo_msgs
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"promo_msgs","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:03:42.094+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:08:23.844+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:09:02.064+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Confirmation
+Parameter Values: {"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Confirmation","parameterValues":{"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:14:06.998+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Confirmation
+Parameter Values: {"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Confirmation","parameterValues":{"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:14:31.971+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:17:13.023+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Confirmation
+Parameter Values: {"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Confirmation","parameterValues":{"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:20:34.444+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Update
+Parameter Values: {"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Update","parameterValues":{"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:21:05.814+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Update
+Parameter Values: {"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Update","parameterValues":{"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:22:05.271+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Update
+Parameter Values: {"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Update","parameterValues":{"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:22:32.772+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Update
+Parameter Values: {"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Update","parameterValues":{"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:23:19.935+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:29:58.941+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:30:50.516+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:33:48.559+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T06:35:51.707+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: TEMPLATE..
+Parameter Values: {"1":"#TEST-12345","2":"99.99","3":"John"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"TEMPLATE..","parameterValues":{"1":"#TEST-12345","2":"99.99","3":"John"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T07:09:27.643+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: TEMPLATE..
+Parameter Values: {"1":"#TEST-12345","2":"99.99","3":"John"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"TEMPLATE..","parameterValues":{"1":"#TEST-12345","2":"99.99","3":"John"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-28T07:23:54.762+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T04:20:34.520+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:00:32.424+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Update
+Parameter Values: {"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:00:49.357+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Cancelled
+Parameter Values: {"{{ item_name }}":"1","{{ customer_full_name }}":"SKU2006-001","{{ Ad_order_number }}":"","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","{{ Ad_item_price }}":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"{{ item_name }}":"1","{{ customer_full_name }}":"SKU2006-001","{{ Ad_order_number }}":"","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","{{ Ad_item_price }}":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:01:01.585+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:01:34.886+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"89.99","Tracking Number":"1","Tracking Url":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"89.99","Tracking Number":"1","Tracking Url":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:01:48.703+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Confirmation
+Parameter Values: {"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Confirmation","parameterValues":{"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:01:54.726+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Update
+Parameter Values: {"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Update","parameterValues":{"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:01:58.491+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Invirtation
+Parameter Values: {"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: bob@biller.com
+Customer Name: Bob Biller
+Order ID: 706405506930370084
+Order Name: Bob Biller
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:02:19.951+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Welcome
+Parameter Values: {"Full Name":"bob@biller.com","Phone Number":"Bob Biller","3":"Bob","4":"Biller","5":"7894561230","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: bob@biller.com
+Customer Name: Bob Biller
+Order ID: 
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Welcome","parameterValues":{"Full Name":"bob@biller.com","Phone Number":"Bob Biller","3":"Bob","4":"Biller","5":"7894561230","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:02:26.122+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: TEMPLATE..
+Parameter Values: {"1":"#TEST-12345","2":"99.99","3":"John"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"TEMPLATE..","parameterValues":{"1":"#TEST-12345","2":"99.99","3":"John"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:02:58.963+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: order_value_based
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:03:30.016+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id_product_tags
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id_product_tags","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:03:47.711+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T09:04:04.243+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"89.99","Tracking Number":"1","Tracking Url":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"89.99","Tracking Number":"1","Tracking Url":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-04-30T12:03:47.870+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"1z827wk74630","Tracking Number":"https:\/\/www.ups.com\/WebTracking?loc=en_US&requester=ST&trackNums=1z827wk74630","Tracking Url":"Shippington","4":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP","5":"Kentucky","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"1z827wk74630","Tracking Number":"https:\/\/www.ups.com\/WebTracking?loc=en_US&requester=ST&trackNums=1z827wk74630","Tracking Url":"Shippington","4":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP","5":"Kentucky","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:02:59.018+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:44:54.568+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Update
+Parameter Values: {"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:09.342+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Cancelled
+Parameter Values: {"{{ item_name }}":"1","{{ customer_full_name }}":"SKU2006-001","{{ Ad_order_number }}":"","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","{{ Ad_item_price }}":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"{{ item_name }}":"1","{{ customer_full_name }}":"SKU2006-001","{{ Ad_order_number }}":"","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","{{ Ad_item_price }}":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:14.592+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year)","2":"820982911946154508","3":"refund","4":"jon@example.com","5":"","6":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:19.228+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Fulfillment Request
+Parameter Values: {"Name":"1z827wk74630","Tracking Number":"https:\/\/www.ups.com\/WebTracking?loc=en_US&requester=ST&trackNums=1z827wk74630","Tracking Url":"Shippington","4":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP","5":"Kentucky","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"Name":"1z827wk74630","Tracking Number":"https:\/\/www.ups.com\/WebTracking?loc=en_US&requester=ST&trackNums=1z827wk74630","Tracking Url":"Shippington","4":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP","5":"Kentucky","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:24.364+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Confirmation
+Parameter Values: {"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Confirmation","parameterValues":{"Email":"404.95","Shipping state":"1","Shipping Address":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:28.070+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Shipping Update
+Parameter Values: {"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: Steve Shipper
+Order ID: 820982911946154508
+Order Name: #9999.1
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Shipping Update","parameterValues":{"Order Name":"89.99","Order Number":"1","Total Discount":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:31.316+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Invirtation
+Parameter Values: {"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: bob@biller.com
+Customer Name: Bob Biller
+Order ID: 706405506930370084
+Order Name: Bob Biller
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Invirtation","parameterValues":{"1":"bob@biller.com","2":"Bob Biller","3":"Bob","4":"7894561230","5":"Biller","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:36.112+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Welcome
+Parameter Values: {"Full Name":"bob@biller.com","Phone Number":"Bob Biller","3":"Bob","4":"Biller","5":"7894561230","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: bob@biller.com
+Customer Name: Bob Biller
+Order ID: 
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Welcome","parameterValues":{"Full Name":"bob@biller.com","Phone Number":"Bob Biller","3":"Bob","4":"Biller","5":"7894561230","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:39.274+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: TEMPLATE..
+Parameter Values: {"1":"#TEST-12345","2":"99.99","3":"John"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"TEMPLATE..","parameterValues":{"1":"#TEST-12345","2":"99.99","3":"John"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:45.578+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: order_value_based
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:45:52.579+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: promo_msgs
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"promo_msgs","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:46:00.821+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T06:46:07.264+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: order_value_based
+Parameter Values: {"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"order_value_based","parameterValues":{"1":"#9999","2":"404.95","3":"jon@example.com","4":"91","5":"7894561230"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T11:57:23.841+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Test_template_id
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Test_template_id","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T11:59:34.491+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:00:03.888+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:01:12.416+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:02:11.182+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"jon@example.com"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"jon@example.com"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:05:21.662+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:13:32.907+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"Name":"#9999"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"Name":"#9999"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:14:11.637+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order_values
+Parameter Values: {"Name":"404.95"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order_values","parameterValues":{"Name":"404.95"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:14:50.192+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:27:31.974+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Update
+Parameter Values: {"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Update","parameterValues":{"Order Name":"89.99","First Name":"1","Last Name":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-01T12:28:15.458+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: TEMPLATE
+Parameter Values: {"1":"Doe"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"TEMPLATE","parameterValues":{"1":"Doe"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-05T08:43:40.469+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"John Smith"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-05T09:58:00.940+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: test_email
+Parameter Values: {"1":"John"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"test_email","parameterValues":{"1":"John"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-08T06:14:12.363+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: test_email
+Parameter Values: {"1":"John"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"test_email","parameterValues":{"1":"John"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-08T06:14:22.276+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+

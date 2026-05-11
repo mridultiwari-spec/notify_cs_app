@@ -1,0 +1,3196 @@
+App uninstalled for shop: xtremestore-9600.myshopify.com
+
+App uninstalled for shop: xtremestore-9600.myshopify.com
+
+Order ID: 7389804658793 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: c55ac206ae3bec9b8dcf86541dd89c1d/authenticate?key=50e42d80254f75f6ca5b2baf0d27e99e
+
+Order ID: 7389805477993 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 047bf1a1cdad20facfa9c642b7034325/authenticate?key=4eeece8bf744f8643fc677747df9890c
+
+Order ID: 7389820354665 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 9db6572433c534e2cc59da20c2c4103b/authenticate?key=226e283dde78a25b8a1f531be1f9a7f1
+
+Order ID: 7389914464361 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: a3e0446195bd772d4ea939db6901b060/authenticate?key=5ef5a5fa77f92f914b01abe03dda441f
+
+Order ID: 7389997105257 | Email: abcd@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => AB
+Added custom variable: {{ 4 }} => CD
+Added custom variable: {{ 5 }} => abcd@gmail.com
+Added custom variable: {{ 6 }} => AB CD
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: AB, CD, United States
+Shipping: AB, CD, United States
+Order_Status_Url: 1c5eaba7063bba81c4b2fc90b77d6257/authenticate?key=92b4d0e4a2291e1fd9ef92c9e0f28685
+
+Order ID: 7390352081001 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 1ec22cfd1b650e342a28512abc8731c6/authenticate?key=1cd6d1976251aeab75c6f85f8ec0be9b
+
+Order ID: 7390626873449 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: ae027a9427b51ff4821bd233f90a6305/authenticate?key=5254379a7794a64bbae0211278350e1d
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1182'
+Body variable: '{{ country_code }}' -> '1'
+Button 1 added: type=cta, text=test
+WhatsApp sent successfully for order confirmation 7390626873449 to 9887154125
+Order ID: 7390628839529 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: e36db28d7fa1fb22212a570c0bcf053b/authenticate?key=802eb991465483931a562bf928c7589d
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1183'
+Body variable: '{{ country_code }}' -> '1'
+Button 1 added: type=cta, text=test
+WhatsApp sent successfully for order confirmation 7390628839529 to 9887154125
+Order ID: 7390653907049 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: cb9a3d4e33c7aad6e342847c88e34d05/authenticate?key=b5ea881f4d37159a035c97b054b57e9a
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1184'
+Body variable: '{{ country_code }}' -> '1'
+Media URL after replacement: URL__test
+Button 1 added: type=cta, text=test_button_1
+Button 2 added: type=quick, text=test Button 2
+WhatsApp sent successfully for order confirmation 7390653907049 to 9887154125
+Order ID: 7390678876265 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: fc0ec4bececefb0456b51e6906015604/authenticate?key=944c12547e124cb72a3e77a7bc377917
+
+Order ID: 7390678876265 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: fc0ec4bececefb0456b51e6906015604/authenticate?key=944c12547e124cb72a3e77a7bc377917
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ Ad_order_number }}' -> '7390678876265'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: URL__test
+Button 1 added: type=cta, text=test_button_1
+Button 2 added: type=quick, text=test Button 2
+WhatsApp sent successfully for order confirmation 7390678876265 to 9887154125
+Order ID: 7390681235561 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 45ba5d5b257e1243b203b52f3d6c9dc1/authenticate?key=e3c73f4b7361e18b1e404c2d0f522e3d
+
+Order ID: 7390681235561 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 45ba5d5b257e1243b203b52f3d6c9dc1/authenticate?key=e3c73f4b7361e18b1e404c2d0f522e3d
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ Ad_order_number }}' -> '7390681235561'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Button 1 added: type=cta, text=test_button_1
+Button 2 added: type=quick, text=test Button 2
+WhatsApp sent successfully for order confirmation 7390681235561 to 9887154125
+Order ID: 7390693064809 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated  
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Order Update
+Discount: 0.00
+Billing: 
+Shipping: 
+Order_Status_Url: 4b6d68ba16d2b2d4ed27a6ee8a2cc710/authenticate?key=1854dccdc9cdf04b24c98ce6386186b0
+
+Order ID: 7390693064809 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => IN
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => 
+Added custom variable: {{ 4 }} => 
+Added custom variable: {{ 5 }} => 
+Added custom variable: {{ 6 }} => 
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"IN","2":"600.00","3":"","4":"","5":"","6":""}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: 
+Shipping: 
+Order_Status_Url: 4b6d68ba16d2b2d4ed27a6ee8a2cc710/authenticate?key=1854dccdc9cdf04b24c98ce6386186b0
+
+Processing WhatsApp for order confirmation - Template: test_template
+ERROR: Customer phone is empty, cannot send WhatsApp for order 7390693064809
+Order ID: 7390694080617 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: d1bf64f2d651fa423c52638456bfb82d/authenticate?key=2be0e57c1e8e08dd05fafbc361a703f1
+
+Order ID: 7390694080617 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: d1bf64f2d651fa423c52638456bfb82d/authenticate?key=2be0e57c1e8e08dd05fafbc361a703f1
+
+Processing WhatsApp for order confirmation - Template: test_template
+WhatsApp sent successfully for order confirmation 7390694080617 to 9887154125
+Order ID: 7390698635369 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: b1624210c60ddbd9212147af1d5c2f65/authenticate?key=d81d44b2e15806e51a2ccbddcf93b7b0
+
+Order ID: 7390698635369 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: b1624210c60ddbd9212147af1d5c2f65/authenticate?key=d81d44b2e15806e51a2ccbddcf93b7b0
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1189'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp sent successfully for order confirmation 7390698635369 to 9887154125
+Order ID: 7390700437609 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 932fd0cf8448c801b9cb9c396ea7fb88/authenticate?key=84c2a2919e312e6cca838640e3408fbb
+
+Order ID: 7390700437609 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 932fd0cf8448c801b9cb9c396ea7fb88/authenticate?key=84c2a2919e312e6cca838640e3408fbb
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1190'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp sent successfully for order confirmation 7390700437609 to 9887154125
+Order ID: 7390720491625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: c19f8b1d716274fd6151f19e4d78da30/authenticate?key=f4046f16963e7fd6b897840c2566da74
+
+Order ID: 7390720491625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: c19f8b1d716274fd6151f19e4d78da30/authenticate?key=f4046f16963e7fd6b897840c2566da74
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1191'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp failed for order 7390720491625: Invalid API domain - please configure real API endpoint (found placeholder: your-api-domain.com)
+Order ID: 7390728683625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 87749f798414638a8d98477be27c58eb/authenticate?key=543e91ef61cbb8aa4f8354c8cdfefa1d
+
+Order ID: 7390728683625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 87749f798414638a8d98477be27c58eb/authenticate?key=543e91ef61cbb8aa4f8354c8cdfefa1d
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1192'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp failed for order 7390728683625: Invalid API domain - please configure real API endpoint (found placeholder: your-api-domain.com)
+Order ID: 7390732484713 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 4fd14000def13173d44b5ce03c98e868/authenticate?key=e5d6628bf4d27fba84e34452cfcbdf43
+
+Order ID: 7390732484713 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => abcde
+Added custom variable: {{ 4 }} => fgij
+Added custom variable: {{ 5 }} => abcde@gmail.com
+Added custom variable: {{ 6 }} => abcde fgij
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 4fd14000def13173d44b5ce03c98e868/authenticate?key=e5d6628bf4d27fba84e34452cfcbdf43
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1193'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp failed for order 7390732484713: Invalid API domain - please configure real API endpoint (found placeholder: your-api-domain.com)
+Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated  
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Order Update
+Discount: 0.00
+Billing: 
+Shipping: 
+Order_Status_Url: abe129ef424b92dbeadad2efa62bc714/authenticate?key=5ca0a7de827ca8a59440b2531f5d7c8d
+
+Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => IN
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => 
+Added custom variable: {{ 4 }} => 
+Added custom variable: {{ 5 }} => 
+Added custom variable: {{ 6 }} => 
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"IN","2":"600.00","3":"","4":"","5":"","6":""}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: 
+Shipping: 
+Order_Status_Url: abe129ef424b92dbeadad2efa62bc714/authenticate?key=5ca0a7de827ca8a59440b2531f5d7c8d
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1194'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+ERROR: Customer phone is empty, cannot send WhatsApp for order 7390737563753
+Order ID: 7390738350185 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 7fedb8a6a998793348f0bd4e793ac94a/authenticate?key=594809e24c5c5157d2744a77c155946a
+
+Order ID: 7390738350185 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => abcde
+Added custom variable: {{ 4 }} => fgij
+Added custom variable: {{ 5 }} => abcde@gmail.com
+Added custom variable: {{ 6 }} => abcde fgij
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 7fedb8a6a998793348f0bd4e793ac94a/authenticate?key=594809e24c5c5157d2744a77c155946a
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1195'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp failed for order 7390738350185: Invalid API domain - contains placeholder (your-api-domain.com); Invalid channel ID - contains placeholder (your_channel_id)
+Order ID: 7390744084585 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: c923c6923ce8fa45739983c7dfc7f699/authenticate?key=d13adb73708bc093703bae1c47051968
+
+Order ID: 7390744084585 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => abcde
+Added custom variable: {{ 4 }} => fgij
+Added custom variable: {{ 5 }} => abcde@gmail.com
+Added custom variable: {{ 6 }} => abcde fgij
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: c923c6923ce8fa45739983c7dfc7f699/authenticate?key=d13adb73708bc093703bae1c47051968
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1196'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp failed for order 7390744084585: Invalid API domain - contains placeholder (your-api-domain.com); Invalid channel ID - contains placeholder (your_channel_id)
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => abcde
+Added custom variable: {{ 4 }} => fgij
+Added custom variable: {{ 5 }} => abcde@gmail.com
+Added custom variable: {{ 6 }} => abcde fgij
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"abcde","4":"fgij","5":"abcde@gmail.com","6":"abcde fgij"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1197'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp sent successfully for order confirmation 7390745395305 to 8874589896
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 2
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 2
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 2
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390745395305'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390745395305 to 8874589896
+Refund ID: 995224715369 | Order ID: 7390745395305 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ item_name }}
+    [2] => {{ Ad_order_number }}
+    [3] => {{ transaction_type }}
+    [4] => {{ customer_email_id }}
+    [5] => {{ country_code }}
+    [6] => {{ customer_phone }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => The Collection Snowboard: Hydrogen
+Added custom variable: {{ 2 }} => 7390745395305
+Added custom variable: {{ 3 }} => 
+Added custom variable: {{ 4 }} => abcde@gmail.com
+Added custom variable: {{ 5 }} => 91
+Added custom variable: {{ 6 }} => 8874589896
+Parameter Values for template: {"1":"The Collection Snowboard: Hydrogen","2":"7390745395305","3":"","4":"abcde@gmail.com","5":"91","6":"8874589896"}
+Template ID: Order Refund
+Transaction Type: 
+Discount: 
+Billing: 
+Shipping: 
+
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 2
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390745395305'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390745395305 to 8874589896
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 2
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390745395305'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390745395305 to 8874589896
+Refund ID: 995225895017 | Order ID: 7390745395305 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ item_name }}
+    [2] => {{ Ad_order_number }}
+    [3] => {{ transaction_type }}
+    [4] => {{ customer_email_id }}
+    [5] => {{ country_code }}
+    [6] => {{ customer_phone }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => The Collection Snowboard: Hydrogen
+Added custom variable: {{ 2 }} => 7390745395305
+Added custom variable: {{ 3 }} => refund
+Added custom variable: {{ 4 }} => abcde@gmail.com
+Added custom variable: {{ 5 }} => 91
+Added custom variable: {{ 6 }} => 8874589896
+Parameter Values for template: {"1":"The Collection Snowboard: Hydrogen","2":"7390745395305","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}
+Template ID: Order Refund
+Transaction Type: refund
+Discount: 
+Billing: 
+Shipping: 
+
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [{{ item_name }}] => {{ Ad_item_quantity }}
+    [{{ customer_full_name }}] => {{ Ad_item_sku }}
+    [{{ Ad_order_number }}] => {{ Ad_item_vendor }}
+    [{{ Ad_total_discount }}] => {{ Ad_total_weight }}
+    [{{ Ad_order_status_url }}] => {{ Ad_shipping_address }}
+    [{{ Ad_item_price }}] => {{ customer_phone }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ {{ item_name }} }} => 2
+Added custom variable: {{ {{ customer_full_name }} }} => 
+Added custom variable: {{ {{ Ad_order_number }} }} => Hydrogen Vendor
+Added custom variable: {{ {{ Ad_total_discount }} }} => 0
+Added custom variable: {{ {{ Ad_order_status_url }} }} => abcde, fgij, United States
+Added custom variable: {{ {{ Ad_item_price }} }} => 8874589896
+Original SMS Text: test
+Processed SMS Text: test
+Parameter Values for template: {"{{ item_name }}":"2","{{ customer_full_name }}":"","{{ Ad_order_number }}":"Hydrogen Vendor","{{ Ad_total_discount }}":"0","{{ Ad_order_status_url }}":"abcde, fgij, United States","{{ Ad_item_price }}":"8874589896"}
+Template ID: Order Cancelled
+Cancel Reason: customer
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Processing WhatsApp for order cancelled - Template: order_cancelled
+Header variable: '{{ Ad_item_quantity }}' -> '2'
+Body variable: '{{ Ad_total_weight }}' -> '0'
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order cancelled 7390745395305 to 8874589896
+Order ID: 7390745395305 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 2
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"2","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 87c0d14f18dea46755790e82105feddb/authenticate?key=1378c5f2519646a57cd1168ca6921939
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390745395305'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390745395305 to 8874589896
+Refund ID: 995226681449 | Order ID: 7390744084585 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ item_name }}
+    [2] => {{ Ad_order_number }}
+    [3] => {{ transaction_type }}
+    [4] => {{ customer_email_id }}
+    [5] => {{ country_code }}
+    [6] => {{ customer_phone }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 
+Added custom variable: {{ 2 }} => 7390744084585
+Added custom variable: {{ 3 }} => refund
+Added custom variable: {{ 4 }} => abcde@gmail.com
+Added custom variable: {{ 5 }} => 91
+Added custom variable: {{ 6 }} => 8874589896
+Parameter Values for template: {"1":"","2":"7390744084585","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}
+Template ID: Order Refund
+Transaction Type: refund
+Discount: 
+Billing: 
+Shipping: 
+
+No WhatsApp template configured for aid=4, skipping WhatsApp send
+Order ID: 7390744084585 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: c923c6923ce8fa45739983c7dfc7f699/authenticate?key=d13adb73708bc093703bae1c47051968
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390744084585'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390744084585 to 8874589896
+Order ID: 7390744084585 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: c923c6923ce8fa45739983c7dfc7f699/authenticate?key=d13adb73708bc093703bae1c47051968
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390744084585'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390744084585 to 8874589896
+Refund ID: 995227107433 | Order ID: 7390744084585 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ item_name }}
+    [2] => {{ Ad_order_number }}
+    [3] => {{ transaction_type }}
+    [4] => {{ customer_email_id }}
+    [5] => {{ country_code }}
+    [6] => {{ customer_phone }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 
+Added custom variable: {{ 2 }} => 7390744084585
+Added custom variable: {{ 3 }} => refund
+Added custom variable: {{ 4 }} => abcde@gmail.com
+Added custom variable: {{ 5 }} => 91
+Added custom variable: {{ 6 }} => 8874589896
+Parameter Values for template: {"1":"","2":"7390744084585","3":"refund","4":"abcde@gmail.com","5":"91","6":"8874589896"}
+Template ID: Order Refund
+Transaction Type: refund
+Discount: 
+Billing: 
+Shipping: 
+
+Processing WhatsApp for refund created - Template: test_template_refund
+Header variable: '{{ customer_email_id }}' -> 'abcde@gmail.com'
+Body variable: '{{ Ad_item_price }}' -> ''
+WhatsApp Button 1: type=cta, text=test
+WhatsApp sent successfully for refund 995227107433 to 8874589896
+Order ID: 7390744084585 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: c923c6923ce8fa45739983c7dfc7f699/authenticate?key=d13adb73708bc093703bae1c47051968
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390744084585'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390744084585 to 8874589896
+Order ID: 7390738350185 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 7fedb8a6a998793348f0bd4e793ac94a/authenticate?key=594809e24c5c5157d2744a77c155946a
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390738350185'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390738350185 to 8874589896
+Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Order Update
+Discount: 0.00
+Billing: 
+Shipping: 
+Order_Status_Url: abe129ef424b92dbeadad2efa62bc714/authenticate?key=5ca0a7de827ca8a59440b2531f5d7c8d
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390737563753'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390737563753 to 7894561230
+Fulfillment ID: 7234136375401 | Order ID: 7390732484713 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Name] => {{ Ad_item_price }}
+    [Tracking Number] => {{ Ad_item_quantity }}
+    [Tracking Url] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Name }} => 600.00
+Added custom variable: {{ Tracking Number }} => 1
+Added custom variable: {{ Tracking Url }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Parameter Values for template: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Fulfillment Created - ID: 7234136375401
+Order ID: 7390732484713
+Tracking: 
+Tracking URL: 
+Shipping City: 
+Shipping State: 
+Shipping: abcde, fgij, United States
+Customer Phone: 
+Country Code: US
+SMS Text: Testing Fulfillment Request.
+
+Processing WhatsApp for fulfillment created - Template: {{ customer_fname }}
+Header variable: '{{ country_code }}' -> 'US'
+Body variable: '{{ Ad_order_number }}' -> '7390732484713'
+WhatsApp Button 1: type=cta, text=test
+ERROR: Customer phone is empty, cannot send WhatsApp for fulfillment 7234136375401
+Order ID: 7390732484713 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 4fd14000def13173d44b5ce03c98e868/authenticate?key=e5d6628bf4d27fba84e34452cfcbdf43
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390732484713'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390732484713 to 8874589896
+Fulfillment ID: 7234134212713 | Order ID: 7390738350185 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Name] => {{ Ad_item_price }}
+    [Tracking Number] => {{ Ad_item_quantity }}
+    [Tracking Url] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Name }} => 600.00
+Added custom variable: {{ Tracking Number }} => 1
+Added custom variable: {{ Tracking Url }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Parameter Values for template: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Fulfillment Created - ID: 7234134212713
+Order ID: 7390738350185
+Tracking: 
+Tracking URL: 
+Shipping City: 
+Shipping State: 
+Shipping: abcde, fgij, United States
+Customer Phone: 
+Country Code: US
+SMS Text: Testing Fulfillment Request.
+
+Processing WhatsApp for fulfillment created - Template: {{ customer_fname }}
+Header variable: '{{ country_code }}' -> 'US'
+Body variable: '{{ Ad_order_number }}' -> '7390738350185'
+WhatsApp Button 1: type=cta, text=test
+ERROR: Customer phone is empty, cannot send WhatsApp for fulfillment 7234134212713
+Fulfillment ID: 7234128248937 | Order ID: 7390744084585 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Name] => {{ Ad_item_price }}
+    [Tracking Number] => {{ Ad_item_quantity }}
+    [Tracking Url] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Name }} => 600.00
+Added custom variable: {{ Tracking Number }} => 1
+Added custom variable: {{ Tracking Url }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Parameter Values for template: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Fulfillment Created - ID: 7234128248937
+Order ID: 7390744084585
+Tracking: 
+Tracking URL: 
+Shipping City: 
+Shipping State: 
+Shipping: abcde, fgij, United States
+Customer Phone: 
+Country Code: US
+SMS Text: Testing Fulfillment Request.
+
+Processing WhatsApp for fulfillment created - Template: {{ customer_fname }}
+Header variable: '{{ country_code }}' -> 'US'
+Body variable: '{{ Ad_order_number }}' -> '7390744084585'
+WhatsApp Button 1: type=cta, text=test
+ERROR: Customer phone is empty, cannot send WhatsApp for fulfillment 7234128248937
+Order ID: 7390732484713 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated abcde abcde@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: abcde, fgij, United States
+Shipping: abcde, fgij, United States
+Order_Status_Url: 4fd14000def13173d44b5ce03c98e868/authenticate?key=e5d6628bf4d27fba84e34452cfcbdf43
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390732484713'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390732484713 to 8874589896
+Fulfillment ID: 7234136375401 | Order ID: 7390732484713 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [Order Number] => {{ Ad_item_quantity }}
+    [Total Discount] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ Order Number }} => 1
+Added custom variable: {{ Total Discount }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Parameter Values for template: {"Order Name":"600.00","Order Number":"1","Total Discount":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Shipping Update
+Fulfillment Processed - ID: 7234136375401
+Order ID: 7390732484713
+Tracking: 12343564564
+Tracking URL: https://www.99minutos.com/tracking/12343564564
+Customer Phone: 
+Country Code: US
+SMS Text: Testing Shipping Update.#1193.1
+
+Processing WhatsApp for fulfillment updated - Template: test_template_update
+Fulfillment ID: 7234154070121 | Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Name] => {{ Ad_item_price }}
+    [Tracking Number] => {{ Ad_item_quantity }}
+    [Tracking Url] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Name }} => 600.00
+Added custom variable: {{ Tracking Number }} => 1
+Added custom variable: {{ Tracking Url }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Parameter Values for template: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":""}
+Fulfillment Created - ID: 7234154070121
+Order ID: 7390737563753
+Tracking: 
+Tracking URL: 
+Shipping City: 
+Shipping State: 
+Shipping: 
+Customer Phone: 
+Country Code: 
+SMS Text: Testing Fulfillment Request.
+
+Processing WhatsApp for fulfillment created - Template: {{ customer_fname }}
+Header variable: '{{ country_code }}' -> ''
+Body variable: '{{ Ad_order_number }}' -> '7390737563753'
+WhatsApp Button 1: type=cta, text=test
+ERROR: Customer phone is empty, cannot send WhatsApp for fulfillment 7234154070121
+Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Order Update
+Discount: 0.00
+Billing: 
+Shipping: 
+Order_Status_Url: abe129ef424b92dbeadad2efa62bc714/authenticate?key=5ca0a7de827ca8a59440b2531f5d7c8d
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390737563753'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390737563753 to 7894561230
+Fulfillment ID: 7234154070121 | Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [Order Number] => {{ Ad_item_quantity }}
+    [Total Discount] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ Order Number }} => 1
+Added custom variable: {{ Total Discount }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Parameter Values for template: {"Order Name":"600.00","Order Number":"1","Total Discount":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Shipping Update
+Fulfillment Processed - ID: 7234154070121
+Order ID: 7390737563753
+Tracking: 123456789
+Tracking URL: https://www.aeronet.com/tracking/?referencenumber=&housebill=123456789
+Customer Phone: 
+Country Code: 
+SMS Text: Testing Shipping Update.#1194.1
+
+Processing WhatsApp for fulfillment updated - Template: test_template_update
+Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Order Update
+Discount: 0.00
+Billing: 
+Shipping: 
+Order_Status_Url: abe129ef424b92dbeadad2efa62bc714/authenticate?key=5ca0a7de827ca8a59440b2531f5d7c8d
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390737563753'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390737563753 to 7894561230
+Fulfillment ID: 7234154070121 | Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [Order Number] => {{ Ad_item_quantity }}
+    [Total Discount] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ Order Number }} => 1
+Added custom variable: {{ Total Discount }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Parameter Values for template: {"Order Name":"600.00","Order Number":"1","Total Discount":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Shipping Update
+Fulfillment Processed - ID: 7234154070121
+Order ID: 7390737563753
+Tracking: 123456789
+Tracking URL: https://www.aeronet.com/tracking/?referencenumber=&housebill=123456789
+Customer Phone: 
+Country Code: 
+SMS Text: Testing Shipping Update.#1194.1
+
+Processing WhatsApp for fulfillment updated - Template: test_template_update
+Fulfillment ID: 7234154070121 | Order ID: 7390737563753 | Email: 
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [Order Number] => {{ Ad_item_quantity }}
+    [Total Discount] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ Order Number }} => 1
+Added custom variable: {{ Total Discount }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Parameter Values for template: {"Order Name":"600.00","Order Number":"1","Total Discount":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Shipping Update
+Fulfillment Processed - ID: 7234154070121
+Order ID: 7390737563753
+Tracking: 123456789
+Tracking URL: https://www.aeronet.com/tracking/?referencenumber=&housebill=123456789
+Customer Phone: 
+Country Code: 
+SMS Text: Testing Shipping Update.#1194.1
+
+Processing WhatsApp for fulfillment updated - Template: test_template_update
+Header variable: '{{ order_name }}' -> '#1194.1'
+Body variable: '{{ customer_phone }}' -> ''
+WhatsApp Button 1: type=cta, text=test
+ERROR: Customer phone is empty, cannot send WhatsApp for fulfillment 7234154070121
+Order ID: 7390728683625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 87749f798414638a8d98477be27c58eb/authenticate?key=543e91ef61cbb8aa4f8354c8cdfefa1d
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390728683625'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390728683625 to 9887154125
+Fulfillment ID: 7234156593257 | Order ID: 7390728683625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Name] => {{ Ad_item_price }}
+    [Tracking Number] => {{ Ad_item_quantity }}
+    [Tracking Url] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Name }} => 600.00
+Added custom variable: {{ Tracking Number }} => 1
+Added custom variable: {{ Tracking Url }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Parameter Values for template: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Fulfillment Created - ID: 7234156593257
+Order ID: 7390728683625
+Tracking: 34432432
+Tracking URL: https://www.99minutos.com/tracking/34432432
+Shipping City: Spotsylvania
+Shipping State: Virginia
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Customer Phone: 9887154125
+Country Code: 1
+SMS Text: Testing Fulfillment Request.
+
+Processing WhatsApp for fulfillment created - Template: {{ customer_fname }}
+Header variable: '{{ country_code }}' -> '1'
+Body variable: '{{ Ad_order_number }}' -> '7390728683625'
+WhatsApp Button 1: type=cta, text=test
+WhatsApp sent successfully for fulfillment 7234156593257 to 9887154125
+Fulfillment ID: 7234136375401 | Order ID: 7390732484713 | Email: abcde@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [Order Number] => {{ Ad_item_quantity }}
+    [Total Discount] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ Order Number }} => 1
+Added custom variable: {{ Total Discount }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => abcde, fgij, United States
+Parameter Values for template: {"Order Name":"600.00","Order Number":"1","Total Discount":"","4":"Hydrogen Vendor","5":"0","6":"abcde, fgij, United States"}
+Template ID: Shipping Update
+Fulfillment Processed - ID: 7234136375401
+Order ID: 7390732484713
+Tracking: 12343564564
+Tracking URL: https://www.99minutos.com/tracking/12343564564
+Customer Phone: 
+Country Code: US
+SMS Text: Testing Shipping Update.#1193.1
+
+Processing WhatsApp for fulfillment updated - Template: test_template_update
+Header variable: '{{ order_name }}' -> '#1193.1'
+Body variable: '{{ customer_phone }}' -> ''
+WhatsApp Button 1: type=cta, text=test
+ERROR: Customer phone is empty, cannot send WhatsApp for fulfillment 7234136375401
+Order ID: 7390720491625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: c19f8b1d716274fd6151f19e4d78da30/authenticate?key=f4046f16963e7fd6b897840c2566da74
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390720491625'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390720491625 to 9887154125
+Fulfillment ID: 7234160525417 | Order ID: 7390720491625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Name] => {{ Ad_item_price }}
+    [Tracking Number] => {{ Ad_item_quantity }}
+    [Tracking Url] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Name }} => 600.00
+Added custom variable: {{ Tracking Number }} => 1
+Added custom variable: {{ Tracking Url }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Parameter Values for template: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Fulfillment Created - ID: 7234160525417
+Order ID: 7390720491625
+Tracking: 
+Tracking URL: 
+Shipping City: Spotsylvania
+Shipping State: Virginia
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Customer Phone: 9887154125
+Country Code: 1
+SMS Text: Testing Fulfillment Request.
+
+Processing WhatsApp for fulfillment created - Template: {{ customer_fname }}
+Header variable: '{{ country_code }}' -> '1'
+Body variable: '{{ Ad_order_number }}' -> '7390720491625'
+WhatsApp Button 1: type=cta, text=test
+WhatsApp sent successfully for fulfillment 7234160525417 to 9887154125
+Fulfillment ID: 7234160525417 | Order ID: 7390720491625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [Order Number] => {{ Ad_item_quantity }}
+    [Total Discount] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ Order Number }} => 1
+Added custom variable: {{ Total Discount }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Parameter Values for template: {"Order Name":"600.00","Order Number":"1","Total Discount":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Shipping Update
+Fulfillment Processed - ID: 7234160525417
+Order ID: 7390720491625
+Tracking: 1223434232423
+Tracking URL: https://www.cypruspost.post/en/track-n-trace-results?code=1223434232423
+Customer Phone: 9887154125
+Country Code: 1
+SMS Text: Testing Shipping Update.#1191.1
+
+Processing WhatsApp for fulfillment updated - Template: test_template_update
+Header variable: '{{ order_name }}' -> '#1191.1'
+Body variable: '{{ customer_phone }}' -> '9887154125'
+WhatsApp Button 1: type=cta, text=test
+WhatsApp sent successfully for fulfillment updated 7234160525417 to 9887154125
+Order ID: 7390720491625 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: c19f8b1d716274fd6151f19e4d78da30/authenticate?key=f4046f16963e7fd6b897840c2566da74
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390720491625'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390720491625 to 9887154125
+Fulfillment ID: 7234223538281 | Order ID: 7390700437609 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Name] => {{ Ad_item_price }}
+    [Tracking Number] => {{ Ad_item_quantity }}
+    [Tracking Url] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Name }} => 600.00
+Added custom variable: {{ Tracking Number }} => 1
+Added custom variable: {{ Tracking Url }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Parameter Values for template: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Fulfillment Created - ID: 7234223538281
+Order ID: 7390700437609
+Tracking: 
+Tracking URL: 
+Shipping City: Spotsylvania
+Shipping State: Virginia
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Customer Phone: 9887154125
+Country Code: 1
+SMS Text: Testing Fulfillment Request.
+
+Processing WhatsApp for fulfillment created - Template: {{ customer_fname }}
+Header variable: '{{ country_code }}' -> '1'
+Body variable: '{{ Ad_order_number }}' -> '7390700437609'
+WhatsApp Button 1: type=cta, text=test
+WhatsApp sent successfully for fulfillment 7234223538281 to 9887154125
+Order ID: 7390700437609 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 932fd0cf8448c801b9cb9c396ea7fb88/authenticate?key=84c2a2919e312e6cca838640e3408fbb
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390700437609'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390700437609 to 9887154125
+Order ID: 7390700437609 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 932fd0cf8448c801b9cb9c396ea7fb88/authenticate?key=84c2a2919e312e6cca838640e3408fbb
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390700437609'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390700437609 to 9887154125
+Fulfillment ID: 7234232287337 | Order ID: 7390698635369 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Name] => {{ Ad_item_price }}
+    [Tracking Number] => {{ Ad_item_quantity }}
+    [Tracking Url] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Name }} => 600.00
+Added custom variable: {{ Tracking Number }} => 1
+Added custom variable: {{ Tracking Url }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Parameter Values for template: {"Name":"600.00","Tracking Number":"1","Tracking Url":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Fulfillment Created - ID: 7234232287337
+Order ID: 7390698635369
+Tracking: 
+Tracking URL: 
+Shipping City: Spotsylvania
+Shipping State: Virginia
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Customer Phone: 9887154125
+Country Code: 1
+SMS Text: Testing Fulfillment Request.
+
+Processing WhatsApp for fulfillment created - Template: {{ customer_fname }}
+Header variable: '{{ country_code }}' -> '1'
+Body variable: '{{ Ad_order_number }}' -> '7390698635369'
+WhatsApp Button 1: type=cta, text=test
+WhatsApp sent successfully for fulfillment 7234232287337 to 9887154125
+Order ID: 7390698635369 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: b1624210c60ddbd9212147af1d5c2f65/authenticate?key=d81d44b2e15806e51a2ccbddcf93b7b0
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7390698635369'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7390698635369 to 9887154125
+Fulfillment ID: 7390698635369 | Order ID:  | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Email] => {{ order_total_price }}
+    [Shipping state] => {{ Ad_item_quantity }}
+    [Shipping Address] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Email }} => {{ order_total_price }}
+Added custom variable: {{ Shipping state }} => 1
+Added custom variable: {{ Shipping Address }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Parameter Values for template: {"Email":"{{ order_total_price }}","Shipping state":"1","Shipping Address":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Shipping Confirmation
+Tracking: 
+Tracking URL: 
+Shipping City: 
+Shipping State: 
+Shipping: 
+
+Processing WhatsApp for order fulfilled - Template: order_fulfilled
+Header variable: '{{ Ad_total_discount }}' -> ''
+Body variable: '{{ Ad_order_number }}' -> ''
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order fulfilled 7390698635369 to 7894561230
+Fulfillment ID: 7390700437609 | Order ID:  | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Email] => {{ order_total_price }}
+    [Shipping state] => {{ Ad_item_quantity }}
+    [Shipping Address] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Email }} => {{ order_total_price }}
+Added custom variable: {{ Shipping state }} => 1
+Added custom variable: {{ Shipping Address }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => 
+Parameter Values for template: {"Email":"{{ order_total_price }}","Shipping state":"1","Shipping Address":"","4":"Hydrogen Vendor","5":"0","6":""}
+Template ID: Shipping Confirmation
+Tracking: 
+Tracking URL: 
+Shipping City: 
+Shipping State: 
+Shipping: 
+
+Processing WhatsApp for order fulfilled - Template: order_fulfilled
+Header variable: '{{ Ad_total_discount }}' -> ''
+Body variable: '{{ Ad_order_number }}' -> ''
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order fulfilled 7390700437609 to 7894561230
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8739110682729
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ email_id }}
+    [2] => {{ customer_full_name }}
+    [3] => {{ customer_fname }}
+    [4] => {{ phone_number }}
+    [5] => {{ customer_lname }}
+    [6] => {{ country_code }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => atul@gmail.com
+Added custom variable: {{ 2 }} => Atul Rajput
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => 7894561230
+Added custom variable: {{ 5 }} => Rajput
+Added custom variable: {{ 6 }} => 1
+Original SMS Text: Testing account invitation.
+Processed SMS Text: Testing account invitation.
+Processed WhatsApp Text: {"template_name":"custom_account_invite","variable_headers":["Atul"],"variable_body":["7894561230"]}
+Parameter Values for template: {"1":"atul@gmail.com","2":"Atul Rajput","3":"Atul","4":"7894561230","5":"Rajput","6":"1"}
+Template ID: Invirtation
+FINAL SMS:
+Testing account invitation.
+
+FINAL WA:
+{"template_name":"custom_account_invite","variable_headers":["Atul"],"variable_body":["7894561230"]}
+
+Processing WhatsApp for customer update - Template: custom_account_invite
+Header variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ phone_number }}' -> '7894561230'
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for customer update: atul@gmail.com to 7894561230
+Order ID: 7392952451177 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 3bfa10168e2553b2445151ed6332d2b5/authenticate?key=ab75819ed4abe035578623e77bc65248
+
+Processing WhatsApp for order edited - Template: test template_order_updated
+Header variable: '{{ item_name }}' -> 'The Collection Snowboard: Hydrogen'
+Body variable: '{{ Ad_order_number }}' -> '7392952451177'
+WhatsApp Button 2: type=quick, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for order edited 7392952451177 to 9887154125
+Order ID: 7392952451177 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 3bfa10168e2553b2445151ed6332d2b5/authenticate?key=ab75819ed4abe035578623e77bc65248
+
+Processing WhatsApp for order confirmation - Template: test_template
+Header variable: '{{ order_name }}' -> '#1198'
+Body variable: '{{ Ad_item_price }}' -> '600.00'
+Media URL after replacement: https://documenter.getpostman.com/view/20579509/2sAYkAR3Zz#10f629fe-fd0e-4dd6-8665-6fe6e8cf2f99
+Button 1 added: type=cta, text=test
+Button 2 added: type=cta, text=test Button 2
+Button 3 added: type=cta, text=Test Button 3
+WhatsApp sent successfully for order confirmation 7392952451177 to 9887154125
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8739110682729
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ email_id }}
+    [2] => {{ customer_full_name }}
+    [3] => {{ customer_fname }}
+    [4] => {{ phone_number }}
+    [5] => {{ customer_lname }}
+    [6] => {{ country_code }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => atul@gmail.com
+Added custom variable: {{ 2 }} => Atul Rajput
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => 7894561230
+Added custom variable: {{ 5 }} => Rajput
+Added custom variable: {{ 6 }} => 1
+Original SMS Text: Testing account invitation.
+Processed SMS Text: Testing account invitation.
+Processed WhatsApp Text: {"template_name":"custom_account_invite","variable_headers":["Atul"],"variable_body":["7894561230"]}
+Parameter Values for template: {"1":"atul@gmail.com","2":"Atul Rajput","3":"Atul","4":"7894561230","5":"Rajput","6":"1"}
+Template ID: Invirtation
+FINAL SMS:
+Testing account invitation.
+
+FINAL WA:
+{"template_name":"custom_account_invite","variable_headers":["Atul"],"variable_body":["7894561230"]}
+
+Order ID: 7400847376489 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated Atul atul@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order Update
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: af517918e13e7ed2ad18c4801709622f/authenticate?key=d1e262ef9c94196fc8779857234522bc
+
+Order ID: 7400847376489 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => Atul Rajput
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"Atul Rajput"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: af517918e13e7ed2ad18c4801709622f/authenticate?key=d1e262ef9c94196fc8779857234522bc
+
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8737058422889
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ email_id }}
+    [2] => {{ customer_full_name }}
+    [3] => {{ customer_fname }}
+    [4] => {{ phone_number }}
+    [5] => {{ customer_lname }}
+    [6] => {{ country_code }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => abcd@gmail.com
+Added custom variable: {{ 2 }} => AB CD
+Added custom variable: {{ 3 }} => AB
+Added custom variable: {{ 4 }} => 9876543210
+Added custom variable: {{ 5 }} => CD
+Added custom variable: {{ 6 }} => 1
+Original SMS Text: Testing account invitation.
+Processed SMS Text: Testing account invitation.
+Processed WhatsApp Text: {"template_name":"custom_account_invite","variable_headers":["AB"],"variable_body":["9876543210"]}
+Parameter Values for template: {"1":"abcd@gmail.com","2":"AB CD","3":"AB","4":"9876543210","5":"CD","6":"1"}
+Template ID: Invirtation
+FINAL SMS:
+Testing account invitation.
+
+FINAL WA:
+{"template_name":"custom_account_invite","variable_headers":["AB"],"variable_body":["9876543210"]}
+
+Order ID: 7400848719977 | Email: abcd@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => AB, CD, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated AB abcd@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"AB, CD, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: AB, CD, United States
+Shipping: AB, CD, United States
+Order_Status_Url: 87fb6f79a6f2ec2df7f21a66a69392e5/authenticate?key=41c20f8a63f094311b71df1310d3a904
+
+Order ID: 7400848719977 | Email: abcd@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => AB
+Added custom variable: {{ 4 }} => CD
+Added custom variable: {{ 5 }} => abcd@gmail.com
+Added custom variable: {{ 6 }} => AB CD
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: AB, CD, United States
+Shipping: AB, CD, United States
+Order_Status_Url: 87fb6f79a6f2ec2df7f21a66a69392e5/authenticate?key=41c20f8a63f094311b71df1310d3a904
+
+Order ID: 7400850587753 | Email: abcd@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [Order Name] => {{ Ad_item_price }}
+    [First Name] => {{ Ad_item_quantity }}
+    [Last Name] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ Order Name }} => 600.00
+Added custom variable: {{ First Name }} => 1
+Added custom variable: {{ Last Name }} => 
+Added custom variable: {{ 4 }} => Hydrogen Vendor
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => AB, CD, United States
+Original SMS Text: Testing Order Updated {{ customer_fname }} {{ customer_email_id }}
+Processed SMS Text: Testing Order Updated AB abcd@gmail.com
+Parameter Values for template: {"Order Name":"600.00","First Name":"1","Last Name":"","4":"Hydrogen Vendor","5":"0","6":"AB, CD, United States"}
+Template ID: Order Update
+Discount: 0.00
+Billing: AB, CD, United States
+Shipping: AB, CD, United States
+Order_Status_Url: a63691adb8dac3ed84bc58e4f8d30aea/authenticate?key=0565da37b9c63d40a2146e47e957eb2e
+
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8737058422889
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ email_id }}
+    [2] => {{ customer_full_name }}
+    [3] => {{ customer_fname }}
+    [4] => {{ phone_number }}
+    [5] => {{ customer_lname }}
+    [6] => {{ country_code }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => abcd@gmail.com
+Added custom variable: {{ 2 }} => AB CD
+Added custom variable: {{ 3 }} => AB
+Added custom variable: {{ 4 }} => 9876543210
+Added custom variable: {{ 5 }} => CD
+Added custom variable: {{ 6 }} => 1
+Original SMS Text: Testing account invitation.
+Processed SMS Text: Testing account invitation.
+Processed WhatsApp Text: {"template_name":"custom_account_invite","variable_headers":["AB"],"variable_body":["9876543210"]}
+Parameter Values for template: {"1":"abcd@gmail.com","2":"AB CD","3":"AB","4":"9876543210","5":"CD","6":"1"}
+Template ID: Invirtation
+FINAL SMS:
+Testing account invitation.
+
+FINAL WA:
+{"template_name":"custom_account_invite","variable_headers":["AB"],"variable_body":["9876543210"]}
+
+Order ID: 7400850587753 | Email: abcd@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ country_code }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ customer_full_name }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => 600.00
+Added custom variable: {{ 3 }} => AB
+Added custom variable: {{ 4 }} => CD
+Added custom variable: {{ 5 }} => abcd@gmail.com
+Added custom variable: {{ 6 }} => AB CD
+Original SMS Text: Test Order Confirmation
+Processed SMS Text: Test Order Confirmation
+Parameter Values for template: {"1":"1","2":"600.00","3":"AB","4":"CD","5":"abcd@gmail.com","6":"AB CD"}
+Template ID: Test Order Confirmation
+Discount: 0.00
+Billing: AB, CD, United States
+Shipping: AB, CD, United States
+Order_Status_Url: a63691adb8dac3ed84bc58e4f8d30aea/authenticate?key=0565da37b9c63d40a2146e47e957eb2e
+
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8739110682729
+
+Processing WhatsApp for customer update - Template: custom_account_invite
+Header variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ email_id }}' -> 'atul@gmail.com'
+Body variable: '{{ customer_full_name }}' -> 'Atul Rajput'
+Body variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ customer_lname }}' -> 'Rajput'
+Body variable: '{{ phone_number }}' -> '7894561230'
+Body variable: '{{ country_code }}' -> '1'
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for customer update: atul@gmail.com to 7894561230
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8739110682729
+
+Processing WhatsApp for customer update - Template: custom_account_invite
+Header variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ email_id }}' -> 'atul@gmail.com'
+Body variable: '{{ customer_full_name }}' -> 'Atul Rajput'
+Body variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ customer_lname }}' -> 'Rajput'
+Body variable: '{{ phone_number }}' -> '7894561230'
+Body variable: '{{ country_code }}' -> '1'
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for customer update: atul@gmail.com to 7894561230
+[2026-05-08 06:12:49] [INFO] ========== CUSTOMER JOINED SEGMENT WEBHOOK RECEIVED ==========
+[08-May-2026 06:12:49 UTC] ========== CUSTOMER JOINED SEGMENT WEBHOOK RECEIVED ==========
+[2026-05-08 06:12:49] [INFO] Shop: xtremestore-9600.myshopify.com
+[08-May-2026 06:12:49 UTC] Shop: xtremestore-9600.myshopify.com
+[2026-05-08 06:12:49] [INFO] Topic: customer.joined_segment
+[08-May-2026 06:12:49 UTC] Topic: customer.joined_segment
+[2026-05-08 06:12:49] [INFO] Raw payload: {"shop_id": "gid://shopify/Shop/67250946153", "customer_id": "gid://shopify/Customer/8739110682729", "segment_id": "gid://shopify/Segment/462024736873"}
+[08-May-2026 06:12:49 UTC] Raw payload: {"shop_id": "gid://shopify/Shop/67250946153", "customer_id": "gid://shopify/Customer/8739110682729", "segment_id": "gid://shopify/Segment/462024736873"}
+[08-May-2026 06:12:49 UTC] PHP Notice:  Undefined variable: api_secret in /var/www/html/notifycsapp/webhooks/segmentJoin2.php on line 80
+[2026-05-08 06:12:49] [INFO] Decoded payload: {"shop_id":"gid:\/\/shopify\/Shop\/67250946153","customer_id":"gid:\/\/shopify\/Customer\/8739110682729","segment_id":"gid:\/\/shopify\/Segment\/462024736873"}
+[08-May-2026 06:12:49 UTC] Decoded payload: {"shop_id":"gid:\/\/shopify\/Shop\/67250946153","customer_id":"gid:\/\/shopify\/Customer\/8739110682729","segment_id":"gid:\/\/shopify\/Segment\/462024736873"}
+[2026-05-08 06:12:49] [INFO] Customer GID: gid://shopify/Customer/8739110682729
+[08-May-2026 06:12:49 UTC] Customer GID: gid://shopify/Customer/8739110682729
+[2026-05-08 06:12:49] [INFO] Segment GID: gid://shopify/Segment/462024736873
+[08-May-2026 06:12:49 UTC] Segment GID: gid://shopify/Segment/462024736873
+[2026-05-08 06:12:49] [INFO] Extracted Customer ID: 8739110682729
+[08-May-2026 06:12:49 UTC] Extracted Customer ID: 8739110682729
+[2026-05-08 06:12:49] [INFO] Extracted Segment ID: 462024736873
+[08-May-2026 06:12:49 UTC] Extracted Segment ID: 462024736873
+[2026-05-08 06:12:49] [INFO] Database connection successful
+[08-May-2026 06:12:49 UTC] Database connection successful
+[2026-05-08 06:12:49] [INFO] Access token retrieved successfully
+[08-May-2026 06:12:49 UTC] Access token retrieved successfully
+[2026-05-08 06:12:49] [INFO] Found segment DB id: 217
+[08-May-2026 06:12:49 UTC] Found segment DB id: 217
+[2026-05-08 06:12:49] [INFO] Fetching customer segment member ID for customer: gid://shopify/Customer/8739110682729, segment: gid://shopify/Segment/462024736873
+[08-May-2026 06:12:49 UTC] Fetching customer segment member ID for customer: gid://shopify/Customer/8739110682729, segment: gid://shopify/Segment/462024736873
+[2026-05-08 06:12:49] [INFO] GraphQL query payload: {"query":"\n    query GetSegmentMemberInfo($customerId: ID!, $segmentId: ID!) {\n        customer(id: $customerId) {\n            segmentMembers(first: 10, segmentId: $segmentId) {\n                edges {\n                    node {\n                        id\n                        segment {\n                            id\n                        }\n                    }\n                }\n            }\n        }\n    }","variables":{"customerId":"gid:\/\/shopify\/Customer\/8739110682729","segmentId":"gid:\/\/shopify\/Segment\/462024736873"}}
+[08-May-2026 06:12:49 UTC] GraphQL query payload: {"query":"\n    query GetSegmentMemberInfo($customerId: ID!, $segmentId: ID!) {\n        customer(id: $customerId) {\n            segmentMembers(first: 10, segmentId: $segmentId) {\n                edges {\n                    node {\n                        id\n                        segment {\n                            id\n                        }\n                    }\n                }\n            }\n        }\n    }","variables":{"customerId":"gid:\/\/shopify\/Customer\/8739110682729","segmentId":"gid:\/\/shopify\/Segment\/462024736873"}}
+[2026-05-08 06:12:49] [INFO] GraphQL response for segment member: {"errors":[{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]}
+[08-May-2026 06:12:49 UTC] GraphQL response for segment member: {"errors":[{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]}
+[2026-05-08 06:12:49] [ERROR] GraphQL errors in fetchCustomerSegmentMemberId: [{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]
+[08-May-2026 06:12:49 UTC] GraphQL errors in fetchCustomerSegmentMemberId: [{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]
+[2026-05-08 06:12:49] [INFO] Constructed segment member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[08-May-2026 06:12:49 UTC] Constructed segment member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[2026-05-08 06:12:49] [INFO] Customer Segment Member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[08-May-2026 06:12:49 UTC] Customer Segment Member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[2026-05-08 06:12:49] [INFO] Fetching customer details for: gid://shopify/Customer/8739110682729
+[08-May-2026 06:12:49 UTC] Fetching customer details for: gid://shopify/Customer/8739110682729
+[2026-05-08 06:12:50] [INFO] GraphQL response code: 200
+[08-May-2026 06:12:50 UTC] GraphQL response code: 200
+[2026-05-08 06:12:50] [INFO] GraphQL response: {"data":{"customer":{"id":"gid://shopify/Customer/8739110682729","firstName":"Atul","lastName":"Rajput","defaultEmailAddress":{"emailAddress":"atul@gmail.com"},"defaultPhoneNumber":{"phoneNumber":"+917894561230"},"createdAt":"2026-04-09T05:15:38Z","addressesV2":{"edges":[{"node":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null}},{"node":{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}}]}}},"extensions":{"cost":{"requestedQueryCost":9,"actualQueryCost":6,"throttleStatus":{"maximumAvailable":20000.0,"currentlyAvailable":19994,"restoreRate":1000.0}}}}
+[08-May-2026 06:12:50 UTC] GraphQL response: {"data":{"customer":{"id":"gid://shopify/Customer/8739110682729","firstName":"Atul","lastName":"Rajput","defaultEmailAddress":{"emailAddress":"atul@gmail.com"},"defaultPhoneNumber":{"phoneNumber":"+917894561230"},"createdAt":"2026-04-09T05:15:38Z","addressesV2":{"edges":[{"node":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null}},{"node":{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}}]}}},"extensions":{"cost":{"requestedQueryCost":9,"actualQueryCost":6,"throttleStatus":{"maximumAvailable":20000.0,"currentlyAvailable":19994,"restoreRate":1000.0}}}}
+[2026-05-08 06:12:50] [INFO] Successfully fetched customer: Atul Rajput
+[08-May-2026 06:12:50 UTC] Successfully fetched customer: Atul Rajput
+[2026-05-08 06:12:50] [INFO] Customer details retrieved: {"id":"gid:\/\/shopify\/Customer\/8739110682729","firstName":"Atul","lastName":"Rajput","email":"atul@gmail.com","phone":"+917894561230","createdAt":"2026-04-09T05:15:38Z","defaultAddress":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},"addresses":[{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}],"country_code":"US"}
+[08-May-2026 06:12:50 UTC] Customer details retrieved: {"id":"gid:\/\/shopify\/Customer\/8739110682729","firstName":"Atul","lastName":"Rajput","email":"atul@gmail.com","phone":"+917894561230","createdAt":"2026-04-09T05:15:38Z","defaultAddress":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},"addresses":[{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}],"country_code":"US"}
+[2026-05-08 06:12:50] [INFO] Data to insert: {"segment_id":"462024736873","shopify_customer_id":"gid:\/\/shopify\/SegmentMember\/8739110682729_462024736873","first_name":"Atul","last_name":"Rajput","email":"atul@gmail.com","phone":"+917894561230","address1":"","address2":"","city":"","country":"US","country_code":"US","zip":"","created_at":"2026-05-08 06:12:50"}
+[08-May-2026 06:12:50 UTC] Data to insert: {"segment_id":"462024736873","shopify_customer_id":"gid:\/\/shopify\/SegmentMember\/8739110682729_462024736873","first_name":"Atul","last_name":"Rajput","email":"atul@gmail.com","phone":"+917894561230","address1":"","address2":"","city":"","country":"US","country_code":"US","zip":"","created_at":"2026-05-08 06:12:50"}
+[2026-05-08 06:12:50] [INFO] Customer already exists in segment, updating information...
+[08-May-2026 06:12:50 UTC] Customer already exists in segment, updating information...
+[2026-05-08 06:12:50] [INFO] Customer information updated successfully
+[08-May-2026 06:12:50 UTC] Customer information updated successfully
+[2026-05-08 06:12:50] [INFO] Segment conditions: {"type":"When Customer Joins Segment"}, SMS enabled: 0, WhatsApp enabled: 1
+[08-May-2026 06:12:50 UTC] Segment conditions: {"type":"When Customer Joins Segment"}, SMS enabled: 0, WhatsApp enabled: 1
+[2026-05-08 06:12:50] [INFO] SMS is NOT enabled - skipping
+[08-May-2026 06:12:50 UTC] SMS is NOT enabled - skipping
+[2026-05-08 06:12:50] [INFO] WhatsApp is enabled - sending
+[08-May-2026 06:12:50 UTC] WhatsApp is enabled - sending
+[2026-05-08 06:12:50] [INFO] WhatsApp sent successfully
+[08-May-2026 06:12:50 UTC] WhatsApp sent successfully
+[2026-05-08 06:12:50] [INFO] Webhook processed successfully
+[08-May-2026 06:12:50 UTC] Webhook processed successfully
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8739110682729
+
+Processing WhatsApp for customer update - Template: custom_account_invite
+Header variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ email_id }}' -> 'atul@gmail.com'
+Body variable: '{{ customer_full_name }}' -> 'Atul Rajput'
+Body variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ customer_lname }}' -> 'Rajput'
+Body variable: '{{ phone_number }}' -> '7894561230'
+Body variable: '{{ country_code }}' -> '1'
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for customer update: atul@gmail.com to 7894561230
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8739110682729
+
+Processing WhatsApp for customer update - Template: custom_account_invite
+Header variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ email_id }}' -> 'atul@gmail.com'
+Body variable: '{{ customer_full_name }}' -> 'Atul Rajput'
+Body variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ customer_lname }}' -> 'Rajput'
+Body variable: '{{ phone_number }}' -> '7894561230'
+Body variable: '{{ country_code }}' -> '1'
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for customer update: atul@gmail.com to 7894561230
+[2026-05-08 06:12:57] [INFO] ========== CUSTOMER JOINED SEGMENT WEBHOOK RECEIVED ==========
+[08-May-2026 06:12:57 UTC] ========== CUSTOMER JOINED SEGMENT WEBHOOK RECEIVED ==========
+[2026-05-08 06:12:57] [INFO] Shop: xtremestore-9600.myshopify.com
+[08-May-2026 06:12:57 UTC] Shop: xtremestore-9600.myshopify.com
+[2026-05-08 06:12:57] [INFO] Topic: customer.joined_segment
+[08-May-2026 06:12:57 UTC] Topic: customer.joined_segment
+[2026-05-08 06:12:57] [INFO] Raw payload: {"shop_id": "gid://shopify/Shop/67250946153", "customer_id": "gid://shopify/Customer/8739110682729", "segment_id": "gid://shopify/Segment/462024736873"}
+[08-May-2026 06:12:57 UTC] Raw payload: {"shop_id": "gid://shopify/Shop/67250946153", "customer_id": "gid://shopify/Customer/8739110682729", "segment_id": "gid://shopify/Segment/462024736873"}
+[08-May-2026 06:12:57 UTC] PHP Notice:  Undefined variable: api_secret in /var/www/html/notifycsapp/webhooks/segmentJoin2.php on line 80
+[2026-05-08 06:12:57] [INFO] Decoded payload: {"shop_id":"gid:\/\/shopify\/Shop\/67250946153","customer_id":"gid:\/\/shopify\/Customer\/8739110682729","segment_id":"gid:\/\/shopify\/Segment\/462024736873"}
+[08-May-2026 06:12:57 UTC] Decoded payload: {"shop_id":"gid:\/\/shopify\/Shop\/67250946153","customer_id":"gid:\/\/shopify\/Customer\/8739110682729","segment_id":"gid:\/\/shopify\/Segment\/462024736873"}
+[2026-05-08 06:12:57] [INFO] Customer GID: gid://shopify/Customer/8739110682729
+[08-May-2026 06:12:57 UTC] Customer GID: gid://shopify/Customer/8739110682729
+[2026-05-08 06:12:57] [INFO] Segment GID: gid://shopify/Segment/462024736873
+[08-May-2026 06:12:57 UTC] Segment GID: gid://shopify/Segment/462024736873
+[2026-05-08 06:12:57] [INFO] Extracted Customer ID: 8739110682729
+[08-May-2026 06:12:57 UTC] Extracted Customer ID: 8739110682729
+[2026-05-08 06:12:57] [INFO] Extracted Segment ID: 462024736873
+[08-May-2026 06:12:57 UTC] Extracted Segment ID: 462024736873
+[2026-05-08 06:12:57] [INFO] Database connection successful
+[08-May-2026 06:12:57 UTC] Database connection successful
+[2026-05-08 06:12:57] [INFO] Access token retrieved successfully
+[08-May-2026 06:12:57 UTC] Access token retrieved successfully
+[2026-05-08 06:12:57] [INFO] Found segment DB id: 217
+[08-May-2026 06:12:57 UTC] Found segment DB id: 217
+[2026-05-08 06:12:57] [INFO] Fetching customer segment member ID for customer: gid://shopify/Customer/8739110682729, segment: gid://shopify/Segment/462024736873
+[08-May-2026 06:12:57 UTC] Fetching customer segment member ID for customer: gid://shopify/Customer/8739110682729, segment: gid://shopify/Segment/462024736873
+[2026-05-08 06:12:57] [INFO] GraphQL query payload: {"query":"\n    query GetSegmentMemberInfo($customerId: ID!, $segmentId: ID!) {\n        customer(id: $customerId) {\n            segmentMembers(first: 10, segmentId: $segmentId) {\n                edges {\n                    node {\n                        id\n                        segment {\n                            id\n                        }\n                    }\n                }\n            }\n        }\n    }","variables":{"customerId":"gid:\/\/shopify\/Customer\/8739110682729","segmentId":"gid:\/\/shopify\/Segment\/462024736873"}}
+[08-May-2026 06:12:57 UTC] GraphQL query payload: {"query":"\n    query GetSegmentMemberInfo($customerId: ID!, $segmentId: ID!) {\n        customer(id: $customerId) {\n            segmentMembers(first: 10, segmentId: $segmentId) {\n                edges {\n                    node {\n                        id\n                        segment {\n                            id\n                        }\n                    }\n                }\n            }\n        }\n    }","variables":{"customerId":"gid:\/\/shopify\/Customer\/8739110682729","segmentId":"gid:\/\/shopify\/Segment\/462024736873"}}
+[2026-05-08 06:12:57] [INFO] GraphQL response for segment member: {"errors":[{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]}
+[08-May-2026 06:12:57 UTC] GraphQL response for segment member: {"errors":[{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]}
+[2026-05-08 06:12:57] [ERROR] GraphQL errors in fetchCustomerSegmentMemberId: [{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]
+[08-May-2026 06:12:57 UTC] GraphQL errors in fetchCustomerSegmentMemberId: [{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]
+[2026-05-08 06:12:57] [INFO] Constructed segment member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[08-May-2026 06:12:57 UTC] Constructed segment member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[2026-05-08 06:12:57] [INFO] Customer Segment Member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[08-May-2026 06:12:57 UTC] Customer Segment Member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[2026-05-08 06:12:57] [INFO] Fetching customer details for: gid://shopify/Customer/8739110682729
+[08-May-2026 06:12:57 UTC] Fetching customer details for: gid://shopify/Customer/8739110682729
+[2026-05-08 06:12:58] [INFO] GraphQL response code: 200
+[08-May-2026 06:12:58 UTC] GraphQL response code: 200
+[2026-05-08 06:12:58] [INFO] GraphQL response: {"data":{"customer":{"id":"gid://shopify/Customer/8739110682729","firstName":"Atul","lastName":"Rajput","defaultEmailAddress":{"emailAddress":"atul@gmail.com"},"defaultPhoneNumber":{"phoneNumber":"+917894561230"},"createdAt":"2026-04-09T05:15:38Z","addressesV2":{"edges":[{"node":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null}},{"node":{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}}]}}},"extensions":{"cost":{"requestedQueryCost":9,"actualQueryCost":6,"throttleStatus":{"maximumAvailable":20000.0,"currentlyAvailable":19994,"restoreRate":1000.0}}}}
+[08-May-2026 06:12:58 UTC] GraphQL response: {"data":{"customer":{"id":"gid://shopify/Customer/8739110682729","firstName":"Atul","lastName":"Rajput","defaultEmailAddress":{"emailAddress":"atul@gmail.com"},"defaultPhoneNumber":{"phoneNumber":"+917894561230"},"createdAt":"2026-04-09T05:15:38Z","addressesV2":{"edges":[{"node":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null}},{"node":{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}}]}}},"extensions":{"cost":{"requestedQueryCost":9,"actualQueryCost":6,"throttleStatus":{"maximumAvailable":20000.0,"currentlyAvailable":19994,"restoreRate":1000.0}}}}
+[2026-05-08 06:12:58] [INFO] Successfully fetched customer: Atul Rajput
+[08-May-2026 06:12:58 UTC] Successfully fetched customer: Atul Rajput
+[2026-05-08 06:12:58] [INFO] Customer details retrieved: {"id":"gid:\/\/shopify\/Customer\/8739110682729","firstName":"Atul","lastName":"Rajput","email":"atul@gmail.com","phone":"+917894561230","createdAt":"2026-04-09T05:15:38Z","defaultAddress":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},"addresses":[{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}],"country_code":"US"}
+[08-May-2026 06:12:58 UTC] Customer details retrieved: {"id":"gid:\/\/shopify\/Customer\/8739110682729","firstName":"Atul","lastName":"Rajput","email":"atul@gmail.com","phone":"+917894561230","createdAt":"2026-04-09T05:15:38Z","defaultAddress":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},"addresses":[{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}],"country_code":"US"}
+[2026-05-08 06:12:58] [INFO] Data to insert: {"segment_id":"462024736873","shopify_customer_id":"gid:\/\/shopify\/SegmentMember\/8739110682729_462024736873","first_name":"Atul","last_name":"Rajput","email":"atul@gmail.com","phone":"+917894561230","address1":"","address2":"","city":"","country":"US","country_code":"US","zip":"","created_at":"2026-05-08 06:12:58"}
+[08-May-2026 06:12:58 UTC] Data to insert: {"segment_id":"462024736873","shopify_customer_id":"gid:\/\/shopify\/SegmentMember\/8739110682729_462024736873","first_name":"Atul","last_name":"Rajput","email":"atul@gmail.com","phone":"+917894561230","address1":"","address2":"","city":"","country":"US","country_code":"US","zip":"","created_at":"2026-05-08 06:12:58"}
+[2026-05-08 06:12:58] [INFO] Customer already exists in segment, updating information...
+[08-May-2026 06:12:58 UTC] Customer already exists in segment, updating information...
+[2026-05-08 06:12:58] [INFO] Customer information updated successfully
+[08-May-2026 06:12:58 UTC] Customer information updated successfully
+[2026-05-08 06:12:58] [INFO] Segment conditions: {"type":"When Customer Joins Segment"}, SMS enabled: 0, WhatsApp enabled: 1
+[08-May-2026 06:12:58 UTC] Segment conditions: {"type":"When Customer Joins Segment"}, SMS enabled: 0, WhatsApp enabled: 1
+[2026-05-08 06:12:58] [INFO] SMS is NOT enabled - skipping
+[08-May-2026 06:12:58 UTC] SMS is NOT enabled - skipping
+[2026-05-08 06:12:58] [INFO] WhatsApp is enabled - sending
+[08-May-2026 06:12:58 UTC] WhatsApp is enabled - sending
+[2026-05-08 06:12:58] [INFO] WhatsApp sent successfully
+[08-May-2026 06:12:58 UTC] WhatsApp sent successfully
+[2026-05-08 06:12:58] [INFO] Webhook processed successfully
+[08-May-2026 06:12:58 UTC] Webhook processed successfully
+[2026-05-08 06:13:14] [INFO] ========== CUSTOMER JOINED SEGMENT WEBHOOK RECEIVED ==========
+[08-May-2026 06:13:14 UTC] ========== CUSTOMER JOINED SEGMENT WEBHOOK RECEIVED ==========
+[2026-05-08 06:13:14] [INFO] Shop: xtremestore-9600.myshopify.com
+[08-May-2026 06:13:14 UTC] Shop: xtremestore-9600.myshopify.com
+[2026-05-08 06:13:14] [INFO] Topic: customer.joined_segment
+[08-May-2026 06:13:14 UTC] Topic: customer.joined_segment
+[2026-05-08 06:13:14] [INFO] Raw payload: {"shop_id": "gid://shopify/Shop/67250946153", "customer_id": "gid://shopify/Customer/8739110682729", "segment_id": "gid://shopify/Segment/462024736873"}
+[08-May-2026 06:13:14 UTC] Raw payload: {"shop_id": "gid://shopify/Shop/67250946153", "customer_id": "gid://shopify/Customer/8739110682729", "segment_id": "gid://shopify/Segment/462024736873"}
+[08-May-2026 06:13:14 UTC] PHP Notice:  Undefined variable: api_secret in /var/www/html/notifycsapp/webhooks/segmentJoin2.php on line 80
+[2026-05-08 06:13:14] [INFO] Decoded payload: {"shop_id":"gid:\/\/shopify\/Shop\/67250946153","customer_id":"gid:\/\/shopify\/Customer\/8739110682729","segment_id":"gid:\/\/shopify\/Segment\/462024736873"}
+[08-May-2026 06:13:14 UTC] Decoded payload: {"shop_id":"gid:\/\/shopify\/Shop\/67250946153","customer_id":"gid:\/\/shopify\/Customer\/8739110682729","segment_id":"gid:\/\/shopify\/Segment\/462024736873"}
+[2026-05-08 06:13:14] [INFO] Customer GID: gid://shopify/Customer/8739110682729
+[08-May-2026 06:13:14 UTC] Customer GID: gid://shopify/Customer/8739110682729
+[2026-05-08 06:13:14] [INFO] Segment GID: gid://shopify/Segment/462024736873
+[08-May-2026 06:13:14 UTC] Segment GID: gid://shopify/Segment/462024736873
+[2026-05-08 06:13:14] [INFO] Extracted Customer ID: 8739110682729
+[08-May-2026 06:13:14 UTC] Extracted Customer ID: 8739110682729
+[2026-05-08 06:13:14] [INFO] Extracted Segment ID: 462024736873
+[08-May-2026 06:13:14 UTC] Extracted Segment ID: 462024736873
+[2026-05-08 06:13:14] [INFO] Database connection successful
+[08-May-2026 06:13:14 UTC] Database connection successful
+[2026-05-08 06:13:14] [INFO] Access token retrieved successfully
+[08-May-2026 06:13:14 UTC] Access token retrieved successfully
+[2026-05-08 06:13:14] [INFO] Found segment DB id: 217
+[08-May-2026 06:13:14 UTC] Found segment DB id: 217
+[2026-05-08 06:13:14] [INFO] Fetching customer segment member ID for customer: gid://shopify/Customer/8739110682729, segment: gid://shopify/Segment/462024736873
+[08-May-2026 06:13:14 UTC] Fetching customer segment member ID for customer: gid://shopify/Customer/8739110682729, segment: gid://shopify/Segment/462024736873
+[2026-05-08 06:13:14] [INFO] GraphQL query payload: {"query":"\n    query GetSegmentMemberInfo($customerId: ID!, $segmentId: ID!) {\n        customer(id: $customerId) {\n            segmentMembers(first: 10, segmentId: $segmentId) {\n                edges {\n                    node {\n                        id\n                        segment {\n                            id\n                        }\n                    }\n                }\n            }\n        }\n    }","variables":{"customerId":"gid:\/\/shopify\/Customer\/8739110682729","segmentId":"gid:\/\/shopify\/Segment\/462024736873"}}
+[08-May-2026 06:13:14 UTC] GraphQL query payload: {"query":"\n    query GetSegmentMemberInfo($customerId: ID!, $segmentId: ID!) {\n        customer(id: $customerId) {\n            segmentMembers(first: 10, segmentId: $segmentId) {\n                edges {\n                    node {\n                        id\n                        segment {\n                            id\n                        }\n                    }\n                }\n            }\n        }\n    }","variables":{"customerId":"gid:\/\/shopify\/Customer\/8739110682729","segmentId":"gid:\/\/shopify\/Segment\/462024736873"}}
+[2026-05-08 06:13:15] [INFO] GraphQL response for segment member: {"errors":[{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]}
+[08-May-2026 06:13:15 UTC] GraphQL response for segment member: {"errors":[{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]}
+[2026-05-08 06:13:15] [ERROR] GraphQL errors in fetchCustomerSegmentMemberId: [{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]
+[08-May-2026 06:13:15 UTC] GraphQL errors in fetchCustomerSegmentMemberId: [{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]
+[2026-05-08 06:13:15] [INFO] Constructed segment member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[08-May-2026 06:13:15 UTC] Constructed segment member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[2026-05-08 06:13:15] [INFO] Customer Segment Member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[08-May-2026 06:13:15 UTC] Customer Segment Member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[2026-05-08 06:13:15] [INFO] Fetching customer details for: gid://shopify/Customer/8739110682729
+[08-May-2026 06:13:15 UTC] Fetching customer details for: gid://shopify/Customer/8739110682729
+[2026-05-08 06:13:15] [INFO] GraphQL response code: 200
+[08-May-2026 06:13:15 UTC] GraphQL response code: 200
+[2026-05-08 06:13:15] [INFO] GraphQL response: {"data":{"customer":{"id":"gid://shopify/Customer/8739110682729","firstName":"Atul","lastName":"Rajput","defaultEmailAddress":{"emailAddress":"atul@gmail.com"},"defaultPhoneNumber":{"phoneNumber":"+917894561230"},"createdAt":"2026-04-09T05:15:38Z","addressesV2":{"edges":[{"node":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null}},{"node":{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}}]}}},"extensions":{"cost":{"requestedQueryCost":9,"actualQueryCost":6,"throttleStatus":{"maximumAvailable":20000.0,"currentlyAvailable":19994,"restoreRate":1000.0}}}}
+[08-May-2026 06:13:15 UTC] GraphQL response: {"data":{"customer":{"id":"gid://shopify/Customer/8739110682729","firstName":"Atul","lastName":"Rajput","defaultEmailAddress":{"emailAddress":"atul@gmail.com"},"defaultPhoneNumber":{"phoneNumber":"+917894561230"},"createdAt":"2026-04-09T05:15:38Z","addressesV2":{"edges":[{"node":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null}},{"node":{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}}]}}},"extensions":{"cost":{"requestedQueryCost":9,"actualQueryCost":6,"throttleStatus":{"maximumAvailable":20000.0,"currentlyAvailable":19994,"restoreRate":1000.0}}}}
+[2026-05-08 06:13:15] [INFO] Successfully fetched customer: Atul Rajput
+[08-May-2026 06:13:15 UTC] Successfully fetched customer: Atul Rajput
+[2026-05-08 06:13:15] [INFO] Customer details retrieved: {"id":"gid:\/\/shopify\/Customer\/8739110682729","firstName":"Atul","lastName":"Rajput","email":"atul@gmail.com","phone":"+917894561230","createdAt":"2026-04-09T05:15:38Z","defaultAddress":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},"addresses":[{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}],"country_code":"US"}
+[08-May-2026 06:13:15 UTC] Customer details retrieved: {"id":"gid:\/\/shopify\/Customer\/8739110682729","firstName":"Atul","lastName":"Rajput","email":"atul@gmail.com","phone":"+917894561230","createdAt":"2026-04-09T05:15:38Z","defaultAddress":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},"addresses":[{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}],"country_code":"US"}
+[2026-05-08 06:13:15] [INFO] Data to insert: {"segment_id":"462024736873","shopify_customer_id":"gid:\/\/shopify\/SegmentMember\/8739110682729_462024736873","first_name":"Atul","last_name":"Rajput","email":"atul@gmail.com","phone":"+917894561230","address1":"","address2":"","city":"","country":"US","country_code":"US","zip":"","created_at":"2026-05-08 06:13:15"}
+[08-May-2026 06:13:15 UTC] Data to insert: {"segment_id":"462024736873","shopify_customer_id":"gid:\/\/shopify\/SegmentMember\/8739110682729_462024736873","first_name":"Atul","last_name":"Rajput","email":"atul@gmail.com","phone":"+917894561230","address1":"","address2":"","city":"","country":"US","country_code":"US","zip":"","created_at":"2026-05-08 06:13:15"}
+[2026-05-08 06:13:15] [INFO] Customer already exists in segment, updating information...
+[08-May-2026 06:13:15 UTC] Customer already exists in segment, updating information...
+[2026-05-08 06:13:15] [INFO] Customer information updated successfully
+[08-May-2026 06:13:15 UTC] Customer information updated successfully
+[2026-05-08 06:13:15] [INFO] Segment conditions: {"type":"When Customer Joins Segment"}, SMS enabled: 0, WhatsApp enabled: 1
+[08-May-2026 06:13:15 UTC] Segment conditions: {"type":"When Customer Joins Segment"}, SMS enabled: 0, WhatsApp enabled: 1
+[2026-05-08 06:13:15] [INFO] SMS is NOT enabled - skipping
+[08-May-2026 06:13:15 UTC] SMS is NOT enabled - skipping
+[2026-05-08 06:13:15] [INFO] WhatsApp is enabled - sending
+[08-May-2026 06:13:15 UTC] WhatsApp is enabled - sending
+[2026-05-08 06:13:15] [INFO] WhatsApp sent successfully
+[08-May-2026 06:13:15 UTC] WhatsApp sent successfully
+[2026-05-08 06:13:15] [INFO] Webhook processed successfully
+[08-May-2026 06:13:15 UTC] Webhook processed successfully
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8739110682729
+
+Processing WhatsApp for customer update - Template: custom_account_invite
+Header variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ email_id }}' -> 'atul@gmail.com'
+Body variable: '{{ customer_full_name }}' -> 'Atul Rajput'
+Body variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ customer_lname }}' -> 'Rajput'
+Body variable: '{{ phone_number }}' -> '7894561230'
+Body variable: '{{ country_code }}' -> '1'
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for customer update: atul@gmail.com to 7894561230
+Shop: xtremestore-9600.myshopify.com | Customer ID: 8739110682729
+
+Processing WhatsApp for customer update - Template: custom_account_invite
+Header variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ email_id }}' -> 'atul@gmail.com'
+Body variable: '{{ customer_full_name }}' -> 'Atul Rajput'
+Body variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ customer_lname }}' -> 'Rajput'
+Body variable: '{{ phone_number }}' -> '7894561230'
+Body variable: '{{ country_code }}' -> '1'
+Media URL after replacement: asadsdsadas
+WhatsApp Button 1: type=cta, text=test
+WhatsApp Button 2: type=cta, text=test Button 2
+WhatsApp Button 3: type=cta, text=Test Button 3
+WhatsApp sent successfully for customer update: atul@gmail.com to 7894561230
+[2026-05-08 06:13:52] [INFO] ========== CUSTOMER JOINED SEGMENT WEBHOOK RECEIVED ==========
+[08-May-2026 06:13:52 UTC] ========== CUSTOMER JOINED SEGMENT WEBHOOK RECEIVED ==========
+[2026-05-08 06:13:52] [INFO] Shop: xtremestore-9600.myshopify.com
+[08-May-2026 06:13:52 UTC] Shop: xtremestore-9600.myshopify.com
+[2026-05-08 06:13:52] [INFO] Topic: customer.joined_segment
+[08-May-2026 06:13:52 UTC] Topic: customer.joined_segment
+[2026-05-08 06:13:52] [INFO] Raw payload: {"shop_id": "gid://shopify/Shop/67250946153", "customer_id": "gid://shopify/Customer/8739110682729", "segment_id": "gid://shopify/Segment/462024736873"}
+[08-May-2026 06:13:52 UTC] Raw payload: {"shop_id": "gid://shopify/Shop/67250946153", "customer_id": "gid://shopify/Customer/8739110682729", "segment_id": "gid://shopify/Segment/462024736873"}
+[08-May-2026 06:13:52 UTC] PHP Notice:  Undefined variable: api_secret in /var/www/html/notifycsapp/webhooks/segmentJoin2.php on line 80
+[2026-05-08 06:13:52] [INFO] Decoded payload: {"shop_id":"gid:\/\/shopify\/Shop\/67250946153","customer_id":"gid:\/\/shopify\/Customer\/8739110682729","segment_id":"gid:\/\/shopify\/Segment\/462024736873"}
+[08-May-2026 06:13:52 UTC] Decoded payload: {"shop_id":"gid:\/\/shopify\/Shop\/67250946153","customer_id":"gid:\/\/shopify\/Customer\/8739110682729","segment_id":"gid:\/\/shopify\/Segment\/462024736873"}
+[2026-05-08 06:13:52] [INFO] Customer GID: gid://shopify/Customer/8739110682729
+[08-May-2026 06:13:52 UTC] Customer GID: gid://shopify/Customer/8739110682729
+[2026-05-08 06:13:52] [INFO] Segment GID: gid://shopify/Segment/462024736873
+[08-May-2026 06:13:52 UTC] Segment GID: gid://shopify/Segment/462024736873
+[2026-05-08 06:13:52] [INFO] Extracted Customer ID: 8739110682729
+[08-May-2026 06:13:52 UTC] Extracted Customer ID: 8739110682729
+[2026-05-08 06:13:52] [INFO] Extracted Segment ID: 462024736873
+[08-May-2026 06:13:52 UTC] Extracted Segment ID: 462024736873
+[2026-05-08 06:13:52] [INFO] Database connection successful
+[08-May-2026 06:13:52 UTC] Database connection successful
+[2026-05-08 06:13:52] [INFO] Access token retrieved successfully
+[08-May-2026 06:13:52 UTC] Access token retrieved successfully
+[2026-05-08 06:13:52] [INFO] Found segment DB id: 217
+[08-May-2026 06:13:52 UTC] Found segment DB id: 217
+[2026-05-08 06:13:52] [INFO] Fetching customer segment member ID for customer: gid://shopify/Customer/8739110682729, segment: gid://shopify/Segment/462024736873
+[08-May-2026 06:13:52 UTC] Fetching customer segment member ID for customer: gid://shopify/Customer/8739110682729, segment: gid://shopify/Segment/462024736873
+[2026-05-08 06:13:52] [INFO] GraphQL query payload: {"query":"\n    query GetSegmentMemberInfo($customerId: ID!, $segmentId: ID!) {\n        customer(id: $customerId) {\n            segmentMembers(first: 10, segmentId: $segmentId) {\n                edges {\n                    node {\n                        id\n                        segment {\n                            id\n                        }\n                    }\n                }\n            }\n        }\n    }","variables":{"customerId":"gid:\/\/shopify\/Customer\/8739110682729","segmentId":"gid:\/\/shopify\/Segment\/462024736873"}}
+[08-May-2026 06:13:52 UTC] GraphQL query payload: {"query":"\n    query GetSegmentMemberInfo($customerId: ID!, $segmentId: ID!) {\n        customer(id: $customerId) {\n            segmentMembers(first: 10, segmentId: $segmentId) {\n                edges {\n                    node {\n                        id\n                        segment {\n                            id\n                        }\n                    }\n                }\n            }\n        }\n    }","variables":{"customerId":"gid:\/\/shopify\/Customer\/8739110682729","segmentId":"gid:\/\/shopify\/Segment\/462024736873"}}
+[2026-05-08 06:13:53] [INFO] GraphQL response for segment member: {"errors":[{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]}
+[08-May-2026 06:13:53 UTC] GraphQL response for segment member: {"errors":[{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]}
+[2026-05-08 06:13:53] [ERROR] GraphQL errors in fetchCustomerSegmentMemberId: [{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]
+[08-May-2026 06:13:53 UTC] GraphQL errors in fetchCustomerSegmentMemberId: [{"message":"Field 'segmentMembers' doesn't exist on type 'Customer'","locations":[{"line":4,"column":13}],"path":["query GetSegmentMemberInfo","customer","segmentMembers"],"extensions":{"code":"undefinedField","typeName":"Customer","fieldName":"segmentMembers"}},{"message":"Variable $segmentId is declared by GetSegmentMemberInfo but not used","locations":[{"line":2,"column":5}],"path":["query GetSegmentMemberInfo"],"extensions":{"code":"variableNotUsed","variableName":"segmentId"}}]
+[2026-05-08 06:13:53] [INFO] Constructed segment member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[08-May-2026 06:13:53 UTC] Constructed segment member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[2026-05-08 06:13:53] [INFO] Customer Segment Member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[08-May-2026 06:13:53 UTC] Customer Segment Member ID: gid://shopify/SegmentMember/8739110682729_462024736873
+[2026-05-08 06:13:53] [INFO] Fetching customer details for: gid://shopify/Customer/8739110682729
+[08-May-2026 06:13:53 UTC] Fetching customer details for: gid://shopify/Customer/8739110682729
+[2026-05-08 06:13:53] [INFO] GraphQL response code: 200
+[08-May-2026 06:13:53 UTC] GraphQL response code: 200
+[2026-05-08 06:13:53] [INFO] GraphQL response: {"data":{"customer":{"id":"gid://shopify/Customer/8739110682729","firstName":"Atul","lastName":"Rajput","defaultEmailAddress":{"emailAddress":"atul@gmail.com"},"defaultPhoneNumber":{"phoneNumber":"+917894561230"},"createdAt":"2026-04-09T05:15:38Z","addressesV2":{"edges":[{"node":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null}},{"node":{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}}]}}},"extensions":{"cost":{"requestedQueryCost":9,"actualQueryCost":6,"throttleStatus":{"maximumAvailable":20000.0,"currentlyAvailable":19994,"restoreRate":1000.0}}}}
+[08-May-2026 06:13:53 UTC] GraphQL response: {"data":{"customer":{"id":"gid://shopify/Customer/8739110682729","firstName":"Atul","lastName":"Rajput","defaultEmailAddress":{"emailAddress":"atul@gmail.com"},"defaultPhoneNumber":{"phoneNumber":"+917894561230"},"createdAt":"2026-04-09T05:15:38Z","addressesV2":{"edges":[{"node":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null}},{"node":{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}}]}}},"extensions":{"cost":{"requestedQueryCost":9,"actualQueryCost":6,"throttleStatus":{"maximumAvailable":20000.0,"currentlyAvailable":19994,"restoreRate":1000.0}}}}
+[2026-05-08 06:13:53] [INFO] Successfully fetched customer: Atul Rajput
+[08-May-2026 06:13:53 UTC] Successfully fetched customer: Atul Rajput
+[2026-05-08 06:13:53] [INFO] Customer details retrieved: {"id":"gid:\/\/shopify\/Customer\/8739110682729","firstName":"Atul","lastName":"Rajput","email":"atul@gmail.com","phone":"+917894561230","createdAt":"2026-04-09T05:15:38Z","defaultAddress":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},"addresses":[{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}],"country_code":"US"}
+[08-May-2026 06:13:53 UTC] Customer details retrieved: {"id":"gid:\/\/shopify\/Customer\/8739110682729","firstName":"Atul","lastName":"Rajput","email":"atul@gmail.com","phone":"+917894561230","createdAt":"2026-04-09T05:15:38Z","defaultAddress":{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},"addresses":[{"address1":null,"address2":null,"city":null,"countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":null,"phone":null},{"address1":"Asdee Ln","address2":"45","city":"Spotsylvania","countryCodeV2":"US","firstName":"Atul","lastName":"Rajput","zip":"22551","phone":"+1 988-715-4125"}],"country_code":"US"}
+[2026-05-08 06:13:53] [INFO] Data to insert: {"segment_id":"462024736873","shopify_customer_id":"gid:\/\/shopify\/SegmentMember\/8739110682729_462024736873","first_name":"Atul","last_name":"Rajput","email":"atul@gmail.com","phone":"+917894561230","address1":"","address2":"","city":"","country":"US","country_code":"US","zip":"","created_at":"2026-05-08 06:13:53"}
+[08-May-2026 06:13:53 UTC] Data to insert: {"segment_id":"462024736873","shopify_customer_id":"gid:\/\/shopify\/SegmentMember\/8739110682729_462024736873","first_name":"Atul","last_name":"Rajput","email":"atul@gmail.com","phone":"+917894561230","address1":"","address2":"","city":"","country":"US","country_code":"US","zip":"","created_at":"2026-05-08 06:13:53"}
+[2026-05-08 06:13:53] [INFO] Customer already exists in segment, updating information...
+[08-May-2026 06:13:53 UTC] Customer already exists in segment, updating information...
+[2026-05-08 06:13:53] [INFO] Customer information updated successfully
+[08-May-2026 06:13:53 UTC] Customer information updated successfully
+[2026-05-08 06:13:53] [INFO] Segment conditions: {"type":"When Customer Joins Segment"}, SMS enabled: 1, WhatsApp enabled: 0
+[08-May-2026 06:13:53 UTC] Segment conditions: {"type":"When Customer Joins Segment"}, SMS enabled: 1, WhatsApp enabled: 0
+[2026-05-08 06:13:53] [INFO] SMS is enabled - sending
+[08-May-2026 06:13:53 UTC] SMS is enabled - sending
+[2026-05-08 06:13:53] [INFO] SMS sent successfully
+[08-May-2026 06:13:53 UTC] SMS sent successfully
+[2026-05-08 06:13:53] [INFO] WhatsApp is NOT enabled - skipping
+[08-May-2026 06:13:53 UTC] WhatsApp is NOT enabled - skipping
+[2026-05-08 06:13:53] [INFO] Webhook processed successfully
+[08-May-2026 06:13:53 UTC] Webhook processed successfully
