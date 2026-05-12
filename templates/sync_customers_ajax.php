@@ -51,7 +51,6 @@ $stmt = $statusPdo->prepare("UPDATE $customerSegmentTable SET sync_status = 'pen
 $stmt->execute(array($local_segment_id));
 $statusPdo = null;
 
-
 header('Content-Type: application/json');
 header('Connection: close');
 header('Content-Length: ' . strlen(json_encode(array('success' => true, 'status' => 'started'))));
@@ -61,7 +60,6 @@ echo json_encode(array(
     'status' => 'processing'
 ));
 
-
 if (function_exists('fastcgi_finish_request')) {
     fastcgi_finish_request();
 }
@@ -69,7 +67,6 @@ flush();
 
 try {
     error_log("[Sync-Start] Starting sync for shop: $shop, segment: $segment_id, local: $local_segment_id");
-
     $procPdo = getDatabaseConnection();
     $stmt = $procPdo->prepare("UPDATE $customerSegmentTable SET sync_status = 'processing' WHERE id = ?");
     $stmt->execute(array($local_segment_id));
@@ -82,21 +79,35 @@ try {
     while ($hasNextPage) {
         $customerQuery = <<<GRAPHQL
 query getCustomers(\$segmentId: ID!, \$cursor: String) {
-    customerSegmentMembers(first: 250, segmentId: \$segmentId, after: \$cursor) {
-        edges {
-            node {
-                id
-                firstName
-                lastName
-                defaultEmailAddress { emailAddress }
-                defaultPhoneNumber { phoneNumber }
-            }
+  customerSegmentMembers(first: 250, segmentId: \$segmentId, after: \$cursor) {
+    edges {
+      node {
+        id
+        firstName
+        lastName
+        defaultEmailAddress {
+          emailAddress
         }
-        pageInfo {
-            hasNextPage
-            endCursor
+        defaultPhoneNumber {
+          phoneNumber
         }
+        defaultAddress {
+          address1
+          address2
+          city
+          country
+          countryCodeV2
+          firstName
+          lastName
+          zip
+        }
+      }
     }
+    pageInfo {
+      hasNextPage
+      endCursor
+    }
+  }
 }
 GRAPHQL;
 
@@ -147,8 +158,6 @@ GRAPHQL;
         }
         usleep(50000);
     }
-
-
     $batchSize = 50;
     $totalInserted = 0;
 
@@ -158,6 +167,22 @@ GRAPHQL;
         $params = array();
 
         foreach ($batch as $customer) {
+            $address1 = '';
+            $address2 = '';
+            $city = '';
+            $country = '';
+            $countryCode = '';
+            $zip = '';
+
+            if (isset($customer['defaultAddress'])) {
+                $address1 = isset($customer['defaultAddress']['address1']) ? $customer['defaultAddress']['address1'] : '';
+                $address2 = isset($customer['defaultAddress']['address2']) ? $customer['defaultAddress']['address2'] : '';
+                $city = isset($customer['defaultAddress']['city']) ? $customer['defaultAddress']['city'] : '';
+                $country = isset($customer['defaultAddress']['country']) ? $customer['defaultAddress']['country'] : '';
+                $countryCode = isset($customer['defaultAddress']['countryCodeV2']) ? $customer['defaultAddress']['countryCodeV2'] : '';
+                $zip = isset($customer['defaultAddress']['zip']) ? $customer['defaultAddress']['zip'] : '';
+            }
+
             $values[] = "(?,?,?,?,?,?,?,?,?,?,?,?)";
             $params = array_merge($params, array(
                 $segment_id,
@@ -166,15 +191,14 @@ GRAPHQL;
                 isset($customer['lastName']) ? $customer['lastName'] : '',
                 isset($customer['defaultEmailAddress']['emailAddress']) ? $customer['defaultEmailAddress']['emailAddress'] : '',
                 isset($customer['defaultPhoneNumber']['phoneNumber']) ? $customer['defaultPhoneNumber']['phoneNumber'] : '',
-                '',
-                '',
-                '',
-                '',
-                '',
-                ''
+                $address1,
+                $address2,
+                $city,
+                $country,
+                $countryCode,
+                $zip
             ));
         }
-
         $sql = "INSERT IGNORE INTO $segmentCustomersInfoTable 
                 (segment_id, shopify_customer_id, first_name, last_name, email, phone, address1, address2, city, country, country_code, zip) 
                 VALUES " . implode(',', $values);
@@ -187,7 +211,6 @@ GRAPHQL;
         $batchPdo = null;
         usleep(50000);
     }
-
     $finalPdo = getDatabaseConnection();
     $stmt = $finalPdo->prepare("UPDATE $customerSegmentTable SET sync_status = 'completed', sync_customer_count = ?, sync_completed_at = NOW() WHERE id = ?");
     $stmt->execute(array($totalInserted, $local_segment_id));

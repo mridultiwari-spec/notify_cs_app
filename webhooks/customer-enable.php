@@ -106,7 +106,6 @@ if ($row) {
                 $sms_variables = array();
             }
 
-            // Check if sms_variables has any key-value pairs
             if (count($sms_variables) > 0) {
                 $has_parameters = true;
                 file_put_contents("$logFile", "SMS Variables loaded (has parameters): " . print_r($sms_variables, true) . "\n", FILE_APPEND);

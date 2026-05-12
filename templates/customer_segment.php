@@ -2780,18 +2780,17 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 })
                     .then(function (res) { return res.json(); })
                     .then(function (data) {
-                        // Log full response to browser console
                         console.log('Webhook Response:', data);
 
                         if (data && data.success) {
                             var channelText = channel === 'sms' ? 'SMS' : 'WhatsApp';
                             var statusText = status === 1 ? 'enabled' : 'disabled';
 
-                            // Check if webhook was managed successfully
+                           
                             if (data.webhook_managed === true) {
                                 shopify.toast.show(channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
                             } else if (data.webhook_managed === false && data.webhook_debug) {
-                                // Webhook failed - show error details
+                               
                                 var debug = data.webhook_debug;
                                 var errorMsg = '';
 
@@ -2962,7 +2961,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             pollSegmentSyncStatus(localId, attempt + 1);
                             return;
                         }
-
                         if (data.status === 'completed') {
                             shopify.toast.show('Customer sync completed. ' + (data.count || 0) + ' customers synced.', { duration: 5000 });
                         } else if (data.status === 'failed') {
@@ -2976,18 +2974,12 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     });
             }, 5000);
         }
-
-
         function addSegmentToTable(localId, name, templateName, shopifySegmentId) {
             var tbody = document.querySelector('.custom-table tbody');
-
-
             var noDataRow = tbody.querySelector('tr td[colspan="6"]');
             if (noDataRow) {
                 noDataRow.parentNode.remove();
             }
-
-
             var newRow = document.createElement('tr');
             newRow.id = 'row-' + localId;
 
@@ -3082,5 +3074,4 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
     </script>
 </body>
-
 </html>
