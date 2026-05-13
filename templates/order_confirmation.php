@@ -125,7 +125,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 'redirect_url' => $app_url . "/index.php?tab=orders&shop=" . urlencode($shop)
             ));
         }
-
         if (isset($_POST['media_type'])) {
             $media_type = isset($_POST['media_type']) ? $_POST['media_type'] : 'text';
             $media_source_type = isset($_POST['media_source_type']) ? $_POST['media_source_type'] : 'url';

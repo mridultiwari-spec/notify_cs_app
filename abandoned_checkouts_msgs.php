@@ -221,7 +221,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
         if ($has_parameters) {
             file_put_contents($logFile, "Using TEMPLATE-BASED SMS with parameters\n", FILE_APPEND);
             
-            // Process SMS variables through replacement map
             foreach ($sms_variables as $key => $value) {
                 $placeholder = "{{ " . trim($key) . " }}";
                 
@@ -271,7 +270,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
                 }
             }
             
-            // Prepare parameter values for SMS template
             $parameter_values = array();
             foreach ($sms_variables as $key => $value) {
                 $placeholder = "{{ " . trim($key) . " }}";
@@ -283,8 +281,7 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
             }
             file_put_contents($logFile, "Parameter Values for template: " . json_encode($parameter_values) . "\n", FILE_APPEND);
             file_put_contents($logFile, "Template ID: " . $template_name_sms . "\n", FILE_APPEND);
-            
-            // Process placeholders in button text and media URL
+
             foreach ($replacementMap as $placeholder => $value) {
                 if ($value !== null) {
                     if (strpos($button_text1, $placeholder) !== false) {
@@ -300,7 +297,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
                 file_put_contents($logFile, "INFO: Dynamic product image not applicable for abandoned checkout\n", FILE_APPEND);
             }
             
-            // Send SMS template
             if (empty($phone_number)) {
                 file_put_contents($logFile, "ERROR: Customer phone is empty, cannot send SMS for checkout: $checkout_id\n", FILE_APPEND);
             } elseif (empty($template_name_sms)) {
@@ -311,7 +307,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
                 file_put_contents($logFile, "Template SMS sent successfully to $phone_number\n", FILE_APPEND);
             }
             
-            // Send WhatsApp text (inside has_parameters block - same as reference)
             $whatsapp_enabled = isset($config['whatsapp_enabled']) ? (int) $config['whatsapp_enabled'] : 0;
             
             if ($whatsapp_enabled == 1 && !empty($phone_number) && !empty($processed_whatsapp_text)) {
@@ -337,7 +332,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
             }
             
         } else {
-            // ============ PLAIN TEXT SMS ============
             file_put_contents($logFile, "Using PLAIN TEXT SMS (no parameters)\n", FILE_APPEND);
             
             $searchVal = array(
@@ -418,8 +412,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
                 $result['sms_sent'] = true;
                 file_put_contents($logFile, "SMS sent successfully to $phone_number\n", FILE_APPEND);
             }
-            
-            // Send WhatsApp text (inside plain text block - same as reference)
             $whatsapp_enabled = isset($config['whatsapp_enabled']) ? (int) $config['whatsapp_enabled'] : 0;
             
             if ($whatsapp_enabled == 1 && !empty($phone_number) && !empty($final_whatsapp)) {
@@ -526,12 +518,10 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
                 'button_text' => $btn1_text
             );
             file_put_contents($logFile, "WhatsApp Button 1: type=$btn1_type, text=$btn1_text\n", FILE_APPEND);
-        }
-        
+        }    
         $btn2_type = isset($config['button_type2']) ? $config['button_type2'] : '';
         $btn2_text = isset($config['button_text2_type']) ? trim($config['button_text2_type']) : '';
         $btn2_url = isset($cta_urls['button2']) ? $cta_urls['button2'] : '';
-        
         if ($btn2_type !== 'none' && !empty($btn2_text)) {
             $btn2_text = wa_replace_placeholders($btn2_text, $replacement_map);
             $btn2_url = wa_replace_placeholders($btn2_url, $replacement_map);
@@ -544,7 +534,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
             );
             file_put_contents($logFile, "WhatsApp Button 2: type=$btn2_type, text=$btn2_text\n", FILE_APPEND);
         }
-        
         $btn3_type = isset($config['button_type3']) ? $config['button_type3'] : '';
         $btn3_text = isset($config['button_text3_type']) ? trim($config['button_text3_type']) : '';
         $btn3_url = isset($cta_urls['button3']) ? $cta_urls['button3'] : '';
@@ -628,7 +617,6 @@ function wa_replace_placeholders($text, $replacement_map)
     if (empty($text)) {
         return $text;
     }
-    
     foreach ($replacement_map as $key => $value) {
         $placeholder = "{{ " . $key . " }}";
         if (strpos($text, $placeholder) !== false) {

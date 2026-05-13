@@ -1094,7 +1094,43 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
             </div>
         </div>
     </div>
+    <script>
+        // Pass PHP status to JavaScript
+        var channelStatuses = {
+            'orders/create': { sms: <?php echo $orderSmsEnabled ? 1 : 0; ?>, wa: <?php echo $orderWhatsappEnabled ? 1 : 0; ?> },
+            'orders/updated': { sms: <?php echo $editedSmsEnabled ? 1 : 0; ?>, wa: <?php echo $editedWhatsappEnabled ? 1 : 0; ?> },
+            'orders/cancelled': { sms: <?php echo $cancelledSmsEnabled ? 1 : 0; ?>, wa: <?php echo $cancelledWhatsappEnabled ? 1 : 0; ?> },
+            'refunds/create': { sms: <?php echo $refundSmsEnabled ? 1 : 0; ?>, wa: <?php echo $refundWhatsappEnabled ? 1 : 0; ?> },
+            'checkouts/update': { sms: <?php echo $abandonedSmsEnabled ? 1 : 0; ?>, wa: <?php echo $abandonedWhatsappEnabled ? 1 : 0; ?> },
+            'fulfillments/create': { sms: <?php echo $fulfillmentRequestSmsEnabled ? 1 : 0; ?>, wa: <?php echo $fulfillmentRequestWhatsappEnabled ? 1 : 0; ?> },
+            'orders/fulfilled': { sms: <?php echo $shippingConfirmationSmsEnabled ? 1 : 0; ?>, wa: <?php echo $shippingConfirmationWhatsappEnabled ? 1 : 0; ?> },
+            'fulfillments/update': { sms: <?php echo $shippingUpdateSmsEnabled ? 1 : 0; ?>, wa: <?php echo $shippingUpdateWhatsappEnabled ? 1 : 0; ?> },
+            'customers/update': { sms: <?php echo $customerAccountUpdateSmsEnabled ? 1 : 0; ?>, wa: <?php echo $customerAccountUpdateWhatsappEnabled ? 1 : 0; ?> },
+            'customers/enable': { sms: <?php echo $customerWelcomeSmsEnabled ? 1 : 0; ?>, wa: <?php echo $customerWelcomeWhatsappEnabled ? 1 : 0; ?> }
+        };
 
+        function checkChannelStatus(templateType, callback) {
+            const topicMap = {
+                'order_confirmation': 'orders/create',
+                'order_edited': 'orders/updated',
+                'order_cancelled': 'orders/cancelled',
+                'order_refund': 'refunds/create',
+                'abandoned_checkout': 'checkouts/update',
+                'fulfillment_request': 'fulfillments/create',
+                'shipping_confirmation': 'orders/fulfilled',
+                'shipping_update': 'fulfillments/update',
+                'customer_account_invite': 'customers/update',
+                'customer_welcome': 'customers/enable'
+            };
+
+            const topic = topicMap[templateType];
+            if (topic && channelStatuses[topic]) {
+                callback(channelStatuses[topic].sms === 1, channelStatuses[topic].wa === 1);
+            } else {
+                callback(false, false);
+            }
+        }
+    </script>
     <script>
         let currentTemplateType = 'order_confirmation';
         document.addEventListener("DOMContentLoaded", function () {
@@ -1201,9 +1237,6 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                             return data;
                         })
                         .then(data => {
-                            // if (channel !== 'sms') {
-                            //     return;
-                            // }
                             if (data && data.error) {
                                 shopify.toast.show(data.error, { isError: true, duration: 3000 });
                                 toggleEl.checked = !toggleEl.checked;
@@ -1212,6 +1245,14 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                             const statusText = action === 1 ? 'enabled' : 'disabled';
                             const channelText = channel === 'sms' ? 'SMS' : 'WhatsApp';
                             shopify.toast.show(channelText + ' webhook ' + statusText + ' successfully.', { duration: 3000 });
+
+                            if (channelStatuses[topic]) {
+                                if (channel === 'sms') {
+                                    channelStatuses[topic].sms = action;
+                                } else {
+                                    channelStatuses[topic].wa = action;
+                                }
+                            }
                         })
                         .catch((e) => {
                             if (channel === 'sms') {
@@ -1269,54 +1310,61 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                 return;
             }
 
-            const sendButton = document.querySelector('#testModal .submit-btn');
-            const originalText = sendButton.innerHTML;
-            sendButton.disabled = true;
-            sendButton.innerHTML = '<span class="loading-spinner"></span> Sending...';
+            checkChannelStatus(currentTemplateType, function (smsEnabled, whatsappEnabled) {
+                if (!smsEnabled && !whatsappEnabled) {
+                    shopify.toast.show("Please enable SMS or WhatsApp template first.", { isError: true, duration: 3000 });
+                    return;
+                }
 
-            const endpointMap = {
-                'order_confirmation': '/notifycsapp/test_trigger/test_order_create.php',
-                'order_edited': '/notifycsapp/test_trigger/test_order_edit.php',
-                'order_cancelled': '/notifycsapp/test_trigger/test_order_cancel.php',
-                'order_refund': '/notifycsapp/test_trigger/test_refund_create.php',
-                'abandoned_checkout': '/notifycsapp/test_trigger/test_abandoned_checkout.php',
-                'fulfillment_request': '/notifycsapp/test_trigger/test_fulfillment.php',
-                'shipping_confirmation': '/notifycsapp/test_trigger/test_shipping_confirm.php',
-                'shipping_update': '/notifycsapp/test_trigger/test_shipping_update.php',
-                'customer_account_invite': '/notifycsapp/test_trigger/test_customer_update.php',
-                'customer_welcome': '/notifycsapp/test_trigger/test_customer_welcome.php'
-            };
+                const sendButton = document.querySelector('#testModal .submit-btn');
+                const originalText = sendButton.innerHTML;
+                sendButton.disabled = true;
+                sendButton.innerHTML = '<span class="loading-spinner"></span> Sending...';
 
-            const endpoint = endpointMap[currentTemplateType] || '/test_trigger/test_order_create.php';
+                const endpointMap = {
+                    'order_confirmation': '/notifycsapp/test_trigger/test_order_create.php',
+                    'order_edited': '/notifycsapp/test_trigger/test_order_edit.php',
+                    'order_cancelled': '/notifycsapp/test_trigger/test_order_cancel.php',
+                    'order_refund': '/notifycsapp/test_trigger/test_refund_create.php',
+                    'abandoned_checkout': '/notifycsapp/test_trigger/test_abandoned_checkout.php',
+                    'fulfillment_request': '/notifycsapp/test_trigger/test_fulfillment.php',
+                    'shipping_confirmation': '/notifycsapp/test_trigger/test_shipping_confirm.php',
+                    'shipping_update': '/notifycsapp/test_trigger/test_shipping_update.php',
+                    'customer_account_invite': '/notifycsapp/test_trigger/test_customer_update.php',
+                    'customer_welcome': '/notifycsapp/test_trigger/test_customer_welcome.php'
+                };
 
-            fetch(endpoint, {
-                method: 'POST',
-                headers: {
-                    'Content-Type': 'application/json'
-                },
-                body: JSON.stringify({
-                    country_code: countryCode,
-                    phone: phone,
-                    shop: "<?php echo $_SESSION['shop']; ?>"
+                const endpoint = endpointMap[currentTemplateType] || '/test_trigger/test_order_create.php';
+
+                fetch(endpoint, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json'
+                    },
+                    body: JSON.stringify({
+                        country_code: countryCode,
+                        phone: phone,
+                        shop: "<?php echo $_SESSION['shop']; ?>"
+                    })
                 })
-            })
-                .then(res => res.json())
-                .then(data => {
-                    if (data.success) {
-                        closeTestModal();
-                        shopify.toast.show('✓ Test triggered successfully! Check the status in App Logs.', { duration: 3000 });
-                    } else {
-                        shopify.toast.show(data.message || "Error sending test SMS", { isError: true, duration: 3000 });
-                    }
-                    sendButton.disabled = false;
-                    sendButton.innerHTML = originalText;
-                })
-                .catch(err => {
-                    console.error(err);
-                    shopify.toast.show("Network error. Please try again.", { isError: true, duration: 3000 });
-                    sendButton.disabled = false;
-                    sendButton.innerHTML = originalText;
-                });
+                    .then(function (res) { return res.json(); })
+                    .then(function (data) {
+                        if (data.success) {
+                            closeTestModal();
+                            shopify.toast.show('✓ Test triggered successfully! Check the status in App Logs.', { duration: 3000 });
+                        } else {
+                            shopify.toast.show(data.message || "Error sending test message", { isError: true, duration: 3000 });
+                        }
+                        sendButton.disabled = false;
+                        sendButton.innerHTML = originalText;
+                    })
+                    .catch(function (err) {
+                        console.error(err);
+                        shopify.toast.show("Network error. Please try again.", { isError: true, duration: 3000 });
+                        sendButton.disabled = false;
+                        sendButton.innerHTML = originalText;
+                    });
+            });
         }
 
         window.onclick = function (event) {
@@ -1351,7 +1399,6 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                 }
             }
         }
-
         function updateSearchInput() {
             var select = document.getElementById('test_country_code');
             var searchInput = document.getElementById('country_search');

@@ -65,7 +65,7 @@ try {
         'customer_email_id' => 'john.doe@example.com',
         'country_code' => $cleanCountryCode,
         'customer_phone' => $cleanPhone,
-        'customer_name' => 'John Doe',
+        'customer_full_name' => 'John Doe',
         'customer_fname' => 'John',
         'customer_lname' => 'Doe',
         'segment_name' => 'Test Segment',

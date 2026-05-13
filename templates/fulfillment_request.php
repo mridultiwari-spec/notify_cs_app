@@ -115,7 +115,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     ':sms_variables' => $sms_variables
                 ));
             }
-
             send_json_response(array(
                 'success' => true,
                 'message' => 'Template saved successfully.',

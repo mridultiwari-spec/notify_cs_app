@@ -1613,3 +1613,60 @@ CURL Error:
 Database log inserted
 ========================================
 
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Cancelled
+Parameter Values: {"1":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","2":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","3":"89.99"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"1":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","2":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","3":"89.99"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-13T12:50:29.982+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Cancelled
+Parameter Values: {"1":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","2":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","3":"89.99"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"1":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","2":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","3":"89.99"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-13T12:50:50.701+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Cancelled
+Parameter Values: {"1":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","2":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","3":"89.99"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"1":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","2":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","3":"89.99"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-13T12:51:40.668+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+

@@ -25,7 +25,6 @@ function webhooksTableExists($pdo)
     }
     return $exists;
 }
-
 function hasInvalidTokenError($response)
 {
     if (!is_array($response) || !isset($response['errors'])) {

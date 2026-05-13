@@ -460,13 +460,6 @@ function manageSegmentWebhook($pdo, $prefix, $shop, $accessToken, $segmentDbId, 
         return false;
     }
 }
-// debugStep('Script start');
-// $shop = isset($_SESSION['shop']) ? $_SESSION['shop'] : (isset($_POST['shop']) ? $_POST['shop'] : (isset($_GET['shop']) ? $_GET['shop'] : ''));
-// if (!$shop) {
-//     die("Shop not found");
-// }
-
-// session_write_close();
 
 debugStep('Script start');
 $shop = isset($_SESSION['shop']) ? $_SESSION['shop'] : (isset($_POST['shop']) ? $_POST['shop'] : (isset($_GET['shop']) ? $_GET['shop'] : ''));
@@ -628,32 +621,6 @@ $isAjaxRequest = ($_SERVER['REQUEST_METHOD'] === 'POST') &&
 if ($isAjaxRequest) {
     $pdo = getDatabaseConnection();
     $customerSegmentTable = $prefix . "customer_segment";
-
-    // if (isset($_POST['update_status'])) {
-    //     $id = isset($_POST['id']) ? $_POST['id'] : null;
-    //     $status = isset($_POST['status']) ? $_POST['status'] : 0;
-
-    //     if ($id !== null) {
-    //         try {
-    //             $stmt = $pdo->prepare("UPDATE $customerSegmentTable SET statuses = ? WHERE id = ?");
-    //             $stmt->execute(array($status, $id));
-    //             $stmt = $pdo->prepare("SELECT COUNT(*) as count FROM $customerSegmentTable WHERE statuses = 1");
-    //             $stmt->execute();
-    //             $result = $stmt->fetch(PDO::FETCH_ASSOC);
-
-    //             echo json_encode(array(
-    //                 'success' => true,
-    //                 'webhooks_registered' => false,
-    //                 'message' => 'Status updated'
-    //             ));
-    //         } catch (Exception $e) {
-    //             echo json_encode(array('success' => false, 'message' => $e->getMessage()));
-    //         }
-    //     } else {
-    //         echo json_encode(array('success' => false, 'message' => 'Missing ID'));
-    //     }
-    //     exit;
-    // }
     if (isset($_POST['update_status'])) {
         $id = isset($_POST['id']) ? $_POST['id'] : null;
         $status = isset($_POST['status']) ? $_POST['status'] : 0;
@@ -972,13 +939,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
             $syncStarted = true;
         }
 
-        // echo json_encode([
-        //     'success' => true,
-        //     'segment_id' => $localSegmentId,
-        //     'shopify_segment_id' => $segment_id,
-        //     'sync_started' => $syncStarted,
-        //     'message' => 'Segment saved successfully. Customer sync started in background.'
-        // ]);
+
         echo json_encode(array(
             'success' => true,
             'segment_id' => $localSegmentId,
@@ -996,7 +957,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['form_type']) && $_POS
 
         exit;
     } catch (Exception $e) {
-        //echo json_encode(['success' => false, 'message' => $e->getMessage()]);
+
         echo json_encode(array('success' => false, 'message' => $e->getMessage()));
         exit;
     }
@@ -1010,7 +971,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
         : json_encode(array('type' => 'When Customer Joins Segment'));
     $id = isset($_POST['aid']) ? $_POST['aid'] : '';
     if (empty($id)) {
-        die("ID missing");
+        echo json_encode(array('success' => false, 'message' => 'ID missing'));
+        exit;
     }
     $sms = isset($_POST['sms']) ? $_POST['sms'] : '';
     $template_name_sms = isset($_POST['template_name']) ? $_POST['template_name'] : '';
@@ -1037,12 +999,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
             $template_name_sms,
             $id
         ));
-        echo "<script>
-            window.location.href = window.location.pathname + '?shop=" . urlencode($shop) . "';
-        </script>";
+        echo json_encode(array('success' => true, 'message' => 'Template saved successfully'));
         exit;
     } catch (Exception $e) {
-        die("Error: " . $e->getMessage());
+        echo json_encode(array('success' => false, 'message' => $e->getMessage()));
+        exit;
     }
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_POST['form_type'] : '') === 'whatsapp')) {
@@ -1053,7 +1014,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
         : json_encode(array('type' => 'When Customer Joins Segment'));
     $id = isset($_POST['aid']) ? $_POST['aid'] : '';
     if (empty($id)) {
-        die("ID missing");
+        echo json_encode(array('success' => false, 'message' => 'ID missing'));
+        exit;
     }
     $media_type = isset($_POST['media_type']) ? $_POST['media_type'] : 'text';
     $media_source_type = isset($_POST['media_source_type']) ? $_POST['media_source_type'] : 'url';
@@ -1113,12 +1075,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
     $template_name = isset($_POST['whatsapp_template_name']) ? $_POST['whatsapp_template_name'] : '';
     $variable_headers = isset($_POST['variable_headers']) ? $_POST['variable_headers'] : array();
     $variable_body = isset($_POST['variable_body']) ? $_POST['variable_body'] : array();
-    // $variable_headers = array_values(array_filter($variable_headers, function ($v) {
-    //     return $v !== '';
-    // }));
-    // $variable_body = array_values(array_filter($variable_body, function ($v) {
-    //     return $v !== '';
-    // }));
     $variable_headers = array_values(array_filter($variable_headers));
     $variable_body = array_values(array_filter($variable_body));
 
@@ -1162,20 +1118,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
             $conditions,
             $id
         ));
-        echo "<script>
-            window.location.href = window.location.pathname + '?shop=" . urlencode($shop) . "&status=success';
-        </script>";
+        echo json_encode(array('success' => true, 'message' => 'Template saved successfully'));
         exit;
     } catch (Exception $e) {
-        die("Error: " . $e->getMessage());
+        echo json_encode(array('success' => false, 'message' => $e->getMessage()));
+        exit;
     }
 }
-// $stmt = $pdo->prepare("
-//     SELECT id, name, comment, template_name, sms, whatsapp, conditions, DateAndTime, statuses AS status, segment_id
-//     FROM $customerSegmentTable
-//     WHERE shop = :shop
-//     ORDER BY DateAndTime DESC
-// ");
 $stmt = $pdo->prepare("
     SELECT id, name, comment, template_name, sms, whatsapp, conditions, DateAndTime, 
            sms_enabled, whatsapp_enabled, segment_id
@@ -1572,13 +1521,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                     </span>
                                 </div>
                             </td>
-                            <!-- <td>
-                                <label class="switch">
-                                    <input type="checkbox" class="webhook-toggle" data-id="<?= $row['id'] ?>"
-                                        data-segment-id="<?= htmlspecialchars($row['segment_id']) ?>" <?= (isset($row['status']) ? $row['status'] : 0) ? 'checked' : '' ?>>
-                                    <span class="slider"></span>
-                                </label>
-                            </td> -->
                             <td>
                                 <label class="switch">
                                     <input type="checkbox" class="segment-toggle sms-toggle" data-id="<?= $row['id'] ?>"
@@ -1605,38 +1547,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             </tbody>
         </table>
     </div>
-    <!-- <div id="testModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Send Test Message</h3>
-                <span class="close" onclick="closeTestModal()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Country Code</label>
-                    <select id="test_country_code">
-                        <option value="+91">India (+91)</option>
-                        <option value="+1">USA (+1)</option>
-                        <option value="+44">UK (+44)</option>
-                        <option value="+61">Australia (+61)</option>
-                        <option value="+86">China (+86)</option>
-                        <option value="+81">Japan (+81)</option>
-                        <option value="+49">Germany (+49)</option>
-                        <option value="+33">France (+33)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="test_phone" placeholder="Enter phone number (e.g., 9876543210)">
-                    <small style="color: #6b7280; font-size: 12px;">Enter number without country code</small>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="cancel-btn" onclick="closeTestModal()">Cancel</button>
-                <button class="submit-btn" onclick="sendTestFromModal()">Send Test</button>
-            </div>
-        </div>
-    </div> -->
     <div id="testModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -2020,7 +1930,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <input type="hidden" name="schedule_dt" id="sms_schedule_hidden">
                         <input type="hidden" name="form_type" value="sms">
                         <input type="hidden" name="aid" id="template_aid_sms">
-                        <!-- <label>SMS Text : </label> -->
                         <p></p>
                         <textarea name="sms" id="sms_text" placeholder="Enter SMS template..."
                             style="display:none;"></textarea>
@@ -2125,7 +2034,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <p>Please replace the Template Variable {#var#} with liquid variables mentioned below.</p>
                         <div class="variable-divider"></div>
                         <div class="variable-list">
-                            <!-- <div class="variable-item">{{ order_name }}</div>-->
                             <div class="variable-item">{{ customer_full_name }}</div>
                             <div class="variable-item">{{ customer_fname }}</div>
                             <div class="variable-item">{{ customer_lname }}</div>
@@ -2484,16 +2392,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 if (fileBox) fileBox.style.display = 'none';
             }
         }
-        // function openTestModal(segmentId) {
-        //     currentSegmentId = segmentId;
-        //     document.getElementById('testModal').style.display = 'block';
-        // }
 
-        // function closeTestModal() {
-        //     document.getElementById('testModal').style.display = 'none';
-        //     document.getElementById('test_phone').value = '';
-        //     currentSegmentId = null;
-        // }
         function openTestModal(segmentId) {
             currentSegmentId = segmentId;
             document.getElementById('testModal').style.display = 'block';
@@ -2737,90 +2636,123 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             if (waForm) waForm.style.display = 'none';
             toggleWhatsAppMediaFields();
         });
-
-        // document.querySelectorAll('.webhook-toggle').forEach(function (toggle) {
-        //     toggle.addEventListener('change', function () {
-        //         var toggleEl = this;
-        //         var id = this.dataset.id;
-        //         var segmentId = this.dataset.segmentId;
-        //         var status = this.checked ? 1 : 0;
-        //         fetch('', {
-        //             method: 'POST',
-        //             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-        //             body: 'update_status=1&id=' + id + '&status=' + status + '&segment_id=' + encodeURIComponent(segmentId)
-        //         })
-        //             .then(function (res) { return res.json(); })
-        //             .then(function (data) {
-        //                 if (data && data.success) {
-        //                     var statusText = status === 1 ? 'enabled' : 'disabled';
-        //                     shopify.toast.show('Segment status ' + statusText + ' successfully.', { duration: 3000 });
-        //                 } else {
-        //                     toggleEl.checked = !toggleEl.checked;
-        //                     shopify.toast.show((data && data.message) ? data.message : 'Error updating status', { isError: true, duration: 3000 });
-        //                 }
-        //             })
-        //             .catch(function () {
-        //                 toggleEl.checked = !toggleEl.checked;
-        //                 shopify.toast.show('Error updating status', { isError: true, duration: 3000 });
-        //             });
-        //     });
-        // });
         document.querySelectorAll('.segment-toggle').forEach(function (toggle) {
-            toggle.addEventListener('change', function () {
+            toggle.addEventListener('change', function (e) {
                 var toggleEl = this;
                 var id = this.dataset.id;
                 var segmentId = this.dataset.segmentId;
                 var channel = this.dataset.channel;
                 var status = this.checked ? 1 : 0;
 
-                fetch('', {
-                    method: 'POST',
-                    headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                    body: 'update_status=1&id=' + id + '&status=' + status + '&channel=' + channel + '&segment_id=' + encodeURIComponent(segmentId)
-                })
-                    .then(function (res) { return res.json(); })
-                    .then(function (data) {
-                        console.log('Webhook Response:', data);
+                if (status === 1) {
 
-                        if (data && data.success) {
-                            var channelText = channel === 'sms' ? 'SMS' : 'WhatsApp';
-                            var statusText = status === 1 ? 'enabled' : 'disabled';
+                    var originalChecked = this.checked;
 
-                           
-                            if (data.webhook_managed === true) {
-                                shopify.toast.show(channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
-                            } else if (data.webhook_managed === false && data.webhook_debug) {
-                               
-                                var debug = data.webhook_debug;
-                                var errorMsg = '';
+                    fetch('', {
+                        method: 'POST',
+                        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                        body: 'get_template_data=1&id=' + id
+                    })
+                        .then(function (response) { return response.json(); })
+                        .then(function (data) {
+                            if (data.success) {
+                                var isConfigured = false;
+                                var errorMessage = '';
+                                if (channel === 'sms') {
+                                    if ((data.data.sms && data.data.sms.trim() !== '') ||
+                                        (data.data.template_id_sms && data.data.template_id_sms.trim() !== '')) {
+                                        isConfigured = true;
+                                    } else {
+                                        errorMessage = 'SMS template is not configured.';
+                                    }
+                                } else if (channel === 'whatsapp') {
 
-                                if (debug.error_type === 'user_errors') {
-                                    errorMsg = 'Webhook Error: ' + (debug.message[0]?.message || JSON.stringify(debug.message));
-                                } else if (debug.error_type === 'graphql_errors') {
-                                    errorMsg = 'GraphQL Error: ' + JSON.stringify(debug.message);
-                                } else if (debug.error_type === 'curl_error') {
-                                    errorMsg = 'Connection Error: ' + debug.message;
-                                } else {
-                                    errorMsg = 'Webhook registration failed. Check console for details.';
+                                    var waData = data.data.whatsapp_data || {};
+                                    if (waData.template_name && waData.template_name.trim() !== '') {
+                                        isConfigured = true;
+                                    } else {
+                                        errorMessage = 'WhatsApp template is not configured';
+                                    }
                                 }
 
-                                shopify.toast.show(errorMsg, { isError: true, duration: 8000 });
-                                console.error('Webhook Debug Details:', debug);
+                                if (isConfigured) {
+
+                                    proceedWithToggle(toggleEl, id, segmentId, channel, status);
+                                } else {
+
+                                    shopify.toast.show(errorMessage, { isError: true, duration: 3000 });
+                                    toggleEl.checked = false;
+                                }
                             } else {
-                                shopify.toast.show(channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
+
+                                shopify.toast.show('Unable to verify template configuration', { isError: true, duration: 3000 });
+                                toggleEl.checked = false;
                             }
-                        } else {
-                            toggleEl.checked = !toggleEl.checked;
-                            shopify.toast.show((data && data.message) ? data.message : 'Error updating status', { isError: true, duration: 3000 });
-                        }
-                    })
-                    .catch(function (error) {
-                        console.error('Fetch Error:', error);
-                        toggleEl.checked = !toggleEl.checked;
-                        shopify.toast.show('Network error. Check console.', { isError: true, duration: 3000 });
-                    });
+                        })
+                        .catch(function (error) {
+                            console.error('Fetch Error:', error);
+                            shopify.toast.show('Unable to verify template configuration', { isError: true, duration: 3000 });
+                            toggleEl.checked = false;
+                        });
+                } else {
+                    proceedWithToggle(toggleEl, id, segmentId, channel, status);
+                }
+
+                e.preventDefault();
             });
         });
+
+        function proceedWithToggle(toggleEl, id, segmentId, channel, status) {
+            fetch('', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+                body: 'update_status=1&id=' + id + '&status=' + status + '&channel=' + channel + '&segment_id=' + encodeURIComponent(segmentId)
+            })
+                .then(function (res) { return res.json(); })
+                .then(function (data) {
+                    console.log('Webhook Response:', data);
+
+                    if (data && data.success) {
+                        var channelText = channel === 'sms' ? 'SMS' : 'WhatsApp';
+                        var statusText = status === 1 ? 'enabled' : 'disabled';
+
+                        if (data.webhook_managed === true) {
+                            shopify.toast.show(channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
+
+                        } else if (data.webhook_managed === false && data.webhook_debug) {
+                            var debug = data.webhook_debug;
+                            var errorMsg = '';
+
+                            if (debug.error_type === 'user_errors') {
+                                errorMsg = 'Webhook Error: ' + (debug.message[0]?.message || JSON.stringify(debug.message));
+                            } else if (debug.error_type === 'graphql_errors') {
+                                errorMsg = 'GraphQL Error: ' + JSON.stringify(debug.message);
+                            } else if (debug.error_type === 'curl_error') {
+                                errorMsg = 'Connection Error: ' + debug.message;
+                            } else {
+                                errorMsg = 'Webhook registration failed. Check console for details.';
+                            }
+
+                            shopify.toast.show(errorMsg, { isError: true, duration: 8000 });
+                            console.error('Webhook Debug Details:', debug);
+
+                            toggleEl.checked = !toggleEl.checked;
+                        } else {
+                            shopify.toast.show(channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
+                        }
+                    } else {
+                        shopify.toast.show((data && data.message) ? data.message : 'Error updating status', { isError: true, duration: 3000 });
+
+                        toggleEl.checked = !toggleEl.checked;
+                    }
+                })
+                .catch(function (error) {
+                    console.error('Fetch Error:', error);
+                    shopify.toast.show('Network error. Check console.', { isError: true, duration: 3000 });
+
+                    toggleEl.checked = !toggleEl.checked;
+                });
+        }
 
         function updateScheduleDateTime() {
             var dateInput = document.getElementById('template_schedule_date');
@@ -2986,76 +2918,107 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             newRow.innerHTML =
                 '<td>' + escapeHtml(name) + '</td>' +
                 '<td>' + escapeHtml(templateName) + '</td>' +
-                '<td>When Customer Joins Segment</td>' +
+                '<td>When Customer Joins Segment<\/td>' +
                 '<td>' +
                 '<button class="test-btn" onclick="openTestModal(' + localId + ')">' +
-                '<span class="material-symbols-outlined">play_arrow</span> Trigger Test' +
-                '</button>' +
-                '</td>' +
+                '<span class="material-symbols-outlined">play_arrow<\/span> Trigger Test' +
+                '<\/button>' +
+                '<\/td>' +
                 '<td class="action-cell">' +
                 '<div class="action-buttons">' +
                 '<span class="action-link primary" onclick="openTemplateModal(' + localId + ')">' +
                 'Configure Template' +
-                '</span>' +
+                '<\/span>' +
                 '<span class="action-link danger" onclick="deleteRow(' + localId + ')">' +
                 'Delete' +
-                '</span>' +
-                '</div>' +
-                '</td>' +
-                // '<td>' +
-                // '<label class="switch">' +
-                // '<input type="checkbox" class="webhook-toggle" data-id="' + localId + '" ' +
-                // 'data-segment-id="' + escapeHtml(shopifySegmentId) + '">' +
-                // '<span class="slider"></span>' +
-                // '</label>' +
-                // '</td>';
+                '<\/span>' +
+                '<\/div>' +
+                '<\/td>' +
                 '<td>' +
                 '<label class="switch">' +
                 '<input type="checkbox" class="segment-toggle sms-toggle" data-id="' + localId + '" ' +
                 'data-segment-id="' + escapeHtml(shopifySegmentId) + '" data-channel="sms">' +
-                '<span class="slider"></span>' +
-                '</label>' +
-                '</td>' +
+                '<span class="slider"><\/span>' +
+                '<\/label>' +
+                '<\/td>' +
                 '<td>' +
                 '<label class="switch">' +
                 '<input type="checkbox" class="segment-toggle whatsapp-toggle" data-id="' + localId + '" ' +
                 'data-segment-id="' + escapeHtml(shopifySegmentId) + '" data-channel="whatsapp">' +
-                '<span class="slider"></span>' +
-                '</label>' +
-                '</td>';
+                '<span class="slider"><\/span>' +
+                '<\/label>' +
+                '<\/td>';
+
             if (tbody.firstChild) {
                 tbody.insertBefore(newRow, tbody.firstChild);
             } else {
                 tbody.appendChild(newRow);
             }
-            var toggle = newRow.querySelector('.webhook-toggle');
-            if (toggle) {
-                toggle.addEventListener('change', function () {
-                    var toggleEl = this;
-                    var id = this.dataset.id;
-                    var segId = this.dataset.segmentId;
-                    var status = this.checked ? 1 : 0;
+
+            var newToggles = newRow.querySelectorAll('.segment-toggle');
+            newToggles.forEach(function (toggle) {
+                attachToggleEventListener(toggle);
+            });
+        }
+
+        function attachToggleEventListener(toggle) {
+            toggle.addEventListener('change', function (e) {
+                var toggleEl = this;
+                var id = this.dataset.id;
+                var segmentId = this.dataset.segmentId;
+                var channel = this.dataset.channel;
+                var status = this.checked ? 1 : 0;
+
+                if (status === 1) {
                     fetch('', {
                         method: 'POST',
                         headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-                        body: 'update_status=1&id=' + id + '&status=' + status + '&segment_id=' + encodeURIComponent(segId)
+                        body: 'get_template_data=1&id=' + id
                     })
-                        .then(function (res) { return res.json(); })
-                        .then(function (result) {
-                            if (result && result.success) {
-                                var statusText = status === 1 ? 'enabled' : 'disabled';
-                                shopify.toast.show('Segment status ' + statusText + ' successfully.', { duration: 3000 });
+                        .then(function (response) { return response.json(); })
+                        .then(function (data) {
+                            if (data.success) {
+                                var isConfigured = false;
+                                var errorMessage = '';
+
+                                if (channel === 'sms') {
+                                    if ((data.data.sms && data.data.sms.trim() !== '') ||
+                                        (data.data.template_id_sms && data.data.template_id_sms.trim() !== '')) {
+                                        isConfigured = true;
+                                    } else {
+                                        errorMessage = 'SMS template is not configured.';
+                                    }
+                                } else if (channel === 'whatsapp') {
+                                    var waData = data.data.whatsapp_data || {};
+                                    if (waData.template_name && waData.template_name.trim() !== '') {
+                                        isConfigured = true;
+                                    } else {
+                                        errorMessage = 'WhatsApp template is not configured';
+                                    }
+                                }
+
+                                if (isConfigured) {
+                                    proceedWithToggle(toggleEl, id, segmentId, channel, status);
+                                } else {
+                                    shopify.toast.show(errorMessage, { isError: true, duration: 3000 });
+                                    toggleEl.checked = false;
+                                }
                             } else {
-                                toggleEl.checked = !toggleEl.checked;
-                                shopify.toast.show((result && result.message) ? result.message : 'Error updating status', { isError: true, duration: 3000 });
+                                shopify.toast.show('Unable to verify template configuration', { isError: true, duration: 3000 });
+                                toggleEl.checked = false;
                             }
                         })
-                        .catch(function () {
-                            toggleEl.checked = !toggleEl.checked;
-                            shopify.toast.show('Error updating status', { isError: true, duration: 3000 });
+                        .catch(function (error) {
+                            console.error('Fetch Error:', error);
+                            shopify.toast.show('Unable to verify template configuration', { isError: true, duration: 3000 });
+                            toggleEl.checked = false;
                         });
-                });
-            }
+                } else {
+                    proceedWithToggle(toggleEl, id, segmentId, channel, status);
+                }
+
+                e.preventDefault();
+            });
         }
         function updateSegmentSyncStatus(localId, status, count) {
             var row = document.getElementById('row-' + localId);
@@ -3072,6 +3035,87 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             div.textContent = text;
             return div.innerHTML;
         }
+        document.getElementById('smsForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+            var loader = document.getElementById('loader');
+            if (loader) loader.style.display = 'flex';
+
+            var submitBtn = this.querySelector('.submit-btn');
+            var originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="loading-spinner"></span> Saving...';
+
+            fetch('', {
+                method: 'POST',
+                body: formData
+            })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (loader) loader.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+
+                    if (data.success) {
+                        shopify.toast.show(data.message || 'Template saved successfully', { duration: 3000 });
+                        setTimeout(function () {
+                            closeTemplateModal();
+                        }, 1500);
+                    } else {
+                        shopify.toast.show(data.message || 'Error saving template', { isError: true, duration: 3000 });
+                    }
+                })
+                .catch(function (error) {
+                    if (loader) loader.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                    shopify.toast.show('Network error. Please try again.', { isError: true, duration: 3000 });
+                });
+        });
+        document.getElementById('whatsappForm').addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            var formData = new FormData(this);
+            var loader = document.getElementById('loader');
+            if (loader) loader.style.display = 'flex';
+
+            var submitBtn = this.querySelector('.submit-btn');
+            var originalText = submitBtn.innerHTML;
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<span class="loading-spinner"></span> Saving...';
+
+            fetch('', {
+                method: 'POST',
+                body: formData
+            })
+                .then(function (response) {
+                    return response.json();
+                })
+                .then(function (data) {
+                    if (loader) loader.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+
+                    if (data.success) {
+                        shopify.toast.show(data.message || 'Template saved successfully', { duration: 3000 });
+                        setTimeout(function () {
+                            closeTemplateModal();
+                        }, 1500);
+                    } else {
+                        shopify.toast.show(data.message || 'Error saving template', { isError: true, duration: 3000 });
+                    }
+                })
+                .catch(function (error) {
+                    if (loader) loader.style.display = 'none';
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalText;
+                    shopify.toast.show('Network error. Please try again.', { isError: true, duration: 3000 });
+                });
+        });
     </script>
 </body>
+
 </html>
