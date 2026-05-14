@@ -8,7 +8,6 @@ include_once __DIR__ . '/send_whatsapp_message_api.php';
 function processAbandonedCheckoutNotifications($shop, $oauth_token)
 {
     global $pdo, $prefix, $logFile;
-    
     $pdo = getDatabaseConnection();
     $checkout_table = $prefix . "abandoned_checkouts";
     $notification_table = $prefix . "shopify_sms_notification_App_Email_Notification";
@@ -437,8 +436,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
             }
         }
     }
-    
-    // ============ WHATSAPP TEMPLATE NOTIFICATION (Independent, same as reference) ============
     $whatsapp_data_from_db = array();
     if (isset($config['whatsapp']) && !empty($config['whatsapp'])) {
         $whatsapp_data_from_db = json_decode($config['whatsapp'], true);
@@ -610,21 +607,6 @@ function updateCheckoutStatus($pdo, $table, $id, $status)
         file_put_contents($logFile, date('Y-m-d H:i:s') . " ERROR updating status: " . $e->getMessage() . "\n", FILE_APPEND);
         return false;
     }
-}
-
-function wa_replace_placeholders($text, $replacement_map)
-{
-    if (empty($text)) {
-        return $text;
-    }
-    foreach ($replacement_map as $key => $value) {
-        $placeholder = "{{ " . $key . " }}";
-        if (strpos($text, $placeholder) !== false) {
-            $text = str_replace($placeholder, $value, $text);
-        }
-    }
-    
-    return $text;
 }
 
 if (isset($_GET['shop']) && isset($_GET['token'])) {
