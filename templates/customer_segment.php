@@ -50,7 +50,6 @@ function writeDebugLog($message, $level = "INFO")
     error_log('[customer_segment] ' . $message);
     debugStep($level . ': ' . $message);
 }
-
 function getSessionTokenFromRequest()
 {
 
@@ -68,7 +67,6 @@ function getSessionTokenFromRequest()
             }
         }
     }
-
 
     if (isset($_SERVER['HTTP_AUTHORIZATION'])) {
         if (preg_match('/Bearer\s+(.*)$/i', $_SERVER['HTTP_AUTHORIZATION'], $matches)) {
@@ -1134,6 +1132,13 @@ $stmt = $pdo->prepare("
 ");
 $stmt->execute(array(':shop' => $shop));
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$segmentStatuses = array();
+foreach ($rows as $row) {
+    $segmentStatuses[$row['id']] = array(
+        'sms' => isset($row['sms_enabled']) ? (int) $row['sms_enabled'] : 0,
+        'wa' => isset($row['whatsapp_enabled']) ? (int) $row['whatsapp_enabled'] : 0
+    );
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -2078,6 +2083,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         var currentEditId = null;
         var currentSegmentId = null;
         var buttonCount = 0;
+        var segmentChannelStatuses = <?php echo json_encode($segmentStatuses); ?>;
 
         function openModal() {
             document.getElementById('modalTitle').innerText = 'Add Customer Segment';
@@ -2202,6 +2208,14 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         for (var k = 0; k < conditionRadios.length; k++) {
                             if (conditionRadios[k].value === conditionType) {
                                 conditionRadios[k].checked = true;
+                                if (typeof Event === 'function') {
+                                    var changeEvent = new Event('change', { bubbles: true });
+                                    conditionRadios[k].dispatchEvent(changeEvent);
+                                } else {
+                                    var changeEvent = document.createEvent('Event');
+                                    changeEvent.initEvent('change', true, true);
+                                    conditionRadios[k].dispatchEvent(changeEvent);
+                                }
                             }
                         }
 
@@ -2214,9 +2228,29 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                             var hourPart = timePart ? timePart.split(':')[0] : '00';
                             document.getElementById('template_schedule_date').value = datePart;
                             document.getElementById('template_schedule_hour').value = hourPart;
+
+                            
+                            var hiddenInput = document.getElementById('template_schedule_hidden_value');
+                            if (hiddenInput) {
+                                hiddenInput.value = data.data.schedule_datetime;
+                            }
+
+                            
+                            var smsHidden = document.getElementById('sms_schedule_hidden');
+                            var waHidden = document.getElementById('wa_schedule_hidden');
+                            if (smsHidden) smsHidden.value = data.data.schedule_datetime;
+                            if (waHidden) waHidden.value = data.data.schedule_datetime;
+
                             updateScheduleDateTime();
                         } else {
                             scheduleBox.style.display = 'none';
+                           
+                            var hiddenInput = document.getElementById('template_schedule_hidden_value');
+                            if (hiddenInput) hiddenInput.value = '';
+                            var smsHidden = document.getElementById('sms_schedule_hidden');
+                            var waHidden = document.getElementById('wa_schedule_hidden');
+                            if (smsHidden) smsHidden.value = '';
+                            if (waHidden) waHidden.value = '';
                         }
 
                         document.getElementById('sms_condition_type').value = conditionType;
@@ -2468,10 +2502,10 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 searchInput.value = selectedOption.text;
             }
         }
-
         function sendTestFromModal() {
             var countryCode = document.getElementById('test_country_code').value;
             var phone = document.getElementById('test_phone').value;
+            var segmentId = currentSegmentId;
 
             if (!phone) {
                 shopify.toast.show("Please enter phone number", { isError: true, duration: 3000 });
@@ -2481,6 +2515,19 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             var phoneRegex = /^\d{5,15}$/;
             if (!phoneRegex.test(phone)) {
                 shopify.toast.show("Please enter a valid phone number (5-15 digits)", { isError: true, duration: 3000 });
+                return;
+            }
+
+            var smsEnabled = false;
+            var whatsappEnabled = false;
+
+            if (segmentChannelStatuses && segmentChannelStatuses[segmentId]) {
+                smsEnabled = segmentChannelStatuses[segmentId].sms === 1;
+                whatsappEnabled = segmentChannelStatuses[segmentId].wa === 1;
+            }
+
+            if (!smsEnabled && !whatsappEnabled) {
+                shopify.toast.show("Please enable SMS or WhatsApp template first.", { isError: true, duration: 3000 });
                 return;
             }
 
@@ -2503,7 +2550,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     country_code: countryCode,
                     phone: phone,
                     shop: "<?php echo $shop; ?>",
-                    segment_id: currentSegmentId
+                    segment_id: segmentId
                 })
             })
                 .then(function (res) {
@@ -2522,7 +2569,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         closeTestModal();
                         shopify.toast.show('Test triggered successfully! Check the status in App Logs.', { duration: 3000 });
                     } else {
-                        shopify.toast.show(data.message || "Error sending test SMS", { isError: true, duration: 3000 });
+                        shopify.toast.show(data.message || "Error sending test message", { isError: true, duration: 3000 });
                         closeTestModal();
                     }
                 })
@@ -2715,6 +2762,22 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     if (data && data.success) {
                         var channelText = channel === 'sms' ? 'SMS' : 'WhatsApp';
                         var statusText = status === 1 ? 'enabled' : 'disabled';
+
+                        if (segmentChannelStatuses && segmentChannelStatuses[id]) {
+                            if (channel === 'sms') {
+                                segmentChannelStatuses[id].sms = status;
+                            } else {
+                                segmentChannelStatuses[id].wa = status;
+                            }
+                        } else if (segmentChannelStatuses) {
+                           
+                            segmentChannelStatuses[id] = { sms: 0, wa: 0 };
+                            if (channel === 'sms') {
+                                segmentChannelStatuses[id].sms = status;
+                            } else {
+                                segmentChannelStatuses[id].wa = status;
+                            }
+                        }
 
                         if (data.webhook_managed === true) {
                             shopify.toast.show(channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
@@ -3061,6 +3124,11 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     if (data.success) {
                         shopify.toast.show(data.message || 'Template saved successfully', { duration: 3000 });
+                        var segmentId = document.getElementById('template_aid_sms').value;
+                        
+                        var conditionType = document.querySelector('#templateModal input[name="condition_type"]:checked').value;
+                        
+                        updateTableRowType(segmentId, conditionType);
                         setTimeout(function () {
                             closeTemplateModal();
                         }, 1500);
@@ -3101,6 +3169,11 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     if (data.success) {
                         shopify.toast.show(data.message || 'Template saved successfully', { duration: 3000 });
+                        var segmentId = document.getElementById('template_aid_wa').value;
+                        
+                        var conditionType = document.querySelector('#templateModal input[name="condition_type"]:checked').value;
+                        
+                        updateTableRowType(segmentId, conditionType);
                         setTimeout(function () {
                             closeTemplateModal();
                         }, 1500);
@@ -3115,7 +3188,22 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                     shopify.toast.show('Network error. Please try again.', { isError: true, duration: 3000 });
                 });
         });
+        function updateTableRowType(segmentId, conditionType) {
+            var row = document.getElementById('row-' + segmentId);
+            if (row) {
+               
+                var typeCell = row.querySelector('td:nth-child(3)');
+                if (typeCell) {
+                    var displayType = '';
+                    if (conditionType === 'Bulk Schedule') {
+                        displayType = 'Bulk Schedule';
+                    } else {
+                        displayType = 'When Customer Joins Segment';
+                    }
+                    typeCell.innerHTML = displayType;
+                }
+            }
+        }
     </script>
 </body>
-
 </html>

@@ -1,9 +1,9 @@
 <?php
-require_once __DIR__ . '/../config/db.php';
-require_once __DIR__ . '/../app_config.php';
-include_once __DIR__ . '/../send_sms_api.php';
-include_once __DIR__ . '/../send_whatsapp_message_api.php';
-include_once __DIR__ . '/../accurate_country_code.php';
+require_once __DIR__ . '/config/db.php';
+require_once __DIR__ . '/app_config.php';
+include_once __DIR__ . '/send_sms_api.php';
+include_once __DIR__ . '/send_whatsapp_message_api.php';
+include_once __DIR__ . '/accurate_country_code.php';
 
 ini_set('max_execution_time', 0);
 set_time_limit(0);
@@ -14,23 +14,10 @@ ini_set('error_log', __DIR__ . '/../file/debug_log.txt');
 function writeBulkLog($message, $type = 'INFO')
 {
     $logFile = __DIR__ . '/../file/debug_log.txt';
-    $timestamp = date('Y-m-d H:i:s');
-    $logEntry = "[{$timestamp}] [BULK-SCHEDULE] [{$type}] {$message}" . PHP_EOL;
-    @file_put_contents($logFile, $logEntry, FILE_APPEND);
+    //$timestamp = date('Y-m-d H:i:s');
+    //$logEntry = "[{$timestamp}] [BULK-SCHEDULE] [{$type}] {$message}" . PHP_EOL;
+   // @file_put_contents($logFile, $logEntry, FILE_APPEND);
     error_log("[BULK-SCHEDULE] {$message}");
-}
-
-function wa_replace_placeholders($text, $replacements)
-{
-    if (!is_string($text)) {
-        return $text;
-    }
-    
-    foreach ($replacements as $key => $value) {
-        $text = str_replace('{{ ' . $key . ' }}', $value, $text);
-        $text = str_replace('{{' . $key . '}}', $value, $text);
-    }
-    return $text;
 }
 
 writeBulkLog("========== BULK SCHEDULE STARTED ==========");
@@ -44,7 +31,7 @@ try {
     $configTable = $prefix . "shopify_sms_notification_app";
     $logTable = $prefix . "shopify_sms_notification_App_Log_Details";
     
-    $bulkCondition = '{"type":"Bulk Schedule"}';
+    //$bulkCondition = '{"type":"Bulk Schedule"}';
     $stmt = $pdo->prepare("
         SELECT 
             cs.id,
@@ -58,9 +45,9 @@ try {
             cs.whatsapp,
             cs.whatsapp_enabled
         FROM $customerSegmentTable cs
-        WHERE cs.conditions = :conditions
+        WHERE cs.conditions LIKE :conditions
     ");
-    $stmt->execute(array(':conditions' => $bulkCondition));
+    $stmt->execute(array(':conditions' => '%"type":"Bulk Schedule"%'));
     $segments = $stmt->fetchAll(PDO::FETCH_ASSOC);
     
     if (empty($segments)) {
