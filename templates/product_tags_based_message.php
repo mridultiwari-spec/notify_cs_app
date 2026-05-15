@@ -90,7 +90,31 @@ if (isset($_GET['edit_id'])) {
     send_json_response($row);
 }
 
+if (isset($_POST['get_template_data']) && isset($_POST['id'])) {
+    $id = $_POST['id'];
+    try {
+        $stmt = $pdo->prepare("SELECT sms, template_name, whatsapp FROM $table WHERE id = :id AND shop = :shop");
+        $stmt->execute(array(':id' => $id, ':shop' => $shop));
+        $templateData = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        $response = array('success' => true);
+        if ($templateData) {
+            $response['sms'] = $templateData['sms'];
+            $response['template_name'] = $templateData['template_name'];
+            if (!empty($templateData['whatsapp'])) {
+                $response['whatsapp'] = json_decode($templateData['whatsapp'], true);
+            } else {
+                $response['whatsapp'] = array();
+            }
+        }
+        send_json_response($response);
+    } catch (Exception $e) {
+        send_json_response(array('success' => false, 'message' => $e->getMessage()));
+    }
+}
+
 if ($_SERVER["REQUEST_METHOD"] === 'POST') {
+    global $app_url;
     $token = get_bearer_token_php53();
     $tokenCheck = validate_shopify_session_token_php53($token, $api_secret, $api_key);
     if (!$tokenCheck['success']) {
@@ -184,19 +208,22 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
                     }
                 } elseif ($media_source_type === 'file') {
                     if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0) {
-                        $uploadDir = __DIR__ . "/uploads/";
+                        $uploadDir = dirname(__FILE__) . "/uploads/";
                         if (!is_dir($uploadDir)) {
-                            mkdir($uploadDir, 0755, true);
+                            mkdir($uploadDir, 0777, true);
                         }
+
+                        $fileExtension = strtolower(pathinfo($_FILES["media_file"]["name"], PATHINFO_EXTENSION));
                         $fileName = time() . "_" . preg_replace(
                             "/[^a-zA-Z0-9._-]/",
                             "",
-                            $_FILES["media_file"]["name"]
-                        );
+                            pathinfo($_FILES["media_file"]["name"], PATHINFO_FILENAME)
+                        ) . "." . $fileExtension;
+
                         $targetPath = $uploadDir . $fileName;
                         if (move_uploaded_file($_FILES["media_file"]["tmp_name"], $targetPath)) {
                             $media_source = 'file';
-                            $media_url = $fileName;
+                            $media_url = rtrim($app_url, '/') . "/templates/uploads/" . $fileName;
                         }
                     }
                 } elseif ($media_source_type === 'dynamic') {
@@ -311,7 +338,8 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             send_json_response(array(
                 'success' => true,
                 'message' => 'WhatsApp template saved successfully.',
-                'redirect_url' => $app_url . "/templates/product_tags_based_message.php?shop=" . urlencode($shop)
+                'redirect_url' => $app_url . "/templates/product_tags_based_message.php?shop=" . urlencode($shop),
+                'media_url' => isset($media_url) ? $media_url : null
             ));
         }
 
@@ -336,6 +364,13 @@ $stmt = $pdo->prepare("
 
 $stmt->execute(array(':shop' => $shop));
 $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
+$orderChannelStatuses = array();
+foreach ($rows as $row) {
+    $orderChannelStatuses[$row['id']] = array(
+        'sms' => (int) $row['sms_enabled'],
+        'wa' => (int) $row['whatsapp_enabled']
+    );
+}
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -707,6 +742,12 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         <div class="condition-box" id="mediaFileBox" style="display:none;">
                             <input type="file" name="media_file" class="condition-input">
                         </div>
+                        <div class="condition-box" id="mediaFileUrlBox" style="display:none;">
+                            <span>Generated Media URL :</span>
+                            <input type="text" name="generated_media_url" class="condition-input"
+                                placeholder="Media URL will appear here after upload"
+                                style="flex:1; background-color: #f5f5f5;" readonly value="">
+                        </div>
                         <div id="buttons-container"></div>
                         <div style="margin-bottom: 15px;">
                             <button type="button" class="add-button-btn" onclick="addButton()">
@@ -760,48 +801,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         </div>
     </div>
 
-    <!-- <div id="testModal" class="test-modal-overlay">
-        <div class="test-modal-box">
-            <div class="test-modal-header">
-                <h3>Send Test Message</h3>
-                <button class="test-modal-close" onclick="closeTestModal()">✕</button>
-            </div>
-            <div class="test-modal-body">
-                <div class="test-form-group">
-                    <label>Country Code</label>
-                    <select id="test_country_code" class="test-select">
-                        <option value="+91">India (+91)</option>
-                        <option value="+1">USA (+1)</option>
-                        <option value="+44">UK (+44)</option>
-                        <option value="+61">Australia (+61)</option>
-                        <option value="+86">China (+86)</option>
-                        <option value="+81">Japan (+81)</option>
-                        <option value="+49">Germany (+49)</option>
-                        <option value="+33">France (+33)</option>
-                        <option value="+1">Canada (+1)</option>
-                        <option value="+55">Brazil (+55)</option>
-                        <option value="+7">Russia (+7)</option>
-                        <option value="+82">South Korea (+82)</option>
-                        <option value="+39">Italy (+39)</option>
-                        <option value="+34">Spain (+34)</option>
-                        <option value="+52">Mexico (+52)</option>
-                        <option value="+31">Netherlands (+31)</option>
-                        <option value="+46">Sweden (+46)</option>
-                    </select>
-                </div>
-                <div class="test-form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="test_phone" class="test-input" style="width: 90%;"
-                        placeholder="Enter phone number (e.g., 9876543210)">
-                    <small class="test-hint">Enter number without country code</small>
-                </div>
-            </div>
-            <div class="test-modal-footer">
-                <button class="test-cancel-btn" onclick="closeTestModal()">Cancel</button>
-                <button class="test-submit-btn" onclick="sendTestFromModal()">Send Test</button>
-            </div>
-        </div>
-    </div> -->
+
     <div id="testModal" class="test-modal-overlay">
         <div class="test-modal-box">
             <div class="test-modal-header">
@@ -1098,6 +1098,7 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
         let currentEditId = null;
         var currentTestId = null;
         var currentTestName = null;
+        var orderChannelStatuses = <?php echo json_encode($orderChannelStatuses); ?>;
 
         function getShopifySessionToken(callback) {
             if (window.shopify && typeof window.shopify.idToken === 'function') {
@@ -1145,6 +1146,18 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                         }
 
                         if (data && data.success) {
+                            if (data.media_url) {
+                                var generatedUrlInput = document.querySelector('input[name="generated_media_url"]');
+                                if (generatedUrlInput) {
+                                    generatedUrlInput.value = data.media_url;
+                                    generatedUrlInput.style.color = '';
+                                    generatedUrlInput.style.fontStyle = '';
+                                    var mediaFileUrlBox = document.getElementById('mediaFileUrlBox');
+                                    if (mediaFileUrlBox) {
+                                        mediaFileUrlBox.style.display = 'flex';
+                                    }
+                                }
+                            }
                             shopify.toast.show(data.message || 'Template saved successfully.', { duration: 3000 });
                             setTimeout(function () {
                                 if (data.redirect_url) {
@@ -1168,46 +1181,97 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 });
             });
         }
-
-        // Toggle switch handler
         document.addEventListener('DOMContentLoaded', function () {
             document.querySelectorAll('.toggle-switch').forEach(function (toggle) {
-                toggle.addEventListener('change', function () {
+                toggle.addEventListener('change', function (e) {
                     var recordId = this.getAttribute('data-id');
                     var channel = this.getAttribute('data-channel');
                     var enabled = this.checked ? 1 : 0;
                     var toggleEl = this;
 
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('POST', window.location.href, true);
-                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState === 4) {
-                            if (xhr.status === 200) {
-                                var data = null;
+                    // If trying to enable (turn ON), first check if template is configured
+                    if (enabled == 1) {
+                        // Fetch template data to check if configured
+                        var xhrCheck = new XMLHttpRequest();
+                        xhrCheck.open('POST', window.location.href, true);
+                        xhrCheck.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        xhrCheck.onreadystatechange = function () {
+                            if (xhrCheck.readyState === 4 && xhrCheck.status === 200) {
+                                var checkData = null;
                                 try {
-                                    data = JSON.parse(xhr.responseText);
+                                    checkData = JSON.parse(xhrCheck.responseText);
                                 } catch (err) {
-                                    shopify.toast.show('Invalid server response', { isError: true, duration: 3000 });
-                                    toggleEl.checked = !toggleEl.checked;
+                                    shopify.toast.show('Error checking template configuration', { isError: true, duration: 3000 });
+                                    toggleEl.checked = false;
                                     return;
                                 }
 
-                                if (data && data.success) {
-                                    shopify.toast.show(data.message, { duration: 3000 });
+                                var isConfigured = false;
+                                if (channel === 'sms') {
+                                    if ((checkData.template_name && checkData.template_name.trim() !== '')) {
+                                        isConfigured = true;
+                                    }
+                                } else if (channel === 'whatsapp') {
+                                    if (checkData.whatsapp && checkData.whatsapp.template_name && checkData.whatsapp.template_name.trim() !== '') {
+                                        isConfigured = true;
+                                    }
+                                }
+
+                                if (!isConfigured) {
+                                    shopify.toast.show('Please configure ' + (channel === 'sms' ? 'SMS' : 'WhatsApp') + ' template first.', { isError: true, duration: 3000 });
+                                    toggleEl.checked = false;
+                                    return;
+                                }
+
+                                // Template is configured, proceed with toggle
+                                proceedWithToggle();
+                            }
+                        };
+                        xhrCheck.send('get_template_data=1&id=' + recordId);
+                    } else {
+                        // Turning OFF, proceed directly
+                        proceedWithToggle();
+                    }
+
+                    function proceedWithToggle() {
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', window.location.href, true);
+                        xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
+                        xhr.onreadystatechange = function () {
+                            if (xhr.readyState === 4) {
+                                if (xhr.status === 200) {
+                                    var data = null;
+                                    try {
+                                        data = JSON.parse(xhr.responseText);
+                                    } catch (err) {
+                                        shopify.toast.show('Invalid server response', { isError: true, duration: 3000 });
+                                        toggleEl.checked = !toggleEl.checked;
+                                        return;
+                                    }
+
+                                    if (data && data.success) {
+                                        shopify.toast.show(data.message, { duration: 3000 });
+                                        // Update the local status array
+                                        if (orderChannelStatuses && orderChannelStatuses[recordId]) {
+                                            if (channel === 'sms') {
+                                                orderChannelStatuses[recordId].sms = enabled;
+                                            } else {
+                                                orderChannelStatuses[recordId].wa = enabled;
+                                            }
+                                        }
+                                    } else {
+                                        shopify.toast.show((data && data.message) ? data.message : 'Update failed', { isError: true, duration: 3000 });
+                                        toggleEl.checked = !toggleEl.checked;
+                                    }
                                 } else {
-                                    shopify.toast.show((data && data.message) ? data.message : 'Update failed', { isError: true, duration: 3000 });
+                                    shopify.toast.show('Failed to update toggle', { isError: true, duration: 3000 });
                                     toggleEl.checked = !toggleEl.checked;
                                 }
-                            } else {
-                                shopify.toast.show('Failed to update toggle', { isError: true, duration: 3000 });
-                                toggleEl.checked = !toggleEl.checked;
                             }
-                        }
-                    };
-
-                    var params = 'toggle_update=1&record_id=' + recordId + '&channel=' + channel + '&enabled=' + enabled;
-                    xhr.send(params);
+                        };
+                        var params = 'toggle_update=1&record_id=' + recordId + '&channel=' + channel + '&enabled=' + enabled;
+                        xhr.send(params);
+                    }
                 });
             });
         });
@@ -1328,6 +1392,10 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
                     const mediaUrlInput = document.getElementById('media_url_input');
                     if (mediaUrlInput) mediaUrlInput.value = data.media_url || '';
+                    var generatedUrlInput = document.querySelector('input[name="generated_media_url"]');
+                    if (generatedUrlInput && data.media_source === 'file' && data.media_url) {
+                        generatedUrlInput.value = data.media_url;
+                    }
                     toggleMediaFields();
 
                     const headersContainer = document.getElementById('headers-container');
@@ -1571,17 +1639,27 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 }
             }
 
+            var mediaFileUrlBox = document.getElementById('mediaFileUrlBox');
+            var generatedUrlInput = document.querySelector('input[name="generated_media_url"]');
+
             if (selected.value === 'url') {
                 urlBox.style.display = 'flex';
                 fileBox.style.display = 'none';
+                if (mediaFileUrlBox) mediaFileUrlBox.style.display = 'none';
             }
             else if (selected.value === 'file') {
                 urlBox.style.display = 'none';
                 fileBox.style.display = 'flex';
+                if (mediaFileUrlBox && generatedUrlInput && generatedUrlInput.value) {
+                    mediaFileUrlBox.style.display = 'flex';
+                } else if (mediaFileUrlBox) {
+                    mediaFileUrlBox.style.display = 'flex';
+                }
             }
             else if (selected.value === 'dynamic') {
                 urlBox.style.display = 'none';
                 fileBox.style.display = 'none';
+                if (mediaFileUrlBox) mediaFileUrlBox.style.display = 'none';
             }
         }
 
@@ -1607,32 +1685,31 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             for (var fi = 0; fi < forms.length; fi++) {
                 attachAjaxFormSubmission(forms[fi]);
             }
+            var fileInput = document.querySelector('input[name="media_file"]');
+            if (fileInput) {
+                fileInput.addEventListener('change', previewFileUrl);
+            }
         });
 
-        // function openTestModal(id, name) {
-        //     currentTestId = id;
-        //     currentTestName = name;
-        //     const testModal = document.getElementById('testModal');
-        //     if (testModal) {
-        //         testModal.style.display = 'flex';
-        //     }
-        //     const testPhone = document.getElementById('test_phone');
-        //     if (testPhone) {
-        //         testPhone.value = '';
-        //     }
-        // }
-
-        // function closeTestModal() {
-        //     const testModal = document.getElementById('testModal');
-        //     if (testModal) {
-        //         testModal.style.display = 'none';
-        //     }
-        //     currentTestId = null;
-        //     currentTestName = null;
-        // }
         function openTestModal(id, name) {
             currentTestId = id;
             currentTestName = name;
+
+            // Check if SMS or WhatsApp is enabled for this record
+            var smsEnabled = false;
+            var whatsappEnabled = false;
+
+            if (orderChannelStatuses && orderChannelStatuses[id]) {
+                smsEnabled = orderChannelStatuses[id].sms === 1;
+                whatsappEnabled = orderChannelStatuses[id].wa === 1;
+            }
+
+            // If both are disabled, show error and don't open modal
+            if (!smsEnabled && !whatsappEnabled) {
+                shopify.toast.show("Please enable SMS or WhatsApp template first.", { isError: true, duration: 3000 });
+                return;
+            }
+
             const testModal = document.getElementById('testModal');
             if (testModal) {
                 testModal.style.display = 'flex';
@@ -1650,7 +1727,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 if (selectedOption) {
                     searchInput.value = selectedOption.text;
                 }
-                // Focus on search input
                 setTimeout(function () {
                     searchInput.focus();
                     searchInput.select();
@@ -1719,7 +1795,6 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
                 searchInput.value = selectedOption.text;
             }
         }
-
         function sendTestFromModal() {
             var countryCode = document.getElementById('test_country_code').value;
             var phone = document.getElementById('test_phone').value;
@@ -1732,6 +1807,20 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             var phoneRegex = /^\d{5,15}$/;
             if (!phoneRegex.test(phone)) {
                 shopify.toast.show('Please enter a valid phone number (5-15 digits)', { isError: true, duration: 3000 });
+                return;
+            }
+
+            // Verify template is still enabled
+            var smsEnabled = false;
+            var whatsappEnabled = false;
+
+            if (orderChannelStatuses && orderChannelStatuses[currentTestId]) {
+                smsEnabled = orderChannelStatuses[currentTestId].sms === 1;
+                whatsappEnabled = orderChannelStatuses[currentTestId].wa === 1;
+            }
+
+            if (!smsEnabled && !whatsappEnabled) {
+                shopify.toast.show("Please enable SMS or WhatsApp template first.", { isError: true, duration: 3000 });
                 return;
             }
 
@@ -1775,6 +1864,31 @@ $rows = $stmt->fetchAll(PDO::FETCH_ASSOC);
             var modal = document.getElementById('testModal');
             if (event.target == modal) {
                 closeTestModal();
+            }
+        }
+        function previewFileUrl() {
+            var fileInput = document.querySelector('input[name="media_file"]');
+            var generatedUrlInput = document.querySelector('input[name="generated_media_url"]');
+            var mediaFileUrlBox = document.getElementById('mediaFileUrlBox');
+
+            if (fileInput && fileInput.files && fileInput.files[0]) {
+                var fileName = fileInput.files[0].name;
+                var timestamp = Math.floor(Date.now() / 1000);
+                var fileExtension = fileName.split('.').pop().toLowerCase();
+                var baseName = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
+                var cleanName = baseName.replace(/[^a-zA-Z0-9._-]/g, '');
+                var predictedFileName = timestamp + '_' + cleanName + '.' + fileExtension;
+
+                var predictedUrl = '<?php echo rtrim($app_url, '/'); ?>/templates/uploads/' + predictedFileName;
+
+                if (generatedUrlInput) {
+                    generatedUrlInput.value = 'Will be: ' + predictedUrl;
+                    generatedUrlInput.style.color = '#666';
+                    generatedUrlInput.style.fontStyle = 'italic';
+                }
+                if (mediaFileUrlBox) {
+                    mediaFileUrlBox.style.display = 'flex';
+                }
             }
         }
     </script>

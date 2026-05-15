@@ -22,7 +22,7 @@ require_once __DIR__ . '/../app_config.php';
 include '../accurate_country_code.php';
 include '../send_sms_api.php';
 include '../send_whatsapp_message_api.php';
-
+$logFile = dirname(__FILE__) . '/../file/order_confirmation_log.txt';
 $data = file_get_contents("php://input");
 $order_details = json_decode($data);
 
@@ -30,7 +30,117 @@ if (!$order_details) {
     set_http_status(200);
     exit;
 }
+function fetchProductTagsGraphQL($shop, $oauth_token, $product_ids)
+{
+    if (empty($product_ids)) {
+        return array();
+    }
 
+    $api_version = "2026-01";
+    $url = "https://{$shop}/admin/api/{$api_version}/graphql.json";
+
+    // Build GraphQL query for multiple products
+    $query = 'query getProducts($ids: [ID!]!) {
+        nodes(ids: $ids) {
+            ... on Product {
+                id
+                tags
+            }
+        }
+    }';
+
+    // Convert product IDs to GID format
+    $gids = array();
+    foreach ($product_ids as $pid) {
+        $gids[] = "gid://shopify/Product/{$pid}";
+    }
+
+    $variables = array('ids' => $gids);
+
+    $payload = json_encode(array(
+        'query' => $query,
+        'variables' => $variables
+    ));
+
+    $ch = curl_init($url);
+    curl_setopt_array($ch, array(
+        CURLOPT_RETURNTRANSFER => true,
+        CURLOPT_POST => true,
+        CURLOPT_POSTFIELDS => $payload,
+        CURLOPT_HTTPHEADER => array(
+            "Content-Type: application/json",
+            "X-Shopify-Access-Token: {$oauth_token}"
+        ),
+        CURLOPT_TIMEOUT => 30,
+        CURLOPT_SSL_VERIFYPEER => false
+    ));
+
+    $response = curl_exec($ch);
+    $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+    curl_close($ch);
+
+    if ($http_code == 200) {
+        $result = json_decode($response, true);
+        $all_tags = array();
+
+        if (isset($result['data']['nodes']) && is_array($result['data']['nodes'])) {
+            foreach ($result['data']['nodes'] as $node) {
+                if (isset($node['tags']) && !empty($node['tags'])) {
+                    $tags = $node['tags'];
+                    // Tags can be comma-separated string or array based on response
+                    if (is_string($tags)) {
+                        $tags_array = array_map('trim', explode(',', $tags));
+                    } elseif (is_array($tags)) {
+                        $tags_array = $tags;
+                    } else {
+                        $tags_array = array();
+                    }
+                    $all_tags = array_merge($all_tags, $tags_array);
+                }
+            }
+        }
+
+        return array_unique($all_tags);
+    }
+
+    return array();
+}
+
+function calculateTagMatchPercentage($order_tags, $template_tags)
+{
+    if (empty($template_tags)) {
+        return 0;
+    }
+
+    // Convert comma-separated strings to arrays
+    if (is_string($order_tags)) {
+        $order_tags_array = array_map('trim', explode(',', $order_tags));
+    } else {
+        $order_tags_array = $order_tags;
+    }
+
+    if (is_string($template_tags)) {
+        $template_tags_array = array_map('trim', explode(',', $template_tags));
+    } else {
+        $template_tags_array = $template_tags;
+    }
+
+    if (empty($template_tags_array)) {
+        return 0;
+    }
+
+    // Count matching tags
+    $matched_count = 0;
+    foreach ($template_tags_array as $template_tag) {
+        if (in_array($template_tag, $order_tags_array)) {
+            $matched_count++;
+        }
+    }
+
+    // Calculate percentage based on template tags count
+    $percentage = ($matched_count / count($template_tags_array)) * 100;
+    return $percentage;
+}
 $order_status_url_full = isset($order_details->order_status_url) ? $order_details->order_status_url : '';
 $shop = parse_url($order_status_url_full, PHP_URL_HOST);
 if (!$shop) {
@@ -334,8 +444,6 @@ if ($row) {
                     error_log("No product ID found for shop: {$shop}");
                 }
             }
-
-            // Send SMS using template function with processed SMS text
             if (empty($customer_phone)) {
                 file_put_contents("$logFile", "ERROR: Customer phone is empty, cannot send SMS for order {$order_id}\n", FILE_APPEND);
             } elseif (empty($template_id)) {
@@ -657,7 +765,7 @@ if ($whatsapp_enabled_main == 1 && !empty($whatsapp_template_name)) {
     }
     //$final_contact = "$country_code" . "$customer_phone";
     $whatsapp_config = array_merge($whatsapp_api_config, array(
-        'to' =>  $country_code . $customer_phone,
+        'to' => $country_code . $customer_phone,
         'template_name' => $whatsapp_template_name,
         'language_code' => 'en',
         'media_type' => $media_type,
@@ -752,35 +860,55 @@ if ($result1->rowCount() > 0) {
 
         $tags_matched = false;
         $price_matched = false;
+        $product_tags_matched = false;
+        $all_product_tags = array();
 
-        // Check tags condition
-        // if (!empty($db_tags) && $db_tags == $order_tags && $order_tags != '') {
-        //     $tags_matched = true;
-        //     file_put_contents("$logFile", "Promotional: Tags matched for shop: $shop, Tags: $db_tags, Offer: $offer_name\n", FILE_APPEND);
-        // }
-        // // Check price conditions
-        // elseif (!empty($db_price)) {
-        //     if ($order_condition == 'Greater than' && $order_total_price >= $db_price) {
-        //         $price_matched = true;
-        //         file_put_contents("$logFile", "Promotional: Price matched (Greater than) for shop: $shop, Price: $order_total_price >= $db_price, Offer: $offer_name\n", FILE_APPEND);
-        //     } elseif ($order_condition == 'Equals' && $order_total_price == $db_price) {
-        //         $price_matched = true;
-        //         file_put_contents("$logFile", "Promotional: Price matched (Equals) for shop: $shop, Price: $order_total_price == $db_price, Offer: $offer_name\n", FILE_APPEND);
-        //     } elseif ($order_condition == 'Less than' && $order_total_price <= $db_price) {
-        //         $price_matched = true;
-        //         file_put_contents("$logFile", "Promotional: Price matched (Less than) for shop: $shop, Price: $order_total_price <= $db_price, Offer: $offer_name\n", FILE_APPEND);
-        //     } elseif ($order_condition == 'Between' && !empty($db_price2) && $order_total_price > $db_price && $order_total_price < $db_price2) {
-        //         $price_matched = true;
-        //         file_put_contents("$logFile", "Promotional: Price matched (Between) for shop: $shop, Price: $db_price < $order_total_price < $db_price2, Offer: $offer_name\n", FILE_APPEND);
-        //     }
-        // }
-        $tags_matched = false;
-        $price_matched = false;
+        // ========== CHECK PRODUCT TAGS USING GRAPHQL ==========
+        if (!empty($db_tags)) {
+            // Collect all unique product IDs from order line items
+            $product_ids = array();
+            if (isset($order_details->line_items) && is_array($order_details->line_items)) {
+                foreach ($order_details->line_items as $line_item) {
+                    if (isset($line_item->product_id) && !empty($line_item->product_id)) {
+                        $product_ids[] = $line_item->product_id;
+                    }
+                }
 
-        if (!empty($db_tags) && $db_tags == $order_tags && $order_tags != '') {
-            $tags_matched = true;
-            file_put_contents("$logFile", "Promotional: Tags matched for shop: $shop, Tags: $db_tags, Offer: $offer_name\n", FILE_APPEND);
+                // Remove duplicate product IDs
+                $product_ids = array_unique($product_ids);
+
+                if (!empty($product_ids)) {
+                    file_put_contents("$logFile", "Fetching tags for " . count($product_ids) . " products using GraphQL\n", FILE_APPEND);
+
+                    // Fetch all product tags in a single GraphQL request
+                    $all_product_tags = fetchProductTagsGraphQL($shop, $oauth_token, $product_ids);
+
+                    if (!empty($all_product_tags)) {
+                        file_put_contents("$logFile", "All product tags found: " . implode(', ', $all_product_tags) . "\n", FILE_APPEND);
+
+                        // Calculate match percentage
+                        $match_percentage = calculateTagMatchPercentage($all_product_tags, $db_tags);
+                        file_put_contents("$logFile", "Tag match percentage: {$match_percentage}% (Required: 50%)\n", FILE_APPEND);
+
+                        // Check if match percentage is 50% or more
+                        if ($match_percentage >= 50) {
+                            $product_tags_matched = true;
+                            file_put_contents("$logFile", "Promotional: Product tags matched for shop: $shop, Template Tags: $db_tags, Offer: $offer_name\n", FILE_APPEND);
+                        }
+                    } else {
+                        file_put_contents("$logFile", "No product tags found for the order\n", FILE_APPEND);
+                    }
+                }
+            }
         }
+
+        // Also check order tags if needed (optional)
+        if (!empty($order_tags) && $db_tags == $order_tags && $order_tags != '') {
+            $tags_matched = true;
+            file_put_contents("$logFile", "Promotional: Order Tags matched for shop: $shop, Tags: $db_tags, Offer: $offer_name\n", FILE_APPEND);
+        }
+
+        // Check price conditions
         if (!empty($db_price)) {
             if ($order_condition == 'Greater than' && $order_total_price >= $db_price) {
                 $price_matched = true;
@@ -796,8 +924,12 @@ if ($result1->rowCount() > 0) {
                 file_put_contents("$logFile", "Promotional: Price matched (Between) for shop: $shop, Price: $db_price < $order_total_price < $db_price2, Offer: $offer_name\n", FILE_APPEND);
             }
         }
-        if ($tags_matched || $price_matched) {
-            $subject_promo = ($tags_matched ? "Product Tags Based" : "Order Value Based");
+
+        // Use product_tags_matched OR tags_matched OR price_matched
+        if ($product_tags_matched || $tags_matched || $price_matched) {
+            $subject_promo = ($product_tags_matched || $tags_matched) ? "Product Tags Based" : "Order Value Based";
+
+            // ========== SMS BLOCK (Independent) ==========
             if ($promo_sms_enabled == 1 && !empty($customer_phone)) {
                 if ($has_parameters) {
                     $parameter_values = array();
@@ -852,9 +984,13 @@ if ($result1->rowCount() > 0) {
                     }
                 }
                 file_put_contents("$logFile", "Promotional SMS sent successfully for offer: $offer_name to {$customer_phone}\n", FILE_APPEND);
-            } else {
+            } elseif ($promo_sms_enabled == 0) {
+                file_put_contents("$logFile", "Promotional SMS: Disabled for offer: $offer_name\n", FILE_APPEND);
+            } elseif (empty($customer_phone)) {
                 file_put_contents("$logFile", "Promotional SMS NOT sent - Phone is empty for offer: $offer_name\n", FILE_APPEND);
             }
+
+            // ========== WHATSAPP BLOCK (Independent - NOT inside SMS condition) ==========
             $promo_whatsapp_enabled = isset($row7['whatsapp_enabled']) ? (int) $row7['whatsapp_enabled'] : 0;
             $promo_whatsapp_data = array();
             if (isset($row7['whatsapp']) && !empty($row7['whatsapp'])) {
@@ -866,6 +1002,7 @@ if ($result1->rowCount() > 0) {
 
             $promo_whatsapp_template_name = isset($promo_whatsapp_data['template_name']) ? $promo_whatsapp_data['template_name'] : '';
 
+            // WhatsApp condition - completely independent from SMS
             if ($promo_whatsapp_enabled == 1 && !empty($promo_whatsapp_template_name) && !empty($customer_phone)) {
                 file_put_contents("$logFile", "Promotional: Sending WhatsApp for offer: $offer_name, Template: $promo_whatsapp_template_name\n", FILE_APPEND);
 
@@ -879,7 +1016,8 @@ if ($result1->rowCount() > 0) {
                     'customer_fname' => $customer_fname,
                     'customer_lname' => $customer_lname,
                     'customer_full_name' => $customer_full_name,
-                    'item_name' => $item_name
+                    'item_name' => $item_name,
+                    'product_tags' => implode(', ', $all_product_tags)
                 );
 
                 $promo_processed_headers = array();
@@ -903,7 +1041,7 @@ if ($result1->rowCount() > 0) {
                         file_put_contents("$logFile", "Promo Body: '$body_var' -> '$processed_value'\n", FILE_APPEND);
                     }
                 }
-                
+
                 $promo_media_url = isset($row7['media_url']) ? $row7['media_url'] : '';
                 $promo_media_source = isset($row7['media_source']) ? $row7['media_source'] : '';
                 $promo_media_type = isset($row7['media_type']) ? $row7['media_type'] : 'text';
@@ -1017,6 +1155,8 @@ if ($result1->rowCount() > 0) {
                 file_put_contents("$logFile", "Promotional WhatsApp: No template name for offer: $offer_name\n", FILE_APPEND);
             } elseif ($promo_whatsapp_enabled == 0) {
                 file_put_contents("$logFile", "Promotional WhatsApp: Disabled for offer: $offer_name\n", FILE_APPEND);
+            } elseif (empty($customer_phone)) {
+                file_put_contents("$logFile", "Promotional WhatsApp NOT sent - Phone is empty for offer: $offer_name\n", FILE_APPEND);
             }
         }
     }

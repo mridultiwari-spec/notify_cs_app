@@ -49,6 +49,7 @@ function send_json_response($payload)
 }
 
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    global $app_url;
     $token = get_bearer_token_php53();
     $tokenCheck = validate_shopify_session_token_php53($token, $api_secret, $api_key);
     if (!$tokenCheck['success']) {
@@ -166,19 +167,22 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     }
                 } elseif ($media_source_type === 'file') {
                     if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0) {
-                        $uploadDir = "uploads/";
+                        $uploadDir = dirname(__FILE__) . "/uploads/";
                         if (!is_dir($uploadDir)) {
                             mkdir($uploadDir, 0777, true);
                         }
+
+                        $fileExtension = strtolower(pathinfo($_FILES["media_file"]["name"], PATHINFO_EXTENSION));
                         $fileName = time() . "_" . preg_replace(
                             "/[^a-zA-Z0-9._-]/",
                             "",
-                            $_FILES["media_file"]["name"]
-                        );
+                            pathinfo($_FILES["media_file"]["name"], PATHINFO_FILENAME)
+                        ) . "." . $fileExtension;
+
                         $targetFile = $uploadDir . $fileName;
                         if (move_uploaded_file($_FILES["media_file"]["tmp_name"], $targetFile)) {
                             $media_source = 'file';
-                            $media_url = $fileName;
+                            $media_url = rtrim($app_url, '/') . "/templates/uploads/" . $fileName;
                         }
                     }
                 } elseif ($media_source_type === 'dynamic') {
@@ -310,7 +314,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             send_json_response(array(
                 'success' => true,
                 'message' => 'Template saved successfully.',
-                'redirect_url' => $app_url . "/index.php?tab=shipping&shop=" . urlencode($shop)
+                'redirect_url' => $app_url . "/index.php?tab=shipping&shop=" . urlencode($shop),
+                'media_url' => isset($media_url) ? $media_url : null
             ));
         }
         send_json_response(array(
@@ -364,8 +369,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         value="<?php echo htmlspecialchars(isset($_GET['shop']) ? $_GET['shop'] : '', ENT_QUOTES, 'UTF-8'); ?>">
                     <input type="hidden" name="aid" value="<?php echo $aid; ?>">
                     <div class="tab-content active" id="sms">
-                        <textarea id="smsBox" name="sms"
-                            placeholder="Enter SMS template..." style="display:none;"><?php echo $isEditMode && isset($existingData['sms']) ? htmlspecialchars($existingData['sms'], ENT_QUOTES, 'UTF-8') : ''; ?></textarea></br>
+                        <textarea id="smsBox" name="sms" placeholder="Enter SMS template..."
+                            style="display:none;"><?php echo $isEditMode && isset($existingData['sms']) ? htmlspecialchars($existingData['sms'], ENT_QUOTES, 'UTF-8') : ''; ?></textarea></br>
                         <p></p>
                         <span>Template Name :</span>
                         <p></p>
@@ -443,6 +448,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="condition-box" id="mediaFileBox" style="display:none;">
                             <input type="file" name="media_file" class="condition-input">
                         </div>
+                        <div class="condition-box" id="mediaFileUrlBox" style="display:none;">
+                            <span>Generated Media URL :</span>
+                            <input type="text" name="generated_media_url" class="condition-input"
+                                placeholder="Media URL will appear here after upload"
+                                style="flex:1; background-color: #f5f5f5;" readonly
+                                value="<?php echo ($isEditMode && isset($existingData['media_source']) && $existingData['media_source'] == 'file' && !empty($existingData['media_url'])) ? htmlspecialchars($existingData['media_url'], ENT_QUOTES, 'UTF-8') : ''; ?>">
+                        </div>
                         <div id="buttons-container">
                             <?php
                             $ctaUrls = array();
@@ -509,7 +521,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                                 value="<?php echo htmlspecialchars($buttonUrl, ENT_QUOTES, 'UTF-8'); ?>">
                                         </div>
                                     </div>
-                                <?php
+                                    <?php
                                 }
                             }
                             ?>
@@ -808,6 +820,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                                 return;
                             }
                             if (data && data.success) {
+                                if (data.media_url) {
+                                    var generatedUrlInput = document.querySelector('input[name="generated_media_url"]');
+                                    if (generatedUrlInput) {
+                                        generatedUrlInput.value = data.media_url;
+                                        generatedUrlInput.style.color = '';
+                                        generatedUrlInput.style.fontStyle = '';
+                                        var mediaFileUrlBox = document.getElementById('mediaFileUrlBox');
+                                        if (mediaFileUrlBox) {
+                                            mediaFileUrlBox.style.display = 'flex';
+                                        }
+                                    }
+                                }
                                 shopify.toast.show(data.message || 'Template saved successfully.', { duration: 3000 });
                                 setTimeout(function () {
                                     var redirectUrl = data.redirect_url ? data.redirect_url : "<?php echo htmlspecialchars($app_url, ENT_QUOTES, 'UTF-8'); ?>/index.php?tab=shipping&shop=<?php echo urlencode($shop); ?>";
@@ -965,17 +989,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     }
                 }
+                var mediaFileUrlBox = document.getElementById('mediaFileUrlBox');
+                var generatedUrlInput = document.querySelector('input[name="generated_media_url"]');
+
                 if (selected.value === 'url') {
                     urlBox.style.display = 'flex';
                     fileBox.style.display = 'none';
+                    if (mediaFileUrlBox) mediaFileUrlBox.style.display = 'none';
                 }
                 else if (selected.value === 'file') {
                     urlBox.style.display = 'none';
                     fileBox.style.display = 'flex';
+                    if (mediaFileUrlBox && generatedUrlInput && generatedUrlInput.value) {
+                        mediaFileUrlBox.style.display = 'flex';
+                    } else if (mediaFileUrlBox) {
+                        mediaFileUrlBox.style.display = 'flex';
+                    }
                 }
                 else if (selected.value === 'dynamic') {
                     urlBox.style.display = 'none';
                     fileBox.style.display = 'none';
+                    if (mediaFileUrlBox) mediaFileUrlBox.style.display = 'none';
                 }
             }
 
@@ -990,8 +1024,39 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 toggleUrlField(parseInt(btnId));
             }
             buttonCount = existingButtonGroups.length;
+            // Add file input change event
+            var fileInput = document.querySelector('input[name="media_file"]');
+            if (fileInput) {
+                fileInput.addEventListener('change', previewFileUrl);
+            }
         });
+        function previewFileUrl() {
+            var fileInput = document.querySelector('input[name="media_file"]');
+            var generatedUrlInput = document.querySelector('input[name="generated_media_url"]');
+            var mediaFileUrlBox = document.getElementById('mediaFileUrlBox');
+
+            if (fileInput && fileInput.files && fileInput.files[0]) {
+                var fileName = fileInput.files[0].name;
+                var timestamp = Math.floor(Date.now() / 1000);
+                var fileExtension = fileName.split('.').pop().toLowerCase();
+                var baseName = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
+                var cleanName = baseName.replace(/[^a-zA-Z0-9._-]/g, '');
+                var predictedFileName = timestamp + '_' + cleanName + '.' + fileExtension;
+
+                var predictedUrl = '<?php echo rtrim($app_url, '/'); ?>/templates/uploads/' + predictedFileName;
+
+                if (generatedUrlInput) {
+                    generatedUrlInput.value = 'Will be: ' + predictedUrl;
+                    generatedUrlInput.style.color = '#666';
+                    generatedUrlInput.style.fontStyle = 'italic';
+                }
+                if (mediaFileUrlBox) {
+                    mediaFileUrlBox.style.display = 'flex';
+                }
+            }
+        }
     </script>
     <div id="toast" class="toast">Copied to clipboard</div>
 </body>
+
 </html>

@@ -1005,6 +1005,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
     }
 }
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_POST['form_type'] : '') === 'whatsapp')) {
+    global $app_url;
     $condition_type = isset($_POST['condition_type']) ? $_POST['condition_type'] : 'When Customer Joins Segment';
     $schedule_dt = isset($_POST['schedule_dt']) ? $_POST['schedule_dt'] : null;
     $conditions = ($condition_type === 'Bulk Schedule' && !empty($schedule_dt))
@@ -1026,19 +1027,23 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
             $media_url = trim($_POST['media_url']);
         } elseif ($media_source_type === 'file') {
             if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0) {
-                $uploadDir = "uploads/";
+                $uploadDir = dirname(__FILE__) . "/uploads/";
                 if (!is_dir($uploadDir)) {
                     mkdir($uploadDir, 0777, true);
                 }
+
+                $fileExtension = strtolower(pathinfo($_FILES["media_file"]["name"], PATHINFO_EXTENSION));
                 $fileName = time() . "_" . preg_replace(
                     "/[^a-zA-Z0-9._-]/",
                     "",
-                    $_FILES["media_file"]["name"]
-                );
+                    pathinfo($_FILES["media_file"]["name"], PATHINFO_FILENAME)
+                ) . "." . $fileExtension;
+
                 $targetFile = $uploadDir . $fileName;
                 if (move_uploaded_file($_FILES["media_file"]["tmp_name"], $targetFile)) {
                     $media_source = 'file';
-                    $media_url = $fileName;
+                    global $app_url;
+                    $media_url = rtrim($app_url, '/') . "/templates/uploads/" . $fileName;
                 }
             }
         } elseif ($media_source_type === 'dynamic') {
@@ -1116,7 +1121,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
             $conditions,
             $id
         ));
-        echo json_encode(array('success' => true, 'message' => 'Template saved successfully'));
+        echo json_encode(array(
+            'success' => true,
+            'message' => 'Template saved successfully',
+            'media_url' => isset($media_url) ? $media_url : null
+        ));
         exit;
     } catch (Exception $e) {
         echo json_encode(array('success' => false, 'message' => $e->getMessage()));
@@ -1991,6 +2000,12 @@ foreach ($rows as $row) {
                         <div class="condition-box" id="waMediaFileBox" style="display:none;">
                             <input type="file" name="media_file" class="condition-input">
                         </div>
+                        <div class="condition-box" id="waMediaFileUrlBox" style="display:none;">
+                            <span>Generated Media URL :</span>
+                            <input type="text" name="generated_media_url" class="condition-input"
+                                placeholder="Media URL will appear here after upload"
+                                style="flex:1; background-color: #f5f5f5;" readonly value="">
+                        </div>
                         <div id="buttons-container"></div>
                         <div style="margin-bottom: 15px;">
                             <button type="button" class="add-button-btn" onclick="addButton()">
@@ -2164,6 +2179,11 @@ foreach ($rows as $row) {
                             if (urlRadio) urlRadio.checked = true;
                         }
                         toggleWhatsAppMediaFields();
+                        var waFileInput = document.querySelector('#whatsappForm input[name="media_file"]');
+                        if (waFileInput) {
+                            waFileInput.addEventListener('change', previewWhatsAppFileUrl);
+                        }
+
                         document.getElementById('buttons-container').innerHTML = '';
                         buttonCount = 0;
                         var buttons = data.data.buttons || [];
@@ -2229,13 +2249,13 @@ foreach ($rows as $row) {
                             document.getElementById('template_schedule_date').value = datePart;
                             document.getElementById('template_schedule_hour').value = hourPart;
 
-                            
+
                             var hiddenInput = document.getElementById('template_schedule_hidden_value');
                             if (hiddenInput) {
                                 hiddenInput.value = data.data.schedule_datetime;
                             }
 
-                            
+
                             var smsHidden = document.getElementById('sms_schedule_hidden');
                             var waHidden = document.getElementById('wa_schedule_hidden');
                             if (smsHidden) smsHidden.value = data.data.schedule_datetime;
@@ -2244,7 +2264,7 @@ foreach ($rows as $row) {
                             updateScheduleDateTime();
                         } else {
                             scheduleBox.style.display = 'none';
-                           
+
                             var hiddenInput = document.getElementById('template_schedule_hidden_value');
                             if (hiddenInput) hiddenInput.value = '';
                             var smsHidden = document.getElementById('sms_schedule_hidden');
@@ -2413,17 +2433,27 @@ foreach ($rows as $row) {
                 }
             }
 
+            var mediaFileUrlBox = document.getElementById('waMediaFileUrlBox');
+            var generatedUrlInput = document.querySelector('#whatsappForm input[name="generated_media_url"]');
+
             if (selected.value === 'url') {
                 if (urlBox) urlBox.style.display = 'flex';
                 if (fileBox) fileBox.style.display = 'none';
+                if (mediaFileUrlBox) mediaFileUrlBox.style.display = 'none';
             }
             else if (selected.value === 'file') {
                 if (urlBox) urlBox.style.display = 'none';
                 if (fileBox) fileBox.style.display = 'flex';
+                if (mediaFileUrlBox && generatedUrlInput && generatedUrlInput.value) {
+                    mediaFileUrlBox.style.display = 'flex';
+                } else if (mediaFileUrlBox) {
+                    mediaFileUrlBox.style.display = 'flex';
+                }
             }
             else if (selected.value === 'dynamic') {
                 if (urlBox) urlBox.style.display = 'none';
                 if (fileBox) fileBox.style.display = 'none';
+                if (mediaFileUrlBox) mediaFileUrlBox.style.display = 'none';
             }
         }
 
@@ -2567,6 +2597,18 @@ foreach ($rows as $row) {
                 .then(function (data) {
                     if (data.success) {
                         closeTestModal();
+                        if (data.media_url) {
+                            var generatedUrlInput = document.querySelector('#whatsappForm input[name="generated_media_url"]');
+                            if (generatedUrlInput) {
+                                generatedUrlInput.value = data.media_url;
+                                generatedUrlInput.style.color = '';
+                                generatedUrlInput.style.fontStyle = '';
+                                var mediaFileUrlBox = document.getElementById('waMediaFileUrlBox');
+                                if (mediaFileUrlBox) {
+                                    mediaFileUrlBox.style.display = 'flex';
+                                }
+                            }
+                        }
                         shopify.toast.show('Test triggered successfully! Check the status in App Logs.', { duration: 3000 });
                     } else {
                         shopify.toast.show(data.message || "Error sending test message", { isError: true, duration: 3000 });
@@ -2770,7 +2812,7 @@ foreach ($rows as $row) {
                                 segmentChannelStatuses[id].wa = status;
                             }
                         } else if (segmentChannelStatuses) {
-                           
+
                             segmentChannelStatuses[id] = { sms: 0, wa: 0 };
                             if (channel === 'sms') {
                                 segmentChannelStatuses[id].sms = status;
@@ -3125,9 +3167,9 @@ foreach ($rows as $row) {
                     if (data.success) {
                         shopify.toast.show(data.message || 'Template saved successfully', { duration: 3000 });
                         var segmentId = document.getElementById('template_aid_sms').value;
-                        
+
                         var conditionType = document.querySelector('#templateModal input[name="condition_type"]:checked').value;
-                        
+
                         updateTableRowType(segmentId, conditionType);
                         setTimeout(function () {
                             closeTemplateModal();
@@ -3170,9 +3212,9 @@ foreach ($rows as $row) {
                     if (data.success) {
                         shopify.toast.show(data.message || 'Template saved successfully', { duration: 3000 });
                         var segmentId = document.getElementById('template_aid_wa').value;
-                        
+
                         var conditionType = document.querySelector('#templateModal input[name="condition_type"]:checked').value;
-                        
+
                         updateTableRowType(segmentId, conditionType);
                         setTimeout(function () {
                             closeTemplateModal();
@@ -3191,7 +3233,7 @@ foreach ($rows as $row) {
         function updateTableRowType(segmentId, conditionType) {
             var row = document.getElementById('row-' + segmentId);
             if (row) {
-               
+
                 var typeCell = row.querySelector('td:nth-child(3)');
                 if (typeCell) {
                     var displayType = '';
@@ -3204,6 +3246,32 @@ foreach ($rows as $row) {
                 }
             }
         }
+        function previewWhatsAppFileUrl() {
+            var fileInput = document.querySelector('#whatsappForm input[name="media_file"]');
+            var generatedUrlInput = document.querySelector('#whatsappForm input[name="generated_media_url"]');
+            var mediaFileUrlBox = document.getElementById('waMediaFileUrlBox');
+
+            if (fileInput && fileInput.files && fileInput.files[0]) {
+                var fileName = fileInput.files[0].name;
+                var timestamp = Math.floor(Date.now() / 1000);
+                var fileExtension = fileName.split('.').pop().toLowerCase();
+                var baseName = fileName.substring(0, fileName.lastIndexOf('.')) || fileName;
+                var cleanName = baseName.replace(/[^a-zA-Z0-9._-]/g, '');
+                var predictedFileName = timestamp + '_' + cleanName + '.' + fileExtension;
+
+                var predictedUrl = '<?php echo rtrim($app_url, '/'); ?>/templates/uploads/' + predictedFileName;
+
+                if (generatedUrlInput) {
+                    generatedUrlInput.value = 'Will be: ' + predictedUrl;
+                    generatedUrlInput.style.color = '#666';
+                    generatedUrlInput.style.fontStyle = 'italic';
+                }
+                if (mediaFileUrlBox) {
+                    mediaFileUrlBox.style.display = 'flex';
+                }
+            }
+        }
     </script>
 </body>
+
 </html>

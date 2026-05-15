@@ -797,12 +797,15 @@ try {
     }
   }
 
-    $sms_enabled = isset($row['sms_enabled']) ? (int)$row['sms_enabled'] : 0;
-  $whatsapp_enabled = isset($row['whatsapp_enabled']) ? (int)$row['whatsapp_enabled'] : 0;
+  $sms_enabled = isset($row['sms_enabled']) ? (int) $row['sms_enabled'] : 0;
+  $whatsapp_enabled = isset($row['whatsapp_enabled']) ? (int) $row['whatsapp_enabled'] : 0;
 
   // Initialize response array
   $response = array();
+  $message_parts = array();
+  $overall_success = false;
 
+  // ============ SMS TEMPLATE NOTIFICATION ============
   if ($sms_enabled == 1) {
     if (!empty($parameter_values)) {
       send_smstext_with_parameters(
@@ -817,12 +820,8 @@ try {
         $order_name,
         $notification_type
       );
-      $response = array(
-        'success' => true,
-        'message' => 'Template SMS sent successfully',
-        'template_name' => $template_name_sms,
-        'parameters' => $parameter_values
-      );
+      $message_parts[] = 'SMS sent successfully';
+      $overall_success = true;
     } else {
       send_smstext(
         $final_country_code,
@@ -835,23 +834,16 @@ try {
         $order_name,
         $notification_type
       );
-      $response = array(
-        'success' => true,
-        'message' => 'Plain text SMS sent successfully',
-        'template_name' => $template_name_sms
-      );
+      $message_parts[] = 'SMS sent successfully';
+      $overall_success = true;
     }
   } else {
-    // SMS is disabled
-    $response = array(
-      'success' => false,
-      'message' => 'SMS is disabled for this template, skipping SMS',
-      'sms_enabled' => false
-    );
+    $message_parts[] = 'SMS is disabled';
   }
 
   // ============ WHATSAPP TEMPLATE NOTIFICATION ============
-  // Only process WhatsApp if enabled
+  $whatsapp_sent = false;
+
   if ($whatsapp_enabled == 1) {
     $whatsapp_data_from_db = array();
     if (isset($row['whatsapp']) && !empty($row['whatsapp'])) {
@@ -987,10 +979,9 @@ try {
         );
         error_log("WhatsApp Button 3: type=$btn3_type, text=$btn3_text");
       }
-      
-      // FIX: Removed undefined $country_code_input variable
+
       $wa_phone = $final_country_code . $final_phone_number;
-      
+
       $whatsapp_config = array_merge($whatsapp_api_config, array(
         'to' => $wa_phone,
         'template_name' => $whatsapp_template_name,
@@ -1018,24 +1009,39 @@ try {
 
           if (isset($whatsapp_result['success']) && $whatsapp_result['success']) {
             error_log("WhatsApp sent successfully for order cancelled test to {$final_phone_number}");
-            // Update response to include WhatsApp info
-            $response['whatsapp_sent'] = true;
-            if (isset($response['success']) && $response['success']) {
-              $response['message'] = $response['message'] . " | WhatsApp also sent";
-            }
+            $message_parts[] = 'WhatsApp sent successfully';
+            $whatsapp_sent = true;
+            $overall_success = true;
           } else {
             $error_msg = isset($whatsapp_result['message']) ? $whatsapp_result['message'] : 'Unknown error';
             error_log("WhatsApp failed for order cancelled test: " . $error_msg);
+            $message_parts[] = 'WhatsApp failed: ' . $error_msg;
           }
         } else {
           error_log("WhatsApp function send_whatsapp_message not found");
+          $message_parts[] = 'WhatsApp function not available';
         }
       }
     } else {
       error_log("No WhatsApp template configured for aid=3, skipping WhatsApp send");
+      $message_parts[] = 'No WhatsApp template configured';
     }
   } else {
     error_log("WhatsApp is disabled for this template (whatsapp_enabled=$whatsapp_enabled)");
+    $message_parts[] = 'WhatsApp is disabled';
+  }
+
+  // Build final response
+  $response = array(
+    'success' => $overall_success,
+    'message' => implode(' | ', array_filter($message_parts)),
+    'sms_enabled' => ($sms_enabled == 1),
+    'whatsapp_enabled' => ($whatsapp_enabled == 1)
+  );
+
+  // Add WhatsApp status if it was sent
+  if ($whatsapp_sent) {
+    $response['whatsapp_sent'] = true;
   }
 
   // Send single JSON response at the end
