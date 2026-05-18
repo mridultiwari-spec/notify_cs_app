@@ -2,7 +2,6 @@
 require_once __DIR__ . '/app_config.php';
 require_once __DIR__ . '/config/db.php';
 require_once __DIR__ . '/config/session_token_auth.php';
-
 function refreshShopAccessTokenForAbandonedCheckout($shop, $pdo, $configTable, $api_key, $api_secret)
 {
     try {
@@ -783,5 +782,21 @@ function extractShopifyId($global_id)
     $parts = explode('/', $global_id);
 
     return end($parts);
+}
+if (isset($_GET['shop']) && isset($_GET['token'])) {
+    $shop = $_GET['shop'];
+    $oauth_token = $_GET['token'];
+    
+    $result = fetchAndStoreAbandonedCheckouts($shop, $oauth_token);
+    header('Content-Type: application/json');
+    echo json_encode($result);
+    exit;
+} else {
+    header('Content-Type: application/json');
+    echo json_encode(array(
+        'error' => 'Missing parameters',
+        'usage' => '?shop=your-store.myshopify.com&token=your_access_token'
+    ));
+    exit;
 }
 ?>

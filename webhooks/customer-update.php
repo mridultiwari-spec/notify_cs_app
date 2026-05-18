@@ -22,6 +22,7 @@ require_once __DIR__ . '/../app_config.php';
 include '../accurate_country_code.php';
 include './../send_sms_api.php';
 include '../send_whatsapp_message_api.php';
+include '../dynmc_prod_img.php';
 $data = file_get_contents("php://input");
 //file_put_contents("$logFile", date('Y-m-d H:i:s') . "\n" . $data . "\n\n", FILE_APPEND);
 
@@ -229,7 +230,7 @@ if ($row) {
                 }
             }
 
-            if ($media_source_prod == 'dynmc_prod_img' && $media_type == 'image') {
+            if ($media_source_prod == 'dynamic' && $media_type == 'image') {
                 file_put_contents("$logFile", "INFO: Dynamic product image not applicable for customer update webhook\n", FILE_APPEND);
             }
             if (empty($phone_number)) {
@@ -442,7 +443,7 @@ if ($whatsapp_enabled == 1 && !empty($whatsapp_template_name)) {
     }
 
     // Handle dynamic product image (not applicable for customer update, but keeping structure)
-    if ($whatsapp_media_source == 'dynmc_prod_img' && $whatsapp_media_type == 'image') {
+    if ($whatsapp_media_source == 'dynamic' && $whatsapp_media_type == 'image') {
         file_put_contents("$logFile", "INFO: Dynamic product image not applicable for customer update WhatsApp\n", FILE_APPEND);
     }
 

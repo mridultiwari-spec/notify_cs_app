@@ -185,7 +185,99 @@ $topicAidMap = array(
     'customers/update' => 9,
     'customers/enable' => 10,
 );
+// Handle abandoned checkout toggle requests (database-only, no webhook registration)
+if (isset($_GET['abandoned_toggle']) && $_GET['abandoned_toggle'] == '1') {
+    header('Content-Type: application/json');
 
+    $input = json_decode(file_get_contents('php://input'), true);
+
+    if (!$input) {
+        http_response_code(400);
+        echo json_encode(array('success' => false, 'error' => 'Invalid request'));
+        exit;
+    }
+
+    $topic = isset($input['topic']) ? $input['topic'] : '';
+    $action = isset($input['action']) ? (int) $input['action'] : 0;
+    $channel = isset($input['channel']) ? $input['channel'] : '';
+
+    // Only allow checkouts/update topic for abandoned checkout
+    if ($topic !== 'checkouts/update') {
+        http_response_code(400);
+        echo json_encode(array('success' => false, 'error' => 'Invalid topic'));
+        exit;
+    }
+
+    // Validate channel
+    if ($channel !== 'sms' && $channel !== 'whatsapp') {
+        http_response_code(400);
+        echo json_encode(array('success' => false, 'error' => 'Invalid channel'));
+        exit;
+    }
+
+    // Validate session
+    $toggleShop = isset($_SESSION['shop']) ? $_SESSION['shop'] : '';
+    $toggleToken = get_bearer_token_php53();
+    if ($toggleToken) {
+        $validatedToggleToken = validate_shopify_session_token_php53($toggleToken, $api_secret, $api_key);
+        if (isset($validatedToggleToken['success']) && $validatedToggleToken['success']) {
+            $toggleShop = $validatedToggleToken['shop'];
+        }
+    }
+
+    if (!$toggleShop && isset($input['id_token']) && $input['id_token']) {
+        $idToken = $input['id_token'];
+        $validatedIdToken = validate_shopify_session_token_php53($idToken, $api_secret, $api_key);
+        if (isset($validatedIdToken['success']) && $validatedIdToken['success']) {
+            $toggleShop = $validatedIdToken['shop'];
+        }
+    }
+
+    if (!$toggleShop) {
+        http_response_code(401);
+        echo json_encode(array('success' => false, 'error' => 'Unauthorized'));
+        exit;
+    }
+
+    $togglePdo = getDatabaseConnection();
+    $notificationTable = $prefix . 'shopify_sms_notification_App_Email_Notification';
+    $aid = 5;
+
+    $column = ($channel === 'sms') ? 'sms_enabled' : 'whatsapp_enabled';
+
+    try {
+        // Check if record exists
+        $checkStmt = $togglePdo->prepare("SELECT id FROM $notificationTable WHERE shop = :shop AND aid = :aid");
+        $checkStmt->execute(array(
+            ':shop' => $toggleShop,
+            ':aid' => $aid
+        ));
+
+        if ($checkStmt->fetch()) {
+            // Update existing record
+            $updateStmt = $togglePdo->prepare("UPDATE $notificationTable SET $column = :action WHERE shop = :shop AND aid = :aid");
+            $updateStmt->execute(array(
+                ':action' => $action,
+                ':shop' => $toggleShop,
+                ':aid' => $aid
+            ));
+        } else {
+            // Insert new record
+            $insertStmt = $togglePdo->prepare("INSERT INTO $notificationTable (shop, aid, $column) VALUES (:shop, :aid, :action)");
+            $insertStmt->execute(array(
+                ':shop' => $toggleShop,
+                ':aid' => $aid,
+                ':action' => $action
+            ));
+        }
+
+        echo json_encode(array('success' => true));
+    } catch (Exception $e) {
+        http_response_code(500);
+        echo json_encode(array('success' => false, 'error' => 'Database error'));
+    }
+    exit;
+}
 if (!function_exists('getChannelStatus')) {
     function getChannelStatus($pdo, $shop, $aid, $prefix)
     {
@@ -586,6 +678,29 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                                 </label>
                             </td>
                         </tr> -->
+                        <tr>
+                            <td><a
+                                    href="<?php echo htmlspecialchars($app_url, ENT_QUOTES, 'UTF-8'); ?>/templates/abandoned_checkout.php?shop=<?php echo $_SESSION['shop']; ?>">Abandoned
+                                    Checkout</a></td>
+                            <td>Sent automatically to the customer if they leave checkout before they buy the items in
+                                their cart.</td>
+                            <td><button class="test-btn" onclick="openTestModal('abandoned_checkout')"><span
+                                        class="material-symbols-outlined">play_arrow</span> Trigger Test</button></td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" class="abandoned-toggle sms-toggle"
+                                        data-topic="checkouts/update" <?php echo $abandonedSmsEnabled ? 'checked' : ''; ?>>
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                            <td>
+                                <label class="switch">
+                                    <input type="checkbox" class="abandoned-toggle whatsapp-toggle"
+                                        data-topic="checkouts/update" <?php echo $abandonedWhatsappEnabled ? 'checked' : ''; ?>>
+                                    <span class="slider"></span>
+                                </label>
+                            </td>
+                        </tr>
                     </tbody>
                 </table>
             </div>
@@ -1422,6 +1537,82 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                 searchInput.select();
             }, 100);
         }
+
+        document.querySelectorAll('.abandoned-toggle').forEach(function (toggle) {
+            toggle.addEventListener('change', function () {
+                const topic = this.dataset.topic;
+                const action = this.checked ? 1 : 0;
+                const channel = this.classList.contains('sms-toggle') ? 'sms' : 'whatsapp';
+                const toggleEl = this;
+
+                function executeAbandonedToggle(sessionToken) {
+                    const headers = {
+                        'Content-Type': 'application/json'
+                    };
+                    if (sessionToken) {
+                        headers['Authorization'] = 'Bearer ' + sessionToken;
+                    }
+                   
+                    return fetch('?abandoned_toggle=1&shop=<?php echo urlencode($shop); ?>', {
+                        method: 'POST',
+                        headers: headers,
+                        body: JSON.stringify({
+                            topic: topic,
+                            action: action,
+                            channel: channel,
+                            id_token: sessionToken || ''
+                        })
+                    });
+                }
+
+                function runAbandonedFlow(sessionToken) {
+                    executeAbandonedToggle(sessionToken)
+                        .then(function (res) {
+                            return res.json().then(function (data) {
+                                if (!res.ok) {
+                                    throw new Error((data && data.error) ? data.error : 'Request failed');
+                                }
+                                return data;
+                            });
+                        })
+                        .then(function (data) {
+                            if (data && data.error) {
+                                shopify.toast.show(data.error, { isError: true, duration: 3000 });
+                                toggleEl.checked = !toggleEl.checked;
+                                return;
+                            }
+                            const statusText = action === 1 ? 'enabled' : 'disabled';
+                            const channelText = channel === 'sms' ? 'SMS' : 'WhatsApp';
+                            shopify.toast.show('Abandoned checkout ' + channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
+
+                            if (channelStatuses[topic]) {
+                                if (channel === 'sms') {
+                                    channelStatuses[topic].sms = action;
+                                } else {
+                                    channelStatuses[topic].wa = action;
+                                }
+                            }
+                        })
+                        .catch(function (e) {
+                            const errMessage = (e && e.message) ? e.message : 'Unable to update abandoned checkout status. Please try again.';
+                            shopify.toast.show(errMessage, { isError: true, duration: 3000 });
+                            toggleEl.checked = !toggleEl.checked;
+                        });
+                }
+
+                if (window.shopify && typeof window.shopify.idToken === 'function') {
+                    window.shopify.idToken()
+                        .then(function (token) {
+                            runAbandonedFlow(token || '');
+                        })
+                        .catch(function () {
+                            runAbandonedFlow('');
+                        });
+                } else {
+                    runAbandonedFlow('');
+                }
+            });
+        });
     </script>
     <?php if (!empty($_SESSION['success'])): ?>
         <div id="toast" class="toast">
@@ -1430,4 +1621,5 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
         <?php unset($_SESSION['success']); ?>
     <?php endif; ?>
 </body>
+
 </html>

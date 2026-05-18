@@ -3,26 +3,20 @@ function send_whatsapp_message($config, $pdo = null, $table2 = null)
 {
     require_once __DIR__ . '/config/db.php';
     require_once __DIR__ . '/app_config.php';
-    // ===== FETCH WHATSAPP SETTINGS FROM DATABASE =====
     if ($pdo !== null) {
         $shop = isset($config['shop']) ? $config['shop'] : '';
 
         if (!empty($shop)) {
-            // Get the table name
             global $prefix;
             $settings_table = $prefix . "shopify_sms_notification_app_API_Settings";
-
             try {
                 $stmt = $pdo->prepare("SELECT * FROM $settings_table WHERE shop = :shop AND type = 'whatsapp' AND status = 'enabled'");
                 $stmt->execute(array(':shop' => $shop));
                 $whatsappSettings = $stmt->fetch(PDO::FETCH_ASSOC);
 
                 if ($whatsappSettings) {
-
                     $config['api_domain'] = isset($whatsappSettings['details']) ? $whatsappSettings['details'] : '';
-
                     $config['channel_id'] = isset($whatsappSettings['channel_id']) ? $whatsappSettings['channel_id'] : '';
-
                     $config['api_key'] = isset($whatsappSettings['apikey']) ? $whatsappSettings['apikey'] : '';
                 }
             } catch (Exception $e) {
@@ -110,20 +104,17 @@ function send_whatsapp_message($config, $pdo = null, $table2 = null)
     $status_message = '';
     $api_response = '';
 
-    // FIX 2: Proper response handling - check for errors in JSON response
     if ($curl_error) {
         $status_message = 'CURL Error: ' . $curl_error;
         $api_response = $curl_error;
         $success = false;
     } else {
-        // Always decode the response
         $decoded_response = json_decode($response, true);
         $api_response = $response;
 
         if ($http_code >= 200 && $http_code < 300) {
-            // Check if response contains errors array
             if (isset($decoded_response['errors']) && is_array($decoded_response['errors']) && count($decoded_response['errors']) > 0) {
-                // Extract error details
+               
                 $error_details = '';
                 foreach ($decoded_response['errors'] as $error) {
                     $error_code = isset($error['code']) ? $error['code'] : '';
@@ -133,17 +124,17 @@ function send_whatsapp_message($config, $pdo = null, $table2 = null)
                 $status_message = 'failed: ' . trim($error_details);
                 $success = false;
             } elseif (isset($decoded_response['error'])) {
-                // Single error object
+                
                 $error_msg = isset($decoded_response['error']['message']) ? $decoded_response['error']['message'] : json_encode($decoded_response['error']);
                 $status_message = 'failed: ' . $error_msg;
                 $success = false;
             } else {
-                // No errors found - true success
+                
                 $status_message = 'success';
                 $success = true;
             }
         } else {
-            // HTTP error
+            
             $error_msg = isset($decoded_response['error']['message']) ? $decoded_response['error']['message'] : 'HTTP Error: ' . $http_code;
             $status_message = 'failed: ' . $error_msg;
             $success = false;

@@ -1,116 +1,174 @@
 <?php
-/**
- * Combined function to fetch product image and update database - PHP 5.4 compatible
- * 
- * @param mysqli $conn Database connection
- * @param string $shop Shopify shop domain
- * @param string $oauth_token Shopify access token
- * @param int $product_id Product ID
- * @param int $aid Dynamic aid value for database
- * @param string $media_source Dynamic media_source for database
-
- * @return array Result with status and message
- */
-function fetchProductImageAndUpdateDb($conn, $shop, $oauth_token, $product_id, $aid, $media_source) {
-    // Initialize result array using PHP 5.4 compatible syntax
+function fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $media_source, $prefix)
+{
     $result = array(
         'success' => false,
         'message' => '',
         'media_url' => null
     );
-    
-    // Validate required parameters
-    if (!$conn || !$shop || !$oauth_token || !$product_id || !$aid || !$media_source) {
+
+    if (!$pdo || !$shop || !$oauth_token || !$product_id || !$aid || !$media_source || !$prefix) {
         $result['message'] = 'Missing required parameters';
         return $result;
     }
-    
+
+    $logFile = dirname(__FILE__) . '/prod_img.txt';
+
     try {
-        // Convert product ID to GraphQL global ID
         $gid = "gid://shopify/Product/" . $product_id;
-        
-        // Create GraphQL query to fetch product image
-        $query = '{ product(id: "' . $gid . '") { images(first: 1) { edges { node { originalSrc } } } } }';
-        
-        // Make GraphQL request
-        $url = "https://{$shop}/admin/api/2023-10/graphql.json";
-        
-        // Use PHP 5.4 compatible array syntax
+        $query = '{
+  product(id: "' . $gid . '") {
+    images(first: 1) {
+      edges {
+        node {
+          url
+        }
+      }
+    }
+  }
+}';
+
+        $url = "https://" . $shop . "/admin/api/2026-01/graphql.json";
+
         $headers = array(
             "Content-Type: application/json",
             "X-Shopify-Access-Token: " . $oauth_token
         );
-        
+
         $payload = json_encode(array('query' => $query));
-        
+
         $ch = curl_init($url);
         curl_setopt($ch, CURLOPT_POSTFIELDS, $payload);
         curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
         curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, false); // For development only
-        
+        curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, true);
+        curl_setopt($ch, CURLOPT_TIMEOUT, 30);
+
         $response = curl_exec($ch);
-        
-        // Handle cURL errors
+
         if (curl_errno($ch)) {
             $result['message'] = "cURL Error: " . curl_error($ch);
             curl_close($ch);
+            file_put_contents($logFile, "ERROR: " . $result['message'] . "\n", FILE_APPEND);
             return $result;
         }
-        
+
         $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
         curl_close($ch);
-        
-        // Handle HTTP errors
+
         if ($http_code >= 400) {
-            $result['message'] = "API Error: HTTP " . $http_code;
+            $result['message'] = "API Error: HTTP " . $http_code . " - Response: " . substr($response, 0, 500);
+            file_put_contents($logFile, "ERROR: " . $result['message'] . "\n", FILE_APPEND);
             return $result;
         }
-        
-        // Parse response
+
         $decoded = json_decode($response, true);
         if ($decoded === null) {
-            $jsonErrorMessage = function_exists('json_last_error_msg') ? json_last_error_msg() : ('JSON error code: ' . json_last_error());
-            $result['message'] = "JSON decode error: " . $jsonErrorMessage;
+            $jsonError = '';
+            switch (json_last_error()) {
+                case JSON_ERROR_NONE:
+                    $jsonError = 'No error';
+                    break;
+                case JSON_ERROR_DEPTH:
+                    $jsonError = 'Maximum stack depth exceeded';
+                    break;
+                case JSON_ERROR_STATE_MISMATCH:
+                    $jsonError = 'State mismatch (invalid or malformed JSON)';
+                    break;
+                case JSON_ERROR_CTRL_CHAR:
+                    $jsonError = 'Control character error, possibly incorrectly encoded';
+                    break;
+                case JSON_ERROR_SYNTAX:
+                    $jsonError = 'Syntax error';
+                    break;
+                case JSON_ERROR_UTF8:
+                    $jsonError = 'Malformed UTF-8 characters, possibly incorrectly encoded';
+                    break;
+                default:
+                    $jsonError = 'Unknown JSON error code: ' . json_last_error();
+                    break;
+            }
+            $result['message'] = "JSON decode error: " . $jsonError;
+            file_put_contents($logFile, "ERROR: " . $result['message'] . "\n", FILE_APPEND);
             return $result;
         }
-        
-        // Extract image URL
-        if (isset($decoded['data']['product']['images']['edges'][0]['node']['originalSrc'])) {
-            $media_url = $decoded['data']['product']['images']['edges'][0]['node']['originalSrc'];
+
+        if (isset($decoded['errors'])) {
+            $errorMsg = isset($decoded['errors'][0]['message']) ? $decoded['errors'][0]['message'] : 'Unknown GraphQL error';
+            $result['message'] = "GraphQL Error: " . $errorMsg;
+            file_put_contents($logFile, "ERROR: " . $result['message'] . "\n", FILE_APPEND);
+            return $result;
+        }
+
+        if (isset($decoded['data']['product']['images']['edges'][0]['node']['url'])) {
+            $media_url = $decoded['data']['product']['images']['edges'][0]['node']['url'];
             $result['media_url'] = $media_url;
-            
-            // // Update database
-            // $escaped_media_url = mysqli_real_escape_string($conn, $media_url);
-            // $escaped_shop = mysqli_real_escape_string($conn, $shop);
-            // $escaped_aid = mysqli_real_escape_string($conn, $aid);
-            // $escaped_media_source = mysqli_real_escape_string($conn, $media_source);
-            // $escaped_table = mysqli_real_escape_string($conn, $table_name);
-            
-            // $update_query = "UPDATE `$escaped_table` 
-            //                SET media_url = '$escaped_media_url' 
-            //                WHERE aid = '$escaped_aid' AND media_source = '$escaped_media_source' AND shop = '$escaped_shop'";
-            
-            if (!empty($media_url)) {
-                $result['success'] = true;
-                $result['message'] = "Successfully updated product image URL";
-            // } else {
-            //     $result['message'] = "Database update failed: " . mysqli_error($conn);
+
+            $table_name = $prefix . "shopify_sms_notification_App_Email_Notification";
+
+            try {
+                $checkStmt = $pdo->prepare("SELECT id FROM `" . $table_name . "` WHERE aid = :aid AND shop = :shop");
+                $checkStmt->execute(array(
+                    ':aid' => $aid,
+                    ':shop' => $shop
+                ));
+
+                if ($checkStmt->fetch()) {
+                    $updateStmt = $pdo->prepare("UPDATE `" . $table_name . "` SET media_url = :media_url WHERE aid = :aid AND shop = :shop");
+                    $updateStmt->execute(array(
+                        ':media_url' => $media_url,
+                        ':aid' => $aid,
+                        ':shop' => $shop
+                    ));
+
+                    $result['success'] = true;
+                    $result['message'] = "Successfully updated product image URL in database";
+                    file_put_contents($logFile, "SUCCESS: Updated media_url for shop=$shop, aid=$aid, url=$media_url\n", FILE_APPEND);
+                } else {
+                    $insertStmt = $pdo->prepare("INSERT INTO `" . $table_name . "` (aid, shop, media_url, media_source) VALUES (:aid, :shop, :media_url, :media_source)");
+                    $insertStmt->execute(array(
+                        ':aid' => $aid,
+                        ':shop' => $shop,
+                        ':media_url' => $media_url,
+                        ':media_source' => $media_source
+                    ));
+
+                    $result['success'] = true;
+                    $result['message'] = "Successfully inserted product image URL into database";
+                    file_put_contents($logFile, "SUCCESS: Inserted media_url for shop=$shop, aid=$aid, url=$media_url\n", FILE_APPEND);
+                }
+            } catch (PDOException $e) {
+                $result['message'] = "Database error: " . $e->getMessage();
+                file_put_contents($logFile, "ERROR: Database update failed - " . $e->getMessage() . "\n", FILE_APPEND);
             }
         } else {
-            $result['message'] = "No product image found";
+            $result['message'] = "No product image found for product ID: " . $product_id;
+            file_put_contents($logFile, "WARNING: No image found for product_id=$product_id, shop=$shop\n", FILE_APPEND);
         }
-        
-    // In PHP 5.4, we might not have json_last_error_msg(), so we handle this separately
+
     } catch (Exception $e) {
         $result['message'] = "Error: " . $e->getMessage();
+        file_put_contents($logFile, "EXCEPTION: " . $e->getMessage() . "\n", FILE_APPEND);
     }
-    file_put_contents('prod_img.txt', json_encode($result));
+
     return $result;
 }
+function getProductImageForNotification($pdo, $shop, $oauth_token, $config, $product_id, $prefix, $aid = 1)
+{
+    $media_source = isset($config['media_source']) ? $config['media_source'] : '';
+    $media_type = isset($config['media_type']) ? $config['media_type'] : '';
+    $media_url = isset($config['media_url']) ? $config['media_url'] : '';
 
-// Here's how to use the function within your existing code:
+    if ($media_source == 'dynamic' && $media_type == 'image' && !empty($product_id)) {
 
-// First check the database for the media source setting
+        $fetchResult = fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $media_source, $prefix);
 
+        if ($fetchResult['success'] && !empty($fetchResult['media_url'])) {
+            return $fetchResult['media_url'];
+        }
+
+        return $media_url;
+    }
+    return $media_url;
+}
 ?>

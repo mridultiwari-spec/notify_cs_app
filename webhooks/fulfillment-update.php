@@ -69,9 +69,9 @@ $tracking_number = isset($fulfillment->tracking_number) ? $fulfillment->tracking
 $tracking_url = isset($fulfillment->tracking_url) ? $fulfillment->tracking_url : '';
 
 $order_status_url = '';
-$total_discount = '';
+//$total_discount = '';
 $total_weight = 0;
-
+$total_discount = isset($fulfillment->line_items[0]->total_discount) ? $fulfillment->line_items[0]->total_discount : '0.00';
 $destination = isset($fulfillment->destination) ? $fulfillment->destination : null;
 
 $shipping_string = $destination ? implode(', ', array_filter(array(
@@ -305,7 +305,7 @@ if ($row) {
                 }
             }
 
-            if ($media_source_prod == 'dynmc_prod_img' && $media_type == 'image') {
+            if ($media_source_prod == 'dynamic' && $media_type == 'image') {
                 $product_id = null;
                 if (isset($fulfillment->line_items) && !empty($fulfillment->line_items)) {
                     if (isset($fulfillment->line_items[0]->product_id)) {
@@ -314,7 +314,7 @@ if ($row) {
                 }
                 if ($product_id) {
                     $aid = 8;
-                    $result = fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $media_source_prod);
+                    $result = fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $whatsapp_media_source, $prefix);
                     if ($result['success']) {
                         $media_url = $result['media_url'];
                         file_put_contents("$logFile", "Dynamic product image fetched: $media_url\n", FILE_APPEND);
@@ -482,7 +482,7 @@ if ($row) {
                 }
             }
 
-            if ($media_source_prod == 'dynmc_prod_img' && $media_type == 'image') {
+            if ($media_source_prod == 'dynamic' && $media_type == 'image') {
                 $product_id = null;
                 if (isset($fulfillment->line_items) && !empty($fulfillment->line_items)) {
                     if (isset($fulfillment->line_items[0]->product_id)) {
@@ -491,7 +491,7 @@ if ($row) {
                 }
                 if ($product_id) {
                     $aid = 8;
-                    $result = fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $media_source_prod);
+                    $result = fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $whatsapp_media_source, $prefix);
                     if ($result['success']) {
                         $media_url = $result['media_url'];
                         file_put_contents("$logFile", "Dynamic product image fetched: $media_url\n", FILE_APPEND);
@@ -634,7 +634,7 @@ if ($whatsapp_enabled == 1 && !empty($whatsapp_template_name)) {
     }
 
     // Handle dynamic product image
-    if ($whatsapp_media_source == 'dynmc_prod_img' && $whatsapp_media_type == 'image') {
+    if ($whatsapp_media_source == 'dynamic' && $whatsapp_media_type == 'image') {
         $product_id = null;
         if (isset($fulfillment->line_items) && !empty($fulfillment->line_items)) {
             if (isset($fulfillment->line_items[0]->product_id)) {
@@ -644,7 +644,7 @@ if ($whatsapp_enabled == 1 && !empty($whatsapp_template_name)) {
         if ($product_id) {
             $aid = 8;
             if (function_exists('fetchProductImageAndUpdateDb')) {
-                $result = fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $whatsapp_media_source);
+                $result = fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $whatsapp_media_source, $prefix);
                 if ($result['success']) {
                     $whatsapp_media_url = $result['media_url'];
                     file_put_contents("$logFile", "Dynamic product image fetched for WhatsApp: $whatsapp_media_url\n", FILE_APPEND);

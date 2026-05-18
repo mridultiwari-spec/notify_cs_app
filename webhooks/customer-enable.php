@@ -22,6 +22,7 @@ require_once __DIR__ . '/../app_config.php';
 include '../accurate_country_code.php';
 include '../send_sms_api.php';
 include '../send_whatsapp_message_api.php';
+include '../dynmc_prod_img.php';
 
 $data = file_get_contents("php://input");
 file_put_contents("$logFile", date('Y-m-d H:i:s') . "\n" . $data . "\n\n", FILE_APPEND);
@@ -67,7 +68,7 @@ $phone_number = isset($customer->phone) ? $customer->phone : '';
 
 $default_address = isset($customer->default_address) ? $customer->default_address : null;
 
-$country_code = '';
+$country_code = ''; 
 if ($default_address && isset($default_address->country_code)) {
     $country_code = strtoupper($default_address->country_code);
 }
@@ -183,11 +184,6 @@ if ($row) {
                     $processed_whatsapp_text = str_replace($placeholder, $replacementMap[$placeholder], $processed_whatsapp_text);
                 }
             }
-
-            //file_put_contents("$logFile", "Original SMS Text: " . $sms_text . "\n", FILE_APPEND);
-            //file_put_contents("$logFile", "Processed SMS Text: " . $processed_sms_text . "\n", FILE_APPEND);
-            //file_put_contents("$logFile", "Processed WhatsApp Text: " . $processed_whatsapp_text . "\n", FILE_APPEND);
-
             $parameter_values = array();
             foreach ($sms_variables as $key => $value) {
                 $placeholder = "{{ " . trim($key) . " }}";
@@ -214,7 +210,7 @@ if ($row) {
                 }
             }
 
-            if ($media_source_prod == 'dynmc_prod_img' && $media_type == 'image') {
+            if ($media_source_prod == 'dynamic' && $media_type == 'image') {
                 file_put_contents("$logFile", "INFO: Dynamic product image not applicable for customer enable webhook\n", FILE_APPEND);
             }
 
@@ -319,7 +315,7 @@ if ($row) {
                 }
             }
 
-            if ($media_source_prod == 'dynmc_prod_img' && $media_type == 'image') {
+            if ($media_source_prod == 'dynamic' && $media_type == 'image') {
                 file_put_contents("$logFile", "INFO: Dynamic product image not applicable for customer enable webhook\n", FILE_APPEND);
             }
 
@@ -462,7 +458,7 @@ if ($whatsapp_enabled == 1 && !empty($whatsapp_template_name)) {
         file_put_contents("$logFile", "Media URL after replacement: $whatsapp_media_url\n", FILE_APPEND);
     }
 
-    if ($whatsapp_media_source == 'dynmc_prod_img' && $whatsapp_media_type == 'image') {
+    if ($whatsapp_media_source == 'dynamic' && $whatsapp_media_type == 'image') {
         file_put_contents("$logFile", "INFO: Dynamic product image not applicable for customer enable WhatsApp\n", FILE_APPEND);
     }
     $buttons = array();
