@@ -14,7 +14,6 @@ if (isset($_SESSION['shop'])) {
 } else {
     $shop = '';
 }
-
 if (!$shop) {
     die("Shop not found");
 }
@@ -303,7 +302,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -510,7 +508,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                             }
                             ?>
                         </div>
-
                         <div style="margin-bottom: 15px;">
                             <button type="button" class="add-button-btn" id="addButtonBtn" onclick="addButton()">
                                 <span style="font-size: 14px;">+</span> Add Button
@@ -895,7 +892,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     };
                 })(tabs[i]));
             }
-
             var mediaSourceSection = document.getElementById('mediaSourceBox');
             var urlBox = document.getElementById('mediaUrlBox');
             var fileBox = document.getElementById('mediaFileBox');
@@ -929,6 +925,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     if (dynamicOption) dynamicOption.style.display = 'none';
                     return;
                 }
+
                 mediaSourceSection.style.display = 'block';
                 if (mediaType.value === 'image') {
                     if (dynamicOption) dynamicOption.style.display = 'inline-flex';
@@ -940,6 +937,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         }
                     }
                 }
+
                 var mediaFileUrlBox = document.getElementById('mediaFileUrlBox');
                 var generatedUrlInput = document.querySelector('input[name="generated_media_url"]');
 
@@ -994,9 +992,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
         }
+        
     </script>
     <div id="toast" class="toast">Copied to clipboard</div>
-
 </body>
 
 </html>

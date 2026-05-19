@@ -1,0 +1,122 @@
+Order ID: 7445534572649 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ order_name }}
+    [2] => {{ customer_fname }}
+    [3] => {{ customer_lname }}
+    [4] => {{ customer_email_id }}
+    [5] => {{ country_code }}
+    [6] => {{ customer_phone }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => #1250
+Added custom variable: {{ 2 }} => Atul
+Added custom variable: {{ 3 }} => Rajput
+Added custom variable: {{ 4 }} => atul@gmail.com
+Added custom variable: {{ 5 }} => 1
+Added custom variable: {{ 6 }} => 9887154125
+Original SMS Text: 
+Processed SMS Text: 
+Parameter Values for template: {"1":"#1250","2":"Atul","3":"Rajput","4":"atul@gmail.com","5":"1","6":"9887154125"}
+Template ID: Order_Update
+Template SMS sent successfully for order update 7445534572649 to 9887154125
+SMS Text with replacements: 
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 1e050caf85af9ca7a8f3cdd774a02dec/authenticate?key=b09bfedd610f006f8b6099e685a662f3
+
+No WhatsApp template configured for aid=2, skipping WhatsApp send
+Order ID: 7445534572649 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ item_name }}
+    [2] => {{ customer_full_name }}
+    [3] => {{ Ad_order_number }}
+    [4] => {{ Ad_total_discount }}
+    [5] => {{ Ad_order_status_url }}
+    [6] => {{ Ad_item_price }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => retest, The Collection Snowboard: Liquid
+Added custom variable: {{ 2 }} => Atul Rajput
+Added custom variable: {{ 3 }} => 7445534572649
+Added custom variable: {{ 4 }} => 0.00
+Added custom variable: {{ 5 }} => 1e050caf85af9ca7a8f3cdd774a02dec/authenticate?key=b09bfedd610f006f8b6099e685a662f3
+Added custom variable: {{ 6 }} => 777.00
+Original SMS Text: 
+Processed SMS Text: 
+Parameter Values for template: {"1":"retest, The Collection Snowboard: Liquid","2":"Atul Rajput","3":"7445534572649","4":"0.00","5":"1e050caf85af9ca7a8f3cdd774a02dec\/authenticate?key=b09bfedd610f006f8b6099e685a662f3","6":"777.00"}
+Template ID: Order_Update
+Template SMS sent successfully for order update 7445534572649 to 9887154125
+SMS Text with replacements: 
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 1e050caf85af9ca7a8f3cdd774a02dec/authenticate?key=b09bfedd610f006f8b6099e685a662f3
+
+No WhatsApp template configured for aid=2, skipping WhatsApp send
+Order ID: 7445534048361 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ Ad_item_quantity }}
+    [2] => {{ Ad_item_sku }}
+    [3] => {{ Ad_item_vendor }}
+    [4] => {{ Ad_total_weight }}
+    [5] => {{ Ad_shipping_address }}
+    [6] => {{ Ad_billing_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 1
+Added custom variable: {{ 2 }} => test
+Added custom variable: {{ 3 }} => xtremestore
+Added custom variable: {{ 4 }} => 0
+Added custom variable: {{ 5 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: 
+Processed SMS Text: 
+Parameter Values for template: {"1":"1","2":"test","3":"xtremestore","4":"0","5":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: Order_Update
+Template SMS sent successfully for order update 7445534048361 to 9887154125
+SMS Text with replacements: 
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 1e7c6d6e187cba140f096d59246d1c3f/authenticate?key=a7d0e63bcd67c6649846b5b00485a59e
+
+No WhatsApp template configured for aid=2, skipping WhatsApp send
+Order ID: 7445534048361 | Email: atul@gmail.com
+
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 1e7c6d6e187cba140f096d59246d1c3f/authenticate?key=a7d0e63bcd67c6649846b5b00485a59e
+
+Processing WhatsApp for order edited - Template: order_edited
+Body variable: '{{ order_name }}' -> '#1249'
+Body variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ customer_lname }}' -> 'Rajput'
+Body variable: '{{ customer_email_id }}' -> 'atul@gmail.com'
+Body variable: '{{ country_code }}' -> '1'
+Body variable: '{{ customer_phone }}' -> '9887154125'
+Body variable: '{{ item_name }}' -> 'retest, The Collection Snowboard: Liquid'
+Body variable: '{{ customer_full_name }}' -> 'Atul Rajput'
+Body variable: '{{ Ad_order_number }}' -> '7445534048361'
+Body variable: '{{ Ad_total_discount }}' -> '0.00'
+Body variable: '{{ Ad_order_status_url }}' -> '1e7c6d6e187cba140f096d59246d1c3f/authenticate?key=a7d0e63bcd67c6649846b5b00485a59e'
+Body variable: '{{ Ad_item_price }}' -> '777.00'
+Body variable: '{{ Ad_item_quantity }}' -> '1'
+Body variable: '{{ Ad_item_sku }}' -> 'test'
+Body variable: '{{ Ad_item_vendor }}' -> 'xtremestore'
+Body variable: '{{ Ad_total_weight }}' -> '0'
+Body variable: '{{ Ad_shipping_address }}' -> 'Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125'
+Body variable: '{{ Ad_billing_address }}' -> 'Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125'
+Dynamic product image fetched for WhatsApp: https://cdn.shopify.com/s/files/1/0672/5094/6153/files/ouEha0xIjO2PwzoI606KmTnHBSgJjNr1DuA5HgFy.jpg?v=1772532729
+WhatsApp Button 1: type=cta, text=Track
+WhatsApp sent successfully for order edited 7445534048361 to 9887154125

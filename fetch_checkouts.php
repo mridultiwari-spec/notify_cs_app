@@ -61,10 +61,10 @@ function fetchAndStoreAbandonedCheckouts($shop, $oauth_token)
             $after_query = ', after: "' . $cursor . '"';
         }
         $query = '
-        query {
+query {
   abandonedCheckouts(first: 250' . $after_query . ') {
     pageInfo {
-        hasNextPage
+      hasNextPage
     }
     edges {
       cursor
@@ -100,11 +100,17 @@ function fetchAndStoreAbandonedCheckouts($shop, $oauth_token)
               sku
               title
               quantity
+              product {
+                id
+              }
               variant {
                 id
                 title
                 sku
                 price
+                product {
+                  id
+                }
               }
             }
           }
@@ -301,6 +307,12 @@ function fetchAndStoreAbandonedCheckouts($shop, $oauth_token)
                             ? extractShopifyId($item['id'])
                             : '',
 
+                        'product_id' => isset($item['product']['id'])
+                            ? extractShopifyId($item['product']['id'])
+                            : (isset($item['variant']['product']['id'])
+                                ? extractShopifyId($item['variant']['product']['id'])
+                                : ''),
+
                         'sku' => isset($item['sku'])
                             ? $item['sku']
                             : '',
@@ -333,6 +345,7 @@ function fetchAndStoreAbandonedCheckouts($shop, $oauth_token)
             }
             $checkout_data = array(
                 'checkout_url' => isset($checkout['abandonedCheckoutUrl']) ? $checkout['abandonedCheckoutUrl'] : '',
+                'first_product_id' => '',
                 'checkout_name' => isset($checkout['name']) ? $checkout['name'] : '',
                 'customer_email' => $customer_email,
                 'customer_phone' => $customer_phone,
@@ -348,6 +361,15 @@ function fetchAndStoreAbandonedCheckouts($shop, $oauth_token)
                 'raw_data' => json_encode($checkout),
                 'created_at' => isset($checkout['createdAt']) ? date('Y-m-d H:i:s', strtotime($checkout['createdAt'])) : null
             );
+            // Extract first product ID from line items
+            if (!empty($line_items)) {
+                foreach ($line_items as $item) {
+                    if (!empty($item['product_id'])) {
+                        $checkout_data['first_product_id'] = $item['product_id'];
+                        break;
+                    }
+                }
+            }
 
             $result = storeAbandonedCheckout(
                 $pdo,
@@ -456,6 +478,7 @@ function createAbandonedCheckoutsTable($pdo, $table)
         `billing_address` TEXT,
 
         `line_items` LONGTEXT,
+        `first_product_id` VARCHAR(255) DEFAULT NULL,
         `raw_data` LONGTEXT,
 
         `status` TINYINT(1) DEFAULT 0 COMMENT '0=new,1=processed',
@@ -513,33 +536,26 @@ function storeAbandonedCheckout($pdo, $table, $shop, $checkout_id, $data)
 
         if ($existing) {
             $sql = "
-            UPDATE `$table`
-            SET
-                checkout_url = :checkout_url,
-                checkout_name = :checkout_name,
-
-                customer_email = :customer_email,
-                customer_phone = :customer_phone,
-
-                customer_first_name = :customer_first_name,
-                customer_last_name = :customer_last_name,
-
-                total_price = :total_price,
-                subtotal_price = :subtotal_price,
-                total_tax = :total_tax,
-
-                currency = :currency,
-
-                shipping_address = :shipping_address,
-                billing_address = :billing_address,
-
-                line_items = :line_items,
-                raw_data = :raw_data,
-
-                updated_at = NOW()
-
-            WHERE id = :id
-            ";
+UPDATE `$table`
+SET
+    checkout_url = :checkout_url,
+    checkout_name = :checkout_name,
+    customer_email = :customer_email,
+    customer_phone = :customer_phone,
+    customer_first_name = :customer_first_name,
+    customer_last_name = :customer_last_name,
+    total_price = :total_price,
+    subtotal_price = :subtotal_price,
+    total_tax = :total_tax,
+    currency = :currency,
+    shipping_address = :shipping_address,
+    billing_address = :billing_address,
+    line_items = :line_items,
+    first_product_id = :first_product_id,
+    raw_data = :raw_data,
+    updated_at = NOW()
+WHERE id = :id
+";
 
             $stmt = $pdo->prepare($sql);
 
@@ -564,6 +580,7 @@ function storeAbandonedCheckout($pdo, $table, $shop, $checkout_id, $data)
                 ':billing_address' => $data['billing_address'],
 
                 ':line_items' => $data['line_items'],
+                ':first_product_id' => isset($data['first_product_id']) ? $data['first_product_id'] : '',
                 ':raw_data' => $data['raw_data'],
 
                 ':id' => $existing['id']
@@ -572,67 +589,50 @@ function storeAbandonedCheckout($pdo, $table, $shop, $checkout_id, $data)
             return 'updated';
         }
         $sql = "
-        INSERT INTO `$table` (
-
-            checkout_id,
-            shop,
-
-            checkout_url,
-            checkout_name,
-
-            customer_email,
-            customer_phone,
-
-            customer_first_name,
-            customer_last_name,
-
-            total_price,
-            subtotal_price,
-            total_tax,
-
-            currency,
-
-            shipping_address,
-            billing_address,
-
-            line_items,
-            raw_data,
-
-            status,
-            created_at,
-            updated_at
-
-        ) VALUES (
-
-            :checkout_id,
-            :shop,
-
-            :checkout_url,
-            :checkout_name,
-
-            :customer_email,
-            :customer_phone,
-
-            :customer_first_name,
-            :customer_last_name,
-
-            :total_price,
-            :subtotal_price,
-            :total_tax,
-
-            :currency,
-
-            :shipping_address,
-            :billing_address,
-
-            :line_items,
-            :raw_data,
-
-            0,
-            :created_at,
-            NOW()
-        )
-        ";
+INSERT INTO `$table` (
+    checkout_id,
+    shop,
+    checkout_url,
+    checkout_name,
+    customer_email,
+    customer_phone,
+    customer_first_name,
+    customer_last_name,
+    total_price,
+    subtotal_price,
+    total_tax,
+    currency,
+    shipping_address,
+    billing_address,
+    line_items,
+    first_product_id,
+    raw_data,
+    status,
+    created_at,
+    updated_at
+) VALUES (
+    :checkout_id,
+    :shop,
+    :checkout_url,
+    :checkout_name,
+    :customer_email,
+    :customer_phone,
+    :customer_first_name,
+    :customer_last_name,
+    :total_price,
+    :subtotal_price,
+    :total_tax,
+    :currency,
+    :shipping_address,
+    :billing_address,
+    :line_items,
+    :first_product_id,
+    :raw_data,
+    0,
+    :created_at,
+    NOW()
+)
+";
 
         $stmt = $pdo->prepare($sql);
 
@@ -660,6 +660,7 @@ function storeAbandonedCheckout($pdo, $table, $shop, $checkout_id, $data)
             ':billing_address' => $data['billing_address'],
 
             ':line_items' => $data['line_items'],
+            ':first_product_id' => isset($data['first_product_id']) ? $data['first_product_id'] : '',
             ':raw_data' => $data['raw_data'],
 
             ':created_at' => $data['created_at']
@@ -786,7 +787,7 @@ function extractShopifyId($global_id)
 if (isset($_GET['shop']) && isset($_GET['token'])) {
     $shop = $_GET['shop'];
     $oauth_token = $_GET['token'];
-    
+
     $result = fetchAndStoreAbandonedCheckouts($shop, $oauth_token);
     header('Content-Type: application/json');
     echo json_encode($result);

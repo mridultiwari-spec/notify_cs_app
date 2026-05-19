@@ -946,6 +946,4 @@ if ($whatsapp_enabled == 1 && !empty($whatsapp_template_name)) {
 } else {
     file_put_contents("$logFile", "No WhatsApp template configured for aid=4, skipping WhatsApp send\n", FILE_APPEND);
 }
-
-
 ?>

@@ -1,0 +1,2 @@
+SUCCESS: Updated media_url for shop=xtremestore-9600.myshopify.com, aid=2, url=https://cdn.shopify.com/s/files/1/0672/5094/6153/files/ouEha0xIjO2PwzoI606KmTnHBSgJjNr1DuA5HgFy.jpg?v=1772532729
+SUCCESS: Updated media_url for shop=xtremestore-9600.myshopify.com, aid=3, url=https://cdn.shopify.com/s/files/1/0672/5094/6153/files/ouEha0xIjO2PwzoI606KmTnHBSgJjNr1DuA5HgFy.jpg?v=1772532729

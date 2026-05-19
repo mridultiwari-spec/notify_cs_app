@@ -23,6 +23,7 @@ include '../accurate_country_code.php';
 include '../send_sms_api.php';
 include '../send_whatsapp_message_api.php';
 include '../dynmc_prod_img.php';
+
 $logFile = dirname(__FILE__) . '/../file/order_confirmation_log.txt';
 $data = file_get_contents("php://input");
 $order_details = json_decode($data);

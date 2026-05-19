@@ -148,7 +148,6 @@ $row = $stmt->fetch();
 if ($row) {
     $sms_enabled = isset($row['sms_enabled']) ? (int) $row['sms_enabled'] : 0;
     if ($sms_enabled == 1) {
-
         $template_name_sms = $row['template_name'];
         $sms_text = $row['sms'];
         $whatsapp_text = $row['whatsapp'];
@@ -158,7 +157,6 @@ if ($row) {
         $media_source_prod = $row['media_source'];
         $button_text1 = trim($row['button_text1']);
         $template_name_sms = $row['template_name'];
-        // Fetch and decode sms_variables
         $sms_variables = array();
         $has_parameters = false;
 
@@ -204,7 +202,8 @@ if ($row) {
             "{{ Ad_shipping_address }}" => $shipping_string,
             "{{ Ad_billing_address }}" => $billing_string,
             "{{ fulfillment_id }}" => $fulfillment_id,
-            "{{ fulfillment_status }}" => isset($fulfillment->status) ? $fulfillment->status : ''
+            "{{ fulfillment_status }}" => isset($fulfillment->status) ? $fulfillment->status : '',
+            "{{ item_name }}" => $item_name
         );
 
         // If we have parameters (sms_variables is not empty), use template-based SMS

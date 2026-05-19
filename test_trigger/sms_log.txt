@@ -1670,3 +1670,117 @@ CURL Error:
 Database log inserted
 ========================================
 
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 9752495981
+Template ID: OrderConfirmation
+Parameter Values: {"1":"91","2":"1","3":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +919752495981
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+919752495981","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"91","2":"1","3":"SKU2006-001","4":"","5":"0","6":"Steve, Shipper, 123 Shipping Street, Shipping Company, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message accepted. ID: 6a0bfd588b877e675cbfee57
+HTTP Code: 200
+Response: {"message":null,"code":100,"status":true,"data":{"id":"6a0bfd588b877e675cbfee57"}}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 917894561230
+Template ID: Abandoned_checkout
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year), Premium Leather Case, Mid-century lounger","2":"2024-01-15T14:30:00Z","3":"https:\/\/jsmith.myshopify.com\/cart\/123456789:1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john@example.com
+Customer Name: John Smith
+Order ID: e3b0c44298fc1c149afbf4c8996fb924
+Order Name: #A1001
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Abandoned_checkout","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year), Premium Leather Case, Mid-century lounger","2":"2024-01-15T14:30:00Z","3":"https:\/\/jsmith.myshopify.com\/cart\/123456789:1"}}}}
+Message accepted. ID: 6a0bfea28b877e675cc36143
+HTTP Code: 200
+Response: {"message":null,"code":100,"status":true,"data":{"id":"6a0bfea28b877e675cc36143"}}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 917894561230
+Template ID: Abandoned_checkout
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year), Premium Leather Case, Mid-century lounger","2":"2024-01-15T14:30:00Z","3":"https:\/\/jsmith.myshopify.com\/cart\/123456789:1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john@example.com
+Customer Name: John Smith
+Order ID: e3b0c44298fc1c149afbf4c8996fb924
+Order Name: #A1001
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Abandoned_checkout","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year), Premium Leather Case, Mid-century lounger","2":"2024-01-15T14:30:00Z","3":"https:\/\/jsmith.myshopify.com\/cart\/123456789:1"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T08:42:32.942+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 917894561230
+Template ID: Abandoned_checkout
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year), Premium Leather Case, Mid-century lounger","2":"2024-01-15T14:30:00Z","3":"https:\/\/jsmith.myshopify.com\/cart\/123456789:1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john@example.com
+Customer Name: John Smith
+Order ID: e3b0c44298fc1c149afbf4c8996fb924
+Order Name: #A1001
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Abandoned_checkout","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year), Premium Leather Case, Mid-century lounger","2":"2024-01-15T14:30:00Z","3":"https:\/\/jsmith.myshopify.com\/cart\/123456789:1"}}}}
+Message accepted. ID: 6a0c299f6408de4a1c6ad985
+HTTP Code: 200
+Response: {"message":null,"code":100,"status":true,"data":{"id":"6a0c299f6408de4a1c6ad985"}}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 917894561230
+Template ID: Abandoned_checkout
+Parameter Values: {"1":"Aviator sunglasses, Lens Protection Plan (2 Year), Premium Leather Case, Mid-century lounger","2":"2024-01-15T14:30:00Z","3":"https:\/\/jsmith.myshopify.com\/cart\/123456789:1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john@example.com
+Customer Name: John Smith
+Order ID: e3b0c44298fc1c149afbf4c8996fb924
+Order Name: #A1001
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Abandoned_checkout","parameterValues":{"1":"Aviator sunglasses, Lens Protection Plan (2 Year), Premium Leather Case, Mid-century lounger","2":"2024-01-15T14:30:00Z","3":"https:\/\/jsmith.myshopify.com\/cart\/123456789:1"}}}}
+Message accepted. ID: 6a0c2a048b877e675ce8bc58
+HTTP Code: 200
+Response: {"message":null,"code":100,"status":true,"data":{"id":"6a0c2a048b877e675ce8bc58"}}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: OrderConfirmation
+Parameter Values: {"1":"#9999","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"91"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"#9999","2":"404.95","3":"John","4":"Smith","5":"jon@example.com","6":"91"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:23:37.612+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+

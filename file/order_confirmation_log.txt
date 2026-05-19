@@ -280,3 +280,210 @@ Template Name: Order Refund
 Parameter Values: {"1":"#1245"}
 Promotional SMS sent successfully for offer: order test to 9887154125
 Promotional WhatsApp: Disabled for offer: order test
+Order ID: 7445525037161 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ order_name }}
+    [2] => {{ order_total_price }}
+    [3] => {{ customer_fname }}
+    [4] => {{ customer_lname }}
+    [5] => {{ customer_email_id }}
+    [6] => {{ country_code }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => #1246
+Added custom variable: {{ 2 }} => 1526.95
+Added custom variable: {{ 3 }} => Atul
+Added custom variable: {{ 4 }} => Rajput
+Added custom variable: {{ 5 }} => atul@gmail.com
+Added custom variable: {{ 6 }} => 1
+Original SMS Text: 
+Processed SMS Text: 
+Parameter Values for template: {"1":"#1246","2":"1526.95","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"1"}
+Template ID: OrderConfirmation
+Template SMS sent successfully for order confirmation 7445525037161 to 9887154125
+SMS Text with replacements: 
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 327153eabecd1a90c948819d781f2b12/authenticate?key=9c7bb60b3c194dfe358f85bf4ea75a67
+
+No WhatsApp template configured for aid=1, skipping WhatsApp send
+Fetching tags for 2 products using GraphQL
+All product tags found: Summer, Winter, Accessory, Sport
+Tag match percentage: 100% (Required: 50%)
+Promotional: Product tags matched for shop: xtremestore-9600.myshopify.com, Template Tags: Summer, Winter,Winter, Sport,  Accessory, Offer: Test Orders Value45
+Promotional SMS: Disabled for offer: Test Orders Value45
+Promotional: Sending WhatsApp for offer: Test Orders Value45, Template: email_sub
+Promo Body: '{{ country_code }}' -> '1'
+Promo Body: '{{ customer_email_id }}' -> 'atul@gmail.com'
+Promo Button 1: type=quick, text=tag based
+Promotional WhatsApp sent successfully for offer: Test Orders Value45 to 9887154125
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 1526.95 >= 500, Offer: order test
+Promotional SMS: Disabled for offer: order test
+Promotional WhatsApp: Disabled for offer: order test
+Order ID: 7445526904937 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ customer_phone }}
+    [2] => {{ item_name }}
+    [3] => {{ customer_full_name }}
+    [4] => {{ Ad_order_number }}
+    [5] => {{ Ad_total_discount }}
+    [6] => {{ Ad_order_status_url }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 9887154125
+Added custom variable: {{ 2 }} => retest, The Collection Snowboard: Liquid
+Added custom variable: {{ 3 }} => Atul Rajput
+Added custom variable: {{ 4 }} => 7445526904937
+Added custom variable: {{ 5 }} => 0.00
+Added custom variable: {{ 6 }} => f95fee8146212f9d73f2f11b78be17e3/authenticate?key=dc1bbdded2584a1ec69e056120c9bd4a
+Original SMS Text: 
+Processed SMS Text: 
+Parameter Values for template: {"1":"9887154125","2":"retest, The Collection Snowboard: Liquid","3":"Atul Rajput","4":"7445526904937","5":"0.00","6":"f95fee8146212f9d73f2f11b78be17e3\/authenticate?key=dc1bbdded2584a1ec69e056120c9bd4a"}
+Template ID: OrderConfirmation
+Template SMS sent successfully for order confirmation 7445526904937 to 9887154125
+SMS Text with replacements: 
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: f95fee8146212f9d73f2f11b78be17e3/authenticate?key=dc1bbdded2584a1ec69e056120c9bd4a
+
+No WhatsApp template configured for aid=1, skipping WhatsApp send
+Fetching tags for 2 products using GraphQL
+All product tags found: Summer, Winter, Accessory, Sport
+Tag match percentage: 100% (Required: 50%)
+Promotional: Product tags matched for shop: xtremestore-9600.myshopify.com, Template Tags: Summer, Winter,Winter, Sport,  Accessory, Offer: Test Orders Value45
+Promotional SMS: Disabled for offer: Test Orders Value45
+Promotional WhatsApp: Disabled for offer: Test Orders Value45
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 1526.95 >= 500, Offer: order test
+Promotional SMS: Disabled for offer: order test
+Promotional WhatsApp: Disabled for offer: order test
+Order ID: 7445528412265 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ Ad_item_price }}
+    [2] => {{ Ad_item_quantity }}
+    [3] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 777.00
+Added custom variable: {{ 2 }} => 1
+Added custom variable: {{ 3 }} => test
+Added custom variable: {{ 4 }} => xtremestore
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: 
+Processed SMS Text: 
+Parameter Values for template: {"1":"777.00","2":"1","3":"test","4":"xtremestore","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: OrderConfirmation
+Template SMS sent successfully for order confirmation 7445528412265 to 9887154125
+SMS Text with replacements: 
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 951f40e9e7c1aa23693bd1523c179668/authenticate?key=aebe834259cd51677135792b279bf067
+
+No WhatsApp template configured for aid=1, skipping WhatsApp send
+Fetching tags for 2 products using GraphQL
+All product tags found: Summer, Winter, Accessory, Sport
+Tag match percentage: 100% (Required: 50%)
+Promotional: Product tags matched for shop: xtremestore-9600.myshopify.com, Template Tags: Summer, Winter,Winter, Sport,  Accessory, Offer: Test Orders Value45
+Promotional SMS: Disabled for offer: Test Orders Value45
+Promotional WhatsApp: Disabled for offer: Test Orders Value45
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 1526.95 >= 500, Offer: order test
+Promotional SMS: Disabled for offer: order test
+Promotional WhatsApp: Disabled for offer: order test
+Order ID: 7445534048361 | Email: atul@gmail.com
+
+SMS Variables loaded (has parameters): Array
+(
+    [1] => {{ Ad_item_price }}
+    [2] => {{ Ad_item_quantity }}
+    [3] => {{ Ad_item_sku }}
+    [4] => {{ Ad_item_vendor }}
+    [5] => {{ Ad_total_weight }}
+    [6] => {{ Ad_shipping_address }}
+)
+
+Using TEMPLATE-BASED SMS with parameters
+Added custom variable: {{ 1 }} => 777.00
+Added custom variable: {{ 2 }} => 1
+Added custom variable: {{ 3 }} => test
+Added custom variable: {{ 4 }} => xtremestore
+Added custom variable: {{ 5 }} => 0
+Added custom variable: {{ 6 }} => Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Original SMS Text: 
+Processed SMS Text: 
+Parameter Values for template: {"1":"777.00","2":"1","3":"test","4":"xtremestore","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Template ID: OrderConfirmation
+Template SMS sent successfully for order confirmation 7445534048361 to 9887154125
+SMS Text with replacements: 
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 1e7c6d6e187cba140f096d59246d1c3f/authenticate?key=a7d0e63bcd67c6649846b5b00485a59e
+
+No WhatsApp template configured for aid=1, skipping WhatsApp send
+Fetching tags for 2 products using GraphQL
+All product tags found: Summer, Winter, Accessory, Sport
+Tag match percentage: 100% (Required: 50%)
+Promotional: Product tags matched for shop: xtremestore-9600.myshopify.com, Template Tags: Summer, Winter,Winter, Sport,  Accessory, Offer: Test Orders Value45
+Promotional SMS: Disabled for offer: Test Orders Value45
+Promotional WhatsApp: Disabled for offer: Test Orders Value45
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 1526.95 >= 500, Offer: order test
+Promotional SMS: Disabled for offer: order test
+Promotional WhatsApp: Disabled for offer: order test
+Order ID: 7445534572649 | Email: atul@gmail.com
+
+SMS is disabled for aid=1, shop: xtremestore-9600.myshopify.com. Skipping SMS.
+Discount: 0.00
+Billing: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Shipping: Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125
+Order_Status_Url: 1e050caf85af9ca7a8f3cdd774a02dec/authenticate?key=b09bfedd610f006f8b6099e685a662f3
+
+Processing WhatsApp for order confirmation - Template: shopify_order_confirm
+Body variable: '{{ order_name }}' -> '#1250'
+Body variable: '{{ order_total_price }}' -> '1526.95'
+Body variable: '{{ customer_fname }}' -> 'Atul'
+Body variable: '{{ customer_lname }}' -> 'Rajput'
+Body variable: '{{ customer_email_id }}' -> 'atul@gmail.com'
+Body variable: '{{ country_code }}' -> '1'
+Body variable: '{{ item_name }}' -> 'retest, The Collection Snowboard: Liquid'
+Body variable: '{{ customer_full_name }}' -> 'Atul Rajput'
+Body variable: '{{ Ad_order_number }}' -> '7445534572649'
+Body variable: '{{ Ad_total_discount }}' -> '0.00'
+Body variable: '{{ Ad_order_status_url }}' -> '1e050caf85af9ca7a8f3cdd774a02dec/authenticate?key=b09bfedd610f006f8b6099e685a662f3'
+Body variable: '{{ Ad_item_price }}' -> '777.00'
+Body variable: '{{ Ad_item_quantity }}' -> '1'
+Body variable: '{{ Ad_item_sku }}' -> 'test'
+Body variable: '{{ Ad_item_vendor }}' -> 'xtremestore'
+Body variable: '{{ Ad_total_weight }}' -> '0'
+Body variable: '{{ Ad_shipping_address }}' -> 'Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125'
+Body variable: '{{ Ad_billing_address }}' -> 'Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125'
+Media URL after replacement: https://cecelia-precolourable-indigenously.ngrok-free.dev/notifycsapp/templates/uploads/1779193920_Screenshotfrom2026-05-0715-43-52.png
+Button 1 added: type=cta, text=Track here
+Button 2 added: type=quick, text=#1250
+Button 3 added: type=cta, text=Test Button 3
+DEBUG FINAL: media_url='https://cecelia-precolourable-indigenously.ngrok-free.dev/notifycsapp/templates/uploads/1779193920_Screenshotfrom2026-05-0715-43-52.png', media_type='image', media_source='file'
+DEBUG FINAL: processed_headers count=0, processed_body count=18
+WhatsApp sent successfully for order confirmation 7445534572649 to 9887154125
+Fetching tags for 2 products using GraphQL
+All product tags found: Summer, Winter, Accessory, Sport
+Tag match percentage: 100% (Required: 50%)
+Promotional: Product tags matched for shop: xtremestore-9600.myshopify.com, Template Tags: Summer, Winter,Winter, Sport,  Accessory, Offer: Test Orders Value45
+Promotional SMS: Disabled for offer: Test Orders Value45
+Promotional WhatsApp: Disabled for offer: Test Orders Value45
+Promotional: Price matched (Greater than) for shop: xtremestore-9600.myshopify.com, Price: 1526.95 >= 500, Offer: order test
+Promotional SMS: Disabled for offer: order test
+Promotional WhatsApp: Disabled for offer: order test

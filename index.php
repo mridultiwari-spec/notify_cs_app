@@ -178,14 +178,12 @@ $topicAidMap = array(
     'orders/updated' => 2,
     'orders/cancelled' => 3,
     'refunds/create' => 4,
-    'checkouts/update' => 5,
     'fulfillments/create' => 6,
     'orders/fulfilled' => 7,
     'fulfillments/update' => 8,
     'customers/update' => 9,
     'customers/enable' => 10,
 );
-// Handle abandoned checkout toggle requests (database-only, no webhook registration)
 if (isset($_GET['abandoned_toggle']) && $_GET['abandoned_toggle'] == '1') {
     header('Content-Type: application/json');
 
@@ -201,21 +199,16 @@ if (isset($_GET['abandoned_toggle']) && $_GET['abandoned_toggle'] == '1') {
     $action = isset($input['action']) ? (int) $input['action'] : 0;
     $channel = isset($input['channel']) ? $input['channel'] : '';
 
-    // Only allow checkouts/update topic for abandoned checkout
-    if ($topic !== 'checkouts/update') {
+    if ($topic !== 'abandoned_checkout') {
         http_response_code(400);
         echo json_encode(array('success' => false, 'error' => 'Invalid topic'));
         exit;
     }
-
-    // Validate channel
     if ($channel !== 'sms' && $channel !== 'whatsapp') {
         http_response_code(400);
         echo json_encode(array('success' => false, 'error' => 'Invalid channel'));
         exit;
     }
-
-    // Validate session
     $toggleShop = isset($_SESSION['shop']) ? $_SESSION['shop'] : '';
     $toggleToken = get_bearer_token_php53();
     if ($toggleToken) {
@@ -246,15 +239,12 @@ if (isset($_GET['abandoned_toggle']) && $_GET['abandoned_toggle'] == '1') {
     $column = ($channel === 'sms') ? 'sms_enabled' : 'whatsapp_enabled';
 
     try {
-        // Check if record exists
         $checkStmt = $togglePdo->prepare("SELECT id FROM $notificationTable WHERE shop = :shop AND aid = :aid");
         $checkStmt->execute(array(
             ':shop' => $toggleShop,
             ':aid' => $aid
         ));
-
         if ($checkStmt->fetch()) {
-            // Update existing record
             $updateStmt = $togglePdo->prepare("UPDATE $notificationTable SET $column = :action WHERE shop = :shop AND aid = :aid");
             $updateStmt->execute(array(
                 ':action' => $action,
@@ -262,7 +252,6 @@ if (isset($_GET['abandoned_toggle']) && $_GET['abandoned_toggle'] == '1') {
                 ':aid' => $aid
             ));
         } else {
-            // Insert new record
             $insertStmt = $togglePdo->prepare("INSERT INTO $notificationTable (shop, aid, $column) VALUES (:shop, :aid, :action)");
             $insertStmt->execute(array(
                 ':shop' => $toggleShop,
@@ -320,8 +309,9 @@ $cancelledWhatsappEnabled = $statuses['orders/cancelled']['wa'];
 $refundSmsEnabled = $statuses['refunds/create']['sms'];
 $refundWhatsappEnabled = $statuses['refunds/create']['wa'];
 
-$abandonedSmsEnabled = $statuses['checkouts/update']['sms'];
-$abandonedWhatsappEnabled = $statuses['checkouts/update']['wa'];
+$abandonedStatus = getChannelStatus($pdo, $shop, 5, $prefix);
+$abandonedSmsEnabled = $abandonedStatus['sms'];
+$abandonedWhatsappEnabled = $abandonedStatus['wa'];
 
 $fulfillmentRequestSmsEnabled = $statuses['fulfillments/create']['sms'];
 $fulfillmentRequestWhatsappEnabled = $statuses['fulfillments/create']['wa'];
@@ -655,29 +645,6 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                                 </label>
                             </td>
                         </tr>
-                        <!-- <tr>
-                            <td><a
-                                    href="<?php echo htmlspecialchars($app_url, ENT_QUOTES, 'UTF-8'); ?>/templates/abandoned_checkout.php?shop=<?php echo $_SESSION['shop']; ?>">Abandoned
-                                    Checkout</a></td>
-                            <td>Sent automatically to the customer if they leave checkout before they buy the items in
-                                their cart.</td>
-                            <td><button class="test-btn" onclick="openTestModal('abandoned_checkout')"><span
-                                        class="material-symbols-outlined">play_arrow</span> Trigger Test</button></td>
-                            <td>
-                                <label class="switch">
-                                    <input type="checkbox" class="webhook-toggle sms-toggle"
-                                        data-topic="checkouts/update" <?php echo $abandonedSmsEnabled ? 'checked' : ''; ?>>
-                                    <span class="slider"></span>
-                                </label>
-                            </td>
-                            <td>
-                                <label class="switch">
-                                    <input type="checkbox" class="webhook-toggle whatsapp-toggle"
-                                        data-topic="checkouts/update" <?php echo $abandonedWhatsappEnabled ? 'checked' : ''; ?>>
-                                    <span class="slider"></span>
-                                </label>
-                            </td>
-                        </tr> -->
                         <tr>
                             <td><a
                                     href="<?php echo htmlspecialchars($app_url, ENT_QUOTES, 'UTF-8'); ?>/templates/abandoned_checkout.php?shop=<?php echo $_SESSION['shop']; ?>">Abandoned
@@ -689,14 +656,14 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                             <td>
                                 <label class="switch">
                                     <input type="checkbox" class="abandoned-toggle sms-toggle"
-                                        data-topic="checkouts/update" <?php echo $abandonedSmsEnabled ? 'checked' : ''; ?>>
+                                        data-topic="abandoned_checkout" <?php echo $abandonedSmsEnabled ? 'checked' : ''; ?>>
                                     <span class="slider"></span>
                                 </label>
                             </td>
                             <td>
                                 <label class="switch">
                                     <input type="checkbox" class="abandoned-toggle whatsapp-toggle"
-                                        data-topic="checkouts/update" <?php echo $abandonedWhatsappEnabled ? 'checked' : ''; ?>>
+                                        data-topic="abandoned_checkout" <?php echo $abandonedWhatsappEnabled ? 'checked' : ''; ?>>
                                     <span class="slider"></span>
                                 </label>
                             </td>
@@ -897,39 +864,6 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
             </div>
         </div>
     </div>
-
-    <!-- <div id="testModal" class="modal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3>Send Test Message</h3>
-                <span class="close" onclick="closeTestModal()">&times;</span>
-            </div>
-            <div class="modal-body">
-                <div class="form-group">
-                    <label>Country Code</label>
-                    <select id="test_country_code">
-                        <option value="+91">India (+91)</option>
-                        <option value="+1">USA (+1)</option>
-                        <option value="+44">UK (+44)</option>
-                        <option value="+61">Australia (+61)</option>
-                        <option value="+86">China (+86)</option>
-                        <option value="+81">Japan (+81)</option>
-                        <option value="+49">Germany (+49)</option>
-                        <option value="+33">France (+33)</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="test_phone" placeholder="Enter phone number (e.g., 9876543210)" style="width: 80%;">
-                    <small style="color: #6b7280; font-size: 12px;">Enter number without country code</small>
-                </div>
-            </div>
-            <div class="modal-footer">
-                <button class="cancel-btn" onclick="closeTestModal()">Cancel</button>
-                <button class="submit-btn" onclick="sendTestFromModal()">Send Test</button>
-            </div>
-        </div>
-    </div> -->
     <div id="testModal" class="modal">
         <div class="modal-content">
             <div class="modal-header">
@@ -1210,13 +1144,12 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
         </div>
     </div>
     <script>
-        // Pass PHP status to JavaScript
         var channelStatuses = {
             'orders/create': { sms: <?php echo $orderSmsEnabled ? 1 : 0; ?>, wa: <?php echo $orderWhatsappEnabled ? 1 : 0; ?> },
             'orders/updated': { sms: <?php echo $editedSmsEnabled ? 1 : 0; ?>, wa: <?php echo $editedWhatsappEnabled ? 1 : 0; ?> },
             'orders/cancelled': { sms: <?php echo $cancelledSmsEnabled ? 1 : 0; ?>, wa: <?php echo $cancelledWhatsappEnabled ? 1 : 0; ?> },
             'refunds/create': { sms: <?php echo $refundSmsEnabled ? 1 : 0; ?>, wa: <?php echo $refundWhatsappEnabled ? 1 : 0; ?> },
-            'checkouts/update': { sms: <?php echo $abandonedSmsEnabled ? 1 : 0; ?>, wa: <?php echo $abandonedWhatsappEnabled ? 1 : 0; ?> },
+            'abandoned_checkout': { sms: <?php echo $abandonedSmsEnabled ? 1 : 0; ?>, wa: <?php echo $abandonedWhatsappEnabled ? 1 : 0; ?> },
             'fulfillments/create': { sms: <?php echo $fulfillmentRequestSmsEnabled ? 1 : 0; ?>, wa: <?php echo $fulfillmentRequestWhatsappEnabled ? 1 : 0; ?> },
             'orders/fulfilled': { sms: <?php echo $shippingConfirmationSmsEnabled ? 1 : 0; ?>, wa: <?php echo $shippingConfirmationWhatsappEnabled ? 1 : 0; ?> },
             'fulfillments/update': { sms: <?php echo $shippingUpdateSmsEnabled ? 1 : 0; ?>, wa: <?php echo $shippingUpdateWhatsappEnabled ? 1 : 0; ?> },
@@ -1230,7 +1163,7 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                 'order_edited': 'orders/updated',
                 'order_cancelled': 'orders/cancelled',
                 'order_refund': 'refunds/create',
-                'abandoned_checkout': 'checkouts/update',
+                'abandoned_checkout': 'abandoned_checkout',
                 'fulfillment_request': 'fulfillments/create',
                 'shipping_confirmation': 'orders/fulfilled',
                 'shipping_update': 'fulfillments/update',
@@ -1531,7 +1464,6 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
             if (selectedOption) {
                 searchInput.value = selectedOption.text;
             }
-
             setTimeout(function () {
                 searchInput.focus();
                 searchInput.select();
@@ -1583,7 +1515,7 @@ $customerWelcomeWhatsappEnabled = $statuses['customers/enable']['wa'];
                             }
                             const statusText = action === 1 ? 'enabled' : 'disabled';
                             const channelText = channel === 'sms' ? 'SMS' : 'WhatsApp';
-                            shopify.toast.show('Abandoned checkout ' + channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
+                            shopify.toast.show(channelText + ' ' + statusText + ' successfully.', { duration: 3000 });
 
                             if (channelStatuses[topic]) {
                                 if (channel === 'sms') {

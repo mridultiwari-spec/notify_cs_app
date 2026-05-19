@@ -2814,3 +2814,364 @@ CURL Error:
 Database log inserted
 ========================================
 
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"#1246","2":"1526.95","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"1"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445525037161
+Order Name: #1246
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"#1246","2":"1526.95","3":"Atul","4":"Rajput","5":"atul@gmail.com","6":"1"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:24:23.023+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"9887154125","2":"retest, The Collection Snowboard: Liquid","3":"Atul Rajput","4":"7445526904937","5":"0.00","6":"f95fee8146212f9d73f2f11b78be17e3\/authenticate?key=dc1bbdded2584a1ec69e056120c9bd4a"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445526904937
+Order Name: #1247
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"9887154125","2":"retest, The Collection Snowboard: Liquid","3":"Atul Rajput","4":"7445526904937","5":"0.00","6":"f95fee8146212f9d73f2f11b78be17e3\/authenticate?key=dc1bbdded2584a1ec69e056120c9bd4a"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:26:19.361+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"777.00","2":"1","3":"test","4":"xtremestore","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445528412265
+Order Name: #1248
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"777.00","2":"1","3":"test","4":"xtremestore","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:27:49.997+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: OrderConfirmation
+Parameter Values: {"1":"777.00","2":"1","3":"test","4":"xtremestore","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445534048361
+Order Name: #1249
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"OrderConfirmation","parameterValues":{"1":"777.00","2":"1","3":"test","4":"xtremestore","5":"0","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:32:28.321+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order_Update
+Parameter Values: {"1":"#1250","2":"Atul","3":"Rajput","4":"atul@gmail.com","5":"1","6":"9887154125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445534572649
+Order Name: #1250
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order_Update","parameterValues":{"1":"#1250","2":"Atul","3":"Rajput","4":"atul@gmail.com","5":"1","6":"9887154125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:35:08.374+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order_Update
+Parameter Values: {"1":"retest, The Collection Snowboard: Liquid","2":"Atul Rajput","3":"7445534572649","4":"0.00","5":"1e050caf85af9ca7a8f3cdd774a02dec\/authenticate?key=b09bfedd610f006f8b6099e685a662f3","6":"777.00"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445534572649
+Order Name: #1250
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order_Update","parameterValues":{"1":"retest, The Collection Snowboard: Liquid","2":"Atul Rajput","3":"7445534572649","4":"0.00","5":"1e050caf85af9ca7a8f3cdd774a02dec\/authenticate?key=b09bfedd610f006f8b6099e685a662f3","6":"777.00"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:36:26.838+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order_Update
+Parameter Values: {"1":"1","2":"test","3":"xtremestore","4":"0","5":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445534048361
+Order Name: #1249
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order_Update","parameterValues":{"1":"1","2":"test","3":"xtremestore","4":"0","5":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:37:48.883+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Cancelled
+Parameter Values: {"1":"#1249","2":"fraud","3":"1526.95","4":"Atul","5":"Rajput","6":"atul@gmail.com"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445534048361
+Order Name: #1249
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"1":"#1249","2":"fraud","3":"1526.95","4":"Atul","5":"Rajput","6":"atul@gmail.com"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:43:12.807+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Cancelled
+Parameter Values: {"1":"1","2":"9887154125","3":"retest, The Collection Snowboard: Liquid","4":"Atul Rajput","5":"7445534572649","6":"0.00"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445534572649
+Order Name: #1250
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"1":"1","2":"9887154125","3":"retest, The Collection Snowboard: Liquid","4":"Atul Rajput","5":"7445534572649","6":"0.00"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:44:52.916+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Cancelled
+Parameter Values: {"1":"951f40e9e7c1aa23693bd1523c179668\/authenticate?key=aebe834259cd51677135792b279bf067","2":"777.00","3":"1","4":"test","5":"xtremestore","6":"0"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445528412265
+Order Name: #1248
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"1":"951f40e9e7c1aa23693bd1523c179668\/authenticate?key=aebe834259cd51677135792b279bf067","2":"777.00","3":"1","4":"test","5":"xtremestore","6":"0"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:46:39.993+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Order Cancelled
+Parameter Values: {"1":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125","2":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7445526904937
+Order Name: #1247
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Cancelled","parameterValues":{"1":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125","2":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:48:00.708+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"7442724814953","2":"refund","3":"atul@gmail.com","4":"7894561230","5":"","6":"7442724814953"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: 
+Order ID: 7442724814953
+Order Name: #1245
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"7442724814953","2":"refund","3":"atul@gmail.com","4":"7894561230","5":"","6":"7442724814953"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:53:23.510+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"","2":"","3":"","4":"0","5":"","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: 
+Order ID: 7442724814953
+Order Name: #1245
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"","2":"","3":"","4":"0","5":"","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T12:55:41.478+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"","2":"","3":"","4":"0","5":"","6":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: 
+Order ID: 7442694602857
+Order Name: #1244
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"","2":"","3":"","4":"0","5":"","6":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T13:14:24.084+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"1":"#1245.1","2":"1234567890","3":"https:\/\/www.logistics.dhl\/us-en\/home\/tracking.html?tracking-id=1234567890","4":"Spotsylvania","5":"Virginia","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7442724814953
+Order Name: #1245.1
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"1":"#1245.1","2":"1234567890","3":"https:\/\/www.logistics.dhl\/us-en\/home\/tracking.html?tracking-id=1234567890","4":"Spotsylvania","5":"Virginia","6":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T13:16:34.623+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"1":"Atul","2":"Rajput","3":"atul@gmail.com","4":"1","5":"9887154125","6":"{{ item_name }}"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7442724814953
+Order Name: #1245.2
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"1":"Atul","2":"Rajput","3":"atul@gmail.com","4":"1","5":"9887154125","6":"{{ item_name }}"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T13:17:52.290+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"1":"Atul","2":"Rajput","3":"atul@gmail.com","4":"1","5":"9887154125","6":"retest"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7442694602857
+Order Name: #1244.1
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"1":"Atul","2":"Rajput","3":"atul@gmail.com","4":"1","5":"9887154125","6":"retest"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T13:19:56.941+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"1":"Atul Rajput","2":"7442694602857","3":"749.95","4":"1","5":"","6":"Hydrogen Vendor"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7442694602857
+Order Name: #1244.2
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"1":"Atul Rajput","2":"7442694602857","3":"749.95","4":"1","5":"","6":"Hydrogen Vendor"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T13:22:11.978+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 1
+Phone Number: 9887154125
+Template ID: Fulfillment Request
+Parameter Values: {"1":"0","2":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125","3":""}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: atul@gmail.com
+Customer Name: Atul Rajput
+Order ID: 7442692505705
+Order Name: #1243.1
+Formatted TO: +19887154125
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+19887154125","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Fulfillment Request","parameterValues":{"1":"0","2":"Atul, Rajput, Asdee Ln, 45, abcde, Spotsylvania, Virginia, 22551, United States, +1 988-715-4125","3":""}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-19T13:24:14.272+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+

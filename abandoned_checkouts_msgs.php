@@ -4,7 +4,7 @@ require_once __DIR__ . '/config/db.php';
 include_once __DIR__ . '/accurate_country_code.php';
 include_once __DIR__ . '/send_sms_api.php';
 include_once __DIR__ . '/send_whatsapp_message_api.php';
-
+include_once __DIR__ . '/dynmc_prod_img.php';
 function processAbandonedCheckoutNotifications($shop, $oauth_token)
 {
     global $pdo, $prefix, $logFile;
@@ -33,50 +33,50 @@ function processAbandonedCheckoutNotifications($shop, $oauth_token)
         return array('processed' => 0, 'sms_sent' => 0, 'whatsapp_sent' => 0);
     }
 
-    //Doesn't check the time conditions for sending the message
+    //Doesn't check the time conditions for sending the message for testing
 
-    $sql = "SELECT * FROM $checkout_table WHERE shop = :shop AND status = 0 ORDER BY created_at DESC";
-    $stmt = $pdo->prepare($sql);
-    $stmt->execute(array(':shop' => $shop));
-    $checkouts = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    if (empty($checkouts)) {
-        file_put_contents($logFile, "No pending abandoned checkouts for shop: $shop\n", FILE_APPEND);
-        return array('processed' => 0, 'sms_sent' => 0, 'whatsapp_sent' => 0);
-    }
-
-    //Checks the Time interval condition for sending the message.  
-
-    // $order_condition = isset($notification_config['order_condition']) ? $notification_config['order_condition'] : '';
-    // $timeinterval = isset($notification_config['timeinterval']) ? (int)$notification_config['timeinterval'] : 0;
-
-    // $timeCondition = '';
-    // $hoursToWait = 0;
-    // if (!empty($order_condition) && $timeinterval > 0) {
-    //     if ($order_condition == 'Number of hours') {
-    //         $hoursToWait = $timeinterval;
-    //     } elseif ($order_condition == 'Number of days') {
-    //         $hoursToWait = $timeinterval * 24;
-    //     } elseif ($order_condition == 'Number of weeks') {
-    //         $hoursToWait = $timeinterval * 24 * 7;
-    //     }
-
-    //     if ($hoursToWait > 0) {
-    //         $timeCondition = " AND created_at <= DATE_SUB(NOW(), INTERVAL " . $hoursToWait . " HOUR)";
-    //         file_put_contents($logFile, "Time filter: $order_condition ($timeinterval) = " . $hoursToWait . " hours wait\n", FILE_APPEND);
-    //     }
-    // }
-
-    // $sql = "SELECT * FROM $checkout_table WHERE shop = :shop AND status = 0" . $timeCondition . " ORDER BY created_at DESC";
+    // $sql = "SELECT * FROM $checkout_table WHERE shop = :shop AND status = 0 ORDER BY created_at DESC";
     // $stmt = $pdo->prepare($sql);
     // $stmt->execute(array(':shop' => $shop));
     // $checkouts = $stmt->fetchAll(PDO::FETCH_ASSOC);
 
     // if (empty($checkouts)) {
-    //     $filterMsg = $hoursToWait > 0 ? " (waiting " . $hoursToWait . " hours)" : "";
-    //     file_put_contents($logFile, "No pending abandoned checkouts for shop: $shop" . $filterMsg . "\n", FILE_APPEND);
+    //     file_put_contents($logFile, "No pending abandoned checkouts for shop: $shop\n", FILE_APPEND);
     //     return array('processed' => 0, 'sms_sent' => 0, 'whatsapp_sent' => 0);
     // }
+
+    //Checks the Time interval condition for sending the message.  
+
+    $order_condition = isset($notification_config['order_condition']) ? $notification_config['order_condition'] : '';
+    $timeinterval = isset($notification_config['timeinterval']) ? (int)$notification_config['timeinterval'] : 0;
+
+    $timeCondition = '';
+    $hoursToWait = 0;
+    if (!empty($order_condition) && $timeinterval > 0) {
+        if ($order_condition == 'Number of hours') {
+            $hoursToWait = $timeinterval;
+        } elseif ($order_condition == 'Number of days') {
+            $hoursToWait = $timeinterval * 24;
+        } elseif ($order_condition == 'Number of weeks') {
+            $hoursToWait = $timeinterval * 24 * 7;
+        }
+
+        if ($hoursToWait > 0) {
+            $timeCondition = " AND created_at <= DATE_SUB(NOW(), INTERVAL " . $hoursToWait . " HOUR)";
+            file_put_contents($logFile, "Time filter: $order_condition ($timeinterval) = " . $hoursToWait . " hours wait\n", FILE_APPEND);
+        }
+    }
+
+    $sql = "SELECT * FROM $checkout_table WHERE shop = :shop AND status = 0" . $timeCondition . " ORDER BY created_at DESC";
+    $stmt = $pdo->prepare($sql);
+    $stmt->execute(array(':shop' => $shop));
+    $checkouts = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+    if (empty($checkouts)) {
+        $filterMsg = $hoursToWait > 0 ? " (waiting " . $hoursToWait . " hours)" : "";
+        file_put_contents($logFile, "No pending abandoned checkouts for shop: $shop" . $filterMsg . "\n", FILE_APPEND);
+        return array('processed' => 0, 'sms_sent' => 0, 'whatsapp_sent' => 0);
+    }
 
     $processed_count = 0;
     $sms_sent_count = 0;
@@ -88,7 +88,8 @@ function processAbandonedCheckoutNotifications($shop, $oauth_token)
             $pdo,
             $checkout_table,
             $log_table,
-            $shop
+            $shop,
+            $oauth_token
         );
 
         if ($result['success']) {
@@ -116,7 +117,7 @@ function processAbandonedCheckoutNotifications($shop, $oauth_token)
     );
 }
 
-function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $log_table, $shop)
+function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $log_table, $shop, $oauth_token)
 {
     global $logFile, $prefix;
 
@@ -160,8 +161,6 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
         $item_quantity = isset($first_item['quantity']) ? $first_item['quantity'] : '';
         $item_price = isset($first_item['variant_price']) ? $first_item['variant_price'] : '';
         $item_vendor = isset($first_item['vendor']) ? $first_item['vendor'] : '';
-
-        // Sum all discounts from line items
         $discountSum = 0;
         foreach ($line_items as $item) {
             if (isset($item['total_discount'])) {
@@ -191,7 +190,7 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
 
     $subject = "Abandoned Checkout";
 
-        $replacementMap = array(
+    $replacementMap = array(
         "{{ product_name }}" => $product_name,
         "{{ total_price }}" => $total_price,
         "{{ checkout_created_at }}" => $checkout_created_at,
@@ -209,14 +208,14 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
         "{{ Ad_item_sku }}" => $item_sku,
         "{{ Ad_item_quantity }}" => $item_quantity,
         "{{ Ad_item_price }}" => $item_price,
-        "{{ Ad_order_number }}" => $checkout_name,       
-        "{{ Ad_total_discount }}" => $total_discount, 
+        "{{ Ad_order_number }}" => $checkout_name,
+        "{{ Ad_total_discount }}" => $total_discount,
         "{{ Ad_order_status_url }}" => $checkout_url,
         "{{ Ad_item_vendor }}" => $item_vendor
     );
 
     $replacement_map = array(
-        'email_id' => $customer_email,
+        'customer_email' => $customer_email,
         'country_code' => $country_code,
         'customer_full_name' => $customer_full_name,
         'phone_number' => $phone_number,
@@ -405,8 +404,23 @@ function sendCheckoutNotification($checkout, $config, $pdo, $checkout_table, $lo
                 file_put_contents($logFile, "Media URL after replacement: $whatsapp_media_url\n", FILE_APPEND);
             }
 
-            if ($whatsapp_media_source == 'dynmc_prod_img' && $whatsapp_media_type == 'image') {
-                file_put_contents($logFile, "INFO: Dynamic product image not applicable for abandoned checkout WhatsApp\n", FILE_APPEND);
+            if ($whatsapp_media_source == 'dynamic' && $whatsapp_media_type == 'image') {
+                $product_id = isset($checkout['first_product_id']) ? $checkout['first_product_id'] : null;
+
+                if ($product_id) {
+                    $aid = 5;
+                    if (function_exists('fetchProductImageAndUpdateDb')) {
+                        $result = fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $aid, $whatsapp_media_source, $prefix);
+                        if ($result['success']) {
+                            $whatsapp_media_url = $result['media_url'];
+                            file_put_contents($logFile, "Dynamic product image fetched for abandoned checkout: $whatsapp_media_url\n", FILE_APPEND);
+                        } else {
+                            file_put_contents($logFile, "Image fetch error for abandoned checkout: " . $result['message'] . "\n", FILE_APPEND);
+                        }
+                    }
+                } else {
+                    file_put_contents($logFile, "No product ID found (first_product_id is empty) for abandoned checkout ID: {$checkout['id']}\n", FILE_APPEND);
+                }
             }
 
             $buttons = array();

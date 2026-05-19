@@ -88,7 +88,8 @@ function send_whatsapp_message($config, $pdo = null, $table2 = null)
     curl_setopt($ch, CURLOPT_POST, true);
     curl_setopt($ch, CURLOPT_HTTPHEADER, array(
         'X-API-KEY: ' . $api_key,
-        'Content-Type: application/json'
+        'Content-Type: application/json',
+        'longTermToken: true'
     ));
     curl_setopt($ch, CURLOPT_POSTFIELDS, $json_payload);
     curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
