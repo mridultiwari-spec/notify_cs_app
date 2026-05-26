@@ -74,7 +74,6 @@ if (!function_exists('get_bearer_token_php53')) {
             return '';
         }
         $token = trim(substr($header, 7));
-        // Normalize accidental whitespace introduced by proxies/logging copy.
         return preg_replace('/\s+/', '', $token);
     }
 }
@@ -314,7 +313,7 @@ if (!function_exists('get_valid_shop_access_token_php53')) {
         }
 
         $now = time();
-        $buffer = 120; // refresh 2 min early
+        $buffer = 120;
         if (!$forceRenew && !empty($row['session_access_token']) && !empty($row['session_access_token_expires_at'])) {
             $expTs = strtotime($row['session_access_token_expires_at']);
             if ($expTs && $expTs > ($now + $buffer)) {

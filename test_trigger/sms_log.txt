@@ -1973,3 +1973,20 @@ CURL Error:
 Database log inserted
 ========================================
 
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"template_name":"test_temp_sms"}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-26T07:27:07.161+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
