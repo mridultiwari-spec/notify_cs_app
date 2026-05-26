@@ -1784,3 +1784,192 @@ CURL Error:
 Database log inserted
 ========================================
 
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"820982911946154508","2":"refund","3":"jon@example.com","4":"7894561230","5":"820982911946154508","6":"89.99"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"820982911946154508","2":"refund","3":"jon@example.com","4":"7894561230","5":"820982911946154508","6":"89.99"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-20T04:50:36.882+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 
+Phone Number: 7894561230
+Template ID: Order Refund
+Parameter Values: {"1":"1","2":"SKU2006-001","3":"0","4":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","5":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: 
+Formatted TO: +7894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+7894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"Order Refund","parameterValues":{"1":"1","2":"SKU2006-001","3":"0","4":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP","5":"Steve, Shipper, 123 Shipping Street, Shippington, Kentucky, 40003, United States, 555-555-SHIP"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-20T05:15:56.366+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: TEMPLATE
+Parameter Values: {"order_name":"#TEST-12345","order_total_price":"99.99","customer_email_id":"john.doe@example.com","country_code":"91","customer_phone":"7894561230","customer_fname":"John","customer_lname":"Doe"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"TEMPLATE","parameterValues":{"order_name":"#TEST-12345","order_total_price":"99.99","customer_email_id":"john.doe@example.com","country_code":"91","customer_phone":"7894561230","customer_fname":"John","customer_lname":"Doe"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-20T06:21:13.399+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+ERROR: Phone number or SMS text is empty
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+ERROR: Phone number or SMS text is empty
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+ERROR: Phone number or SMS text is empty
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+ERROR: Phone number or SMS text is empty
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+ERROR: Phone number or SMS text is empty
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: jon@example.com
+Customer Name: John Smith
+Order ID: 820982911946154508
+Order Name: #9999
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"template_name":"OrderConfirmation"}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-20T06:46:26.279+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"template_name":"TEMPLATE"}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-20T06:46:41.672+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND WITH PARAMETERS ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Template ID: test_temp_sms
+Parameter Values: {"1":"John Doe"}
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"templateId":"test_temp_sms","parameterValues":{"1":"John Doe"}}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-20T11:16:17.417+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"template_name":"test_temp_sms"}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-20T11:16:59.065+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+
+========== SMS SEND ATTEMPT ==========
+Country Code: 91
+Phone Number: 7894561230
+Shop: xtremestore-9600.myshopify.com
+Customer Email: john.doe@example.com
+Customer Name: John Doe
+Order ID: TEST-12345
+Order Name: Test Order
+Formatted TO: +917894561230
+PAYLOAD: {"channelId":"69cbeb30084991c05464619e","from":"Sender ID Test","to":"+917894561230","channel":"SMS","deptId":"","callbackUrl":"","message":{"template":{"template_name":"test_temp_sms"}}}
+Message failed: Unknown error
+HTTP Code: 403
+Response: {"timestamp":"2026-05-20T11:45:09.492+00:00","status":403,"error":"Forbidden","path":"/chatbird/api/message/send"}
+CURL Error: 
+Database log inserted
+========================================
+

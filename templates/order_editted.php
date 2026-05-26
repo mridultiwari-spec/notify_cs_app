@@ -39,14 +39,35 @@ function getExistingTemplate($pdo, $table, $shop, $aid)
 $aid = 2;
 $table = $prefix . "shopify_sms_notification_App_Email_Notification";
 $existingData = getExistingTemplate($pdo, $table, $shop, $aid);
-
+$isEditMode = ($existingData !== false);
 function send_json_response($payload)
 {
     header('Content-Type: application/json; charset=utf-8');
     echo json_encode($payload);
     exit;
 }
+function validateFileType($filePath, $media_type)
+{
+    $allowedExtensions = array();
+    if ($media_type === 'image') {
+        $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'webp');
+    } elseif ($media_type === 'video') {
+        $allowedExtensions = array('mp4', 'mov', 'avi', 'webm', 'mkv', 'mpeg');
+    } elseif ($media_type === 'pdf') {
+        $allowedExtensions = array('pdf');
+    }
 
+    $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+
+    if (!in_array($extension, $allowedExtensions)) {
+        return array(
+            'valid' => false,
+            'message' => 'Invalid file type for ' . $media_type . '. Allowed: ' . implode(', ', $allowedExtensions)
+        );
+    }
+
+    return array('valid' => true, 'message' => '');
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $app_url;
     $token = get_bearer_token_php53();
@@ -130,33 +151,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $media_source_type = isset($_POST['media_source_type']) ? $_POST['media_source_type'] : 'url';
             $media_url = null;
             $media_source = null;
-
-            // if ($media_type !== 'text') {
-            //     if ($media_source_type === 'url') {
-            //         if (!empty($_POST['media_url'])) {
-            //             $media_source = 'input';
-            //             $media_url = trim($_POST['media_url']);
-            //         }
-            //     } elseif ($media_source_type === 'file') {
-            //         if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0) {
-            //             $uploadDir = "uploads/";
-            //             if (!is_dir($uploadDir)) {
-            //                 mkdir($uploadDir, 0777, true);
-            //             }
-            //             $fileName = time() . "_" . preg_replace(
-            //                 "/[^a-zA-Z0-9._-]/",
-            //                 "",
-            //                 $_FILES["media_file"]["name"]
-            //             );
-            //             $targetFile = $uploadDir . $fileName;
-            //             if (move_uploaded_file($_FILES["media_file"]["tmp_name"], $targetFile)) {
-            //                 $media_source = 'file';
-            //                 $media_url = $fileName;
-            //             }
-            //         }
-            //     }
-            // }
-
             if ($media_type !== 'text') {
                 if ($media_source_type === 'url') {
                     if (!empty($_POST['media_url'])) {
@@ -164,13 +158,49 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $media_url = trim($_POST['media_url']);
                     }
                 } elseif ($media_source_type === 'file') {
-                    if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0) {
+                    $newFileUploaded = (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0);
+
+                    if ($newFileUploaded) {
                         $uploadDir = dirname(__FILE__) . "/uploads/";
+
                         if (!is_dir($uploadDir)) {
-                            mkdir($uploadDir, 0777, true);
+                            if (!mkdir($uploadDir, 0777, true)) {
+                                send_json_response(array(
+                                    'success' => false,
+                                    'message' => 'Failed to create directory: ' . $uploadDir
+                                ));
+                            }
+                        }
+
+                        if (!is_writable($uploadDir)) {
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Directory not writable: ' . $uploadDir
+                            ));
                         }
 
                         $fileExtension = strtolower(pathinfo($_FILES["media_file"]["name"], PATHINFO_EXTENSION));
+
+                        // FILE TYPE VALIDATION
+                        $validation = validateFileType($_FILES["media_file"]["name"], $media_type);
+                        if (!$validation['valid']) {
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => $validation['message']
+                            ));
+                        }
+
+                        // Delete old file if exists (optional)
+                        $existingMediaSource = isset($existingData['media_source']) ? $existingData['media_source'] : '';
+                        $existingMediaUrl = isset($existingData['media_url']) ? $existingData['media_url'] : '';
+                        if ($isEditMode && $existingMediaSource === 'file' && !empty($existingMediaUrl)) {
+                            $oldFileName = basename($existingMediaUrl);
+                            $oldFilePath = dirname(__FILE__) . "/uploads/" . $oldFileName;
+                            if (file_exists($oldFilePath)) {
+                                unlink($oldFilePath);
+                            }
+                        }
+
                         $fileName = time() . "_" . preg_replace(
                             "/[^a-zA-Z0-9._-]/",
                             "",
@@ -178,9 +208,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ) . "." . $fileExtension;
 
                         $targetFile = $uploadDir . $fileName;
+
                         if (move_uploaded_file($_FILES["media_file"]["tmp_name"], $targetFile)) {
                             $media_source = 'file';
                             $media_url = rtrim($app_url, '/') . "/templates/uploads/" . $fileName;
+                        } else {
+                            $lastError = error_get_last();
+                            $errorMsg = $lastError ? $lastError['message'] : 'Unknown error';
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Failed to move uploaded file. Error: ' . $errorMsg
+                            ));
+                        }
+                    } else {
+                        // NO new file uploaded - check if we should keep existing file
+                        $existingMediaSource = isset($existingData['media_source']) ? $existingData['media_source'] : '';
+                        $existingMediaUrl = isset($existingData['media_url']) ? $existingData['media_url'] : '';
+
+                        if ($isEditMode && $existingMediaSource === 'file' && !empty($existingMediaUrl)) {
+                            $media_source = 'file';
+                            $media_url = $existingMediaUrl;
+                        } else if (!$isEditMode || empty($existingMediaUrl)) {
+                            $errorCode = isset($_FILES['media_file']['error']) ? $_FILES['media_file']['error'] : 'No file';
+                            $errorMessages = array(
+                                1 => 'File exceeds upload_max_filesize',
+                                2 => 'File exceeds MAX_FILE_SIZE',
+                                3 => 'File only partially uploaded',
+                                4 => 'No file uploaded. Please select a file to upload.',
+                                6 => 'Missing temporary folder',
+                                7 => 'Failed to write file to disk',
+                                8 => 'PHP extension stopped upload'
+                            );
+                            $errorMsg = isset($errorMessages[$errorCode]) ? $errorMessages[$errorCode] : 'Error code: ' . $errorCode;
+
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Upload error: ' . $errorMsg
+                            ));
                         }
                     }
                 } elseif ($media_source_type === 'dynamic') {

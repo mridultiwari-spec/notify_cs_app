@@ -42,8 +42,8 @@ function send_smstext($country_code, $phone_number, $template_name_sms, $shop, $
     file_put_contents($logFile, "Order ID: {$order_id}\n", FILE_APPEND);
     file_put_contents($logFile, "Order Name: {$order_name}\n", FILE_APPEND);
     
-    if (empty($phone_number) || empty($final_sms)) {
-        file_put_contents($logFile, "ERROR: Phone number or SMS text is empty\n", FILE_APPEND);
+    if (empty($phone_number)) {
+        file_put_contents($logFile, "ERROR: Phone number is empty\n", FILE_APPEND);
         return false;
     }
     

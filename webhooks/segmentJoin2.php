@@ -19,7 +19,7 @@ if (!function_exists('set_http_status')) {
 }
 include '../send_sms_api.php';
 include '../send_whatsapp_message_api.php';
-include  '../accurate_country_code.php';
+include '../accurate_country_code.php';
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '../file/debug_log.txt');
 
@@ -51,7 +51,6 @@ if (!function_exists('wa_replace_placeholders')) {
     {
         if (!is_string($text))
             return $text;
-
         foreach ($replacements as $key => $value) {
             $text = str_replace('{{ ' . $key . ' }}', $value, $text);
             $text = str_replace('{{' . $key . '}}', $value, $text);
@@ -257,15 +256,12 @@ try {
     $customerFullName = trim($customerFirstName . ' ' . $customerLastName);
     $customerEmail = isset($customerDetails['email']) ? $customerDetails['email'] : '';
     $phoneNumber = isset($customerDetails['phone']) ? $customerDetails['phone'] : '';
-
-    //$countryCode = isset($customerDetails['country_code']) ? $customerDetails['country_code'] : '';
     $countryCode = isset($customerDetails['country_code']) ? $customerDetails['country_code'] : '';
     if (empty($countryCode) && isset($primaryAddress['countryCodeV2'])) {
         $countryCode = $primaryAddress['countryCodeV2'];
     }
 
     if (!empty($countryCode) && strlen($countryCode) == 2) {
-        // $ccodes array is defined in accurate_country_code.php
         $countryCodeUpper = strtoupper($countryCode);
         if (isset($ccodes[$countryCodeUpper])) {
             $countryCode = $ccodes[$countryCodeUpper]; // Convert "IN" to 91
@@ -304,48 +300,104 @@ try {
 
         if ($conditions === '{"type":"When Customer Joins Segment"}') {
 
-            // ============ SEND SMS ============
             if ($sms_enabled == 1) {
                 writeWebhookLog("SMS is enabled - sending");
 
                 $smsVariables = array();
+                $has_parameters = false;
+
                 if (!empty($segmentSettings['sms_variables'])) {
                     $smsVariables = json_decode($segmentSettings['sms_variables'], true);
                     if (!is_array($smsVariables)) {
                         $smsVariables = array();
                     }
+                    if (count($smsVariables) > 0) {
+                        $has_parameters = true;
+                        writeWebhookLog("SMS has parameters - will use template-based SMS");
+                    } else {
+                        writeWebhookLog("SMS has NO parameters - will use plain text SMS");
+                    }
+                } else {
+                    writeWebhookLog("SMS has NO parameters - will use plain text SMS");
                 }
 
-                $parameter_values = array();
-                if (!empty($smsVariables) && is_array($smsVariables)) {
+                
+                $replacementMap = array(
+                    '{{ customer_fname }}' => $customerFirstName,
+                    '{{ customer_lname }}' => $customerLastName,
+                    '{{ customer_full_name }}' => $customerFullName,
+                    '{{ customer_name }}' => $customerFullName,
+                    '{{ customer_email_id }}' => $customerEmail,
+                    '{{ customer_phone }}' => $phoneNumber,
+                    '{{ country_code }}' => $countryCode
+                );
+
+                if ($has_parameters) {
+                    
+                    writeWebhookLog("Using TEMPLATE-BASED SMS with parameters");
+
+                    $parameter_values = array();
                     foreach ($smsVariables as $key => $value) {
                         $processed_value = $value;
-                        $processed_value = str_replace('{{ customer_fname }}', $customerFirstName, $processed_value);
-                        $processed_value = str_replace('{{ customer_full_name }}', $customerFullName, $processed_value);
-                        $processed_value = str_replace('{{ customer_lname }}', $customerLastName, $processed_value);
-                        $processed_value = str_replace('{{ customer_name }}', $customerFullName, $processed_value);
-                        $processed_value = str_replace('{{ customer_email_id }}', $customerEmail, $processed_value);
-                        $processed_value = str_replace('{{ customer_phone }}', $phoneNumber, $processed_value);
+                        foreach ($replacementMap as $placeholder => $val) {
+                            $processed_value = str_replace($placeholder, $val, $processed_value);
+                        }
                         $parameter_values[$key] = $processed_value;
                     }
-                }
 
-                if (function_exists('send_smstext_with_parameters')) {
-                    send_smstext_with_parameters(
-                        $countryCode,
-                        $phoneNumber,
-                        $template_name_sms,
-                        $shop,
-                        $customerEmail,
-                        $customerFullName,
-                        $parameter_values,
-                        $customerFullName,
-                        '',
-                        "Customer Segment"
-                    );
-                    writeWebhookLog("SMS sent successfully");
+                    if (function_exists('send_smstext_with_parameters')) {
+                        send_smstext_with_parameters(
+                            $countryCode,
+                            $phoneNumber,
+                            $template_name_sms,
+                            $shop,
+                            $customerEmail,
+                            $customerFullName,
+                            $parameter_values,
+                            $customerFullName,
+                            '',
+                            "Customer Segment"
+                        );
+                        writeWebhookLog("Template SMS sent successfully");
+                    } else {
+                        writeWebhookLog("ERROR: send_smstext_with_parameters function not found", "ERROR");
+                    }
                 } else {
-                    writeWebhookLog("ERROR: send_smstext_with_parameters function not found", "ERROR");
+                   
+                    writeWebhookLog("Using PLAIN TEXT SMS (no parameters)");
+
+                    
+                    $sms_text = isset($segmentSettings['sms']) ? $segmentSettings['sms'] : '';
+
+                    if (empty($sms_text)) {
+                        writeWebhookLog("ERROR: SMS text is empty", "ERROR");
+                    } else {
+                        
+                        $processed_sms_text = $sms_text;
+                        foreach ($replacementMap as $placeholder => $val) {
+                            $processed_sms_text = str_replace($placeholder, $val, $processed_sms_text);
+                        }
+
+                        writeWebhookLog("Processed SMS text: " . $processed_sms_text);
+
+                       
+                        if (function_exists('send_smstext')) {
+                            send_smstext(
+                                $countryCode,
+                                $phoneNumber,
+                                $template_name_sms,
+                                $shop,
+                                $customerEmail,
+                                $customerFullName,
+                                $customerFullName,
+                                '',
+                                "Customer Segment"
+                            );
+                            writeWebhookLog("Plain text SMS sent successfully");
+                        } else {
+                            writeWebhookLog("ERROR: send_smstext function not found", "ERROR");
+                        }
+                    }
                 }
             } else {
                 writeWebhookLog("SMS is NOT enabled - skipping");
@@ -638,7 +690,6 @@ function fetchCustomerDetails($shop, $accessToken, $customerGid)
         return null;
     }
     curl_close($ch);
-
     writeWebhookLog("GraphQL response code: {$httpCode}");
     writeWebhookLog("GraphQL response: " . $response);
     $result = json_decode($response, true);

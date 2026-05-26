@@ -10,13 +10,12 @@ set_time_limit(0);
 ignore_user_abort(true);
 ini_set('log_errors', 1);
 ini_set('error_log', __DIR__ . '/../file/debug_log.txt');
-
 function writeBulkLog($message, $type = 'INFO')
 {
     $logFile = __DIR__ . '/../file/debug_log.txt';
     //$timestamp = date('Y-m-d H:i:s');
     //$logEntry = "[{$timestamp}] [BULK-SCHEDULE] [{$type}] {$message}" . PHP_EOL;
-   // @file_put_contents($logFile, $logEntry, FILE_APPEND);
+   //@file_put_contents($logFile, $logEntry, FILE_APPEND);
     error_log("[BULK-SCHEDULE] {$message}");
 }
 
@@ -25,13 +24,11 @@ writeBulkLog("========== BULK SCHEDULE STARTED ==========");
 try {
     $pdo = getDatabaseConnection();
     writeBulkLog("Database connection successful");
-    
     $customerSegmentTable = $prefix . "customer_segment";
     $segmentCustomersInfoTable = $prefix . "segment_customers_info";
     $configTable = $prefix . "shopify_sms_notification_app";
     $logTable = $prefix . "shopify_sms_notification_App_Log_Details";
     
-    //$bulkCondition = '{"type":"Bulk Schedule"}';
     $stmt = $pdo->prepare("
         SELECT 
             cs.id,
@@ -134,7 +131,6 @@ try {
                 continue;
             }
             
-            // Handle country code
             if (!empty($countryCode) && strlen($countryCode) == 2) {
                 $countryCodeUpper = strtoupper($countryCode);
                 if (isset($ccodes[$countryCodeUpper])) {
@@ -142,12 +138,10 @@ try {
                 }
             }
             
-            // Clean phone number
             if (substr($phoneNumber, 0, 1) === '0') {
                 $phoneNumber = substr($phoneNumber, 1);
             }
             
-            // ============ SEND SMS ============
             if ($sms_enabled == 1 && !empty($template_name_sms)) {
                 writeBulkLog("Sending SMS to {$customerFullName} at {$phoneNumber}");
                 
@@ -187,8 +181,6 @@ try {
                 
                 usleep(200000);
             }
-            
-            // ============ SEND WHATSAPP ============
             if ($whatsapp_enabled == 1 && !empty($whatsappData)) {
                 $whatsappTemplateName = isset($whatsappData['template_name']) ? $whatsappData['template_name'] : '';
                 
@@ -198,7 +190,6 @@ try {
                     $whatsappApiConfig = array(
                         'log_file' => "$logFile"
                     );
-                    
                     $whatsappMediaType = isset($whatsappData['media_type']) ? $whatsappData['media_type'] : 'text';
                     $whatsappMediaUrl = isset($whatsappData['media_url']) ? $whatsappData['media_url'] : '';
                     $whatsappMediaSource = isset($whatsappData['media_source']) ? $whatsappData['media_source'] : '';
@@ -311,7 +302,6 @@ try {
                     } else {
                         writeBulkLog("ERROR: send_whatsapp_message function not found", "ERROR");
                     }
-                    
                     usleep(200000);
                 }
             }

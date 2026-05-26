@@ -282,8 +282,6 @@ try {
     if (empty($processed_sms_text) || empty($sms_text)) {
         $processed_sms_text = "Your order {$order_name} shipping has been updated! Status: {$shipment_status}. Tracking number: {$tracking_number} via {$tracking_company}. Track your order: {$tracking_url} Estimated delivery: {$estimated_delivery_date}";
     }
-    
-    // ========== SMS HANDLING ==========
     if ($sms_enabled == 1) {
         if ($has_parameters) {
             send_smstext_with_parameters(
@@ -334,8 +332,6 @@ try {
     }
     
     echo json_encode($response);
-    
-    // ========== WHATSAPP HANDLING (MOVED OUTSIDE THE SMS ENABLED CHECK) ==========
     $whatsapp_data_from_db = array();
     if (isset($row['whatsapp']) && !empty($row['whatsapp'])) {
         $whatsapp_data_from_db = json_decode($row['whatsapp'], true);
@@ -350,7 +346,7 @@ try {
         error_log("Processing WhatsApp for shipping update test - Template: $whatsapp_template_name");
         
         $whatsapp_api_config = array(
-            'log_file' => 'whatsapp_log.txt'
+            'log_file' => __DIR__ . '/../file/debug_log.txt'
         );
         
         $whatsapp_table2 = $prefix . "shopify_sms_notification_App_Log_Details";

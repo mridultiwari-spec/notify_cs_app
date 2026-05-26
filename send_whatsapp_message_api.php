@@ -49,7 +49,7 @@ function send_whatsapp_message($config, $pdo = null, $table2 = null)
     $country_code = isset($config['country_code']) ? $config['country_code'] : '';
     $phone_num = isset($config['phone_num']) ? $config['phone_num'] : $to;
     $notification_type = isset($config['notification_type']) ? $config['notification_type'] : 'whatsapp';
-    $log_file = isset($config['log_file']) ? $config['log_file'] : 'whatsapp_log.txt';
+    $log_file = isset($config['log_file']) ? $config['log_file'] : __DIR__ . '/../file/debug_log.txt';
 
     if (empty($api_domain) || empty($channel_id) || empty($api_key)) {
         return _wa_send_response(false, 'Missing API configuration', null, null, null, $pdo, $table2, $shop, $order_id, $order_name, $customer_email, $country_code, $phone_num, $notification_type, $log_file);

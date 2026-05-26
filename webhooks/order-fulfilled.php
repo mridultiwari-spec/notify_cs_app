@@ -65,8 +65,6 @@ file_put_contents("$logFile", "Fulfillment ID: $fulfillment_id | Order ID: $orde
 
 $order_name = isset($fulfillment->name) ? $fulfillment->name : '';
 
-// $tracking_number = isset($fulfillment->tracking_number) ? $fulfillment->tracking_number : '';
-// $tracking_url = isset($fulfillment->tracking_url) ? $fulfillment->tracking_url : '';
 $tracking_number = '';
 $tracking_url = '';
 if (isset($fulfillment->fulfillments) && !empty($fulfillment->fulfillments)) {
@@ -75,12 +73,10 @@ if (isset($fulfillment->fulfillments) && !empty($fulfillment->fulfillments)) {
     $tracking_url = isset($last_fulfillment->tracking_url) ? $last_fulfillment->tracking_url : '';
 }
 
-//$order_status_url = '';
 $order_status_url = isset($fulfillment->order_status_url) ? $fulfillment->order_status_url : '';
 $total_discount = isset($fulfillment->total_discounts) ? $fulfillment->total_discounts : '';
 $total_weight = isset($fulfillment->total_weight) ? $fulfillment->total_weight : 0;
 
-//$destination = isset($fulfillment->destination) ? $fulfillment->destination : null;
 $destination = isset($fulfillment->shipping_address) ? $fulfillment->shipping_address : null;
 
 $shipping_string = $destination ? implode(', ', array_filter(array(
@@ -135,8 +131,7 @@ if ($shipping_country_code) {
     $country_code = 'IN';
 }
 
-// Get customer phone with priority (same as order-edit pattern)
-$customer_details_phone = ''; // No customer object in fulfillment
+$customer_details_phone = '';
 $customer_order_phone = isset($fulfillment->phone) ? $fulfillment->phone : '';
 
 if ($destination_phone) {
@@ -154,7 +149,6 @@ if ($country_code && $customer_phone) {
     $country_code = $final_arr['country_code'];
     $customer_phone = $final_arr['phone_number'];
 }
-// ========== END PHONE NUMBER EXTRACTION ==========
 
 $item_name_arr = array();
 $item_price_arr = array();
@@ -200,8 +194,6 @@ if ($row) {
         $media_url = $row['media_url'];
         $media_source_prod = $row['media_source'];
         $button_text1 = trim($row['button_text1']);
-
-        // Fetch and decode sms_variables
         $sms_variables = array();
         $has_parameters = false;
 
@@ -210,8 +202,6 @@ if ($row) {
             if (!is_array($sms_variables)) {
                 $sms_variables = array();
             }
-
-            // Check if sms_variables has any key-value pairs
             if (count($sms_variables) > 0) {
                 $has_parameters = true;
                 file_put_contents("$logFile", "SMS Variables loaded (has parameters): " . print_r($sms_variables, true) . "\n", FILE_APPEND);
@@ -244,14 +234,14 @@ if ($row) {
             "{{ Ad_item_vendor }}" => $item_vendor,
             "{{ Ad_total_weight }}" => $total_weight,
             "{{ Ad_shipping_address }}" => $shipping_string,
-            "{{ Ad_billing_address }}" => $billing_string
+            "{{ Ad_billing_address }}" => $billing_string,
+            "{{ item_name }}" => $item_name
         );
         $replacementMap["{{ order_total_price }}"] = isset($fulfillment->total_price) ? $fulfillment->total_price : '';
 
         if ($has_parameters) {
             file_put_contents("$logFile", "Using TEMPLATE-BASED SMS with parameters\n", FILE_APPEND);
 
-            // Process custom variables and add to replacement map
             foreach ($sms_variables as $key => $value) {
                 $placeholder = "{{ " . trim($key) . " }}";
 
@@ -276,30 +266,21 @@ if ($row) {
                     }
                     $recursion_count++;
                 }
-
                 $replacementMap[$placeholder] = $processed_value;
                 file_put_contents("$logFile", "Added custom variable: $placeholder => $processed_value\n", FILE_APPEND);
             }
-
-            // Process sms_text with variable replacements
             $processed_sms_text = $sms_text;
-
-            // Replace standard placeholders in sms_text
             foreach ($replacementMap as $placeholder => $value) {
                 if ($value !== null && strpos($processed_sms_text, $placeholder) !== false) {
                     $processed_sms_text = str_replace($placeholder, $value, $processed_sms_text);
                 }
             }
-
-            // Also replace custom variable placeholders in sms_text
             foreach ($sms_variables as $key => $value) {
                 $placeholder = "{{ " . trim($key) . " }}";
                 if (isset($replacementMap[$placeholder]) && strpos($processed_sms_text, $placeholder) !== false) {
                     $processed_sms_text = str_replace($placeholder, $replacementMap[$placeholder], $processed_sms_text);
                 }
             }
-
-            // Process whatsapp_text similarly
             $processed_whatsapp_text = $whatsapp_text;
             foreach ($replacementMap as $placeholder => $value) {
                 if ($value !== null && strpos($processed_whatsapp_text, $placeholder) !== false) {
@@ -369,8 +350,6 @@ if ($row) {
                     error_log("No product ID found for shop: {$shop}");
                 }
             }
-
-            // Send SMS using template function with processed SMS text
             if (empty($customer_phone)) {
                 file_put_contents("$logFile", "ERROR: Customer phone is empty, cannot send SMS for fulfillment {$fulfillment_id}\n", FILE_APPEND);
             } elseif (empty($template_id)) {

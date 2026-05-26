@@ -12,7 +12,7 @@ function fetchProductImageAndUpdateDb($pdo, $shop, $oauth_token, $product_id, $a
         return $result;
     }
 
-    $logFile = dirname(__FILE__) . '/prod_img.txt';
+    $logFile = dirname(__FILE__) . '/file/debug_log.txt';
 
     try {
         $gid = "gid://shopify/Product/" . $product_id;

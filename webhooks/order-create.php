@@ -24,7 +24,7 @@ include '../send_sms_api.php';
 include '../send_whatsapp_message_api.php';
 include '../dynmc_prod_img.php';
 
-$logFile = dirname(__FILE__) . '/../file/order_confirmation_log.txt';
+$logFile = dirname(__FILE__) . '/../file/debug_log.txt';
 $data = file_get_contents("php://input");
 $order_details = json_decode($data);
 
@@ -40,8 +40,6 @@ function fetchProductTagsGraphQL($shop, $oauth_token, $product_ids)
 
     $api_version = "2026-01";
     $url = "https://{$shop}/admin/api/{$api_version}/graphql.json";
-
-    // Build GraphQL query for multiple products
     $query = 'query getProducts($ids: [ID!]!) {
         nodes(ids: $ids) {
             ... on Product {
@@ -50,8 +48,6 @@ function fetchProductTagsGraphQL($shop, $oauth_token, $product_ids)
             }
         }
     }';
-
-    // Convert product IDs to GID format
     $gids = array();
     foreach ($product_ids as $pid) {
         $gids[] = "gid://shopify/Product/{$pid}";
@@ -138,7 +134,6 @@ function calculateTagMatchPercentage($order_tags, $template_tags)
             $matched_count++;
         }
     }
-
     // Calculate percentage based on template tags count
     $percentage = ($matched_count / count($template_tags_array)) * 100;
     return $percentage;

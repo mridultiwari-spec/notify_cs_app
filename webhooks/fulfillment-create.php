@@ -291,9 +291,6 @@ if ($row) {
             }
 
             file_put_contents("$logFile", "Parameter Values for template: " . json_encode($parameter_values) . "\n", FILE_APPEND);
-            //file_put_contents("$logFile", "Template ID: " . $template_id . "\n", FILE_APPEND);
-
-            // Process button text and media URL with replacements
             foreach ($replacementMap as $placeholder => $value) {
                 if ($value !== null && $value !== '') {
                     if (strpos($button_text1, $placeholder) !== false) {

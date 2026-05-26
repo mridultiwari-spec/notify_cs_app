@@ -624,7 +624,7 @@ try {
     error_log("Processing WhatsApp for order update test - Template: $whatsapp_template_name");
 
     $whatsapp_api_config = array(
-      'log_file' => 'whatsapp_log.txt'
+      'log_file' => __DIR__ . '/../file/debug_log.txt'
     );
 
     $whatsapp_table2 = $prefix . "shopify_sms_notification_App_Log_Details";

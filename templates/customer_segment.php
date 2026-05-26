@@ -28,13 +28,9 @@ if ($debugMode) {
             if (!headers_sent()) {
                 header('Content-Type: text/plain; charset=utf-8');
             }
-            echo "=== customer_segment.php DEBUG FATAL ===\n";
-            foreach ($debugSteps as $line) {
-                echo $line . "\n";
-            }
-            echo "FATAL: " . $error['message'] . "\n";
-            echo "FILE: " . $error['file'] . "\n";
-            echo "LINE: " . $error['line'] . "\n";
+            // foreach ($debugSteps as $line) {
+            //     echo $line . "\n";
+            // }
         }
     });
 }
@@ -52,14 +48,12 @@ function writeDebugLog($message, $level = "INFO")
 }
 function getSessionTokenFromRequest()
 {
-
     $headers = array();
     if (function_exists('getallheaders')) {
         $headers = getallheaders();
     } elseif (function_exists('apache_request_headers')) {
         $headers = apache_request_headers();
     }
-
     foreach ($headers as $key => $value) {
         if (strtolower($key) === 'authorization') {
             if (preg_match('/Bearer\s+(.*)$/i', $value, $matches)) {
@@ -74,19 +68,15 @@ function getSessionTokenFromRequest()
         }
     }
 
-
     if (isset($_SESSION['shopify_session_token'])) {
         return $_SESSION['shopify_session_token'];
     }
-
     return null;
 }
-
 function updateAccessTokenInDatabase($shop, $newToken)
 {
     global $pdo, $prefix;
     $tables = $prefix . "shopify_sms_notification_app";
-
     try {
         $stmt = $pdo->prepare("UPDATE $tables SET session_access_token = :token, session_token_updated_at = NOW() WHERE shop = :shop");
         $stmt->execute(array(':token' => $newToken, ':shop' => $shop));
@@ -98,14 +88,11 @@ function updateAccessTokenInDatabase($shop, $newToken)
     }
 }
 
-
 function markShopNeedsReauth($shop)
 {
     global $pdo, $prefix;
     $tables = $prefix . "shopify_sms_notification_app";
-
     try {
-
         $stmt = $pdo->query("SHOW COLUMNS FROM $tables LIKE 'needs_reauth'");
         if (!$stmt->fetch()) {
             $pdo->exec("ALTER TABLE $tables ADD COLUMN needs_reauth TINYINT DEFAULT 0");
@@ -131,7 +118,6 @@ function triggerBackgroundSync($url, $shop, $segmentId, $localSegmentId)
     $execAvailable = function_exists('exec');
     $disabledFunctions = explode(',', ini_get('disable_functions'));
     $disabledFunctions = array_map('trim', $disabledFunctions);
-
     if ($execAvailable && !in_array('exec', $disabledFunctions)) {
         $command = sprintf(
             'curl -s --max-time 1 --connect-timeout 1 -X POST -d %s %s > /dev/null 2>&1 &',
@@ -181,14 +167,12 @@ function triggerBackgroundSync($url, $shop, $segmentId, $localSegmentId)
     );
     if ($fp) {
         stream_set_blocking($fp, 0);
-
         $header = "POST $path HTTP/1.1\r\n";
         $header .= "Host: $host\r\n";
         $header .= "Content-Type: application/x-www-form-urlencoded\r\n";
         $header .= "Content-Length: " . strlen($postFields) . "\r\n";
         $header .= "Connection: Close\r\n\r\n";
         $header .= $postFields;
-
         fwrite($fp, $header);
         fclose($fp);
         error_log("[BackgroundSync] fsockopen method used");
@@ -271,7 +255,226 @@ function deleteWebhookFromDatabase($pdo, $prefix, $shop, $segmentGid)
         return false;
     }
 }
+function getExistingLeftSegmentWebhook($pdo, $prefix, $shop, $segmentGid)
+{
+    $webhooksTable = $prefix . "webhooks";
+    $topic = 'customer.left_segment';
 
+    try {
+        $uniqueTopic = $topic . ':' . $segmentGid;
+        $stmt = $pdo->prepare("SELECT webhook_id FROM {$webhooksTable} WHERE shop = :shop AND topic = :topic LIMIT 1");
+        $stmt->execute(array(':shop' => $shop, ':topic' => $uniqueTopic));
+        $result = $stmt->fetch(PDO::FETCH_ASSOC);
+
+        if ($result && !empty($result['webhook_id'])) {
+            return $result['webhook_id'];
+        }
+        return null;
+    } catch (Exception $e) {
+        writeDebugLog("Error getting existing left webhook: " . $e->getMessage(), "ERROR");
+        return null;
+    }
+}
+function saveLeftWebhookToDatabase($pdo, $prefix, $shop, $segmentGid, $segmentName, $webhookId, $channel = 'sms')
+{
+    $webhooksTable = $prefix . "webhooks";
+    $topic = 'customer.left_segment';
+
+    try {
+        $uniqueTopic = $topic . ':' . $segmentGid;
+        $stmt = $pdo->prepare("SELECT id FROM {$webhooksTable} WHERE shop = :shop AND topic = :topic");
+        $stmt->execute(array(':shop' => $shop, ':topic' => $uniqueTopic));
+
+        if ($stmt->fetch()) {
+            $stmt = $pdo->prepare("
+                UPDATE {$webhooksTable} 
+                SET webhook_id = :webhook_id, channel = :channel
+                WHERE shop = :shop AND topic = :topic
+            ");
+        } else {
+            $stmt = $pdo->prepare("
+                INSERT INTO {$webhooksTable} (shop, topic, webhook_id, channel) 
+                VALUES (:shop, :topic, :webhook_id, :channel)
+            ");
+        }
+
+        $stmt->execute(array(
+            ':shop' => $shop,
+            ':topic' => $uniqueTopic,
+            ':webhook_id' => $webhookId,
+            ':channel' => $channel
+        ));
+        writeDebugLog("Saved left webhook to database for segment: {$segmentName} with webhook_id: {$webhookId}");
+        return true;
+    } catch (Exception $e) {
+        writeDebugLog("Error saving left webhook to database: " . $e->getMessage(), "ERROR");
+        return false;
+    }
+}
+function deleteLeftWebhookFromDatabase($pdo, $prefix, $shop, $segmentGid)
+{
+    $webhooksTable = $prefix . "webhooks";
+    $topic = 'customer.left_segment';
+    $uniqueTopic = $topic . ':' . $segmentGid;
+
+    try {
+        $stmt = $pdo->prepare("DELETE FROM {$webhooksTable} WHERE shop = :shop AND topic = :topic");
+        $stmt->execute(array(':shop' => $shop, ':topic' => $uniqueTopic));
+        writeDebugLog("Deleted left webhook from database for segment: {$segmentGid}");
+        return true;
+    } catch (Exception $e) {
+        writeDebugLog("Error deleting left webhook from database: " . $e->getMessage(), "ERROR");
+        return false;
+    }
+}
+
+function registerCustomerLeftSegmentWebhook($shop, $accessToken, $segmentGid, $segmentName)
+{
+    global $app_url, $pdo, $prefix;
+
+    $webhookEndpoint = rtrim($app_url, '/') . '/webhooks/segmentLeft2.php';
+    $apiVersion = "2026-01";
+    $filter = 'segmentId:"' . $segmentGid . '"';
+
+    $query = '
+    mutation webhookSubscriptionCreate($topic: WebhookSubscriptionTopic!, $webhookSubscription: WebhookSubscriptionInput!) {
+        webhookSubscriptionCreate(topic: $topic, webhookSubscription: $webhookSubscription) {
+            webhookSubscription {
+                id
+                topic
+                filter
+                uri
+            }
+            userErrors {
+                field
+                message
+            }
+        }
+    }';
+
+    $variables = array(
+        'topic' => 'CUSTOMER_LEFT_SEGMENT',
+        'webhookSubscription' => array(
+            'callbackUrl' => $webhookEndpoint,
+            'format' => 'JSON',
+            'filter' => $filter
+        )
+    );
+    writeDebugLog("Registering left webhook for segment: {$segmentName}");
+    writeDebugLog("Segment Numeric ID: {$segmentGid}");
+    writeDebugLog("Filter: {$filter}");
+    writeDebugLog("Webhook endpoint: {$webhookEndpoint}");
+
+    $result = makeShopifyGraphQLRequest($shop, $accessToken, $query, $variables, $apiVersion, null);
+
+    $GLOBALS['webhook_debug_left'] = array();
+
+    if (isset($result['error'])) {
+        $GLOBALS['webhook_debug_left'] = array(
+            'error_type' => 'curl_error',
+            'message' => $result['error']
+        );
+        writeDebugLog("GraphQL cURL error for left webhook: " . $result['error'], "ERROR");
+        return false;
+    }
+
+    if (isset($result['errors'])) {
+        $GLOBALS['webhook_debug_left'] = array(
+            'error_type' => 'graphql_errors',
+            'message' => $result['errors']
+        );
+        writeDebugLog("GraphQL errors for left webhook: " . json_encode($result['errors']), "ERROR");
+        return false;
+    }
+
+    if (isset($result['data']['webhookSubscriptionCreate']['userErrors']) && !empty($result['data']['webhookSubscriptionCreate']['userErrors'])) {
+        $userErrors = $result['data']['webhookSubscriptionCreate']['userErrors'];
+        $GLOBALS['webhook_debug_left'] = array(
+            'error_type' => 'user_errors',
+            'message' => $userErrors
+        );
+        writeDebugLog("User errors for left webhook: " . json_encode($userErrors), "ERROR");
+        return false;
+    }
+    $webhookId = isset($result['data']['webhookSubscriptionCreate']['webhookSubscription']['id'])
+        ? $result['data']['webhookSubscriptionCreate']['webhookSubscription']['id']
+        : null;
+
+    if ($webhookId) {
+        if (preg_match('/\/(\d+)$/', $webhookId, $matches)) {
+            $numericWebhookId = $matches[1];
+        } else {
+            $numericWebhookId = $webhookId;
+        }
+
+        writeDebugLog("Successfully registered left webhook for segment '{$segmentName}'. Webhook ID: {$numericWebhookId}");
+
+        saveLeftWebhookToDatabase($pdo, $prefix, $shop, $segmentGid, $segmentName, $numericWebhookId, 'sms');
+
+        $GLOBALS['webhook_debug_left'] = array(
+            'success' => true,
+            'webhook_id' => $numericWebhookId,
+            'message' => 'Left webhook registered successfully',
+            'endpoint' => $webhookEndpoint
+        );
+        return true;
+    }
+
+    $GLOBALS['webhook_debug_left'] = array(
+        'error_type' => 'no_webhook_id',
+        'message' => 'No webhook ID in response',
+        'full_response' => $result
+    );
+    writeDebugLog("Failed to register left webhook for segment: {$segmentName}", "ERROR");
+    return false;
+}
+
+function unregisterCustomerLeftSegmentWebhook($shop, $accessToken, $segmentGid, $webhookId)
+{
+    global $pdo, $prefix;
+    $apiVersion = "2026-01";
+
+    $query = '
+    mutation webhookSubscriptionDelete($id: ID!) {
+        webhookSubscriptionDelete(id: $id) {
+            deletedWebhookSubscriptionId
+            userErrors {
+                field
+                message
+            }
+        }
+    }';
+
+    if (is_numeric($webhookId) && strpos($webhookId, 'gid://') !== 0) {
+        $webhookGid = "gid://shopify/WebhookSubscription/{$webhookId}";
+    } else {
+        $webhookGid = $webhookId;
+    }
+
+    $variables = array('id' => $webhookGid);
+
+    writeDebugLog("Unregistering left webhook for segment: {$segmentGid} with webhook ID: {$webhookGid}");
+
+    $result = makeShopifyGraphQLRequest($shop, $accessToken, $query, $variables, $apiVersion, null);
+
+    if (isset($result['errors'])) {
+        writeDebugLog("Error unregistering left webhook: " . json_encode($result['errors']), "ERROR");
+        return false;
+    }
+
+    $deletedId = isset($result['data']['webhookSubscriptionDelete']['deletedWebhookSubscriptionId'])
+        ? $result['data']['webhookSubscriptionDelete']['deletedWebhookSubscriptionId']
+        : null;
+
+    if ($deletedId) {
+        writeDebugLog("Successfully unregistered left webhook for segment: {$segmentGid}");
+        deleteLeftWebhookFromDatabase($pdo, $prefix, $shop, $segmentGid);
+        return true;
+    }
+
+    writeDebugLog("Failed to unregister left webhook for segment: {$segmentGid}", "ERROR");
+    return false;
+}
 function registerCustomerJoinedSegmentWebhook($shop, $accessToken, $segmentGid, $segmentName)
 {
     global $app_url, $pdo, $prefix;
@@ -438,23 +641,36 @@ function manageSegmentWebhook($pdo, $prefix, $shop, $accessToken, $segmentDbId, 
         $whatsappEnabled = (int) $status['whatsapp_enabled'];
         $shouldHaveWebhook = ($smsEnabled == 1 || $whatsappEnabled == 1);
 
-        $existingWebhookId = getExistingSegmentWebhook($pdo, $prefix, $shop, $segmentGid);
+        $existingJoinedWebhookId = getExistingSegmentWebhook($pdo, $prefix, $shop, $segmentGid);
+        $joinedResult = true;
 
-        if ($shouldHaveWebhook && !$existingWebhookId) {
-            writeDebugLog("Segment '{$segmentName}' needs webhook registration (SMS: {$smsEnabled}, WhatsApp: {$whatsappEnabled})");
-            return registerCustomerJoinedSegmentWebhook($shop, $accessToken, $segmentGid, $segmentName);
-
-        } elseif (!$shouldHaveWebhook && $existingWebhookId) {
-            writeDebugLog("Segment '{$segmentName}' no longer needs webhook");
-            return unregisterCustomerJoinedSegmentWebhook($shop, $accessToken, $segmentGid, $existingWebhookId);
-
+        if ($shouldHaveWebhook && !$existingJoinedWebhookId) {
+            writeDebugLog("Segment '{$segmentName}' needs JOINED webhook registration");
+            $joinedResult = registerCustomerJoinedSegmentWebhook($shop, $accessToken, $segmentGid, $segmentName);
+        } elseif (!$shouldHaveWebhook && $existingJoinedWebhookId) {
+            writeDebugLog("Segment '{$segmentName}' no longer needs JOINED webhook");
+            $joinedResult = unregisterCustomerJoinedSegmentWebhook($shop, $accessToken, $segmentGid, $existingJoinedWebhookId);
         } else {
-            writeDebugLog("No webhook action needed for segment '{$segmentName}'");
-            return true;
+            writeDebugLog("No JOINED webhook action needed for segment '{$segmentName}'");
         }
 
+        $existingLeftWebhookId = getExistingLeftSegmentWebhook($pdo, $prefix, $shop, $segmentGid);
+        $leftResult = true;
+
+        if ($shouldHaveWebhook && !$existingLeftWebhookId) {
+            writeDebugLog("Segment '{$segmentName}' needs LEFT webhook registration");
+            $leftResult = registerCustomerLeftSegmentWebhook($shop, $accessToken, $segmentGid, $segmentName);
+        } elseif (!$shouldHaveWebhook && $existingLeftWebhookId) {
+            writeDebugLog("Segment '{$segmentName}' no longer needs LEFT webhook");
+            $leftResult = unregisterCustomerLeftSegmentWebhook($shop, $accessToken, $segmentGid, $existingLeftWebhookId);
+        } else {
+            writeDebugLog("No LEFT webhook action needed for segment '{$segmentName}'");
+        }
+
+        return ($joinedResult && $leftResult);
+
     } catch (Exception $e) {
-        writeDebugLog("Error managing segment webhook: " . $e->getMessage(), "ERROR");
+        writeDebugLog("Error managing segment webhooks: " . $e->getMessage(), "ERROR");
         return false;
     }
 }
@@ -610,7 +826,28 @@ function refreshShopAccessToken($shop, $sessionToken = null)
         return false;
     }
 }
+function validateFileType($filePath, $media_type)
+{
+    $allowedExtensions = array();
+    if ($media_type === 'image') {
+        $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'webp');
+    } elseif ($media_type === 'video') {
+        $allowedExtensions = array('mp4', 'mov', 'avi', 'webm', 'mkv', 'mpeg');
+    } elseif ($media_type === 'pdf') {
+        $allowedExtensions = array('pdf');
+    }
 
+    $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+
+    if (!in_array($extension, $allowedExtensions)) {
+        return array(
+            'valid' => false,
+            'message' => 'Invalid file type for ' . $media_type . '. Allowed: ' . implode(', ', $allowedExtensions)
+        );
+    }
+
+    return array('valid' => true, 'message' => '');
+}
 $isAjaxRequest = ($_SERVER['REQUEST_METHOD'] === 'POST') &&
     (isset($_POST['update_status']) ||
         isset($_POST['get_template_data']) ||
@@ -1012,6 +1249,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
         ? json_encode(array('type' => 'Bulk Schedule', 'schedule_datetime' => $schedule_dt))
         : json_encode(array('type' => 'When Customer Joins Segment'));
     $id = isset($_POST['aid']) ? $_POST['aid'] : '';
+    $isEditMode = !empty($id);
     if (empty($id)) {
         echo json_encode(array('success' => false, 'message' => 'ID missing'));
         exit;
@@ -1026,13 +1264,63 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
             $media_source = 'input';
             $media_url = trim($_POST['media_url']);
         } elseif ($media_source_type === 'file') {
-            if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0) {
+            $newFileUploaded = (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0);
+
+            if ($newFileUploaded) {
                 $uploadDir = dirname(__FILE__) . "/uploads/";
+
                 if (!is_dir($uploadDir)) {
-                    mkdir($uploadDir, 0777, true);
+                    if (!mkdir($uploadDir, 0777, true)) {
+                        echo json_encode(array(
+                            'success' => false,
+                            'message' => 'Failed to create directory: ' . $uploadDir
+                        ));
+                        exit;
+                    }
+                }
+
+                if (!is_writable($uploadDir)) {
+                    echo json_encode(array(
+                        'success' => false,
+                        'message' => 'Directory not writable: ' . $uploadDir
+                    ));
+                    exit;
                 }
 
                 $fileExtension = strtolower(pathinfo($_FILES["media_file"]["name"], PATHINFO_EXTENSION));
+
+                // FILE TYPE VALIDATION
+                $validation = validateFileType($_FILES["media_file"]["name"], $media_type);
+                if (!$validation['valid']) {
+                    echo json_encode(array(
+                        'success' => false,
+                        'message' => $validation['message']
+                    ));
+                    exit;
+                }
+
+                // Delete old file if exists (optional)
+                if ($isEditMode) {
+                    // Fetch existing record to get old file info
+                    $fetchStmt = $pdo->prepare("SELECT whatsapp FROM $customerSegmentTable WHERE id = :id AND shop = :shop");
+                    $fetchStmt->execute(array(':id' => $id, ':shop' => $shop));
+                    $existingData = $fetchStmt->fetch(PDO::FETCH_ASSOC);
+
+                    if ($existingData && !empty($existingData['whatsapp'])) {
+                        $existingWhatsapp = json_decode($existingData['whatsapp'], true);
+                        if (
+                            isset($existingWhatsapp['media_source']) && $existingWhatsapp['media_source'] === 'file' &&
+                            !empty($existingWhatsapp['media_url'])
+                        ) {
+                            $oldFileName = basename($existingWhatsapp['media_url']);
+                            $oldFilePath = dirname(__FILE__) . "/uploads/" . $oldFileName;
+                            if (file_exists($oldFilePath)) {
+                                unlink($oldFilePath);
+                            }
+                        }
+                    }
+                }
+
                 $fileName = time() . "_" . preg_replace(
                     "/[^a-zA-Z0-9._-]/",
                     "",
@@ -1040,10 +1328,68 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && ((isset($_POST['form_type']) ? $_PO
                 ) . "." . $fileExtension;
 
                 $targetFile = $uploadDir . $fileName;
+
                 if (move_uploaded_file($_FILES["media_file"]["tmp_name"], $targetFile)) {
                     $media_source = 'file';
-                    global $app_url;
                     $media_url = rtrim($app_url, '/') . "/templates/uploads/" . $fileName;
+                } else {
+                    $lastError = error_get_last();
+                    $errorMsg = $lastError ? $lastError['message'] : 'Unknown error';
+                    echo json_encode(array(
+                        'success' => false,
+                        'message' => 'Failed to move uploaded file. Error: ' . $errorMsg
+                    ));
+                    exit;
+                }
+            } else {
+                // NO new file uploaded - check if we should keep existing file
+                if ($isEditMode) {
+                    // Fetch existing record to get existing file info
+                    $fetchStmt = $pdo->prepare("SELECT whatsapp FROM $customerSegmentTable WHERE id = :id AND shop = :shop");
+                    $fetchStmt->execute(array(':id' => $id, ':shop' => $shop));
+                    $existingData = $fetchStmt->fetch(PDO::FETCH_ASSOC);
+
+                    if ($existingData && !empty($existingData['whatsapp'])) {
+                        $existingWhatsapp = json_decode($existingData['whatsapp'], true);
+                        if (
+                            isset($existingWhatsapp['media_source']) && $existingWhatsapp['media_source'] === 'file' &&
+                            !empty($existingWhatsapp['media_url'])
+                        ) {
+                            $media_source = 'file';
+                            $media_url = $existingWhatsapp['media_url'];
+                        } else {
+                            echo json_encode(array(
+                                'success' => false,
+                                'message' => 'No file uploaded. Please select a file to upload.'
+                            ));
+                            exit;
+                        }
+                    } else {
+                        echo json_encode(array(
+                            'success' => false,
+                            'message' => 'No file uploaded. Please select a file to upload.'
+                        ));
+                        exit;
+                    }
+                } else {
+                    // New record and no file uploaded - show error
+                    $errorCode = isset($_FILES['media_file']['error']) ? $_FILES['media_file']['error'] : 'No file';
+                    $errorMessages = array(
+                        1 => 'File exceeds upload_max_filesize',
+                        2 => 'File exceeds MAX_FILE_SIZE',
+                        3 => 'File only partially uploaded',
+                        4 => 'No file uploaded. Please select a file to upload.',
+                        6 => 'Missing temporary folder',
+                        7 => 'Failed to write file to disk',
+                        8 => 'PHP extension stopped upload'
+                    );
+                    $errorMsg = isset($errorMessages[$errorCode]) ? $errorMessages[$errorCode] : 'Error code: ' . $errorCode;
+
+                    echo json_encode(array(
+                        'success' => false,
+                        'message' => 'Upload error: ' . $errorMsg
+                    ));
+                    exit;
                 }
             }
         } elseif ($media_source_type === 'dynamic') {
@@ -2460,7 +2806,6 @@ foreach ($rows as $row) {
         function openTestModal(segmentId) {
             currentSegmentId = segmentId;
             document.getElementById('testModal').style.display = 'block';
-
             var select = document.getElementById('test_country_code');
             var searchInput = document.getElementById('country_search');
             if (select && searchInput) {
@@ -3269,9 +3614,11 @@ foreach ($rows as $row) {
                 if (mediaFileUrlBox) {
                     mediaFileUrlBox.style.display = 'flex';
                 }
+
             }
         }
     </script>
 </body>
+
 
 </html>

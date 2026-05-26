@@ -57,6 +57,7 @@ try {
     $response = array('success' => false, 'message' => 'No channel enabled');
     $sms_sent = false;
     $whatsapp_sent = false;
+    $has_parameters = false;
 
     // ============ SEND SMS IF ENABLED ============
     if ($sms_enabled == 1) {
@@ -64,8 +65,10 @@ try {
             error_log("SMS enabled but no template_id_sms found for segment: $segmentId");
         } else {
             $template_name_sms = $segmentData['template_id_sms'];
+            $sms_text = isset($segmentData['sms']) ? $segmentData['sms'] : '';
 
-            $actualValues = array(
+            // Define test values for placeholders
+            $testValues = array(
                 'order_name' => '#TEST-12345',
                 'order_total_price' => '99.99',
                 'customer_email_id' => 'john.doe@example.com',
@@ -80,63 +83,110 @@ try {
                 'customer_zip' => '10001'
             );
 
-            $smsVariables = json_decode($segmentData['sms_variables'], true);
+            // Check if SMS has parameters (sms_variables is not empty)
+            $smsVariables = array();
+            $has_parameters = false;
 
-            $parameter_values = array();
-
-            if (!empty($smsVariables) && is_array($smsVariables)) {
-                foreach ($smsVariables as $key => $dbValue) {
-                    $variableName = trim($key, '{} ');
-                    if (isset($actualValues[$variableName])) {
-                        $parameter_values[$key] = $actualValues[$variableName];
-                    } else {
-                        $dbValueClean = trim($dbValue, '{} ');
-                        if (isset($actualValues[$dbValueClean])) {
-                            $parameter_values[$key] = $actualValues[$dbValueClean];
-                        } else {
-                            $parameter_values[$key] = $dbValue;
-                        }
-                    }
+            if (!empty($segmentData['sms_variables'])) {
+                $smsVariables = json_decode($segmentData['sms_variables'], true);
+                if (is_array($smsVariables) && count($smsVariables) > 0) {
+                    $has_parameters = true;
+                    error_log("SMS has parameters - will use template-based SMS");
+                } else {
+                    error_log("SMS has NO parameters - will use plain text SMS");
                 }
             } else {
-                $parameter_values = array(
-                    "order_name" => '#TEST-12345',
-                    "order_total_price" => '99.99',
-                    "customer_email_id" => 'john.doe@example.com',
-                    "country_code" => $cleanCountryCode,
-                    "customer_phone" => $cleanPhone,
-                    "customer_fname" => 'John',
-                    "customer_lname" => 'Doe'
-                );
+                error_log("SMS has NO parameters - will use plain text SMS");
             }
 
-            if (empty($parameter_values)) {
-                $parameter_values = array(
-                    "order_name" => '#TEST-12345',
-                    "order_total_price" => '99.99',
-                    "customer_email_id" => 'john.doe@example.com',
-                    "country_code" => $cleanCountryCode,
-                    "customer_phone" => $cleanCountryCode . $cleanPhone
-                );
-            }
+            // Build replacement map for variables
+            $replacementMap = array(
+                '{{ order_name }}' => $testValues['order_name'],
+                '{{ order_total_price }}' => $testValues['order_total_price'],
+                '{{ customer_email_id }}' => $testValues['customer_email_id'],
+                '{{ country_code }}' => $testValues['country_code'],
+                '{{ customer_phone }}' => $testValues['customer_phone'],
+                '{{ customer_full_name }}' => $testValues['customer_full_name'],
+                '{{ customer_fname }}' => $testValues['customer_fname'],
+                '{{ customer_lname }}' => $testValues['customer_lname'],
+                '{{ segment_name }}' => $testValues['segment_name'],
+                '{{ customer_address }}' => $testValues['customer_address'],
+                '{{ customer_city }}' => $testValues['customer_city'],
+                '{{ customer_zip }}' => $testValues['customer_zip']
+            );
 
-            if (!empty($cleanPhone) && !empty($template_name_sms) && !empty($parameter_values)) {
-                send_smstext_with_parameters(
-                    $cleanCountryCode,
-                    $cleanPhone,
-                    $template_name_sms,
-                    $shop,
-                    'john.doe@example.com',
-                    'John Doe',
-                    $parameter_values,
-                    'TEST-12345',
-                    'Test Order',
-                    $notification_type
-                );
-                $sms_sent = true;
-                error_log("SMS sent successfully for segment test to {$cleanPhone}");
+            if ($has_parameters) {
+                // PARAMETER-BASED SMS (Template SMS)
+                error_log("Using TEMPLATE-BASED SMS with parameters");
+
+                $parameter_values = array();
+                foreach ($smsVariables as $key => $value) {
+                    $processed_value = $value;
+                    foreach ($replacementMap as $placeholder => $val) {
+                        $processed_value = str_replace($placeholder, $val, $processed_value);
+                    }
+                    $parameter_values[$key] = $processed_value;
+                }
+
+                if (!empty($cleanPhone) && !empty($template_name_sms) && !empty($parameter_values)) {
+                    if (function_exists('send_smstext_with_parameters')) {
+                        send_smstext_with_parameters(
+                            $cleanCountryCode,
+                            $cleanPhone,
+                            $template_name_sms,
+                            $shop,
+                            'john.doe@example.com',
+                            'John Doe',
+                            $parameter_values,
+                            'TEST-12345',
+                            'Test Order',
+                            $notification_type
+                        );
+                        $sms_sent = true;
+                        error_log("Template SMS sent successfully for segment test to {$cleanPhone}");
+                    } else {
+                        error_log("ERROR: send_smstext_with_parameters function not found");
+                    }
+                } else {
+                    error_log("Missing required data to send template SMS");
+                }
             } else {
-                error_log("Missing required data to send SMS");
+                // PLAIN TEXT SMS (No parameters)
+                error_log("Using PLAIN TEXT SMS (no parameters)");
+
+                if (empty($template_name_sms)) {
+                    error_log("ERROR: SMS template name is empty for plain text SMS");
+                } else {
+                    // Replace placeholders in SMS text
+                    $processed_sms_text = $sms_text;
+                    foreach ($replacementMap as $placeholder => $val) {
+                        $processed_sms_text = str_replace($placeholder, $val, $processed_sms_text);
+                    }
+
+                    error_log("Processed SMS text: " . $processed_sms_text);
+
+                    if (!empty($cleanPhone) && !empty($template_name_sms)) {
+                        if (function_exists('send_smstext')) {
+                            send_smstext(
+                                $cleanCountryCode,
+                                $cleanPhone,
+                                $template_name_sms,
+                                $shop,
+                                'john.doe@example.com',
+                                'John Doe',
+                                'TEST-12345',
+                                'Test Order',
+                                $notification_type
+                            );
+                            $sms_sent = true;
+                            error_log("Plain text SMS sent successfully for segment test to {$cleanPhone}");
+                        } else {
+                            error_log("ERROR: send_smstext function not found");
+                        }
+                    } else {
+                        error_log("Missing required data to send plain text SMS");
+                    }
+                }
             }
         }
     } else {
@@ -160,7 +210,7 @@ try {
             error_log("Processing WhatsApp for customer segment test - Template: $whatsappTemplateName");
 
             $whatsappApiConfig = array(
-                'log_file' => 'whatsapp_log.txt'
+                'log_file' =>  __DIR__ . '/../file/debug_log.txt'
             );
 
             $whatsappTable2 = $prefix . "shopify_sms_notification_App_Log_Details";

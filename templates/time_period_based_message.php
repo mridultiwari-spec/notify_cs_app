@@ -11,7 +11,28 @@ function send_json_response($payload, $statusCode = 200)
     echo json_encode($payload);
     exit;
 }
+function validateFileType($filePath, $media_type)
+{
+    $allowedExtensions = array();
+    if ($media_type === 'image') {
+        $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'webp');
+    } elseif ($media_type === 'video') {
+        $allowedExtensions = array('mp4', 'mov', 'avi', 'webm', 'mkv', 'mpeg');
+    } elseif ($media_type === 'pdf') {
+        $allowedExtensions = array('pdf');
+    }
 
+    $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+
+    if (!in_array($extension, $allowedExtensions)) {
+        return array(
+            'valid' => false,
+            'message' => 'Invalid file type for ' . $media_type . '. Allowed: ' . implode(', ', $allowedExtensions)
+        );
+    }
+
+    return array('valid' => true, 'message' => '');
+}
 $shop = isset($_SESSION['shop']) ? $_SESSION['shop'] : (isset($_POST['shop']) ? $_POST['shop'] : (isset($_GET['shop']) ? $_GET['shop'] : ''));
 if (!$shop) {
     send_json_response(array('success' => false, 'message' => 'Shop not found'), 400);
@@ -193,6 +214,7 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
             ));
 
         } elseif (isset($_POST['whatsapp_tab_submit'])) {
+            $isEditMode = !empty($id);
             $media_type = isset($_POST['media_type']) ? $_POST['media_type'] : 'text';
             $media_source_type = isset($_POST['media_source_type']) ? $_POST['media_source_type'] : 'url';
             $media_source = null;
@@ -205,13 +227,54 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
                         $media_url = trim($_POST['media_url']);
                     }
                 } elseif ($media_source_type === 'file') {
-                    if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0) {
+                    $newFileUploaded = (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0);
+
+                    if ($newFileUploaded) {
                         $uploadDir = dirname(__FILE__) . "/uploads/";
+
                         if (!is_dir($uploadDir)) {
-                            mkdir($uploadDir, 0777, true);
+                            if (!mkdir($uploadDir, 0777, true)) {
+                                send_json_response(array(
+                                    'success' => false,
+                                    'message' => 'Failed to create directory: ' . $uploadDir
+                                ));
+                            }
+                        }
+
+                        if (!is_writable($uploadDir)) {
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Directory not writable: ' . $uploadDir
+                            ));
                         }
 
                         $fileExtension = strtolower(pathinfo($_FILES["media_file"]["name"], PATHINFO_EXTENSION));
+
+                        // FILE TYPE VALIDATION
+                        $validation = validateFileType($_FILES["media_file"]["name"], $media_type);
+                        if (!$validation['valid']) {
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => $validation['message']
+                            ));
+                        }
+
+                        // Delete old file if exists (optional)
+                        if ($isEditMode) {
+                            // Fetch existing record to get old file info
+                            $fetchStmt = $pdo->prepare("SELECT media_source, media_url FROM $table WHERE id = :id AND shop = :shop");
+                            $fetchStmt->execute(array(':id' => $id, ':shop' => $shop));
+                            $existingMedia = $fetchStmt->fetch(PDO::FETCH_ASSOC);
+
+                            if ($existingMedia && $existingMedia['media_source'] === 'file' && !empty($existingMedia['media_url'])) {
+                                $oldFileName = basename($existingMedia['media_url']);
+                                $oldFilePath = dirname(__FILE__) . "/uploads/" . $oldFileName;
+                                if (file_exists($oldFilePath)) {
+                                    unlink($oldFilePath);
+                                }
+                            }
+                        }
+
                         $fileName = time() . "_" . preg_replace(
                             "/[^a-zA-Z0-9._-]/",
                             "",
@@ -219,9 +282,53 @@ if ($_SERVER["REQUEST_METHOD"] === 'POST') {
                         ) . "." . $fileExtension;
 
                         $targetPath = $uploadDir . $fileName;
+
                         if (move_uploaded_file($_FILES["media_file"]["tmp_name"], $targetPath)) {
                             $media_source = 'file';
                             $media_url = rtrim($app_url, '/') . "/templates/uploads/" . $fileName;
+                        } else {
+                            $lastError = error_get_last();
+                            $errorMsg = $lastError ? $lastError['message'] : 'Unknown error';
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Failed to move uploaded file. Error: ' . $errorMsg
+                            ));
+                        }
+                    } else {
+                        // NO new file uploaded - check if we should keep existing file
+                        if ($isEditMode) {
+                            // Fetch existing record to get existing file info
+                            $fetchStmt = $pdo->prepare("SELECT media_source, media_url FROM $table WHERE id = :id AND shop = :shop");
+                            $fetchStmt->execute(array(':id' => $id, ':shop' => $shop));
+                            $existingMedia = $fetchStmt->fetch(PDO::FETCH_ASSOC);
+
+                            if ($existingMedia && $existingMedia['media_source'] === 'file' && !empty($existingMedia['media_url'])) {
+                                $media_source = 'file';
+                                $media_url = $existingMedia['media_url'];
+                            } else {
+                                send_json_response(array(
+                                    'success' => false,
+                                    'message' => 'No file uploaded. Please select a file to upload.'
+                                ));
+                            }
+                        } else {
+                            // New record and no file uploaded - show error
+                            $errorCode = isset($_FILES['media_file']['error']) ? $_FILES['media_file']['error'] : 'No file';
+                            $errorMessages = array(
+                                1 => 'File exceeds upload_max_filesize',
+                                2 => 'File exceeds MAX_FILE_SIZE',
+                                3 => 'File only partially uploaded',
+                                4 => 'No file uploaded. Please select a file to upload.',
+                                6 => 'Missing temporary folder',
+                                7 => 'Failed to write file to disk',
+                                8 => 'PHP extension stopped upload'
+                            );
+                            $errorMsg = isset($errorMessages[$errorCode]) ? $errorMessages[$errorCode] : 'Error code: ' . $errorCode;
+
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Upload error: ' . $errorMsg
+                            ));
                         }
                     }
                 } elseif ($media_source_type === 'dynamic') {
@@ -803,48 +910,6 @@ foreach ($rows as $row) {
             </div>
         </div>
     </div>
-    <!-- <div id="testModal" class="test-modal-overlay">
-        <div class="test-modal-box">
-            <div class="test-modal-header">
-                <h3>Send Test Message</h3>
-                <button class="test-modal-close" onclick="closeTestModal()">✕</button>
-            </div>
-            <div class="test-modal-body">
-                <div class="test-form-group">
-                    <label>Country Code</label>
-                    <select id="test_country_code" class="test-select">
-                        <option value="+91">India (+91)</option>
-                        <option value="+1">USA (+1)</option>
-                        <option value="+44">UK (+44)</option>
-                        <option value="+61">Australia (+61)</option>
-                        <option value="+86">China (+86)</option>
-                        <option value="+81">Japan (+81)</option>
-                        <option value="+49">Germany (+49)</option>
-                        <option value="+33">France (+33)</option>
-                        <option value="+1">Canada (+1)</option>
-                        <option value="+55">Brazil (+55)</option>
-                        <option value="+7">Russia (+7)</option>
-                        <option value="+82">South Korea (+82)</option>
-                        <option value="+39">Italy (+39)</option>
-                        <option value="+34">Spain (+34)</option>
-                        <option value="+52">Mexico (+52)</option>
-                        <option value="+31">Netherlands (+31)</option>
-                        <option value="+46">Sweden (+46)</option>
-                    </select>
-                </div>
-                <div class="test-form-group">
-                    <label>Phone Number</label>
-                    <input type="tel" id="test_phone" class="test-input" style="width: 90%;"
-                        placeholder="Enter phone number (e.g., 9876543210)">
-                    <small class="test-hint">Enter number without country code</small>
-                </div>
-            </div>
-            <div class="test-modal-footer">
-                <button class="test-cancel-btn" onclick="closeTestModal()">Cancel</button>
-                <button class="test-submit-btn" onclick="sendTestFromModal()">Send Test</button>
-            </div>
-        </div>
-    </div> -->
     <div id="testModal" class="test-modal-overlay">
         <div class="test-modal-box">
             <div class="test-modal-header">

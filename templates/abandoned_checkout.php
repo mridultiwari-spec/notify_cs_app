@@ -47,6 +47,29 @@ function send_json_response($payload)
     exit;
 }
 
+function validateFileType($filePath, $media_type)
+{
+    $allowedExtensions = array();
+    if ($media_type === 'image') {
+        $allowedExtensions = array('jpg', 'jpeg', 'png', 'gif', 'webp');
+    } elseif ($media_type === 'video') {
+        $allowedExtensions = array('mp4', 'mov', 'avi', 'webm', 'mkv', 'mpeg');
+    } elseif ($media_type === 'pdf') {
+        $allowedExtensions = array('pdf');
+    }
+
+    $extension = strtolower(pathinfo($filePath, PATHINFO_EXTENSION));
+
+    if (!in_array($extension, $allowedExtensions)) {
+        return array(
+            'valid' => false,
+            'message' => 'Invalid file type for ' . $media_type . '. Allowed: ' . implode(', ', $allowedExtensions)
+        );
+    }
+
+    return array('valid' => true, 'message' => '');
+}
+
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     global $app_url;
     $token = get_bearer_token_php53();
@@ -145,13 +168,38 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         $media_url = trim($_POST['media_url']);
                     }
                 } elseif ($media_source_type === 'file') {
-                    if (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0) {
+                    $newFileUploaded = (isset($_FILES['media_file']) && $_FILES['media_file']['error'] === 0);
+
+                    if ($newFileUploaded) {
                         $uploadDir = dirname(__FILE__) . "/uploads/";
+
                         if (!is_dir($uploadDir)) {
-                            mkdir($uploadDir, 0777, true);
+                            if (!mkdir($uploadDir, 0777, true)) {
+                                send_json_response(array(
+                                    'success' => false,
+                                    'message' => 'Failed to create directory: ' . $uploadDir
+                                ));
+                            }
+                        }
+
+                        if (!is_writable($uploadDir)) {
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Directory not writable: ' . $uploadDir
+                            ));
                         }
 
                         $fileExtension = strtolower(pathinfo($_FILES["media_file"]["name"], PATHINFO_EXTENSION));
+
+                        // FILE TYPE VALIDATION
+                        $validation = validateFileType($_FILES["media_file"]["name"], $media_type);
+                        if (!$validation['valid']) {
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => $validation['message']
+                            ));
+                        }
+
                         $fileName = time() . "_" . preg_replace(
                             "/[^a-zA-Z0-9._-]/",
                             "",
@@ -159,9 +207,43 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         ) . "." . $fileExtension;
 
                         $targetFile = $uploadDir . $fileName;
+
                         if (move_uploaded_file($_FILES["media_file"]["tmp_name"], $targetFile)) {
                             $media_source = 'file';
                             $media_url = rtrim($app_url, '/') . "/templates/uploads/" . $fileName;
+                        } else {
+                            $lastError = error_get_last();
+                            $errorMsg = $lastError ? $lastError['message'] : 'Unknown error';
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Failed to move uploaded file. Error: ' . $errorMsg
+                            ));
+                        }
+                    } else {
+                        // NO new file uploaded - check if we should keep existing file
+                        $existingMediaSource = isset($existingData['media_source']) ? $existingData['media_source'] : '';
+                        $existingMediaUrl = isset($existingData['media_url']) ? $existingData['media_url'] : '';
+
+                        if ($isEditMode && $existingMediaSource === 'file' && !empty($existingMediaUrl)) {
+                            $media_source = 'file';
+                            $media_url = $existingMediaUrl;
+                        } else if (!$isEditMode || empty($existingMediaUrl)) {
+                            $errorCode = isset($_FILES['media_file']['error']) ? $_FILES['media_file']['error'] : 'No file';
+                            $errorMessages = array(
+                                1 => 'File exceeds upload_max_filesize',
+                                2 => 'File exceeds MAX_FILE_SIZE',
+                                3 => 'File only partially uploaded',
+                                4 => 'No file uploaded. Please select a file to upload.',
+                                6 => 'Missing temporary folder',
+                                7 => 'Failed to write file to disk',
+                                8 => 'PHP extension stopped upload'
+                            );
+                            $errorMsg = isset($errorMessages[$errorCode]) ? $errorMessages[$errorCode] : 'Error code: ' . $errorCode;
+
+                            send_json_response(array(
+                                'success' => false,
+                                'message' => 'Upload error: ' . $errorMsg
+                            ));
                         }
                     }
                 } elseif ($media_source_type === 'dynamic') {
@@ -302,6 +384,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -646,7 +729,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <div class="variable-item">{{ Ad_item_price }}</div>
                         <div class="variable-item">{{ Ad_order_status_url }}</div>
                         <div class="variable-item">{{ Ad_item_vendor }}</div>
-                        <div class="variable-item">{{ Ad_total_discount }}</div> 
+                        <div class="variable-item">{{ Ad_total_discount }}</div>
                         <div class="variable-item">{{ Ad_order_number }}</div>
                     </div>
                 </div>
@@ -992,7 +1075,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 }
             }
         }
-        
+
     </script>
     <div id="toast" class="toast">Copied to clipboard</div>
 </body>

@@ -233,9 +233,32 @@ $shipping_string = $shipping ? implode(', ', array_filter(array(
 ))) : '';
 
 // Fix 12: customer not in refund payload root
+// Fix 12: customer not in refund payload root
 $customer = isset($order_details->customer) ? $order_details->customer : null;
-$customer_fname = ($customer && isset($customer->first_name)) ? $customer->first_name : '';
-$customer_lname = ($customer && isset($customer->last_name)) ? $customer->last_name : '';
+
+// Initialize customer name variables
+$customer_fname = '';
+$customer_lname = '';
+
+// Source 1: Try to get from customer object in webhook
+if ($customer && isset($customer->first_name)) {
+    $customer_fname = $customer->first_name;
+    $customer_lname = isset($customer->last_name) ? $customer->last_name : '';
+    file_put_contents("$logFile", "INFO: Got customer name from webhook customer: {$customer_fname} {$customer_lname}\n", FILE_APPEND);
+}
+// Source 2: Try to get from billing address
+elseif ($billing && isset($billing->first_name)) {
+    $customer_fname = $billing->first_name;
+    $customer_lname = isset($billing->last_name) ? $billing->last_name : '';
+    file_put_contents("$logFile", "INFO: Got customer name from billing address: {$customer_fname} {$customer_lname}\n", FILE_APPEND);
+}
+// Source 3: Try to get from shipping address
+elseif ($shipping && isset($shipping->first_name)) {
+    $customer_fname = $shipping->first_name;
+    $customer_lname = isset($shipping->last_name) ? $shipping->last_name : '';
+    file_put_contents("$logFile", "INFO: Got customer name from shipping address: {$customer_fname} {$customer_lname}\n", FILE_APPEND);
+}
+
 $customer_full_name = trim($customer_fname . ' ' . $customer_lname);
 $customer_email_id = isset($order_details->contact_email) ? $order_details->contact_email : '';
 
@@ -278,11 +301,33 @@ if ($orderData) {
         $order_customer_phone = $orderData['customer']['defaultPhoneNumber']['phoneNumber'];
     }
 
-    // Update customer email from order data if available
+        // Update customer email from order data if available
     if (isset($orderData['customer']['defaultEmailAddress']) && isset($orderData['customer']['defaultEmailAddress']['emailAddress'])) {
         $customer_email_id = $orderData['customer']['defaultEmailAddress']['emailAddress'];
     } elseif (isset($orderData['email'])) {
         $customer_email_id = $orderData['email'];
+    }
+
+    // Update customer name from order data if available
+    if (isset($orderData['customer']['firstName']) && isset($orderData['customer']['lastName'])) {
+        $customer_fname = $orderData['customer']['firstName'];
+        $customer_lname = $orderData['customer']['lastName'];
+        $customer_full_name = trim($customer_fname . ' ' . $customer_lname);
+        file_put_contents("$logFile", "INFO: Updated customer name from GraphQL order customer: {$customer_fname} {$customer_lname}\n", FILE_APPEND);
+    }
+    // Fallback to shipping address from order data
+    elseif (isset($orderData['shippingAddress']['firstName'])) {
+        $customer_fname = $orderData['shippingAddress']['firstName'];
+        $customer_lname = isset($orderData['shippingAddress']['lastName']) ? $orderData['shippingAddress']['lastName'] : '';
+        $customer_full_name = trim($customer_fname . ' ' . $customer_lname);
+        file_put_contents("$logFile", "INFO: Updated customer name from GraphQL order shipping address: {$customer_fname} {$customer_lname}\n", FILE_APPEND);
+    }
+    // Fallback to billing address from order data
+    elseif (isset($orderData['billingAddress']['firstName'])) {
+        $customer_fname = $orderData['billingAddress']['firstName'];
+        $customer_lname = isset($orderData['billingAddress']['lastName']) ? $orderData['billingAddress']['lastName'] : '';
+        $customer_full_name = trim($customer_fname . ' ' . $customer_lname);
+        file_put_contents("$logFile", "INFO: Updated customer name from GraphQL order billing address: {$customer_fname} {$customer_lname}\n", FILE_APPEND);
     }
 
     // Update order name
@@ -356,16 +401,17 @@ $item_price_arr = array();
 $item_quantity_arr = array();
 $item_sku_arr = array();
 $item_vendor_arr = array();
-
+$refund_subtotal_arr = array();
 if (isset($order_details->refund_line_items) && is_array($order_details->refund_line_items)) {
     foreach ($order_details->refund_line_items as $refund_line_item) {
         $line_item = isset($refund_line_item->line_item) ? $refund_line_item->line_item : null;
         if ($line_item) {
             $item_name_arr[] = isset($line_item->name) ? $line_item->name : '';
             $item_price_arr[] = isset($line_item->price) ? $line_item->price : '';
-            $item_quantity_arr[] = isset($line_item->quantity) ? $line_item->quantity : '';
+            $item_quantity_arr[] = isset($refund_line_item->quantity) ? $refund_line_item->quantity : '';
             $item_sku_arr[] = isset($line_item->sku) ? $line_item->sku : '';
             $item_vendor_arr[] = isset($line_item->vendor) ? $line_item->vendor : '';
+            $refund_subtotal_arr[] = isset($refund_line_item->subtotal) ? $refund_line_item->subtotal : '';
         }
     }
 }
@@ -374,7 +420,7 @@ $item_price = isset($item_price_arr[0]) ? $item_price_arr[0] : '';
 $item_quantity = isset($item_quantity_arr[0]) ? $item_quantity_arr[0] : '';
 $item_sku = isset($item_sku_arr[0]) ? $item_sku_arr[0] : '';
 $item_vendor = isset($item_vendor_arr[0]) ? $item_vendor_arr[0] : '';
-
+$refund_subtotal = isset($refund_subtotal_arr[0]) ? $refund_subtotal_arr[0] : '';
 date_default_timezone_set("Asia/Kolkata");
 $current_DateTime = date('Y-m-d H:i:s');
 $finalDateTime = $current_DateTime;
@@ -399,7 +445,6 @@ if ($row) {
         $media_source_prod = $row['media_source'];
         $button_text1 = trim($row['button_text1']);
         $template_name_sms = $row['template_name'];
-        // Fetch and decode sms_variables
         $sms_variables = array();
         $has_parameters = false;
 
@@ -408,8 +453,6 @@ if ($row) {
             if (!is_array($sms_variables)) {
                 $sms_variables = array();
             }
-
-            // Check if sms_variables has any key-value pairs
             if (count($sms_variables) > 0) {
                 $has_parameters = true;
                 file_put_contents("$logFile", "SMS Variables loaded (has parameters): " . print_r($sms_variables, true) . "\n", FILE_APPEND);
@@ -419,8 +462,6 @@ if ($row) {
         } else {
             file_put_contents("$logFile", "SMS Variables is NULL or empty\n", FILE_APPEND);
         }
-
-        // Build base replacement map for standard variables
         $replacementMap = array(
             "{{ order_name }}" => $order_name,
             "{{ Ad_order_number }}" => $order_id,

@@ -671,7 +671,7 @@ if ($whatsapp_enabled == 1 && !empty($whatsapp_template_name)) {
         // 'api_domain' => 'https://your-api-domain.com',  // Replace with actual API domain
         // 'channel_id' => 'your_channel_id',              // Replace with actual channel ID
         // 'api_key' => 'your_api_key',                    // Replace with actual API key
-        'log_file' => 'whatsapp_log.txt'
+        'log_file' => __DIR__ . '/../file/debug_log.txt'
     );
 
     // Table for logging

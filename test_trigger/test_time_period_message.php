@@ -687,7 +687,7 @@ if ($whatsapp_enabled == 1 && !empty($whatsapp_template_name)) {
         // 'api_domain' => 'https://your-api-domain.com',
         // 'channel_id' => 'your_channel_id',
         // 'api_key' => 'your_api_key',
-        'log_file' => 'whatsapp_log.txt'
+        'log_file' => __DIR__ . '/../file/debug_log.txt'
     );
 
     $whatsapp_table2 = $prefix . "shopify_sms_notification_App_Log_Details";
