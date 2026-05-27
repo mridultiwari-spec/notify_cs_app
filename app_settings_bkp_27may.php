@@ -44,264 +44,7 @@ function legacy_password_verify($password, $hash)
 {
     return crypt($password, $hash) === $hash;
 }
-function disableChannelAndDeregisterWebhooks($pdo, $shop, $prefix, $channel, $api_key, $api_secret, $sessionToken)
-{
-    global $app_url;
-    $notificationTable = $prefix . "shopify_sms_notification_App_Email_Notification";
-    $apiSettingsTable = $prefix . "shopify_sms_notification_app_API_Settings";
-    $customerSegmentTable = $prefix . "customer_segment";
-    $column = ($channel == 'sms') ? 'sms_enabled' : 'whatsapp_enabled';
 
-    $stmt = $pdo->prepare("UPDATE $notificationTable SET $column = 0 WHERE shop = :shop");
-    $stmt->execute(array(':shop' => $shop));
-    $updatedCount = $stmt->rowCount();
-    $segmentStmt = $pdo->prepare("UPDATE $customerSegmentTable SET $column = 0 WHERE shop = :shop");
-    $segmentStmt->execute(array(':shop' => $shop));
-    $segmentUpdatedCount = $segmentStmt->rowCount();
-    $updateApiStmt = $pdo->prepare("UPDATE $apiSettingsTable SET status = 'disabled' WHERE shop = :shop AND type = :channel");
-    $updateApiStmt->execute(array(':shop' => $shop, ':channel' => $channel));
-
-    $configTable = $prefix . "shopify_sms_notification_app";
-    $tokenState = get_valid_shop_access_token_php53($pdo, $configTable, $shop, $api_key, $api_secret, $sessionToken);
-    if (!$tokenState['success']) {
-        return array('success' => false, 'error' => 'Failed to get access token');
-    }
-    $accessToken = $tokenState['access_token'];
-    $apiVersion = "2026-01";
-
-    $stmt = $pdo->prepare("
-        SELECT aid, sms_enabled, whatsapp_enabled 
-        FROM $notificationTable 
-        WHERE shop = :shop
-    ");
-    $stmt->execute(array(':shop' => $shop));
-    $templates = $stmt->fetchAll(PDO::FETCH_ASSOC);
-
-    $topicAidMap = array(
-        1 => 'orders/create',
-        2 => 'orders/updated',
-        3 => 'orders/cancelled',
-        4 => 'refunds/create',
-        5 => 'checkouts/update',
-        6 => 'fulfillments/create',
-        7 => 'orders/fulfilled',
-        8 => 'fulfillments/update',
-        9 => 'customers/update',
-        10 => 'customers/enable'
-    );
-
-    $base_url = $app_url . '/webhooks/';
-    $topicCallbackMap = array(
-        'orders/create' => $base_url . 'order-create.php',
-        'orders/updated' => $base_url . 'order-updated.php',
-        'orders/cancelled' => $base_url . 'order-cancelled.php',
-        'refunds/create' => $base_url . 'refund-create.php',
-        'checkouts/update' => $base_url . 'checkout-update.php',
-        'fulfillments/create' => $base_url . 'fulfillment-create.php',
-        'orders/fulfilled' => $base_url . 'order-fulfilled.php',
-        'fulfillments/update' => $base_url . 'fulfillment-update.php',
-        'customers/update' => $base_url . 'customer-update.php',
-        'customers/enable' => $base_url . 'customer-enable.php',
-    );
-
-    $deregisteredTopics = array();
-
-    foreach ($templates as $template) {
-        if ($template['sms_enabled'] == 0 && $template['whatsapp_enabled'] == 0) {
-            $aid = $template['aid'];
-            if (isset($topicAidMap[$aid])) {
-                $topic = $topicAidMap[$aid];
-                $callbackUrl = $topicCallbackMap[$topic];
-
-                $ch = curl_init("https://$shop/admin/api/$apiVersion/webhooks.json");
-                curl_setopt_array($ch, array(
-                    CURLOPT_RETURNTRANSFER => true,
-                    CURLOPT_HTTPHEADER => array("X-Shopify-Access-Token: $accessToken")
-                ));
-                $res = curl_exec($ch);
-                curl_close($ch);
-                $webhooks = json_decode($res, true);
-                $webhooksList = isset($webhooks['webhooks']) ? $webhooks['webhooks'] : array();
-
-                $webhookId = null;
-                foreach ($webhooksList as $wh) {
-                    if ($wh['topic'] === $topic && $wh['address'] === $callbackUrl) {
-                        $webhookId = $wh['id'];
-                        break;
-                    }
-                }
-
-                if ($webhookId) {
-                    $ch = curl_init("https://$shop/admin/api/$apiVersion/webhooks/$webhookId.json");
-                    curl_setopt_array($ch, array(
-                        CURLOPT_RETURNTRANSFER => true,
-                        CURLOPT_CUSTOMREQUEST => "DELETE",
-                        CURLOPT_HTTPHEADER => array("X-Shopify-Access-Token: $accessToken")
-                    ));
-                    curl_exec($ch);
-                    curl_close($ch);
-                    $deregisteredTopics[] = $topic;
-                    $webhookTable = $prefix . "webhooks";
-                    $tableCheck = $pdo->query("SHOW TABLES LIKE '$webhookTable'");
-                    if ($tableCheck && $tableCheck->fetch()) {
-                        $deleteStmt = $pdo->prepare("DELETE FROM $webhookTable WHERE shop = :shop AND topic = :topic");
-                        $deleteStmt->execute(array(':shop' => $shop, ':topic' => $topic));
-                    }
-                }
-            }
-        }
-    }
-
-    $deregisteredSegments = array();
-
-    $segmentStmt = $pdo->prepare("
-        SELECT id, segment_id, sms_enabled, whatsapp_enabled 
-        FROM $customerSegmentTable 
-        WHERE shop = :shop
-    ");
-    $segmentStmt->execute(array(':shop' => $shop));
-    $segments = $segmentStmt->fetchAll(PDO::FETCH_ASSOC);
-
-    function unregisterSegmentWebhookGraphQL($shop, $accessToken, $webhookId, $apiVersion)
-    {
-        if (is_numeric($webhookId) && strpos($webhookId, 'gid://') !== 0) {
-            $webhookGid = "gid://shopify/WebhookSubscription/{$webhookId}";
-        } else {
-            $webhookGid = $webhookId;
-        }
-
-        $query = '
-        mutation webhookSubscriptionDelete($id: ID!) {
-            webhookSubscriptionDelete(id: $id) {
-                deletedWebhookSubscriptionId
-                userErrors {
-                    field
-                    message
-                }
-            }
-        }';
-
-        $variables = array('id' => $webhookGid);
-        $payload = json_encode(array(
-            'query' => $query,
-            'variables' => $variables
-        ));
-
-        $url = "https://{$shop}/admin/api/{$apiVersion}/graphql.json";
-        $ch = curl_init($url);
-        curl_setopt_array($ch, array(
-            CURLOPT_RETURNTRANSFER => true,
-            CURLOPT_POST => true,
-            CURLOPT_POSTFIELDS => $payload,
-            CURLOPT_HTTPHEADER => array(
-                "Content-Type: application/json",
-                "X-Shopify-Access-Token: {$accessToken}"
-            ),
-            CURLOPT_TIMEOUT => 30,
-            CURLOPT_SSL_VERIFYPEER => false
-        ));
-        $response = curl_exec($ch);
-        $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        curl_close($ch);
-
-        if ($httpCode == 200) {
-            $result = json_decode($response, true);
-            if (isset($result['data']['webhookSubscriptionDelete']['deletedWebhookSubscriptionId'])) {
-                return true;
-            }
-        }
-        return false;
-    }
-
-    $webhookTable = $prefix . "webhooks";
-    $tableCheck = $pdo->query("SHOW TABLES LIKE '$webhookTable'");
-    $webhookTableExists = ($tableCheck && $tableCheck->fetch());
-
-    foreach ($segments as $segment) {
-
-        if ($segment['sms_enabled'] == 0 && $segment['whatsapp_enabled'] == 0) {
-            $segmentGid = $segment['segment_id'];
-            $segmentId = $segment['id'];
-
-
-            $joinedTopic = 'customer.joined_segment:' . $segmentGid;
-            $joinedWebhookId = null;
-
-            if ($webhookTableExists) {
-                $stmt = $pdo->prepare("SELECT webhook_id FROM $webhookTable WHERE shop = :shop AND topic = :topic");
-                $stmt->execute(array(':shop' => $shop, ':topic' => $joinedTopic));
-                $webhookData = $stmt->fetch(PDO::FETCH_ASSOC);
-                if ($webhookData && !empty($webhookData['webhook_id'])) {
-                    $joinedWebhookId = $webhookData['webhook_id'];
-                }
-            }
-
-            if ($joinedWebhookId) {
-                $result = unregisterSegmentWebhookGraphQL($shop, $accessToken, $joinedWebhookId, $apiVersion);
-                if ($result) {
-                    $deregisteredSegments[] = $joinedTopic;
-                    if ($webhookTableExists) {
-                        $deleteStmt = $pdo->prepare("DELETE FROM $webhookTable WHERE shop = :shop AND topic = :topic");
-                        $deleteStmt->execute(array(':shop' => $shop, ':topic' => $joinedTopic));
-                    }
-                }
-            }
-            $leftTopic = 'customer.left_segment:' . $segmentGid;
-            $leftWebhookId = null;
-
-            if ($webhookTableExists) {
-                $stmt = $pdo->prepare("SELECT webhook_id FROM $webhookTable WHERE shop = :shop AND topic = :topic");
-                $stmt->execute(array(':shop' => $shop, ':topic' => $leftTopic));
-                $webhookData = $stmt->fetch(PDO::FETCH_ASSOC);
-                if ($webhookData && !empty($webhookData['webhook_id'])) {
-                    $leftWebhookId = $webhookData['webhook_id'];
-                }
-            }
-
-            if ($leftWebhookId) {
-                $result = unregisterSegmentWebhookGraphQL($shop, $accessToken, $leftWebhookId, $apiVersion);
-                if ($result) {
-                    $deregisteredSegments[] = $leftTopic;
-                    if ($webhookTableExists) {
-                        $deleteStmt = $pdo->prepare("DELETE FROM $webhookTable WHERE shop = :shop AND topic = :topic");
-                        $deleteStmt->execute(array(':shop' => $shop, ':topic' => $leftTopic));
-                    }
-                }
-            }
-        }
-    }
-
-    return array(
-        'success' => true,
-        'templates_updated' => $updatedCount,
-        'webhooks_deregistered' => $deregisteredTopics,
-        'segment_webhooks_deregistered' => $deregisteredSegments
-    );
-}
-function enableChannelStatus($pdo, $shop, $prefix, $channel)
-{
-    $apiSettingsTable = $prefix . "shopify_sms_notification_app_API_Settings";
-
-
-    $checkStmt = $pdo->prepare("SELECT id FROM $apiSettingsTable WHERE shop = :shop AND type = :channel");
-    $checkStmt->execute(array(':shop' => $shop, ':channel' => $channel));
-    $exists = $checkStmt->fetch();
-
-    if ($exists) {
-
-        $updateStmt = $pdo->prepare("UPDATE $apiSettingsTable SET status = 'enabled' WHERE shop = :shop AND type = :channel");
-        $updateStmt->execute(array(':shop' => $shop, ':channel' => $channel));
-    } else {
-
-        $insertStmt = $pdo->prepare("
-            INSERT INTO $apiSettingsTable (shop, type, status, country, details, channel_id) 
-            VALUES (:shop, :channel, 'enabled', '', '', '')
-        ");
-        $insertStmt->execute(array(':shop' => $shop, ':channel' => $channel));
-    }
-
-    return true;
-}
 function send_json_response($payload)
 {
     header('Content-Type: application/json; charset=utf-8');
@@ -382,25 +125,6 @@ WHERE shop = :shop AND type = 'sms'
     }
 }
 
-if (isset($_POST['ajax_disable_channel']) && $_POST['ajax_disable_channel'] == '1') {
-    $channel = isset($_POST['channel']) ? $_POST['channel'] : '';
-    if (!in_array($channel, array('sms', 'whatsapp'))) {
-        send_json_response(array('success' => false, 'message' => 'Invalid channel'));
-    }
-
-    $result = disableChannelAndDeregisterWebhooks($pdo, $shop, $prefix, $channel, $api_key, $api_secret, $token);
-    send_json_response($result);
-}
-
-if (isset($_POST['ajax_enable_channel']) && $_POST['ajax_enable_channel'] == '1') {
-    $channel = isset($_POST['channel']) ? $_POST['channel'] : '';
-    if (!in_array($channel, array('sms', 'whatsapp'))) {
-        send_json_response(array('success' => false, 'message' => 'Invalid channel'));
-    }
-
-    enableChannelStatus($pdo, $shop, $prefix, $channel);
-    send_json_response(array('success' => true, 'message' => ucfirst($channel) . ' enabled successfully'));
-}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $token = get_bearer_token_php53();
     $tokenValidation = validate_shopify_session_token_php53($token, $api_secret, $api_key);
@@ -869,8 +593,7 @@ function js_escape($str)
                         <div class="form-group toggle-inline">
                             <label>Enable / Disable SMS</label>
                             <label class="toggle">
-                                <input type="checkbox" name="status" id="sms_status" <?php echo ($smsSettings && $smsSettings['status'] == 'enabled') ? 'checked' : ''; ?>
-                                    onchange="handleChannelToggle('sms', this.checked, this)">
+                                <input type="checkbox" name="status" <?php echo ($smsSettings && $smsSettings['status'] == 'enabled') ? 'checked' : ''; ?>>
                                 <span class="slider"></span>
                             </label>
                         </div>
@@ -1123,8 +846,7 @@ function js_escape($str)
                         <div class="form-group toggle-inline">
                             <label>Enable / Disable WhatsApp</label>
                             <label class="toggle">
-                                <input type="checkbox" name="status" id="whatsapp_status" <?php echo ($whatsappSettings && $whatsappSettings['status'] == 'enabled') ? 'checked' : ''; ?>
-                                    onchange="handleChannelToggle('whatsapp', this.checked, this)">
+                                <input type="checkbox" name="status" <?php echo ($whatsappSettings && $whatsappSettings['status'] == 'enabled') ? 'checked' : ''; ?>>
                                 <span class="slider"></span>
                             </label>
                         </div>
@@ -1173,19 +895,6 @@ function js_escape($str)
                 </div>
                 <div class="btn-group">
                     <button onclick="sendTestSMS()" class="submit-btn">Send Test</button>
-                </div>
-            </div>
-        </div>
-        <div id="confirmModal" class="modal">
-            <div class="modal-content">
-                <span class="close" onclick="closeConfirmModal()">&times;</span>
-                <h3 id="confirmModalTitle">Confirm Action</h3>
-                <p id="confirmModalMessage">Are you sure you want to disable this channel?</p>
-                <div class="btn-group" style="margin-top: 20px; display: flex; gap: 10px; justify-content: flex-end;">
-                    <button onclick="closeConfirmModal()" class="cancel-btn"
-                        style="padding: 8px 16px; background: #6b7280; color: white; border: none; border-radius: 6px; cursor: pointer;">Cancel</button>
-                    <button id="confirmModalConfirmBtn" class="confirm-btn"
-                        style="padding: 8px 16px; background: #dc2626; color: white; border: none; border-radius: 6px; cursor: pointer;">Confirm</button>
                 </div>
             </div>
         </div>
@@ -1286,82 +995,6 @@ function js_escape($str)
         .country-select.show {
             display: block;
         }
-
-        .cancel-btn:hover {
-            background: #4b5563 !important;
-        }
-
-        .confirm-btn:hover {
-            background: #b91c1c !important;
-        }
-
-        /* Modal Styles - Add this entire block */
-        .modal {
-            display: none;
-            position: fixed;
-            z-index: 9999;
-            left: 0;
-            top: 0;
-            width: 100%;
-            height: 100%;
-            background-color: rgba(0, 0, 0, 0.5);
-            overflow: auto;
-        }
-
-        .modal-content {
-            background-color: #ffffff;
-            margin: 10% auto;
-            padding: 24px;
-            border-radius: 12px;
-            width: 90%;
-            max-width: 500px;
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-            position: relative;
-            animation: modalFadeIn 0.3s ease;
-        }
-
-        @keyframes modalFadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(-30px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        .modal-content .close {
-            position: absolute;
-            right: 20px;
-            top: 15px;
-            font-size: 28px;
-            font-weight: bold;
-            color: #9ca3af;
-            cursor: pointer;
-            transition: color 0.2s ease;
-        }
-
-        .modal-content .close:hover {
-            color: #4b5563;
-        }
-
-        .modal-content h3 {
-            margin-top: 0;
-            margin-bottom: 16px;
-            color: #111827;
-            font-size: 20px;
-            font-weight: 600;
-            padding-right: 24px;
-        }
-
-        .modal-content p {
-            margin-bottom: 20px;
-            color: #4b5563;
-            font-size: 14px;
-            line-height: 1.5;
-        }
     </style>
     <script>
         function openTab(tab, el) {
@@ -1435,6 +1068,7 @@ function js_escape($str)
             sendButton.disabled = true;
             sendButton.innerHTML = '<span class="loading-spinner"></span> Sending...';
 
+            // Use XMLHttpRequest for PHP 5.3 compatibility (fetch is not supported in older browsers)
             getShopifySessionToken(function (sessionToken) {
                 var xhr = new XMLHttpRequest();
                 xhr.open('POST', 'trigger_test.php', true);
@@ -1561,28 +1195,15 @@ function js_escape($str)
             });
         }
 
-        // window.addEventListener('DOMContentLoaded', function () {
-        //     attachSettingsAjaxSubmission('#sms form');
-        //     attachSettingsAjaxSubmission('#whatsapp form');
-        // });
-
         window.addEventListener('DOMContentLoaded', function () {
             attachSettingsAjaxSubmission('#sms form');
             attachSettingsAjaxSubmission('#whatsapp form');
-
-            var confirmBtn = document.getElementById('confirmModalConfirmBtn');
-            if (confirmBtn) {
-                var newConfirmBtn = confirmBtn.cloneNode(true);
-                confirmBtn.parentNode.replaceChild(newConfirmBtn, confirmBtn);
-                newConfirmBtn.addEventListener('click', function () {
-                    executeDisableChannel();
-                });
-            }
         });
         function toggleCountryDropdown(input) {
             var select = findCountrySelect(input);
             if (!select) return;
 
+            // Hide all other country dropdowns first
             var allSelects = document.querySelectorAll('.country-select');
             for (var i = 0; i < allSelects.length; i++) {
                 if (allSelects[i] !== select) {
@@ -1590,15 +1211,17 @@ function js_escape($str)
                 }
             }
 
+            // Toggle this dropdown
             if (select.classList.contains('show')) {
                 select.classList.remove('show');
             } else {
                 select.classList.add('show');
-
+                // Show all options
                 var options = select.options;
                 for (var i = 0; i < options.length; i++) {
                     options[i].style.display = '';
                 }
+                // Only clear if input doesn't already have a valid country selected
                 var hasValidCountry = false;
                 for (var i = 0; i < options.length; i++) {
                     if (options[i].text === input.value) {
@@ -1616,11 +1239,13 @@ function js_escape($str)
             var input = findCountryInput(select);
             if (!input) return;
 
+            // Set the input value to selected country
             var selectedOption = select.options[select.selectedIndex];
             if (selectedOption) {
                 input.value = selectedOption.text;
             }
 
+            // Hide the dropdown
             select.classList.remove('show');
         }
 
@@ -1640,212 +1265,7 @@ function js_escape($str)
                 }
             }
         }
-        // function handleChannelToggle(channel, isEnabled, toggleElement) {
-        //     if (isEnabled) {
-        //         toggleElement.disabled = true;
-        //         getShopifySessionToken(function (sessionToken) {
-        //             var xhr = new XMLHttpRequest();
-        //             xhr.open('POST', window.location.pathname + window.location.search, true);
-        //             xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        //             if (sessionToken) {
-        //                 xhr.setRequestHeader('Authorization', 'Bearer ' + sessionToken);
-        //             }
 
-        //             xhr.onreadystatechange = function () {
-        //                 if (xhr.readyState === 4) {
-        //                     toggleElement.disabled = false;
-
-        //                     if (xhr.status === 200) {
-        //                         try {
-        //                             var response = JSON.parse(xhr.responseText);
-        //                             if (response.success) {
-        //                                 shopify.toast.show(response.message, { duration: 3000 });
-        //                             } else {
-        //                                 shopify.toast.show(response.message || 'Failed to enable ' + channel, { isError: true, duration: 3000 });
-        //                                 toggleElement.checked = false;
-        //                             }
-        //                         } catch (e) {
-        //                             shopify.toast.show('Error processing request', { isError: true, duration: 3000 });
-        //                             toggleElement.checked = false;
-        //                         }
-        //                     } else {
-        //                         shopify.toast.show('Network error. Please try again.', { isError: true, duration: 3000 });
-        //                         toggleElement.checked = false;
-        //                     }
-        //                 }
-        //             };
-
-        //             xhr.send('ajax_enable_channel=1&channel=' + encodeURIComponent(channel));
-        //         });
-        //         return;
-        //     }
-        //     if (!confirm('Are you sure you want to disable ' + channel.toUpperCase() + '? This will turn off ' + channel.toUpperCase())) {
-        //         toggleElement.checked = true;
-        //         return;
-        //     }
-
-        //     toggleElement.disabled = true;
-
-        //     getShopifySessionToken(function (sessionToken) {
-        //         var xhr = new XMLHttpRequest();
-        //         xhr.open('POST', window.location.pathname + window.location.search, true);
-        //         xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-        //         if (sessionToken) {
-        //             xhr.setRequestHeader('Authorization', 'Bearer ' + sessionToken);
-        //         }
-
-        //         xhr.onreadystatechange = function () {
-        //             if (xhr.readyState === 4) {
-        //                 toggleElement.disabled = false;
-
-        //                 if (xhr.status === 200) {
-        //                     try {
-        //                         var response = JSON.parse(xhr.responseText);
-        //                         if (response.success) {
-        //                             var message = channel.toUpperCase() + ' disabled for all templates.';
-        //                             if (response.webhooks_deregistered && response.webhooks_deregistered.length > 0) {
-        //                                 message += ' ' + response.webhooks_deregistered.length + ' webhook(s) de-registered.';
-        //                             }
-        //                             shopify.toast.show(message, { duration: 4000 });
-        //                         } else {
-        //                             shopify.toast.show(response.message || 'Failed to disable ' + channel, { isError: true, duration: 3000 });
-        //                             toggleElement.checked = true;
-        //                         }
-        //                     } catch (e) {
-        //                         shopify.toast.show('Error processing request', { isError: true, duration: 3000 });
-        //                         toggleElement.checked = true;
-        //                     }
-        //                 } else {
-        //                     shopify.toast.show('Network error. Please try again.', { isError: true, duration: 3000 });
-        //                     toggleElement.checked = true;
-        //                 }
-        //             }
-        //         };
-
-        //         xhr.send('ajax_disable_channel=1&channel=' + encodeURIComponent(channel));
-        //     });
-        // }
-        // Variables to store pending channel toggle action
-        var pendingChannel = null;
-        var pendingToggleElement = null;
-
-        function handleChannelToggle(channel, isEnabled, toggleElement) {
-            if (isEnabled) {
-                toggleElement.disabled = true;
-                getShopifySessionToken(function (sessionToken) {
-                    var xhr = new XMLHttpRequest();
-                    xhr.open('POST', window.location.pathname + window.location.search, true);
-                    xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                    if (sessionToken) {
-                        xhr.setRequestHeader('Authorization', 'Bearer ' + sessionToken);
-                    }
-
-                    xhr.onreadystatechange = function () {
-                        if (xhr.readyState === 4) {
-                            toggleElement.disabled = false;
-
-                            if (xhr.status === 200) {
-                                try {
-                                    var response = JSON.parse(xhr.responseText);
-                                    if (response.success) {
-                                        shopify.toast.show(response.message, { duration: 3000 });
-                                    } else {
-                                        shopify.toast.show(response.message || 'Failed to enable ' + channel, { isError: true, duration: 3000 });
-                                        toggleElement.checked = false;
-                                    }
-                                } catch (e) {
-                                    shopify.toast.show('Error processing request', { isError: true, duration: 3000 });
-                                    toggleElement.checked = false;
-                                }
-                            } else {
-                                shopify.toast.show('Network error. Please try again.', { isError: true, duration: 3000 });
-                                toggleElement.checked = false;
-                            }
-                        }
-                    };
-
-                    xhr.send('ajax_enable_channel=1&channel=' + encodeURIComponent(channel));
-                });
-                return;
-            }
-
-            pendingChannel = channel;
-            pendingToggleElement = toggleElement;
-            var modalTitle = document.getElementById('confirmModalTitle');
-            var modalMessage = document.getElementById('confirmModalMessage');
-            if (modalTitle) modalTitle.innerHTML = 'Disable ' + channel.toUpperCase() + '?';
-            if (modalMessage) modalMessage.innerHTML = 'Are you sure you want to disable ' + channel.toUpperCase() + '? This will turn off all templates for sending ' + channel.toUpperCase() + 'texts.';
-            var modal = document.getElementById('confirmModal');
-            if (modal) modal.style.display = 'block';
-        }
-        function closeConfirmModal() {
-            var modal = document.getElementById('confirmModal');
-            if (modal) modal.style.display = 'none';
-            if (pendingToggleElement) {
-                pendingToggleElement.checked = true;
-                pendingToggleElement = null;
-                pendingChannel = null;
-            }
-        }
-
-        function executeDisableChannel() {
-            if (!pendingChannel || !pendingToggleElement) {
-                closeConfirmModal();
-                return;
-            }
-
-            var channel = pendingChannel;
-            var toggleElement = pendingToggleElement;
-            var modal = document.getElementById('confirmModal');
-
-            if (modal) modal.style.display = 'none';
-            toggleElement.disabled = true;
-
-            getShopifySessionToken(function (sessionToken) {
-                var xhr = new XMLHttpRequest();
-                xhr.open('POST', window.location.pathname + window.location.search, true);
-                xhr.setRequestHeader('Content-Type', 'application/x-www-form-urlencoded');
-                if (sessionToken) {
-                    xhr.setRequestHeader('Authorization', 'Bearer ' + sessionToken);
-                }
-
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState === 4) {
-                        toggleElement.disabled = false;
-
-                        if (xhr.status === 200) {
-                            try {
-                                var response = JSON.parse(xhr.responseText);
-                                if (response.success) {
-                                    var message = channel.toUpperCase() + ' disabled for all templates.';
-                                    if (response.webhooks_deregistered && response.webhooks_deregistered.length > 0) {
-                                        message += ' ' + response.webhooks_deregistered.length + ' webhook(s) de-registered.';
-                                    }
-                                    shopify.toast.show(message, { duration: 4000 });
-                                    
-                                } else {
-                                    shopify.toast.show(response.message || 'Failed to disable ' + channel, { isError: true, duration: 3000 });
-                                    
-                                    toggleElement.checked = true;
-                                }
-                            } catch (e) {
-                                shopify.toast.show('Error processing request', { isError: true, duration: 3000 });
-                                toggleElement.checked = true;
-                            }
-                        } else {
-                            shopify.toast.show('Network error. Please try again.', { isError: true, duration: 3000 });
-                            toggleElement.checked = true;
-                        }
-
-                       
-                        pendingChannel = null;
-                        pendingToggleElement = null;
-                    }
-                };
-
-                xhr.send('ajax_disable_channel=1&channel=' + encodeURIComponent(channel));
-            });
-        }
         function findCountrySelect(input) {
             var select = input.nextElementSibling;
             if (select && select.tagName === 'SELECT') return select;
@@ -1881,4 +1301,5 @@ function js_escape($str)
         });
     </script>
 </body>
+
 </html>
